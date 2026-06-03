@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HSK Sensei - An interactive Mandarin learning tool to master HSK vocabulary with spaced repetition, canvas stroke writing, flashcards, and pronunciation labs.">
+  <title>HSK Sensei | Interactive Mandarin Learning Tool</title>
+  
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Application CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating Hanzi Background Particles -->
+  <div id="hanziBgContainer" class="hanzi-bg-container"></div>
+
+  <div class="app-container">
+    
+    <!-- Top Header Glassmorphic Bar -->
+    <header>
+      <div class="brand-wrapper">
+        <img src="assets/logo.png" alt="HSK Sensei Logo" class="app-logo">
+        <div class="brand-info">
+          <h1>HSK Sensei</h1>
+          <span>汉字学习 • Chinese Mastery</span>
+        </div>
+      </div>
+      
+      <div class="header-controls">
+        <!-- Level Picker -->
+        <div class="level-selector-wrapper" role="radiogroup" aria-label="HSK Level Selector">
+          <button class="level-btn active" data-level="1" onclick="switchLevel(1)" role="radio" aria-checked="true">HSK 1</button>
+          <button class="level-btn" data-level="2" onclick="switchLevel(2)" role="radio" aria-checked="false">HSK 2</button>
+          <button class="level-btn" data-level="3" onclick="switchLevel(3)" role="radio" aria-checked="false">HSK 3</button>
+        </div>
+        
+        <!-- Interactive Stats Indicators -->
+        <div class="stats-bar">
+          <div class="stat-item" title="Daily Streak">
+            <svg class="icon-orange" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0zM15 11a3 3 0 1 0-6 0 3 3 0 0 0 6 0z"/>
+            </svg>
+            <span id="headerStreakVal" class="stat-val">0</span>
+            <span class="stat-lbl">days</span>
+          </div>
+          
+          <div class="stat-item" title="HSK Level Progress">
+            <svg class="icon-cyan" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span id="headerProgressVal" class="stat-val">0/0</span>
+            <span class="stat-lbl">mastered</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Tab Bar -->
+    <nav class="nav-tabs" aria-label="Main Navigation">
+      <button class="tab-btn active" data-tab="dashboard" onclick="switchTab('dashboard')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z" />
+        </svg>
+        Dashboard
+      </button>
+      
+      <button class="tab-btn" data-tab="flashcards" onclick="switchTab('flashcards')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+        Flashcards
+      </button>
+      
+      <button class="tab-btn" data-tab="practice" onclick="switchTab('practice')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+        </svg>
+        Practice Quiz
+      </button>
+      
+      <button class="tab-btn" data-tab="stroke" onclick="switchTab('stroke')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+        </svg>
+        Stroke Writing
+      </button>
+      
+      <button class="tab-btn" data-tab="pronounce" onclick="switchTab('pronounce')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+        </svg>
+        Pronunciation Lab
+      </button>
+      
+      <button class="tab-btn" data-tab="dictionary" onclick="switchTab('dictionary')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        Dictionary
+      </button>
+    </nav>
+
+    <!-- Main Screens Content Area -->
+    <main class="main-content">
+      
+      <!-- 1. DASHBOARD TAB SCREEN -->
+      <section id="dashboardSection" class="screen-section active">
+        <div class="dashboard-layout">
+          
+          <!-- Left Main Pane -->
+          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <!-- Welcome Header Card -->
+            <div class="glass-card welcome-card">
+              <div class="welcome-text">
+                <h2 id="dashGreeting">Good morning, Mandarin Scholar!</h2>
+                <p>Welcome back to HSK Sensei. We use Spaced Repetition (SRS), tracing guides, and voice recognition to accelerate your Chinese proficiency. Let's make progress today!</p>
+              </div>
+              <div class="welcome-deco">学</div>
+            </div>
+            
+            <!-- SRS Review Due box -->
+            <div class="glass-card">
+              <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">Spaced Repetition System (SRS)</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Words are automatically scheduled for review based on how well you remember them. Keeps your long-term retention high.</p>
+              
+              <div class="srs-info-box">
+                <div class="srs-counter-wrapper">
+                  <div id="srsDueCount" class="srs-counter">0</div>
+                  <div>
+                    <div class="srs-lbl-title">Review Cards Due</div>
+                    <div class="srs-lbl-desc">Ready to sync into your memory</div>
+                  </div>
+                </div>
+                
+                <button id="srsReviewBtn" class="btn-primary" onclick="state.activeTab = 'flashcards_review'; switchTab('flashcards')">
+                  Start Review
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Stats Pane -->
+          <div class="glass-card" style="display: flex; flex-direction: column; align-items: center;">
+            <h3 style="font-size: 1.15rem; font-weight: 700; width: 100%; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.75rem; margin-bottom: 1rem;">Mastery Progress</h3>
+            
+            <div class="progress-container">
+              <svg width="150" height="150" class="progress-ring-svg">
+                <defs>
+                  <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--accent-cyan)" />
+                    <stop offset="100%" stop-color="var(--accent-blue)" />
+                  </linearGradient>
+                </defs>
+                <circle cx="75" cy="75" r="58" stroke-width="12" fill="transparent" class="progress-ring-circle-bg" />
+                <circle id="dashProgressCircle" cx="75" cy="75" r="58" stroke-width="12" fill="transparent" class="progress-ring-circle" stroke-dasharray="364.4" stroke-dashoffset="364.4" />
+              </svg>
+              <div class="progress-text">
+                <span id="dashProgressPct" class="progress-pct">0%</span>
+                <span class="progress-label">Mastery Rate</span>
+              </div>
+            </div>
+            
+            <div class="dashboard-stats-grid">
+              <div class="stat-box">
+                <span id="dashTotalWordsVal" class="value">0</span>
+                <span class="lbl">Total Words</span>
+              </div>
+              <div class="stat-box">
+                <span id="dashLearnedWordsVal" class="value" style="color: var(--success);">0</span>
+                <span class="lbl">Mastered</span>
+              </div>
+              <div class="stat-box">
+                <span id="dashProgressWordsVal" class="value" style="color: var(--accent-blue);">0</span>
+                <span class="lbl">Learning</span>
+              </div>
+              <div class="stat-box">
+                <span id="dashStarredWordsVal" class="value" style="color: var(--accent-orange);">0</span>
+                <span class="lbl">Starred</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- 2. FLASHCARDS TAB SCREEN -->
+      <section id="flashcardsSection" class="screen-section">
+        <div class="flashcards-layout">
+          
+          <div class="quiz-header">
+            <span>Vocabulary Deck</span>
+            <span>Card <strong id="cardCurrentIndex">0</strong> of <strong id="cardTotalCount">0</strong></span>
+          </div>
+          
+          <!-- Flipping Flashcard Scene -->
+          <div id="flashcardScene" class="card-scene">
+            <div id="flashcard" class="flashcard" onclick="flipFlashcard()">
+              
+              <!-- Front Face of Card -->
+              <div class="card-face card-front">
+                <div class="card-header">
+                  <span id="cardLevelBadge" class="card-level-badge">HSK 1</span>
+                  <button id="cardStarBtn" class="card-star-btn" title="Star Word">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                  </button>
+                </div>
+                
+                <div id="cardChar" class="card-character">我</div>
+                
+                <button class="audio-trigger-btn" title="Listen Pronunciation">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                  </svg>
+                </button>
+                
+                <div class="flip-hint">
+                  <span>Click Card to Flip</span>
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M19 12H5m14 0l-4-4m4 4l-4 4"/>
+                  </svg>
+                </div>
+              </div>
+              
+              <!-- Back Face of Card -->
+              <div class="card-face card-back">
+                <div id="cardPinyin" class="card-pinyin">wǒ</div>
+                <div id="cardPos" class="card-pos">Pronoun</div>
+                <div id="cardEnglish" class="card-english">I; me</div>
+                
+                <div class="card-example-box">
+                  <div id="cardExCn" class="card-ex-cn">我是学生。</div>
+                  <div id="cardExPy" class="card-ex-py">Wǒ shì xuésheng.</div>
+                  <div id="cardExEn" class="card-ex-en">I am a student.</div>
+                </div>
+                
+                <button class="audio-trigger-btn" style="margin-top:1rem;" title="Listen Pronunciation">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                  </svg>
+                </button>
+                
+                <div class="flip-hint">
+                  <span>Click to see Front</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          <!-- Empty Deck Slate -->
+          <div id="flashcardEmptyState" class="empty-state" style="display:none;">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 style="font-size:1.25rem; font-weight:700;">Deck Complete!</h3>
+            <p style="font-size:0.9rem; color:var(--text-secondary); max-width: 320px;">You have no due cards to study for HSK level. Good job staying on track!</p>
+            <button class="btn-primary" style="margin-top:0.5rem;" onclick="state.activeTab = 'flashcards'; initFlashcards()">Reset Study Stack</button>
+          </div>
+          
+          <!-- SRS Mastery Rating Options -->
+          <div class="card-actions">
+            <button class="action-btn btn-again" onclick="handleFlashcardAnswer(false)">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89"/>
+              </svg>
+              Need Practice
+            </button>
+            <button class="action-btn btn-good" onclick="handleFlashcardAnswer(true)">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Got It!
+            </button>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- 3. PRACTICE QUIZ TAB SCREEN -->
+      <section id="practiceSection" class="screen-section">
+        <div class="quiz-wrapper">
+          <div class="quiz-header">
+            <span>Dynamic Level Assessment</span>
+            <span>Question <strong id="quizQNum">0</strong>/<strong id="quizQTotal">10</strong></span>
+          </div>
+          
+          <div class="quiz-progress-track">
+            <div id="quizProgressBar" class="quiz-progress-bar"></div>
+          </div>
+          
+          <!-- Active Quiz Question -->
+          <div id="quizActiveCard" class="glass-card quiz-card">
+            <span id="quizQType" class="quiz-question-type">Meaning matching</span>
+            <h2 id="quizQMain" class="quiz-question-main">我</h2>
+            <p id="quizQText" class="quiz-question-text" style="display:none;"></p>
+            
+            <button id="quizAudioBtn" class="audio-trigger-btn quiz-audio-play" style="display:none;" title="Listen word">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+              </svg>
+            </button>
+            
+            <div id="quizOptionsGrid" class="quiz-options-grid" style="width:100%; margin-top:2rem;">
+              <!-- Dynamically populated buttons -->
+            </div>
+          </div>
+          
+          <!-- Quiz Results Overlay Screen -->
+          <div id="quizResultsCard" class="glass-card quiz-results-card" style="display:none;">
+            <div id="quizResultsEmoji" class="results-confetti">🏆</div>
+            <h2 id="quizResultsHeading" style="font-size:2rem; font-weight:800;">Exceptional Job!</h2>
+            <p style="color:var(--text-secondary); max-width:320px; font-size:0.95rem;">You completed the practice quiz session. Performance updates are successfully synced to your dashboard.</p>
+            
+            <div class="score-circle">
+              <span id="quizResultsScore" class="score-num">0</span>
+              <span class="score-lbl">Correct answers</span>
+            </div>
+            
+            <div style="display:flex; gap:1rem; width:100%; justify-content:center; margin-top:1rem;">
+              <button class="btn-secondary" onclick="switchTab('dashboard')">Back to Dashboard</button>
+              <button class="btn-primary" onclick="startNewQuiz()">Retry Assessment</button>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- 4. STROKE WRITING TAB SCREEN -->
+      <section id="strokeSection" class="screen-section">
+        <div class="writing-layout">
+          
+          <!-- Tracing Canvas Pad Card -->
+          <div class="canvas-container">
+            <div class="canvas-card">
+              <div class="grid-overlay">
+                <svg>
+                  <line x1="50%" y1="0%" x2="50%" y2="100%" />
+                  <line x1="0%" y1="50%" x2="100%" y2="50%" />
+                  <line x1="0%" y1="0%" x2="100%" y2="100%" />
+                  <line x1="100%" y1="0%" x2="0%" y2="100%" />
+                </svg>
+              </div>
+              <div id="strokeCharGuideBg" class="character-guide-bg">学</div>
+              <canvas id="strokeCanvas" width="320" height="320"></canvas>
+            </div>
+            
+            <div class="canvas-toolbar">
+              <button class="canvas-btn" onclick="clearStrokeCanvas()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                </svg>
+                Clear
+              </button>
+              <button class="canvas-btn active-toggle" onclick="toggleStrokeGuide(this)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                </svg>
+                Toggle Outline
+              </button>
+            </div>
+          </div>
+          
+          <!-- Instructions & Card Context Pane -->
+          <div class="glass-card" style="display:flex; flex-direction:column; gap:1.25rem;">
+            <div>
+              <span class="quiz-question-type">Writing Practice Pad</span>
+              <h2 id="strokeTargetChar" style="font-family: var(--font-serif); font-size: 3rem; font-weight:700; margin-top: 0.5rem;">学</h2>
+              <p id="strokeTargetPy" style="color:var(--accent-cyan); font-size:1.25rem; font-weight:600;">xué</p>
+              <p id="strokeTargetEn" style="color:var(--text-secondary); font-size:0.95rem;">to study, to learn</p>
+            </div>
+            
+            <div style="border-top:1px solid var(--border-glass); padding-top:1.25rem; margin-top:0.5rem;">
+              <h4 style="font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:0.5rem;">Writing Guide</h4>
+              <ol style="font-size:0.825rem; color:var(--text-secondary); padding-left:1.2rem; display:flex; flex-direction:column; gap:0.35rem;">
+                <li>Observe the faint character outline in the pad.</li>
+                <li>Trace the strokes in correct order (usually top-to-bottom, left-to-right).</li>
+                <li>Practice repeating to build clean muscle memory for characters.</li>
+              </ol>
+            </div>
+            
+            <!-- Tracing word controls footer -->
+            <div style="margin-top:auto; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-glass); padding-top:1.25rem;">
+              <span style="font-size:0.75rem; color:var(--text-muted);">Word <strong id="strokeCurrentIndex">1</strong> of <strong id="strokeTotalCount">0</strong></span>
+              <div style="display:flex; gap:0.5rem;">
+                <button class="btn-secondary" style="padding:0.45rem 1rem;" onclick="handleStrokePrev()">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="btn-secondary" style="padding:0.45rem 1rem;" onclick="handleStrokeNext()">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- 5. PRONUNCIATION LAB TAB SCREEN -->
+      <section id="pronounceSection" class="screen-section">
+        <div class="glass-card pronounce-layout">
+          <span class="quiz-question-type" style="color:var(--accent-orange);">Speak & Evaluate Pronunciation</span>
+          
+          <div style="margin-top:1rem;">
+            <h2 id="speechTargetChar" style="font-family:var(--font-serif); font-size:4.5rem; font-weight:700;">我</h2>
+            <div id="speechTargetPy" style="color:var(--accent-cyan); font-size:1.5rem; font-weight:600;">wǒ</div>
+            <div id="speechTargetEn" style="color:var(--text-secondary); font-size:0.95rem; margin-top:0.2rem;">I, me</div>
+            <input type="hidden" id="speechTargetWordId">
+          </div>
+          
+          <!-- Audio trigger player helper -->
+          <button class="audio-trigger-btn" onclick="playPronounceTarget()" title="Play Audio Reference" style="margin-top:0.5rem;">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+          </button>
+          
+          <!-- Active microphone button -->
+          <div class="mic-wrapper">
+            <button id="pronounceMicBtn" class="mic-btn" onclick="toggleListening()" title="Start Speaking">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/>
+              </svg>
+            </button>
+            <div class="wave-ring"></div>
+            <div class="wave-ring"></div>
+          </div>
+          
+          <!-- Speech Grader response dashboard -->
+          <div class="pronounce-feedback">
+            <div id="speechResultBadge" class="speech-result-badge badge-neutral">Ready</div>
+            <div id="speechTranscript" class="speech-transcript">Press the microphone and say the characters aloud.</div>
+          </div>
+          
+          <!-- Pagination controls -->
+          <div style="width:100%; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-glass); padding-top:1.5rem; margin-top:1rem;">
+            <span style="font-size:0.75rem; color:var(--text-muted);">Word <strong id="speechCurrentIndex">1</strong> of <strong id="speechTotalCount">0</strong></span>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="btn-secondary" style="padding:0.45rem 1rem;" onclick="handlePronouncePrev()">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="btn-secondary" style="padding:0.45rem 1rem;" onclick="handlePronounceNext()">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. DICTIONARY TAB SCREEN -->
+      <section id="dictionarySection" class="screen-section">
+        <div class="glass-card" style="padding:1.5rem 1.5rem 2.5rem 1.5rem;">
+          
+          <!-- Dictionary Toolbar filters -->
+          <div class="dict-toolbar">
+            <div class="dict-filters">
+              <button class="filter-btn active" onclick="handleDictFilterChange(this, 'all')">All Level Words</button>
+              <button class="filter-btn" onclick="handleDictFilterChange(this, 'starred')">Starred Only</button>
+              <button class="filter-btn" onclick="handleDictFilterChange(this, 'learned')">Mastered</button>
+              <button class="filter-btn" onclick="handleDictFilterChange(this, 'due')">Review Due</button>
+            </div>
+            
+            <div class="search-box-wrapper">
+              <input type="text" class="search-input" placeholder="Search dictionary term..." oninput="handleDictSearch(event)">
+              <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Word grid list cards -->
+          <div id="vocabGrid" class="vocab-grid">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </section>
+      
+    </main>
+  </div>
+
+  <!-- HTML5 Dialog detail popup (Overlay) -->
+  <dialog id="wordDetailModal" class="detail-modal">
+    <div class="modal-header">
+      <h3 class="modal-title">Vocabulary Lookup Card</h3>
+      <button class="modal-close-btn" onclick="closeWordDetails()" title="Close details">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="modal-body">
+      
+      <!-- Primary Text Detail Row -->
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; background:rgba(0,0,0,0.15); padding:1.25rem; border-radius:1rem; border:1px solid var(--border-glass);">
+        <div>
+          <h2 id="modalChar" style="font-family: var(--font-serif); font-size:3.75rem; font-weight:700; line-height:1;">我</h2>
+          <div id="modalPinyin" style="color:var(--accent-cyan); font-size:1.35rem; font-weight:600; margin-top:0.35rem;">wǒ</div>
+          <div id="modalPos" class="card-pos" style="margin-top:0.5rem; margin-bottom:0;">Pronoun</div>
+        </div>
+        
+        <div style="display:flex; flex-direction:column; gap:0.5rem; align-items:flex-end;">
+          <button id="modalStarBtn" class="card-star-btn" style="padding:0.25rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </button>
+          
+          <button id="modalAudioBtn" class="audio-trigger-btn" style="margin:0; width:42px; height:42px;">
+            <svg viewBox="0 0 24 24" style="width:18px; height:18px;">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+      <!-- English Translation Meaning -->
+      <div>
+        <h4 style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-secondary); margin-bottom:0.35rem;">Meaning</h4>
+        <p id="modalEnglish" style="font-size:1.15rem; font-weight:500;">I, me</p>
+      </div>
+      
+      <!-- Sample Sentence block -->
+      <div>
+        <h4 style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-secondary); margin-bottom:0.35rem;">Example Sentence</h4>
+        <div class="card-example-box">
+          <div id="modalExCn" class="card-ex-cn">我喜欢学汉语。</div>
+          <div id="modalExPy" class="card-ex-py">Wǒ xǐhuan xué Hànyǔ.</div>
+          <div id="modalExEn" class="card-ex-en">I like learning Chinese.</div>
+        </div>
+      </div>
+      
+      <!-- Canvas Stroke Writing practice card inside lookup modal -->
+      <div style="border-top:1px solid var(--border-glass); padding-top:1.25rem;">
+        <h4 style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-secondary); margin-bottom:0.5rem;">Quick Writing Pad</h4>
+        <div style="display:flex; gap:1.25rem; align-items:center;">
+          <div class="canvas-card" style="width:200px; height:200px;">
+            <div class="grid-overlay">
+              <svg>
+                <line x1="50%" y1="0%" x2="50%" y2="100%" />
+                <line x1="0%" y1="50%" x2="100%" y2="50%" />
+              </svg>
+            </div>
+            <div id="modalStrokeCharGuideBg" class="character-guide-bg" style="font-size:10rem;">我</div>
+            <canvas id="modalStrokeCanvas" width="200" height="200" style="width:200px; height:200px;"></canvas>
+          </div>
+          
+          <div style="display:flex; flex-direction:column; gap:0.5rem;">
+            <button class="canvas-btn" onclick="clearModalCanvas()">Clear Canvas</button>
+            <button class="canvas-btn active-toggle" onclick="toggleModalStrokeGuide(this)">Toggle Guide</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </dialog>
+
+  <!-- Data & Logic scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

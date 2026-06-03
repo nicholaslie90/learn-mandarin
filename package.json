@@ -1,0 +1,19 @@
+{
+  "name": "hsk-sensei",
+  "version": "1.0.0",
+  "description": "Interactive Mandarin learning tool to master HSK vocabulary.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y http-server -p 3000"
+  },
+  "keywords": [
+    "mandarin",
+    "chinese",
+    "hsk",
+    "spaced-repetition",
+    "canvas-writing",
+    "pronunciation"
+  ],
+  "author": "",
+  "license": "ISC"
+}
