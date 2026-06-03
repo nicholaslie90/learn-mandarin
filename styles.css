@@ -489,6 +489,10 @@ header {
   transform: rotateY(180deg);
 }
 
+.flashcard.no-transition {
+  transition: none !important;
+}
+
 .card-face {
   position: absolute;
   width: 100%;

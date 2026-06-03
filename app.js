@@ -743,8 +743,21 @@ function handleFlashcardAnswer(mastered) {
   
   // Move to next card
   if (state.flashcardIndex < activeFlashcardList.length - 1) {
+    const card = document.getElementById('flashcard');
+    if (card) {
+      card.classList.add('no-transition');
+      card.classList.remove('flipped');
+      state.flashcardFlipped = false;
+      void card.offsetHeight; // Force reflow
+    }
+    
     state.flashcardIndex++;
     renderFlashcard();
+    
+    // Re-enable transition after snap
+    setTimeout(() => {
+      if (card) card.classList.remove('no-transition');
+    }, 50);
   } else {
     // End of cards pile
     alert("Fantastic job! You've reviewed this study session pack! 🎉");
