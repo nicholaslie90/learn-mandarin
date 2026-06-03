@@ -137,102 +137,66 @@ class SoundEngine {
 const sounds = new SoundEngine();
 
 // Canvas Writing Drawing Pad Manager
-class WritingCanvas {
-  constructor(canvasId, guideId) {
-    this.canvas = document.getElementById(canvasId);
-    if (!this.canvas) return;
-    this.ctx = this.canvas.getContext('2d');
-    this.guide = document.getElementById(guideId);
-    this.isDrawing = false;
-    this.lastX = 0;
-    this.lastY = 0;
-    
-    this.setupListeners();
-    this.resize();
+// HanziWriter Integration Manager
+class HanziWriterManager {
+  constructor(containerId, size) {
+    this.containerId = containerId;
+    this.size = size;
+    this.writer = null;
+    this.character = '';
+    this.showOutlineState = true;
   }
   
-  setupListeners() {
-    // Mouse Events
-    this.canvas.addEventListener('mousedown', (e) => this.startDrawing(e.offsetX, e.offsetY));
-    this.canvas.addEventListener('mousemove', (e) => this.draw(e.offsetX, e.offsetY));
-    this.canvas.addEventListener('mouseup', () => this.stopDrawing());
-    this.canvas.addEventListener('mouseleave', () => this.stopDrawing());
+  setCharacter(char) {
+    this.character = char;
+    const container = document.getElementById(this.containerId);
+    if (!container) return;
+    container.innerHTML = ''; // Clear previous SVG if any
     
-    // Touch Events for Mobile
-    this.canvas.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      const rect = this.canvas.getBoundingClientRect();
-      const touch = e.touches[0];
-      this.startDrawing(touch.clientX - rect.left, touch.clientY - rect.top);
+    // Check if HanziWriter is loaded, if not show loading state
+    if (typeof HanziWriter === 'undefined') {
+      container.innerHTML = '<div style="color:var(--text-secondary); text-align:center; padding-top:45%;">Loading writing engine...</div>';
+      return;
+    }
+    
+    this.writer = HanziWriter.create(this.containerId, char, {
+      width: this.size,
+      height: this.size,
+      padding: 15,
+      showOutline: this.showOutlineState,
+      strokeColor: '#00f2fe',
+      outlineColor: 'rgba(255, 255, 255, 0.08)',
+      drawingColor: '#ff0080',
+      drawingWidth: 6,
+      strokeAnimationSpeed: 1.2,
+      delayBetweenStrokes: 350
     });
-    this.canvas.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-      const rect = this.canvas.getBoundingClientRect();
-      const touch = e.touches[0];
-      this.draw(touch.clientX - rect.left, touch.clientY - rect.top);
-    });
-    this.canvas.addEventListener('touchend', () => this.stopDrawing());
-  }
-  
-  resize() {
-    // Make sure we have a sharp high-DPI canvas
-    const size = 320;
-    const dpi = window.devicePixelRatio || 1;
-    this.canvas.width = size * dpi;
-    this.canvas.height = size * dpi;
-    this.canvas.style.width = `${size}px`;
-    this.canvas.style.height = `${size}px`;
-    this.ctx.scale(dpi, dpi);
     
-    // Set drawing styles
-    this.ctx.strokeStyle = '#00f2fe';
-    this.ctx.lineWidth = 10;
-    this.ctx.lineCap = 'round';
-    this.ctx.lineJoin = 'round';
-    this.clear();
+    // Automatically start tracing practice mode
+    this.writer.quiz();
   }
   
-  startDrawing(x, y) {
-    this.isDrawing = true;
-    [this.lastX, this.lastY] = [x, y];
-    
-    // Draw initial dot
-    this.ctx.beginPath();
-    this.ctx.arc(x, y, this.ctx.lineWidth / 2, 0, Math.PI * 2);
-    this.ctx.fillStyle = this.ctx.strokeStyle;
-    this.ctx.fill();
-  }
-  
-  draw(x, y) {
-    if (!this.isDrawing) return;
-    this.ctx.beginPath();
-    this.ctx.moveTo(this.lastX, this.lastY);
-    this.ctx.lineTo(x, y);
-    this.ctx.stroke();
-    [this.lastX, this.lastY] = [x, y];
-  }
-  
-  stopDrawing() {
-    this.isDrawing = false;
-  }
-  
-  clear() {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-  }
-  
-  setGuideChar(char) {
-    if (this.guide) {
-      this.guide.textContent = char;
+  animate() {
+    if (this.writer) {
+      this.writer.animateCharacter();
     }
   }
   
-  toggleGuide(show) {
-    if (this.guide) {
-      if (show) {
-        this.guide.classList.remove('hidden');
-      } else {
-        this.guide.classList.add('hidden');
-      }
+  practice() {
+    if (this.writer) {
+      this.writer.quiz();
+    }
+  }
+  
+  toggleOutline(btn) {
+    if (!this.writer) return;
+    this.showOutlineState = !this.showOutlineState;
+    if (this.showOutlineState) {
+      this.writer.showOutline();
+      btn.classList.add('active-toggle');
+    } else {
+      this.writer.hideOutline();
+      btn.classList.remove('active-toggle');
     }
   }
 }
@@ -1042,7 +1006,7 @@ function initStrokePractice() {
   strokeWordIndex = 0;
   
   if (!canvasHelper) {
-    canvasHelper = new WritingCanvas('strokeCanvas', 'strokeCharGuideBg');
+    canvasHelper = new HanziWriterManager('strokeWriterContainer', 320);
   }
   
   renderStrokeWord();
@@ -1066,10 +1030,8 @@ function renderStrokeWord() {
   if (currEl) currEl.textContent = strokeWordIndex + 1;
   if (totEl) totEl.textContent = strokeWordList.length;
   
-  // Configure canvas
-  canvasHelper.clear();
-  // Draw primary character helper guide
-  canvasHelper.setGuideChar(word.character);
+  // Set character to writer
+  canvasHelper.setCharacter(word.character);
   
   // Autoplay voice
   setTimeout(() => { playTextToSpeech(word.character); }, 200);
@@ -1089,19 +1051,16 @@ function handleStrokeNext() {
   }
 }
 
-function clearStrokeCanvas() {
-  if (canvasHelper) canvasHelper.clear();
+function animateStroke() {
+  if (canvasHelper) canvasHelper.animate();
+}
+
+function restartPractice() {
+  if (canvasHelper) canvasHelper.practice();
 }
 
 function toggleStrokeGuide(btn) {
-  const isVisible = btn.classList.contains('active-toggle');
-  if (isVisible) {
-    btn.classList.remove('active-toggle');
-    if (canvasHelper) canvasHelper.toggleGuide(false);
-  } else {
-    btn.classList.add('active-toggle');
-    if (canvasHelper) canvasHelper.toggleGuide(true);
-  }
+  if (canvasHelper) canvasHelper.toggleOutline(btn);
 }
 
 // -------------------------------------------------------------
@@ -1302,10 +1261,9 @@ function openWordDetails(word) {
   // Initialize canvas pad inside modal
   setTimeout(() => {
     if (!modalCanvasHelper) {
-      modalCanvasHelper = new WritingCanvas('modalStrokeCanvas', 'modalStrokeCharGuideBg');
+      modalCanvasHelper = new HanziWriterManager('modalStrokeWriterContainer', 200);
     }
-    modalCanvasHelper.clear();
-    modalCanvasHelper.setGuideChar(word.character);
+    modalCanvasHelper.setCharacter(word.character);
   }, 100);
 }
 
@@ -1314,19 +1272,16 @@ function closeWordDetails() {
   if (modal) modal.close();
 }
 
-function clearModalCanvas() {
-  if (modalCanvasHelper) modalCanvasHelper.clear();
+function animateModalStroke() {
+  if (modalCanvasHelper) modalCanvasHelper.animate();
+}
+
+function restartModalPractice() {
+  if (modalCanvasHelper) modalCanvasHelper.practice();
 }
 
 function toggleModalStrokeGuide(btn) {
-  const isVisible = btn.classList.contains('active-toggle');
-  if (isVisible) {
-    btn.classList.remove('active-toggle');
-    if (modalCanvasHelper) modalCanvasHelper.toggleGuide(false);
-  } else {
-    btn.classList.add('active-toggle');
-    if (modalCanvasHelper) modalCanvasHelper.toggleGuide(true);
-  }
+  if (modalCanvasHelper) modalCanvasHelper.toggleOutline(btn);
 }
 
 // -------------------------------------------------------------

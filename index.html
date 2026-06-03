@@ -362,16 +362,21 @@
                   <line x1="100%" y1="0%" x2="0%" y2="100%" />
                 </svg>
               </div>
-              <div id="strokeCharGuideBg" class="character-guide-bg">学</div>
-              <canvas id="strokeCanvas" width="320" height="320"></canvas>
+              <div id="strokeWriterContainer" style="width:320px; height:320px; position:relative; z-index:2;"></div>
             </div>
             
             <div class="canvas-toolbar">
-              <button class="canvas-btn" onclick="clearStrokeCanvas()">
+              <button class="canvas-btn" onclick="animateStroke()">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
                 </svg>
-                Clear
+                Animate Order
+              </button>
+              <button class="canvas-btn" onclick="restartPractice()">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                </svg>
+                Practice Tracing
               </button>
               <button class="canvas-btn active-toggle" onclick="toggleStrokeGuide(this)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -577,13 +582,13 @@
                 <line x1="0%" y1="50%" x2="100%" y2="50%" />
               </svg>
             </div>
-            <div id="modalStrokeCharGuideBg" class="character-guide-bg" style="font-size:10rem;">我</div>
-            <canvas id="modalStrokeCanvas" width="200" height="200" style="width:200px; height:200px;"></canvas>
+            <div id="modalStrokeWriterContainer" style="width:200px; height:200px; position:relative; z-index:2;"></div>
           </div>
           
           <div style="display:flex; flex-direction:column; gap:0.5rem;">
-            <button class="canvas-btn" onclick="clearModalCanvas()">Clear Canvas</button>
-            <button class="canvas-btn active-toggle" onclick="toggleModalStrokeGuide(this)">Toggle Guide</button>
+            <button class="canvas-btn" onclick="animateModalStroke()">Animate Order</button>
+            <button class="canvas-btn" onclick="restartModalPractice()">Practice Tracing</button>
+            <button class="canvas-btn active-toggle" onclick="toggleModalStrokeGuide(this)">Toggle Outline</button>
           </div>
         </div>
       </div>
@@ -592,6 +597,7 @@
   </dialog>
 
   <!-- Data & Logic scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
