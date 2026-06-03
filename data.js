@@ -309,8 +309,8 @@ const HSK_DATA = {
       english: "to sing a song",
       pos: "Verb",
       exampleCn: "她唱歌唱得非常好。",
-      examplePy: "Tā chànggē chàng de fēicháng hǎotīng.",
-      exampleEn: "She sings songs very beautifully."
+      examplePy: "Tā chànggē chàng de fēicháng hǎo.",
+      exampleEn: "She sings songs very well."
     },
     {
       id: "hsk2_2",
