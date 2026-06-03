@@ -2,17 +2,63 @@
 
 // Web Speech API Voice Selection helper
 let chineseVoice = null;
-function loadChineseVoice() {
+let allChineseVoices = [];
+let selectedVoiceURI = localStorage.getItem('hsk_sensei_voice_uri') || '';
+
+function loadChineseVoices() {
   if (typeof speechSynthesis === 'undefined') return;
   const voices = speechSynthesis.getVoices();
-  // Look for Chinese voices: zh-CN (Mainland), zh-HK (Hong Kong), zh-TW (Taiwan)
-  chineseVoice = voices.find(v => v.lang.includes('zh-CN') || v.lang.includes('zh_CN')) || 
-                 voices.find(v => v.lang.startsWith('zh-')) || 
-                 voices.find(v => v.lang.includes('Chinese'));
+  
+  // Filter for Chinese, Hong Kong, Taiwan, or Chinese-adjacent voices
+  allChineseVoices = voices.filter(v => 
+    v.lang.includes('zh') || 
+    v.lang.includes('ZH') || 
+    v.lang.includes('Chinese')
+  );
+  
+  // Populate dropdown UI
+  const select = document.getElementById('ttsVoiceSelect');
+  if (select) {
+    select.innerHTML = '<option value="">Default Chinese Voice</option>';
+    allChineseVoices.forEach(v => {
+      const option = document.createElement('option');
+      option.value = v.voiceURI;
+      option.textContent = `${v.name} (${v.lang})`;
+      if (v.voiceURI === selectedVoiceURI) {
+        option.selected = true;
+      }
+      select.appendChild(option);
+    });
+  }
+  
+  updateSelectedVoice();
 }
+
+function updateSelectedVoice() {
+  if (allChineseVoices.length === 0) return;
+  
+  let voice = allChineseVoices.find(v => v.voiceURI === selectedVoiceURI);
+  if (!voice) {
+    // Fallback: look for zh-CN, or just use the first Chinese voice
+    voice = allChineseVoices.find(v => v.lang.includes('zh-CN') || v.lang.includes('zh_CN')) || 
+            allChineseVoices.find(v => v.lang.startsWith('zh-')) ||
+            allChineseVoices[0];
+  }
+  chineseVoice = voice;
+}
+
+function handleVoiceChange(event) {
+  selectedVoiceURI = event.target.value;
+  localStorage.setItem('hsk_sensei_voice_uri', selectedVoiceURI);
+  updateSelectedVoice();
+  
+  // Audio chime or quick speech test
+  playTextToSpeech("中文");
+}
+
 if (typeof speechSynthesis !== 'undefined') {
-  speechSynthesis.onvoiceschanged = loadChineseVoice;
-  loadChineseVoice();
+  speechSynthesis.onvoiceschanged = loadChineseVoices;
+  loadChineseVoices();
 }
 
 // Synth Sound Effects Engine (Uses Web Audio API)
@@ -1315,6 +1361,9 @@ window.addEventListener('DOMContentLoaded', () => {
   setupFloatingBackground();
   updateProgressPill();
   renderStreakUI();
+  
+  // Load voices if already cached by browser
+  loadChineseVoices();
   
   // Dashboard default
   switchTab('dashboard');

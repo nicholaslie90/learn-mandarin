@@ -39,6 +39,17 @@
           <button class="level-btn" data-level="3" onclick="switchLevel(3)" role="radio" aria-checked="false">HSK 3</button>
         </div>
         
+        <!-- TTS Voice Selector Dropdown -->
+        <div class="voice-selector-wrapper" title="Choose TTS voice for pronunciation">
+          <svg class="icon-cyan" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <select id="ttsVoiceSelect" class="voice-select" onchange="handleVoiceChange(event)" aria-label="TTS Voice Select">
+            <option value="">Default Chinese Voice</option>
+          </select>
+        </div>
+        
         <!-- Interactive Stats Indicators -->
         <div class="stats-bar">
           <div class="stat-item" title="Daily Streak">

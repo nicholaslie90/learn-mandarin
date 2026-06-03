@@ -183,6 +183,35 @@ header {
   box-shadow: var(--shadow-glow);
 }
 
+/* Voice Selector Dropdown */
+.voice-selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-glass);
+}
+
+.voice-select {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  max-width: 150px;
+  text-overflow: ellipsis;
+}
+
+.voice-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
 /* Stats Pill */
 .stats-bar {
   display: flex;
