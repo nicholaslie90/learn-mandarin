@@ -1150,5 +1150,251 @@ const HSK_DATA = {
       examplePy: "Wǒ zuómó le hěn jiǔ, háishì méi míngbai tā de yìsi.",
       exampleEn: "I pondered it for a long time, but still didn't understand his meaning."
     }
+  ],
+  7: [
+    {
+      id: "hsk7_1",
+      character: "奠定",
+      pinyin: "diàndìng",
+      english: "to establish, lay (foundation)",
+      pos: "Verb",
+      exampleCn: "这次会议为两国合作奠定了基础。",
+      examplePy: "Zhè cì huìyì wèi liǎng guó hézuò diàndìng le jīchǔ.",
+      exampleEn: "This conference laid the foundation for cooperation between the two countries."
+    },
+    {
+      id: "hsk7_2",
+      character: "阐述",
+      pinyin: "chǎnshù",
+      english: "to expound, explain",
+      pos: "Verb",
+      exampleCn: "报告详细阐述了新政策的目标。",
+      examplePy: "Bàogào xiángxì chǎnshù le xīn zhèngcè de mùbiāo.",
+      exampleEn: "The report expounded on the goals of the new policy in detail."
+    },
+    {
+      id: "hsk7_3",
+      character: "借鉴",
+      pinyin: "jièjiàn",
+      english: "to draw lessons from, use for reference",
+      pos: "Verb",
+      exampleCn: "我们应该借鉴国外的先进经验。",
+      examplePy: "Wǒmen yīnggāi jièjiàn guówài de xiānjìn jīngyàn.",
+      exampleEn: "We should draw on advanced experience from abroad."
+    },
+    {
+      id: "hsk7_4",
+      character: "拓宽",
+      pinyin: "tuòkuān",
+      english: "to broaden, expand",
+      pos: "Verb",
+      exampleCn: "读书可以拓宽我们的知识面。",
+      examplePy: "Dúshū kěyǐ tuòkuān wǒmen de zhīshimiàn.",
+      exampleEn: "Reading books can broaden our horizons."
+    },
+    {
+      id: "hsk7_5",
+      character: "协调",
+      pinyin: "xiétiáo",
+      english: "to coordinate, harmonize",
+      pos: "Verb / Adjective",
+      exampleCn: "政府正在协调各部门的工作。",
+      examplePy: "Zhèngfǔ zhèngzài xiétiáo gè bùmén de gōngzuò.",
+      exampleEn: "The government is coordinating the work of various departments."
+    },
+    {
+      id: "hsk7_6",
+      character: "促进",
+      pinyin: "cùjìn",
+      english: "to promote, accelerate",
+      pos: "Verb",
+      exampleCn: "经济合作促进了双方的友谊。",
+      examplePy: "Jīngjì hézuò cùjìn le shuāngfāng de yǒuyì.",
+      exampleEn: "Economic cooperation promoted friendship between both sides."
+    },
+    {
+      id: "hsk7_7",
+      character: "贯彻",
+      pinyin: "guànchè",
+      english: "to carry out, implement",
+      pos: "Verb",
+      exampleCn: "我们要认真贯彻落实会议精神。",
+      examplePy: "Wǒmen yào rènzhēn guànchè luòshí huìyì jīngshén.",
+      exampleEn: "We must conscientiously implement the spirit of the conference."
+    },
+    {
+      id: "hsk7_8",
+      character: "机制",
+      pinyin: "jīzhì",
+      english: "mechanism",
+      pos: "Noun",
+      exampleCn: "双方建立了长期的沟通机制。",
+      examplePy: "Shuāngfāng jiànlì le chángqī de gōutōng jīzhì.",
+      exampleEn: "Both sides have established a long-term communication mechanism."
+    }
+  ],
+  8: [
+    {
+      id: "hsk8_1",
+      character: "蕴含",
+      pinyin: "yùnhán",
+      english: "to contain, imply",
+      pos: "Verb",
+      exampleCn: "这首诗蕴含着深刻的人生哲理。",
+      examplePy: "Zhè shǒu shī yùnhán zhe shēnkè de rénshēng zhélǐ.",
+      exampleEn: "This poem contains profound life philosophy."
+    },
+    {
+      id: "hsk8_2",
+      character: "融洽",
+      pinyin: "róngqià",
+      english: "harmonious, friendly",
+      pos: "Adjective",
+      exampleCn: "同事们之间的关系非常融洽。",
+      examplePy: "Tóngshìmen zhī jiān de guānxì fēicháng róngqià.",
+      exampleEn: "The relationship among colleagues is very harmonious."
+    },
+    {
+      id: "hsk8_3",
+      character: "见解",
+      pinyin: "jiànjiě",
+      english: "opinion, insight",
+      pos: "Noun",
+      exampleCn: "她对这个问题有自己独特的见解。",
+      examplePy: "Tā duì zhège wèntí yǒu zìjǐ dútè de jiànjiě.",
+      exampleEn: "She has her own unique insights into this issue."
+    },
+    {
+      id: "hsk8_4",
+      character: "跨越",
+      pinyin: "kuàyuè",
+      english: "to leap over, span",
+      pos: "Verb",
+      exampleCn: "这座大桥跨越了整条江。",
+      examplePy: "Zhè zuò dàqiáo kuàyuè le zhěng tiáo jiāng.",
+      exampleEn: "This bridge spans the entire river."
+    },
+    {
+      id: "hsk8_5",
+      character: "遵循",
+      pinyin: "zūnxún",
+      english: "to follow, abide by",
+      pos: "Verb",
+      exampleCn: "科学研究必须遵循客观规律。",
+      examplePy: "Kēxué yánjiū bìxū zūnxún kèguān guīlǜ.",
+      exampleEn: "Scientific research must follow objective laws."
+    },
+    {
+      id: "hsk8_6",
+      character: "频繁",
+      pinyin: "pínfán",
+      english: "frequent",
+      pos: "Adjective",
+      exampleCn: "两国之间的文化交流非常频繁。",
+      examplePy: "Liǎng guó zhī jiān de wénhuà jiāoliú fēicháng pínfán.",
+      exampleEn: "The cultural exchanges between the two countries are very frequent."
+    },
+    {
+      id: "hsk8_7",
+      character: "弥补",
+      pinyin: "míbǔ",
+      english: "to compensate, make up",
+      pos: "Verb",
+      exampleCn: "努力工作可以弥补经验的不足。",
+      examplePy: "Nǔlì gōngzuò kěyǐ míbǔ jīngyàn de bùzú.",
+      exampleEn: "Working hard can make up for the lack of experience."
+    },
+    {
+      id: "hsk8_8",
+      character: "创新",
+      pinyin: "chuàngxīn",
+      english: "to innovate, innovation",
+      pos: "Verb / Noun",
+      exampleCn: "科技创新是推动社会进步的动力。",
+      examplePy: "Kējì chuàngxīn shì tuīdòng shèhuì jìnbù de dònglì.",
+      exampleEn: "Scientific and technological innovation is the driving force of social progress."
+    }
+  ],
+  9: [
+    {
+      id: "hsk9_1",
+      character: "缔结",
+      pinyin: "dìjié",
+      english: "to conclude (treaty, alliance)",
+      pos: "Verb",
+      exampleCn: "两国正式缔结了和平条约。",
+      examplePy: "Liǎng guó zhèngshì dìjié le hépíng tiáoyué.",
+      exampleEn: "The two countries formally concluded a peace treaty."
+    },
+    {
+      id: "hsk9_2",
+      character: "宏观",
+      pinyin: "hóngguān",
+      english: "macroscopic, macro",
+      pos: "Adjective",
+      exampleCn: "我们应该从宏观的角度来看待经济。",
+      examplePy: "Wǒmen yīnggāi cóng hóngguān de jiǎodù lái kàndài jīngjì.",
+      exampleEn: "We should look at the economy from a macro perspective."
+    },
+    {
+      id: "hsk9_3",
+      character: "瞩目",
+      pinyin: "zhǔmù",
+      english: "to focus attention on, remarkable",
+      pos: "Verb",
+      exampleCn: "中国的经济发展取得了令人瞩目的成就。",
+      examplePy: "Zhōngguó de jīngjì fāzhǎn qǔdé le lìng rén zhǔmù de chéngjiù.",
+      exampleEn: "China's economic development has achieved remarkable results."
+    },
+    {
+      id: "hsk9_4",
+      character: "决策",
+      pinyin: "juécè",
+      english: "to make policy, decision",
+      pos: "Noun / Verb",
+      exampleCn: "领导层正在讨论这项重大决策。",
+      examplePy: "Lǐngdǎocéng zhèngzài tǎolùn zhè xiàng zhòngdà juécè.",
+      exampleEn: "The leadership is discussing this major decision."
+    },
+    {
+      id: "hsk9_5",
+      character: "战略",
+      pinyin: "zhànlüè",
+      english: "strategy, strategic",
+      pos: "Noun / Adjective",
+      exampleCn: "双方确立了全面战略合作伙伴关系。",
+      examplePy: "Shuāngfāng quèlì le quánmiàn zhànlüè hézuò huǒbàn guānxì.",
+      exampleEn: "Both sides established a comprehensive strategic cooperative partnership."
+    },
+    {
+      id: "hsk9_6",
+      character: "顺应",
+      pinyin: "shùnyìng",
+      english: "to conform to, adapt to",
+      pos: "Verb",
+      exampleCn: "发展必须顺应时代潮流。",
+      examplePy: "Fāzhǎn bìxū shùnyìng shídài cháolíu.",
+      exampleEn: "Development must conform to the trend of the times."
+    },
+    {
+      id: "hsk9_7",
+      character: "构想",
+      pinyin: "gòuxiǎng",
+      english: "concept, conception",
+      pos: "Noun / Verb",
+      exampleCn: "这个构想在实践中得到了验证。",
+      examplePy: "Zhège gòuxiǎng zài shíjiàn zhōng dédào le yànzhèng.",
+      exampleEn: "This concept has been verified in practice."
+    },
+    {
+      id: "hsk9_8",
+      character: "瞻望",
+      pinyin: "zhānwàng",
+      english: "to look forward to, look into the distance",
+      pos: "Verb",
+      exampleCn: "瞻望未来，我们充满信心。",
+      examplePy: "Zhānwàng wèilái, wǒmen chōngmǎn xìnhīn.",
+      exampleEn: "Looking forward to the future, we are full of confidence."
+    }
   ]
 };

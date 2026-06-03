@@ -157,6 +157,7 @@ header {
   padding: 0.25rem;
   border-radius: 0.75rem;
   border: 1px solid var(--border-glass);
+  flex-wrap: wrap;
 }
 
 .level-btn {
