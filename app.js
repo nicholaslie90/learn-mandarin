@@ -235,8 +235,8 @@ const state = {
   lastStudyDate: '', // YYYY-MM-DD
 
   // Reading Lab state
-  showEssayPinyin: true,
-  showEssayTranslation: true,
+  showEssayPinyin: false,
+  showEssayTranslation: false,
   essayQuizAnswers: {}, // questionIndex -> selectedOptionIndex
   essayQuizGraded: false,
 };
