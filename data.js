@@ -1398,3 +1398,213 @@ const HSK_DATA = {
     }
   ]
 };
+
+const HSK_ESSAYS = {
+  1: [
+    {
+      id: "essay_1_1",
+      titleCn: "我的家",
+      titlePy: "Wǒ de jiā",
+      titleEn: "My Family",
+      contentCn: "我叫李华。我是中国学生。我喜欢学习汉语。我家有三口人：爸爸、妈妈和我。我们家还有一只猫和一只大狗。它们很可爱。",
+      contentPy: "Wǒ jiào Lǐ Huá. Wǒ shì Zhōngguó xuéshēng. Wǒ xǐhuan xuéxí Hànyǔ. Wǒ jiā yǒu sān kǒu rén: bàba, māma hé wǒ. Wǒmen jiā hái yǒu yī zhī māo hé yī zhī dà gǒu. Tāmen hěn kě'ài.",
+      contentEn: "My name is Li Hua. I am a Chinese student. I like studying Chinese. There are three people in my family: father, mother, and me. Our family also has a cat and a big dog. They are very cute.",
+      questions: [
+        {
+          q: "李华家有几口人？",
+          options: ["两口人", "三口人", "四口人"],
+          correct: 1
+        },
+        {
+          q: "他家有什么动物？",
+          options: ["猫和狗", "苹果和茶", "电视和书"],
+          correct: 0
+        }
+      ]
+    }
+  ],
+  2: [
+    {
+      id: "essay_2_1",
+      titleCn: "我的周末",
+      titlePy: "Wǒ de zhōumò",
+      titleEn: "My Weekend",
+      contentCn: "今天是星期六，天气晴。我早上跑步，然后准备去朋友家。我们要一起去公共汽车站，坐车去旅游。我们喜欢唱歌和跳舞。周末运动对身体很好。",
+      contentPy: "Jīntiān shì xīngqīliù, tiānqì qíng. Wǒ zǎoshang pǎobù, ránhòu zhǔnbèi qù péngyou jiā. Wǒmen yào yīqǐ qù gōnggòng qìchēzhàn, zuò chē qù lǚyóu. Wǒmen xǐhuan chànggē hé tiàowǔ. Zhōumò yùndòng duì shēntǐ hěn hǎo.",
+      contentEn: "Today is Saturday, and the weather is sunny. I run in the morning, then prepare to go to my friend's house. We are going to go to the bus station together and take a bus to travel. We like to sing and dance. Exercising on the weekend is very good for health.",
+      questions: [
+        {
+          q: "今天天气怎么样？",
+          options: ["下雪天", "晴天", "阴天"],
+          correct: 1
+        },
+        {
+          q: "他们怎么去旅游？",
+          options: ["骑自行车", "坐公共汽车", "跑步"],
+          correct: 1
+        }
+      ]
+    }
+  ],
+  3: [
+    {
+      id: "essay_3_1",
+      titleCn: "健康的生活习惯",
+      titlePy: "Jiànkāng de shēnghuó xíguàn",
+      titleEn: "Healthy Life Habits",
+      contentCn: "以前，我习惯晚睡晚起，身体不太健康，经常感冒。我的邻居是一位医生，他告诉我一个办法：每天早起跑步，多吃新鲜水果，多喝水。我决定做出改变。现在，我感冒少了，在办公室工作也更热情了。",
+      contentPy: "Yǐqián, wǒ xíguàn wǎn shuì wǎn qǐ, shēntǐ bú tài jiànkāng, jīngcháng gǎnmào. Wǒ de línjū shì yī wèi yīshēng, tā gàosu wǒ yī gè bànfǎ: měitiān zǎoqǐ pǎobù, duō chī xīnxiān shuǐguǒ, duō hē shuǐ. Wǒ juédìng zuò chū gǎibiàn. Xiànzài, wǒ gǎnmào shǎo le, zài bàngōngshì gōngzuò yě gèng rèqíng le.",
+      contentEn: "Previously, I was accustomed to sleeping late and waking up late; my health was not very good, and I frequently caught colds. My neighbor is a doctor. He told me a solution: wake up early to run every day, eat more fresh fruit, and drink more water. I decided to make a change. Now, I have fewer colds, and I work in the office with more enthusiasm.",
+      questions: [
+        {
+          q: "我的邻居是什么职业？",
+          options: ["老师", "医生", "服务员"],
+          correct: 1
+        },
+        {
+          q: "医生告诉了我什么办法？",
+          options: ["多吃药", "多看电视", "早起跑步、吃水果、多喝水"],
+          correct: 2
+        }
+      ]
+    }
+  ],
+  4: [
+    {
+      id: "essay_4_1",
+      titleCn: "诚实与爱情",
+      titlePy: "Chéngshí yǔ àiqíng",
+      titleEn: "Honesty and Love",
+      contentCn: "在爱情中，最关键的品质是诚实。虽然抱歉的言语可以重新获得谅解，但经常拒绝沟通会导致困难。偶尔，我们需要写信表达对彼此的爱，这比任何表格或计划都更能暖和人心。",
+      contentPy: "Zài àiqíng zhōng, zuì guānjiàn de pǐnzhì shì chéngshí. Suīrán bàoqiàn de yányǔ kěyǐ chóngxīn huòdé liàngjiě, dàn jīngcháng jùjué gōutōng huì dǎozhì kùnnan. Ǒu'ěr, wǒmen xūyào xiěxìn biǎodá duì bǐcǐ de ài, zhè bǐ rènhé biǎogé huò jìhuà dōu gèng néng nuǎnhuo rénxīn.",
+      contentEn: "In love, the most crucial quality is honesty. Although apologetic words can regain understanding, frequently refusing to communicate leads to difficulties. Occasionally, we need to write letters to express our love for each other, which warms hearts more than any forms or plans.",
+      questions: [
+        {
+          q: "爱情中什么品质最关键？",
+          options: ["安排", "毕业", "诚实"],
+          correct: 2
+        },
+        {
+          q: "拒绝沟通会导致什么？",
+          options: ["安全", "困难", "暖和"],
+          correct: 1
+        }
+      ]
+    }
+  ],
+  5: [
+    {
+      id: "essay_5_1",
+      titleCn: "年轻人的独立与繁荣",
+      titlePy: "Niánqīngrén de dúlì yǔ fánróng",
+      titleEn: "Independence and Prosperity of Youth",
+      contentCn: "现在的年轻人更追求生活独立，他们认为应该把握时代机会。当面临激烈竞争时，他们不会慌张，而是通过调整逻辑和思维，彻底解决问题。他们独特的生活方式也促进了社会的多元繁荣。",
+      contentPy: "Xiànzài de niánqīngrén gèng zhuīqiú shēnghuó dúlì, tāmen rènwéi yīnggāi bǎwò shídài jīhuì. Dāng miànlín jīliè jìngzhēng shí, tāmen búhuì huāngzhāng, érshì tōngguò tiáozhěng luójī hé sīwéi, chèdǐ jiějué wèntí. Tāmen dútè de shēnghuó fāngshì yě cùjìn le shèhuì de duōyuán fánróng.",
+      contentEn: "Young people nowadays pursue independent living more; they believe they should grasp opportunities of the times. When facing intense competition, they do not panic, but solve problems thoroughly by adjusting their logic and thinking. Their unique lifestyles also promote multi-dimensional social prosperity.",
+      questions: [
+        {
+          q: "年轻人面临竞争时会怎么样？",
+          options: ["慌张不知所措", "选择沉默忽视", "不会慌张，彻底解决问题"],
+          correct: 2
+        },
+        {
+          q: "年轻人独特的生活方式促进了什么？",
+          options: ["社会的多元繁荣", "自然环境的破坏", "人口寿命的缩短"],
+          correct: 0
+        }
+      ]
+    }
+  ],
+  6: [
+    {
+      id: "essay_6_1",
+      titleCn: "科技创新与经济崛起",
+      titlePy: "Kējì chuàngxīn yǔ jīngjì juéqǐ",
+      titleEn: "Tech Innovation and Economic Rise",
+      contentCn: "随着科技创新的崛起，全球瞩目的经济繁荣正在经历宏观层面的构想与调整。在筹备重大决策时，我们应该衡量发展过程中的纽带关系。虽然会遇到很多颠簸甚至崩溃的尴尬时刻，但只要遵循客观规律，决不向困难妥协，必能弥补不足，成就未来。",
+      contentPy: "Suízhe kējì chuàngxīn de juéqǐ, quánqiú zhǔmù de jīngjì fánróng zhèngzài jīnglì hóngguān céngmiàn de gòuxiǎng yǔ tiáozhěng. Zài chóubèi zhòngdà juécè shí, wǒmen yīnggāi héngliáng fāzhǎn guòchéng zhōng de niǔdài guānxì. Suīrán huì yùdào hěn duō diānbǒ shènzhì bēngkuì de gāngà shíkè, dàn zhǐyào zūnxún kèguān guīlǜ, jué bù xiàng kùnnan tuǒxié, bì néng míbǔ bùzú, chéngjiù wèilái.",
+      contentEn: "With the rise of scientific and technological innovation, globally watched economic prosperity is undergoing macro-level conceptualization and adjustment. When preparing major decisions, we must weigh the bonding relationships in the development process. Although we will encounter many bumpy or even breakdown moments of embarrassment, as long as we follow objective laws and never compromise with difficulties, we will compensate for deficiencies and secure the future.",
+      questions: [
+        {
+          q: "在重大决策时应该衡量什么？",
+          options: ["奢侈品的数量", "发展过程中的纽带关系", "筹备会的时间"],
+          correct: 1
+        },
+        {
+          q: "面对颠簸或困难时应该怎么办？",
+          options: ["彻底放弃崩溃", "决不妥协，遵循规律", "向困难做出妥协"],
+          correct: 1
+        }
+      ]
+    }
+  ],
+  7: [
+    {
+      id: "essay_7_1",
+      titleCn: "奠定合作的基石",
+      titlePy: "Diàndìng hézuò de jīshí",
+      titleEn: "Laying the Cornerstone of Cooperation",
+      contentCn: "阐述明确的合作计划有助于奠定双方的信任基础。在长期的交往中，我们要互相借鉴先进经验，拓宽沟通渠道。为了更好地协调分歧，双方需要建立有效的沟通机制，共同促进各领域的繁荣与长足发展。",
+      contentPy: "Chǎnshù míngquè de hézuò jìhuà yǒuzhù yú diàndìng shuāngfāng de xìnrèn jīchǔ. Zài chángqī de jiāowǎng zhōng, wǒmen yào hùxiāng jièjiàn xiānjìn jīngyàn, tuòkuān gōutōng qúdào. Wèile gèng hǎo de xiétiáo fēnqí, shuāngfāng xūyào jiànlì yǒuxiào de gōutōng jīzhì, gòngtóng cùjìn gè lǐngyù de fánróng yǔ chángzú fāzhǎn.",
+      contentEn: "Expounding clear cooperation plans helps lay the foundation of mutual trust. In long-term exchanges, we should draw on each other's advanced experiences and broaden communication channels. In order to better coordinate differences, both sides need to establish an effective communication mechanism to jointly promote prosperity and long-term development in various fields.",
+      questions: [
+        {
+          q: "如何奠定双方的信任基础？",
+          options: ["阐述明确的合作计划", "保持沉默与推托", "完全忽视对方的需求"],
+          correct: 0
+        },
+        {
+          q: "为了协调分歧，双方需要建立什么？",
+          options: ["保密制度", "激烈的辩论赛", "有效的沟通机制"],
+          correct: 2
+        }
+      ]
+    }
+  ],
+  8: [
+    {
+      id: "essay_8_1",
+      titleCn: "艺术作品中的哲理与创新",
+      titlePy: "Yìshù zuòpǐn zhōng de zhélǐ yǔ chuàngxīn",
+      titleEn: "Philosophy and Innovation in Artworks",
+      contentCn: "许多经典的艺术作品蕴含着深刻的人生哲理。欣赏这些作品不仅能跨越文化障碍，还可以丰富我们的精神见解。在彼此频繁的文化交流中，艺术家们通过不断创新，弥补传统的不足，使关系更加融洽，也促进了艺术规律的遵循。",
+      contentPy: "Xǔduō jīngdiǎn de yìshù zuòpǐn yùnhán zhe shēnkè de rénshēng zhélǐ. Xīnshǎng zhèxiē zuòpǐn bùjǐn néng kuàyuè wénhuà zhàng'ài, hái kěyǐ fēngfù wǒmen de jīngshén jiànjiě. Zài bǐcǐ pínfán de wénhuà jiāoliú zhōng, yìshùjiāmen tōngguò bùduàn chuàngxīn, míbǔ chuántǒng de bùzú, shǐ guānxì gèngjiā róngqià, yě cùjìn le yìshù guīlǜ de zūnxún.",
+      contentEn: "Many classic artworks contain profound philosophy of life. Appreciating these works can not only span cultural barriers but also enrich our spiritual insights. In frequent cultural exchanges, artists compensate for traditional deficiencies through continuous innovation, making relationships more harmonious, and encouraging compliance with artistic laws.",
+      questions: [
+        {
+          q: "艺术作品中一般蕴含什么？",
+          options: ["昂贵的奢侈成分", "深刻的人生哲理", "频繁的商业广告"],
+          correct: 1
+        },
+        {
+          q: "艺术家们如何弥补传统不足？",
+          options: ["通过不断创新", "彻底妥协放弃", "保持彼此的沉默"],
+          correct: 0
+        }
+      ]
+    }
+  ],
+  9: [
+    {
+      id: "essay_9_1",
+      titleCn: "宏观视野下的多边合作与瞩目成果",
+      titlePy: "Hóngguān shìyě xià de duōbiān hézuò yǔ zhǔmù chéngguǒ",
+      titleEn: "Multilateral Cooperation and Remarkable Results Under Macro Vision",
+      contentCn: "顺应全球化的趋势，缔结紧密的多边合作已成为各国发展的重要战略。在做出重大决策时，我们必须从宏观角度审视大局，构想长远蓝图。凝聚各方智慧与力量，瞻望未来，必将取得全球瞩目的辉煌成就。",
+      contentPy: "Shùnyìng quánqiúhuà de qūshì, dìjié jǐnmèi de duōbiān hézuò yǐ chéngwéi gè guó fāzhǎn de zhòngyào zhànlüè. Zài zuòchū zhòngdà juécè shí, wǒmen bìxū cóng hóngguān jiǎodù shěnshì dàjú, gòuxiǎng chángyuǎn lántú. Níngjù gè fāng zhìhuì yǔ lìliàng, zhānwàng wèilái, bìjiāng qǔdé quánqiú zhǔmù de huīhuáng chéngjiù.",
+      contentEn: "Conforming to the trend of globalization, concluding tight multilateral cooperation has become an important strategy for national development. When making major decisions, we must examine the big picture from a macro perspective and conceptualize a long-term blueprint. Gathering the wisdom and strength of all parties and looking forward to the future will surely yield brilliant achievements of global attention.",
+      questions: [
+        {
+          q: "在做出重大决策时应该怎样做？",
+          options: ["从宏观角度审视大局", "只看局部的短期利益", "任由突发事件安排"],
+          correct: 0
+        },
+        {
+          q: "瞻望未来，如何取得瞩目的成就？",
+          options: ["彼此忽视和拒绝沟通", "凝聚各方智慧与力量", "停止一切创新和合作"],
+          correct: 1
+        }
+      ]
+    }
+  ]
+};

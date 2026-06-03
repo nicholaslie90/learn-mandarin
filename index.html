@@ -121,6 +121,13 @@
         </svg>
         Dictionary
       </button>
+      
+      <button class="tab-btn" data-tab="reading" onclick="switchTab('reading')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+        </svg>
+        Reading Lab
+      </button>
     </nav>
 
     <!-- Main Screens Content Area -->
@@ -513,6 +520,60 @@
           <div id="vocabGrid" class="vocab-grid">
             <!-- Populated dynamically via JS -->
           </div>
+        </div>
+      </section>
+
+      <!-- 7. READING PRACTICE TAB SCREEN -->
+      <section id="readingSection" class="screen-section">
+        <div class="dashboard-layout" style="grid-template-columns: 2fr 1fr;">
+          
+          <!-- Left Pane: Article Viewer -->
+          <div class="glass-card" style="display:flex; flex-direction:column; gap:1.5rem; min-height:550px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; border-bottom:1px solid var(--border-glass); padding-bottom:1rem;">
+              <div>
+                <span class="quiz-question-type">Reading Comprehension</span>
+                <h2 id="essayTitleCn" style="font-family: var(--font-serif); font-size:2rem; font-weight:700; margin-top:0.25rem;">我的家</h2>
+                <p id="essayTitleEn" style="color:var(--text-secondary); font-size:0.95rem;">My Family</p>
+              </div>
+              
+              <div style="display:flex; gap:0.5rem; align-items:center;">
+                <!-- Audio button for whole essay -->
+                <button id="essayAudioBtn" class="audio-trigger-btn" style="margin:0; width:42px; height:42px;" title="Listen to Essay">
+                  <svg viewBox="0 0 24 24" style="width:18px; height:18px;">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                  </svg>
+                </button>
+                <!-- Toggle Pinyin/Translation Buttons -->
+                <button class="canvas-btn active-toggle" id="toggleEssayPinyinBtn" onclick="toggleEssayPinyin(this)">Pinyin</button>
+                <button class="canvas-btn active-toggle" id="toggleEssayTranslationBtn" onclick="toggleEssayTranslation(this)">Translation</button>
+              </div>
+            </div>
+            
+            <!-- Essay Content Paragraphs Container -->
+            <div id="essayTextContent" style="display:flex; flex-direction:column; gap:1.5rem; font-size:1.15rem; line-height:1.8;">
+              <!-- Populated dynamically via JS -->
+            </div>
+          </div>
+          
+          <!-- Right Pane: Comprehension Questions & Quiz -->
+          <div class="glass-card" style="display:flex; flex-direction:column; gap:1.5rem;">
+            <h3 style="font-size:1.15rem; font-weight:700; border-bottom:1px solid var(--border-glass); padding-bottom:0.75rem; margin-bottom:0.25rem;">Comprehension Check</h3>
+            
+            <div id="essayQuestionsList" style="display:flex; flex-direction:column; gap:1.5rem;">
+              <!-- Dynamically populated questions -->
+            </div>
+            
+            <!-- Quiz grade overlay feedback -->
+            <div id="essayQuizFeedback" style="display:none; align-items:center; gap:0.75rem; padding:1rem; border-radius:0.75rem; border:1px solid var(--border-glass); font-size:0.875rem;">
+              <div id="essayQuizFeedbackBadge" class="speech-result-badge badge-neutral">Ready</div>
+              <div id="essayQuizFeedbackText">Answer the questions to submit.</div>
+            </div>
+            
+            <button id="submitEssayQuizBtn" class="btn-primary" onclick="gradeEssayQuiz()" style="margin-top:auto; width:100%; justify-content:center;">
+              Submit Answers
+            </button>
+          </div>
+          
         </div>
       </section>
       

@@ -233,6 +233,12 @@ const state = {
   progress: {}, // wordId -> { srsLevel, dueTime, starred, learned }
   streak: 0,
   lastStudyDate: '', // YYYY-MM-DD
+
+  // Reading Lab state
+  showEssayPinyin: true,
+  showEssayTranslation: true,
+  essayQuizAnswers: {}, // questionIndex -> selectedOptionIndex
+  essayQuizGraded: false,
 };
 
 // Spaced Repetition Intervals (in hours)
@@ -488,6 +494,8 @@ function switchTab(tabId) {
     initPronounceLab();
   } else if (tabId === 'dictionary') {
     renderDictionary();
+  } else if (tabId === 'reading') {
+    renderEssay();
   }
 }
 
@@ -1261,11 +1269,16 @@ function openWordDetails(word) {
   // Star button
   const starBtn = document.getElementById('modalStarBtn');
   if (starBtn) {
-    starBtn.className = prog.starred ? 'card-star-btn starred' : 'card-star-btn';
-    starBtn.onclick = () => {
-      toggleStarWord(word.id);
-      starBtn.className = state.progress[word.id].starred ? 'card-star-btn starred' : 'card-star-btn';
-    };
+    if (word.id.startsWith('mock_')) {
+      starBtn.style.display = 'none';
+    } else {
+      starBtn.style.display = '';
+      starBtn.className = prog.starred ? 'card-star-btn starred' : 'card-star-btn';
+      starBtn.onclick = () => {
+        toggleStarWord(word.id);
+        starBtn.className = state.progress[word.id].starred ? 'card-star-btn starred' : 'card-star-btn';
+      };
+    }
   }
   
   // HTML Dialog element trigger
@@ -1321,6 +1334,270 @@ function setupFloatingBackground() {
     
     container.appendChild(el);
   }
+}
+
+// -------------------------------------------------------------
+// View Renderers: 7. Reading Lab Controller
+// -------------------------------------------------------------
+function isChineseChar(c) {
+  return /[\u4e00-\u9fa5]/.test(c);
+}
+
+function renderEssay() {
+  const essays = HSK_ESSAYS[state.currentLevel];
+  const textContentEl = document.getElementById('essayTextContent');
+  if (!textContentEl) return;
+  
+  if (!essays || essays.length === 0) {
+    textContentEl.innerHTML = `
+      <div class="empty-state">
+        <p>No essays available for HSK Level ${state.currentLevel}.</p>
+      </div>
+    `;
+    return;
+  }
+  
+  const essay = essays[0];
+  
+  // Set Title and Description
+  const titleCnEl = document.getElementById('essayTitleCn');
+  const titleEnEl = document.getElementById('essayTitleEn');
+  if (titleCnEl) titleCnEl.textContent = essay.titleCn;
+  if (titleEnEl) titleEnEl.textContent = essay.titleEn;
+  
+  // Clear container
+  textContentEl.innerHTML = '';
+  
+  const parasCn = essay.contentCn.split('\n');
+  const parasPy = essay.contentPy.split('\n');
+  const parasEn = essay.contentEn.split('\n');
+  
+  for (let i = 0; i < parasCn.length; i++) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'essay-para-wrapper';
+    
+    // Hanzi characters section
+    const cnDiv = document.createElement('div');
+    cnDiv.className = 'essay-cn-text';
+    
+    let htmlCn = '';
+    for (const char of parasCn[i]) {
+      if (isChineseChar(char)) {
+        htmlCn += `<span class="essay-word" onclick="handleEssayWordClick('${char}')">${char}</span>`;
+      } else {
+        htmlCn += char;
+      }
+    }
+    cnDiv.innerHTML = htmlCn;
+    wrapper.appendChild(cnDiv);
+    
+    // Pinyin section
+    if (parasPy[i]) {
+      const pyDiv = document.createElement('div');
+      pyDiv.className = 'essay-py-text';
+      pyDiv.textContent = parasPy[i];
+      wrapper.appendChild(pyDiv);
+    }
+    
+    // Translation section
+    if (parasEn[i]) {
+      const enDiv = document.createElement('div');
+      enDiv.className = 'essay-en-text';
+      enDiv.textContent = parasEn[i];
+      wrapper.appendChild(enDiv);
+    }
+    
+    textContentEl.appendChild(wrapper);
+  }
+  
+  // Sync state visibility
+  updateEssayVisibility();
+  
+  // Listen Button
+  const audioBtn = document.getElementById('essayAudioBtn');
+  if (audioBtn) {
+    audioBtn.onclick = () => playTextToSpeech(essay.contentCn);
+  }
+  
+  // Reset Quiz State
+  state.essayQuizAnswers = {};
+  state.essayQuizGraded = false;
+  
+  const feedback = document.getElementById('essayQuizFeedback');
+  if (feedback) feedback.style.display = 'none';
+  
+  const submitBtn = document.getElementById('submitEssayQuizBtn');
+  if (submitBtn) {
+    submitBtn.textContent = 'Submit Answers';
+    submitBtn.disabled = false;
+  }
+  
+  // Render questions
+  renderEssayQuestions(essay);
+}
+
+function handleEssayWordClick(char) {
+  let foundWord = null;
+  for (const level in HSK_DATA) {
+    const list = HSK_DATA[level];
+    const match = list.find(w => w.character === char);
+    if (match) {
+      foundWord = match;
+      break;
+    }
+  }
+  
+  if (!foundWord) {
+    foundWord = {
+      id: `mock_${char}`,
+      character: char,
+      pinyin: "Lookup...",
+      english: "Character from reading essay",
+      pos: "Character",
+      exampleCn: char,
+      examplePy: "",
+      exampleEn: ""
+    };
+  }
+  
+  openWordDetails(foundWord);
+}
+
+function toggleEssayPinyin(btn) {
+  state.showEssayPinyin = !state.showEssayPinyin;
+  if (state.showEssayPinyin) {
+    btn.classList.add('active-toggle');
+  } else {
+    btn.classList.remove('active-toggle');
+  }
+  updateEssayVisibility();
+}
+
+function toggleEssayTranslation(btn) {
+  state.showEssayTranslation = !state.showEssayTranslation;
+  if (state.showEssayTranslation) {
+    btn.classList.add('active-toggle');
+  } else {
+    btn.classList.remove('active-toggle');
+  }
+  updateEssayVisibility();
+}
+
+function updateEssayVisibility() {
+  document.querySelectorAll('.essay-py-text').forEach(el => {
+    el.style.display = state.showEssayPinyin ? 'block' : 'none';
+  });
+  document.querySelectorAll('.essay-en-text').forEach(el => {
+    el.style.display = state.showEssayTranslation ? 'block' : 'none';
+  });
+}
+
+function renderEssayQuestions(essay) {
+  const qList = document.getElementById('essayQuestionsList');
+  if (!qList) return;
+  qList.innerHTML = '';
+  
+  essay.questions.forEach((qObj, qIdx) => {
+    const card = document.createElement('div');
+    card.className = 'essay-q-card';
+    
+    const qTitle = document.createElement('div');
+    qTitle.className = 'essay-q-title';
+    qTitle.textContent = `${qIdx + 1}. ${qObj.q}`;
+    card.appendChild(qTitle);
+    
+    const optionsContainer = document.createElement('div');
+    optionsContainer.className = 'essay-options-container';
+    
+    qObj.options.forEach((optText, optIdx) => {
+      const label = document.createElement('label');
+      label.className = 'essay-opt-label';
+      
+      label.innerHTML = `
+        <input type="radio" class="essay-opt-input" name="essay_q_${qIdx}" value="${optIdx}" onclick="selectEssayAnswer(${qIdx}, ${optIdx})">
+        <span>${optText}</span>
+      `;
+      optionsContainer.appendChild(label);
+    });
+    
+    card.appendChild(optionsContainer);
+    qList.appendChild(card);
+  });
+}
+
+function selectEssayAnswer(qIdx, optIdx) {
+  if (state.essayQuizGraded) return;
+  state.essayQuizAnswers[qIdx] = optIdx;
+}
+
+function gradeEssayQuiz() {
+  const essays = HSK_ESSAYS[state.currentLevel];
+  if (!essays || essays.length === 0) return;
+  const essay = essays[0];
+  
+  const totalQuestions = essay.questions.length;
+  const answeredCount = Object.keys(state.essayQuizAnswers).length;
+  
+  if (answeredCount < totalQuestions) {
+    alert("Please answer all questions before submitting!");
+    return;
+  }
+  
+  state.essayQuizGraded = true;
+  let correctCount = 0;
+  
+  essay.questions.forEach((qObj, qIdx) => {
+    const selectedOptIdx = state.essayQuizAnswers[qIdx];
+    const correctOptIdx = qObj.correct;
+    
+    const qCard = document.querySelectorAll('.essay-q-card')[qIdx];
+    if (qCard) {
+      const labels = qCard.querySelectorAll('.essay-opt-label');
+      labels.forEach((label, optIdx) => {
+        const input = label.querySelector('input');
+        if (input) {
+          input.disabled = true;
+        }
+        
+        if (optIdx === correctOptIdx) {
+          label.classList.add('correct-answer');
+        } else if (optIdx === selectedOptIdx) {
+          label.classList.add('incorrect-answer');
+        }
+      });
+    }
+    
+    if (selectedOptIdx === correctOptIdx) {
+      correctCount++;
+    }
+  });
+  
+  const feedback = document.getElementById('essayQuizFeedback');
+  const badge = document.getElementById('essayQuizFeedbackBadge');
+  const text = document.getElementById('essayQuizFeedbackText');
+  const submitBtn = document.getElementById('submitEssayQuizBtn');
+  
+  if (feedback && badge && text) {
+    feedback.style.display = 'flex';
+    if (correctCount === totalQuestions) {
+      badge.textContent = 'Perfect';
+      badge.className = 'speech-result-badge badge-success';
+      text.textContent = `All ${correctCount}/${totalQuestions} correct! Excellent reading comprehension! 🎉`;
+      sounds.playCorrect();
+    } else {
+      badge.textContent = 'Completed';
+      badge.className = 'speech-result-badge badge-error';
+      text.textContent = `You got ${correctCount}/${totalQuestions} correct. Review the highlighted answers.`;
+      sounds.playWrong();
+    }
+  }
+  
+  if (submitBtn) {
+    submitBtn.textContent = 'Quiz Graded';
+    submitBtn.disabled = true;
+  }
+  
+  updateStreak();
 }
 
 // Startup trigger
