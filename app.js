@@ -680,13 +680,21 @@ function renderFlashcard() {
   if (exEn) exEn.textContent = word.exampleEn;
   
   // Setup audio speech button on front & back
-  const audioBtns = document.querySelectorAll('.audio-trigger-btn');
-  audioBtns.forEach(btn => {
-    btn.onclick = (e) => {
+  const frontAudioBtn = document.querySelector('#flashcardsSection .card-front .audio-trigger-btn');
+  if (frontAudioBtn) {
+    frontAudioBtn.onclick = (e) => {
       e.stopPropagation();
       playTextToSpeech(word.character);
     };
-  });
+  }
+
+  const backAudioBtn = document.querySelector('#flashcardsSection .card-back .audio-trigger-btn');
+  if (backAudioBtn) {
+    backAudioBtn.onclick = (e) => {
+      e.stopPropagation();
+      playTextToSpeech(word.exampleCn);
+    };
+  }
   
   // Reset flipped state
   const card = document.getElementById('flashcard');
@@ -1225,6 +1233,11 @@ function openWordDetails(word) {
   const playBtn = document.getElementById('modalAudioBtn');
   if (playBtn) {
     playBtn.onclick = () => playTextToSpeech(word.character);
+  }
+
+  const playExBtn = document.getElementById('modalExAudioBtn');
+  if (playExBtn) {
+    playExBtn.onclick = () => playTextToSpeech(word.exampleCn);
   }
   
   // Star button
