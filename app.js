@@ -261,6 +261,25 @@ function loadFromLocalStorage() {
   const localDate = localStorage.getItem('hsk_sensei_last_study');
   if (localDate) state.lastStudyDate = localDate;
   
+  // Load unlocked extra words
+  const storedExtraIds = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
+  if (storedExtraIds) {
+    const unlockedIds = new Set(JSON.parse(storedExtraIds));
+    for (const level in EXTRA_HSK_DATA) {
+      const extraList = EXTRA_HSK_DATA[level];
+      if (extraList) {
+        extraList.forEach(word => {
+          if (unlockedIds.has(word.id)) {
+            const currentWords = HSK_DATA[level] || [];
+            if (!currentWords.some(w => w.id === word.id)) {
+              HSK_DATA[level].push(word);
+            }
+          }
+        });
+      }
+    }
+  }
+  
   // Initialize progress slots for any words that don't exist yet
   Object.values(HSK_DATA).forEach(levelWords => {
     levelWords.forEach(word => {
@@ -690,7 +709,16 @@ function renderFlashcard() {
   const exPy = document.getElementById('cardExPy');
   const exEn = document.getElementById('cardExEn');
   
-  if (pinyinEl) pinyinEl.textContent = word.pinyin;
+  if (pinyinEl) {
+    pinyinEl.textContent = word.pinyin;
+    pinyinEl.style.display = 'none';
+  }
+  
+  const cardPinyinToggle = document.getElementById('cardPinyinToggle');
+  if (cardPinyinToggle) {
+    cardPinyinToggle.style.display = '';
+  }
+  
   if (posEl) posEl.textContent = word.pos;
   if (englishEl) englishEl.textContent = word.english;
   if (exCn) exCn.textContent = word.exampleCn;
@@ -1051,8 +1079,34 @@ function renderStrokeWord() {
   if (currEl) currEl.textContent = strokeWordIndex + 1;
   if (totEl) totEl.textContent = strokeWordList.length;
   
-  // Set character to writer
-  canvasHelper.setCharacter(word.character);
+  // Extract Chinese characters only
+  const chars = [...word.character].filter(c => /[\u4e00-\u9fa5]/.test(c));
+  const selector = document.getElementById('strokeCharSelector');
+  
+  if (chars.length > 1) {
+    if (selector) {
+      selector.innerHTML = '';
+      selector.style.display = 'flex';
+      chars.forEach((char, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'char-selector-btn';
+        if (idx === 0) btn.classList.add('active');
+        btn.textContent = char;
+        btn.onclick = () => {
+          selector.querySelectorAll('.char-selector-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          canvasHelper.setCharacter(char);
+        };
+        selector.appendChild(btn);
+      });
+    }
+    canvasHelper.setCharacter(chars[0]);
+  } else {
+    if (selector) {
+      selector.style.display = 'none';
+    }
+    canvasHelper.setCharacter(word.character);
+  }
   
   // Autoplay voice
   setTimeout(() => { playTextToSpeech(word.character); }, 200);
@@ -1289,7 +1343,35 @@ function openWordDetails(word) {
     if (!modalCanvasHelper) {
       modalCanvasHelper = new HanziWriterManager('modalStrokeWriterContainer', 200);
     }
-    modalCanvasHelper.setCharacter(word.character);
+    
+    // Extract Chinese characters only
+    const chars = [...word.character].filter(c => /[\u4e00-\u9fa5]/.test(c));
+    const selector = document.getElementById('modalStrokeCharSelector');
+    
+    if (chars.length > 1) {
+      if (selector) {
+        selector.innerHTML = '';
+        selector.style.display = 'flex';
+        chars.forEach((char, idx) => {
+          const btn = document.createElement('button');
+          btn.className = 'char-selector-btn';
+          if (idx === 0) btn.classList.add('active');
+          btn.textContent = char;
+          btn.onclick = () => {
+            selector.querySelectorAll('.char-selector-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            modalCanvasHelper.setCharacter(char);
+          };
+          selector.appendChild(btn);
+        });
+      }
+      modalCanvasHelper.setCharacter(chars[0]);
+    } else {
+      if (selector) {
+        selector.style.display = 'none';
+      }
+      modalCanvasHelper.setCharacter(word.character);
+    }
   }, 100);
 }
 
@@ -1600,9 +1682,113 @@ function gradeEssayQuiz() {
   updateStreak();
 }
 
+// -------------------------------------------------------------
+// Light & Dark Theme Controller
+// -------------------------------------------------------------
+function toggleTheme() {
+  const body = document.body;
+  const isLight = body.classList.toggle('light-theme');
+  localStorage.setItem('hsk_sensei_theme', isLight ? 'light' : 'dark');
+  
+  const icon = document.getElementById('themeToggleIcon');
+  if (icon) {
+    if (isLight) {
+      icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+    } else {
+      icon.innerHTML = `<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707m0-11.314l.707.707m10.608 10.608l.707.707M12 8a4 4 0 110 8 4 4 0 010-8z"/>`;
+    }
+  }
+  sounds.playFlip();
+}
+
+function initTheme() {
+  const theme = localStorage.getItem('hsk_sensei_theme') || 'dark';
+  const icon = document.getElementById('themeToggleIcon');
+  if (theme === 'light') {
+    document.body.classList.add('light-theme');
+    if (icon) {
+      icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+    }
+  } else {
+    document.body.classList.remove('light-theme');
+    if (icon) {
+      icon.innerHTML = `<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707m0-11.314l.707.707m10.608 10.608l.707.707M12 8a4 4 0 110 8 4 4 0 010-8z"/>`;
+    }
+  }
+}
+
+// -------------------------------------------------------------
+// Card Pinyin Visibility Toggle
+// -------------------------------------------------------------
+function toggleCardPinyin() {
+  const cardPinyin = document.getElementById('cardPinyin');
+  const cardPinyinToggle = document.getElementById('cardPinyinToggle');
+  if (cardPinyin && cardPinyinToggle) {
+    cardPinyin.style.display = 'block';
+    cardPinyinToggle.style.display = 'none';
+    sounds.playFlip();
+  }
+}
+
+// -------------------------------------------------------------
+// Dynamic Flashcard Deck Expansion
+// -------------------------------------------------------------
+function generateMoreFlashcards() {
+  const extraPool = EXTRA_HSK_DATA[state.currentLevel] || [];
+  if (extraPool.length === 0) {
+    alert("No more extra words available for this HSK level in the pool!");
+    return;
+  }
+  
+  const currentWords = HSK_DATA[state.currentLevel] || [];
+  const currentIds = new Set(currentWords.map(w => w.id));
+  const availableExtra = extraPool.filter(w => !currentIds.has(w.id));
+  
+  if (availableExtra.length === 0) {
+    alert("You have already generated all extra vocabulary sets for HSK Level " + state.currentLevel + "! 🎉");
+    return;
+  }
+  
+  const batchSize = Math.min(10, availableExtra.length);
+  const shuffled = availableExtra.sort(() => 0.5 - Math.random());
+  const selectedBatch = shuffled.slice(0, batchSize);
+  
+  // Add to active level vocabulary array
+  HSK_DATA[state.currentLevel] = [...currentWords, ...selectedBatch];
+  
+  // Save custom vocabulary additions in localStorage so they persist
+  let unlockedIds = [];
+  const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
+  if (stored) {
+    unlockedIds = JSON.parse(stored);
+  }
+  selectedBatch.forEach(w => {
+    unlockedIds.push(w.id);
+    if (!state.progress[w.id]) {
+      state.progress[w.id] = {
+        srsLevel: 0,
+        dueTime: 0,
+        starred: false,
+        learned: false
+      };
+    }
+  });
+  
+  localStorage.setItem('hsk_sensei_unlocked_extra_ids', JSON.stringify(unlockedIds));
+  saveToLocalStorage();
+  
+  sounds.playCorrect();
+  alert(`Successfully generated a new set of ${batchSize} flashcards for HSK Level ${state.currentLevel}! 🚀`);
+  
+  // Refresh view
+  switchTab(state.activeTab);
+  updateProgressPill();
+}
+
 // Startup trigger
 window.addEventListener('DOMContentLoaded', () => {
   loadFromLocalStorage();
+  initTheme();
   setupFloatingBackground();
   updateProgressPill();
   renderStreakUI();

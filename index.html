@@ -56,6 +56,13 @@
           </select>
         </div>
         
+        <!-- Theme Toggle Button -->
+        <button id="themeToggleBtn" class="canvas-btn" style="margin: 0; padding: 0.5rem; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%;" onclick="toggleTheme()" title="Toggle Light/Dark Theme">
+          <svg id="themeToggleIcon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="icon-cyan">
+            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707m0-11.314l.707.707m10.608 10.608l.707.707M12 8a4 4 0 110 8 4 4 0 010-8z"/>
+          </svg>
+        </button>
+        
         <!-- Interactive Stats Indicators -->
         <div class="stats-bar">
           <div class="stat-item" title="Daily Streak">
@@ -211,6 +218,15 @@
                 <span class="lbl">Starred</span>
               </div>
             </div>
+            
+            <div style="margin-top: 1.5rem; width: 100%; border-top: 1px solid var(--border-glass); padding-top: 1.25rem;">
+              <button class="btn-primary" onclick="generateMoreFlashcards()" style="width: 100%; justify-content: center; font-size: 0.9rem;">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="margin-right: 0.35rem;">
+                  <path d="M12 5v14M5 12h14"/>
+                </svg>
+                Generate Extra Cards
+              </button>
+            </div>
           </div>
           
         </div>
@@ -258,7 +274,10 @@
               
               <!-- Back Face of Card -->
               <div class="card-face card-back">
-                <div id="cardPinyin" class="card-pinyin">wǒ</div>
+                <div class="card-pinyin-wrapper" style="min-height:36px; display:flex; align-items:center; justify-content:center; gap:0.5rem; margin-bottom:0.5rem;">
+                  <button id="cardPinyinToggle" class="canvas-btn" style="font-size:0.8rem; padding:0.25rem 0.6rem; border-radius:0.5rem; margin:0;" onclick="event.stopPropagation(); toggleCardPinyin()">Show Pinyin</button>
+                  <div id="cardPinyin" class="card-pinyin" style="display:none; margin:0;">wǒ</div>
+                </div>
                 <div id="cardPos" class="card-pos">Pronoun</div>
                 <div id="cardEnglish" class="card-english">I; me</div>
                 
@@ -366,6 +385,7 @@
           
           <!-- Tracing Canvas Pad Card -->
           <div class="canvas-container">
+            <div id="strokeCharSelector" class="char-selector-container" style="display:none; gap:0.5rem; justify-content:center; align-items:center; margin-bottom:1rem; flex-wrap:wrap;"></div>
             <div class="canvas-card">
               <div class="grid-overlay">
                 <svg>
@@ -642,14 +662,17 @@
       <div style="border-top:1px solid var(--border-glass); padding-top:1.25rem;">
         <h4 style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-secondary); margin-bottom:0.5rem;">Quick Writing Pad</h4>
         <div style="display:flex; gap:1.25rem; align-items:center;">
-          <div class="canvas-card" style="width:200px; height:200px;">
-            <div class="grid-overlay">
-              <svg>
-                <line x1="50%" y1="0%" x2="50%" y2="100%" />
-                <line x1="0%" y1="50%" x2="100%" y2="50%" />
-              </svg>
+          <div style="display:flex; flex-direction:column; gap:0.5rem; align-items:center;">
+            <div id="modalStrokeCharSelector" class="char-selector-container" style="display:none; gap:0.4rem; justify-content:center; align-items:center; flex-wrap:wrap;"></div>
+            <div class="canvas-card" style="width:200px; height:200px;">
+              <div class="grid-overlay">
+                <svg>
+                  <line x1="50%" y1="0%" x2="50%" y2="100%" />
+                  <line x1="0%" y1="50%" x2="100%" y2="50%" />
+                </svg>
+              </div>
+              <div id="modalStrokeWriterContainer" style="width:200px; height:200px; position:relative; z-index:2;"></div>
             </div>
-            <div id="modalStrokeWriterContainer" style="width:200px; height:200px; position:relative; z-index:2;"></div>
           </div>
           
           <div style="display:flex; flex-direction:column; gap:0.5rem;">

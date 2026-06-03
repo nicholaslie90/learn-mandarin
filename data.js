@@ -1608,3 +1608,564 @@ const HSK_ESSAYS = {
     }
   ]
 };
+
+const EXTRA_HSK_DATA = {
+  1: [
+    {
+      id: "hsk1_ex1",
+      character: "谢谢",
+      pinyin: "xièxie",
+      english: "to thank, thanks",
+      pos: "Verb / Noun",
+      exampleCn: "谢谢你帮我。",
+      examplePy: "Xièxie nǐ bāng wǒ.",
+      exampleEn: "Thank you for helping me."
+    },
+    {
+      id: "hsk1_ex2",
+      character: "再见",
+      pinyin: "zàijiàn",
+      english: "goodbye, see you again",
+      pos: "Verb",
+      exampleCn: "老师，再见！",
+      examplePy: "Lǎoshī, zàijiàn!",
+      exampleEn: "Goodbye, teacher!"
+    },
+    {
+      id: "hsk1_ex3",
+      character: "名字",
+      pinyin: "míngzi",
+      english: "name",
+      pos: "Noun",
+      exampleCn: "你的名字是什么？",
+      examplePy: "Nǐ de míngzi : shénme?",
+      exampleEn: "What is your name?"
+    },
+    {
+      id: "hsk1_ex4",
+      character: "医生",
+      pinyin: "yīshēng",
+      english: "doctor, physician",
+      pos: "Noun",
+      exampleCn: "我爸爸是医生。",
+      examplePy: "Wǒ bàba shì yīshēng.",
+      exampleEn: "My father is a doctor."
+    },
+    {
+      id: "hsk1_ex5",
+      character: "苹果",
+      pinyin: "píngguǒ",
+      english: "apple",
+      pos: "Noun",
+      exampleCn: "我喜欢吃红苹果。",
+      examplePy: "Wǒ xǐhuan chī hóng píngguǒ.",
+      exampleEn: "I like eating red apples."
+    },
+    {
+      id: "hsk1_ex6",
+      character: "下雨",
+      pinyin: "xiàyǔ",
+      english: "to rain",
+      pos: "Verb",
+      exampleCn: "外面开始下雨了。",
+      examplePy: "Wàimiàn kāishǐ xiàyǔ le.",
+      exampleEn: "It is starting to rain outside."
+    }
+  ],
+  2: [
+    {
+      id: "hsk2_ex1",
+      character: "帮助",
+      pinyin: "bāngzhù",
+      english: "to help, assist",
+      pos: "Verb / Noun",
+      exampleCn: "谢谢你对我的帮助。",
+      examplePy: "Xièxie nǐ duì wǒ de bāngzhù.",
+      exampleEn: "Thank you for your help to me."
+    },
+    {
+      id: "hsk2_ex2",
+      character: "便宜",
+      pinyin: "piányi",
+      english: "cheap, inexpensive",
+      pos: "Adjective",
+      exampleCn: "这件衣服很便宜。",
+      examplePy: "Zhè jiàn yīfu hěn piányi.",
+      exampleEn: "This piece of clothing is very cheap."
+    },
+    {
+      id: "hsk2_ex3",
+      character: "旅游",
+      pinyin: "lǚyóu",
+      english: "to travel, tourism",
+      pos: "Verb / Noun",
+      exampleCn: "我们明年去中国旅游。",
+      examplePy: "Wǒmen míngnián qù Zhōngguó lǚyóu.",
+      exampleEn: "We will go to travel in China next year."
+    },
+    {
+      id: "hsk2_ex4",
+      character: "运动",
+      pinyin: "yùndòng",
+      english: "sports, exercise, to exercise",
+      pos: "Noun / Verb",
+      exampleCn: "多运动对身体好。",
+      examplePy: "Duō yùndòng duì shēntǐ hǎo.",
+      exampleEn: "Exercising more is good for the body."
+    },
+    {
+      id: "hsk2_ex5",
+      character: "准备",
+      pinyin: "zhǔnbèi",
+      english: "to prepare, get ready",
+      pos: "Verb",
+      exampleCn: "我已经准备好考试了。",
+      examplePy: "Wǒ yǐjīng zhǔnbèi hǎo kǎoshì le.",
+      exampleEn: "I am already prepared for the exam."
+    },
+    {
+      id: "hsk2_ex6",
+      character: "服务员",
+      pinyin: "fúwùyuán",
+      english: "waiter, waitress",
+      pos: "Noun",
+      exampleCn: "服务员，请给我一杯水。",
+      examplePy: "Fúwùyuán, qǐng gěi wǒ yī bēi shuǐ.",
+      exampleEn: "Waiter, please give me a glass of water."
+    }
+  ],
+  3: [
+    {
+      id: "hsk3_ex1",
+      character: "检查",
+      pinyin: "jiǎnchá",
+      english: "to check, inspect, examine",
+      pos: "Verb / Noun",
+      exampleCn: "考试前要认真检查。",
+      examplePy: "Kǎoshì qián yào rènzhēn jiǎnchá.",
+      exampleEn: "You should check carefully before the exam."
+    },
+    {
+      id: "hsk3_ex2",
+      character: "满意",
+      pinyin: "mǎnyì",
+      english: "satisfied, pleased",
+      pos: "Adjective",
+      exampleCn: "经理对我的工作很满意。",
+      examplePy: "Jīnglǐ duì wǒ de gōngzuò hěn mǎnyì.",
+      exampleEn: "The manager is very satisfied with my work."
+    },
+    {
+      id: "hsk3_ex3",
+      character: "影响",
+      pinyin: "yǐngxiǎng",
+      english: "to influence, affect, effect",
+      pos: "Verb / Noun",
+      exampleCn: "噪音会影响大家的休息。",
+      examplePy: "Zàoyīn huì yǐngxiǎng dàjiā de xiūxi.",
+      exampleEn: "Noise will affect everyone's rest."
+    },
+    {
+      id: "hsk3_ex4",
+      character: "游戏",
+      pinyin: "yóuxì",
+      english: "game, play",
+      pos: "Noun",
+      exampleCn: "孩子们在玩电脑游戏。",
+      examplePy: "Háizimen zài wán diànnǎo yóuxì.",
+      exampleEn: "The children are playing computer games."
+    },
+    {
+      id: "hsk3_ex5",
+      character: "办法",
+      pinyin: "bànfǎ",
+      english: "method, way, solution",
+      pos: "Noun",
+      exampleCn: "这是一个解决问题的好办法。",
+      examplePy: "Zhè shì yī gè jiějué wèntí de hǎo bànfǎ.",
+      exampleEn: "This is a good way to resolve the problem."
+    },
+    {
+      id: "hsk3_ex6",
+      character: "迟到",
+      pinyin: "chídào",
+      english: "to arrive late, be late",
+      pos: "Verb",
+      exampleCn: "上班请不要迟到。",
+      examplePy: "Shàngbān qǐng búyào chídào.",
+      exampleEn: "Please do not be late for work."
+    }
+  ],
+  4: [
+    {
+      id: "hsk4_ex1",
+      character: "申请",
+      pinyin: "shēnqǐng",
+      english: "to apply for, application",
+      pos: "Verb / Noun",
+      exampleCn: "我已经提交了奖学金申请。",
+      examplePy: "Wǒ yǐjīng tíjiāo le jiǎngxuéjīn shēnqǐng.",
+      exampleEn: "I have already submitted the scholarship application."
+    },
+    {
+      id: "hsk4_ex2",
+      character: "诚实",
+      pinyin: "chéngshí",
+      english: "honest, truthfulness",
+      pos: "Adjective / Noun",
+      exampleCn: "诚实是做人的基本原则。",
+      examplePy: "Chéngshí : zuòrén de jīběn yuánzé.",
+      exampleEn: "Honesty is the fundamental principle of being a person."
+    },
+    {
+      id: "hsk4_ex3",
+      character: "暖和",
+      pinyin: "nuǎnhuo",
+      english: "warm, nice and warm",
+      pos: "Adjective",
+      exampleCn: "今天天气真暖和。",
+      examplePy: "Jīntiān tiānqì zhēn nuǎnhuo.",
+      exampleEn: "The weather is really warm today."
+    },
+    {
+      id: "hsk4_ex4",
+      character: "拒绝",
+      pinyin: "jùjué",
+      english: "to refuse, decline, reject",
+      pos: "Verb",
+      exampleCn: "他友好地拒绝了我的邀请。",
+      examplePy: "Tā yǒuhǎo de jùjué le wǒ de yāoqǐng.",
+      exampleEn: "He politely declined my invitation."
+    },
+    {
+      id: "hsk4_ex5",
+      character: "关键",
+      pinyin: "guānjiàn",
+      english: "key, crucial point",
+      pos: "Noun / Adjective",
+      exampleCn: "这是解决这个问题的关键。",
+      examplePy: "Zhè : jiějué zhège wèntí de guānjiàn.",
+      exampleEn: "This is the key to solving this problem."
+    },
+    {
+      id: "hsk4_ex6",
+      character: "羡慕",
+      pinyin: "xiànmù",
+      english: "to admire, envy",
+      pos: "Verb",
+      exampleCn: "我很羡慕他的好运气。",
+      examplePy: "Wǒ hěn xiànmù tā de hǎo yùnqi.",
+      exampleEn: "I envy his good fortune very much."
+    }
+  ],
+  5: [
+    {
+      id: "hsk5_ex1",
+      character: "彻底",
+      pinyin: "chèdǐ",
+      english: "thorough, complete",
+      pos: "Adjective / Adverb",
+      exampleCn: "这个问题需要彻底解决。",
+      examplePy: "Zhège wèntí xūyào chèdǐ jiějué.",
+      exampleEn: "This issue needs to be resolved thoroughly."
+    },
+    {
+      id: "hsk5_ex2",
+      character: "宣布",
+      pinyin: "xuānbù",
+      english: "to announce, declare",
+      pos: "Verb",
+      exampleCn: "公司宣布了新的发展计划。",
+      examplePy: "Gōngsī xuānbù le xīn de fāzhǎn jìhuà.",
+      exampleEn: "The company announced its new development plan."
+    },
+    {
+      id: "hsk5_ex3",
+      character: "矛盾",
+      pinyin: "máodùn",
+      english: "contradiction, conflict",
+      pos: "Noun / Adjective",
+      exampleCn: "他们两人之间有一些矛盾。",
+      examplePy: "Tāmen liǎng rén zhījiān yǒu yīxiē máodùn.",
+      exampleEn: "There are some conflicts between the two of them."
+    },
+    {
+      id: "hsk5_ex4",
+      character: "珍惜",
+      pinyin: "zhēnxī",
+      english: "to cherish, treasure, value",
+      pos: "Verb",
+      exampleCn: "我们要珍惜生命中的每一天。",
+      examplePy: "Wǒmen yào zhēnxī shēngmìng zhōng de měi yī tiān.",
+      exampleEn: "We must cherish every single day in our lives."
+    },
+    {
+      id: "hsk5_ex5",
+      character: "贡献",
+      pinyin: "gòngxiàn",
+      english: "to contribute, contribution",
+      pos: "Verb / Noun",
+      exampleCn: "他为科学界做出了巨大贡献。",
+      examplePy: "Tā wèi kēxuéjiè zuòchū le jùdà gòngxiàn.",
+      exampleEn: "He made a huge contribution to the scientific community."
+    },
+    {
+      id: "hsk5_ex6",
+      character: "克服",
+      pinyin: "kèfú",
+      english: "to overcome, conquer",
+      pos: "Verb",
+      exampleCn: "我们必须克服眼前的困难。",
+      examplePy: "Wǒmen bìxū kèfú yǎnqián de kùnnan.",
+      exampleEn: "We must overcome the difficulties in front of us."
+    }
+  ],
+  6: [
+    {
+      id: "hsk6_ex1",
+      character: "捍卫",
+      pinyin: "hànwèi",
+      english: "to defend, guard, protect",
+      pos: "Verb",
+      exampleCn: "我们必须捍卫国家的尊严。",
+      examplePy: "Wǒmen bìxū hànwèi guójiā de zūnyán.",
+      exampleEn: "We must defend the dignity of our nation."
+    },
+    {
+      id: "hsk6_ex2",
+      character: "频繁",
+      pinyin: "pínfán",
+      english: "frequent, frequently",
+      pos: "Adjective / Adverb",
+      exampleCn: "两国之间进行了频繁的外交交流。",
+      examplePy: "Liǎng guó zhījiān jìnxíng le pínfán de wàijiāo jiāolíu.",
+      exampleEn: "Frequent diplomatic exchanges have taken place between the two countries."
+    },
+    {
+      id: "hsk6_ex3",
+      character: "消除",
+      pinyin: "xiāochú",
+      english: "to eliminate, dispel, remove",
+      pos: "Verb",
+      exampleCn: "这些措施有助于消除安全隐患。",
+      examplePy: "Zhèxiē cuòshī yǒuzhùyú xiāochú ānquán yǐnhuàn.",
+      exampleEn: "These measures help eliminate safety hazards."
+    },
+    {
+      id: "hsk6_ex4",
+      character: "赞助",
+      pinyin: "zànzhù",
+      english: "to sponsor, support (financially)",
+      pos: "Verb / Noun",
+      exampleCn: "这家企业赞助了本次体育赛事。",
+      examplePy: "Zhè jiā qǐyè zànzhù le běncì tǐyù sàishì.",
+      exampleEn: "This enterprise sponsored this sports event."
+    },
+    {
+      id: "hsk6_ex5",
+      character: "妥协",
+      pinyin: "tuǒxié",
+      english: "to compromise, meet halfway",
+      pos: "Verb / Noun",
+      exampleCn: "在原则问题上，我们绝不妥协。",
+      examplePy: "Zài yuánzé wèntí shang, wǒmen juébù tuǒxié.",
+      exampleEn: "On matters of principle, we will never compromise."
+    },
+    {
+      id: "hsk6_ex6",
+      character: "谴责",
+      pinyin: "qiǎnzé",
+      english: "to condemn, denounce",
+      pos: "Verb / Noun",
+      exampleCn: "国际社会对这种暴力行为表示谴责。",
+      examplePy: "Guójì shèhuì duì zhèzhǒng bàolì xíngwéi biǎoshì qiǎnzé.",
+      exampleEn: "The international community expressed condemnation for this violent act."
+    }
+  ],
+  7: [
+    {
+      id: "hsk7_ex1",
+      character: "阐述",
+      pinyin: "chǎnshù",
+      english: "to elaborate, expound",
+      pos: "Verb",
+      exampleCn: "报告中详细阐述了这一观点。",
+      examplePy: "Bàogào zhōng xiángxì chǎnshù le zhè yī guāndiǎn.",
+      exampleEn: "This viewpoint was elaborated in detail in the report."
+    },
+    {
+      id: "hsk7_ex2",
+      character: "颠覆",
+      pinyin: "diānfù",
+      english: "to subvert, overturn",
+      pos: "Verb",
+      exampleCn: "这个发现颠覆了传统科学理论。",
+      examplePy: "Zhège fāxiàn diānfù le chuántǒng kēxué lǐlùn.",
+      exampleEn: "This discovery subverted traditional scientific theories."
+    },
+    {
+      id: "hsk7_ex3",
+      character: "凝聚",
+      pinyin: "níngjù",
+      english: "to cohere, condense, build up",
+      pos: "Verb",
+      exampleCn: "这个项目凝聚了全组人的心血。",
+      examplePy: "Zhège xiàngmù níngjù le quán zǔ rén de xīnxuè.",
+      exampleEn: "This project condensed the efforts of the entire team."
+    },
+    {
+      id: "hsk7_ex4",
+      character: "偏见",
+      pinyin: "piānjiàn",
+      english: "prejudice, bias",
+      pos: "Noun",
+      exampleCn: "我们应该消除对他人的偏见。",
+      examplePy: "Wǒmen yīnggāi xiāochú duì tārén de piānjiàn.",
+      exampleEn: "We should eliminate prejudice against others."
+    },
+    {
+      id: "hsk7_ex5",
+      character: "繁衍",
+      pinyin: "fányǎn",
+      english: "to multiply, reproduce",
+      pos: "Verb",
+      exampleCn: "生物在这里得以繁衍后代。",
+      examplePy: "Shēngwù zài zhèlǐ déyǐ fányǎn hòudài.",
+      exampleEn: "Organisms are able to multiply and reproduce here."
+    },
+    {
+      id: "hsk7_ex6",
+      character: "脉络",
+      pinyin: "màiluò",
+      english: "train of thought, thread, context",
+      pos: "Noun",
+      exampleCn: "我们需要理清这篇文章的脉络。",
+      examplePy: "Wǒmen yūyào lǐqīng zhè piān wénzhāng de màiluò.",
+      exampleEn: "We need to clarify the thread of this article."
+    }
+  ],
+  8: [
+    {
+      id: "hsk8_ex1",
+      character: "摩擦",
+      pinyin: "mócā",
+      english: "friction, clash, conflict",
+      pos: "Noun / Verb",
+      exampleCn: "两国之间有一些边境摩擦。",
+      examplePy: "Liǎng guó zhījiān yǒu yīxiē biānjìng mócā.",
+      exampleEn: "There is some border friction between the two countries."
+    },
+    {
+      id: "hsk8_ex2",
+      character: "拓宽",
+      pinyin: "tuòkuān",
+      english: "to broaden, widen",
+      pos: "Verb",
+      exampleCn: "读书可以拓宽我们的视野。",
+      examplePy: "Dúshū kěyǐ tuòkuān wǒmen de shìyě.",
+      exampleEn: "Reading can broaden our horizons."
+    },
+    {
+      id: "hsk8_ex3",
+      character: "部署",
+      pinyin: "bùshǔ",
+      english: "to deploy, arrange",
+      pos: "Verb / Noun",
+      exampleCn: "政府正在部署下一步的安全工作。",
+      examplePy: "Zhèngfǔ zhèngzài bùshǔ xià yī bù de ānquán gōngzuò.",
+      exampleEn: "The government is deploying the next step of security work."
+    },
+    {
+      id: "hsk8_ex4",
+      character: "融洽",
+      pinyin: "róngqià",
+      english: "harmonious, friendly",
+      pos: "Adjective",
+      exampleCn: "同事们相处得非常融洽。",
+      examplePy: "Tóngshìmen xiāngchǔ de fēicháng róngqià.",
+      exampleEn: "The colleagues get along with each other very harmoniously."
+    },
+    {
+      id: "hsk8_ex5",
+      character: "博弈",
+      pinyin: "bóyì",
+      english: "game, contest, play",
+      pos: "Noun / Verb",
+      exampleCn: "这是两个大国之间的战略博弈。",
+      examplePy: "Zhè shì liǎng gè dàguó zhījiān de zhànlüè bóyì.",
+      exampleEn: "This is a strategic game between two major countries."
+    },
+    {
+      id: "hsk8_ex6",
+      character: "妥协",
+      pinyin: "tuǒxié",
+      english: "to compromise, meet halfway",
+      pos: "Verb / Noun",
+      exampleCn: "为了大局，各方达成了妥协。",
+      examplePy: "Wèile dàjú, gèfāng dáchéng le tuǒxié.",
+      exampleEn: "For the sake of the big picture, all parties reached a compromise."
+    }
+  ],
+  9: [
+    {
+      id: "hsk9_ex1",
+      character: "遏制",
+      pinyin: "èzhì",
+      english: "to contain, restrain, hold back",
+      pos: "Verb",
+      exampleCn: "必须采取有效措施遏制通货膨胀。",
+      examplePy: "Bìxū cǎiqǔ yǒuxiào cuòshī èzhì tōnghuò péngzhàng.",
+      exampleEn: "Effective measures must be taken to contain inflation."
+    },
+    {
+      id: "hsk9_ex2",
+      character: "跨越",
+      pinyin: "kuàyuè",
+      english: "to leap over, span, transcend",
+      pos: "Verb",
+      exampleCn: "这是一项跨越世纪的伟大工程。",
+      examplePy: "Zhè shì yī xiàng kuàyuè shìjì de wěidà gōngchéng.",
+      exampleEn: "This is a great project spanning centuries."
+    },
+    {
+      id: "hsk9_ex3",
+      character: "演变",
+      pinyin: "yǎnbiàn",
+      english: "to evolve, change, evolution",
+      pos: "Verb / Noun",
+      exampleCn: "生命演变的过程非常漫长。",
+      examplePy: "Shēngwù yǎnbiàn de guòchéng fēicháng màncháng.",
+      exampleEn: "The process of life evolution is very long."
+    },
+    {
+      id: "hsk9_ex4",
+      character: "抉择",
+      pinyin: "juézé",
+      english: "choice, to choose (critical)",
+      pos: "Noun / Verb",
+      exampleCn: "在人生的十字路口，他做出了艰难的抉择。",
+      examplePy: "Zài rénshēng de shízìlùkǒu, tā zuòchū le jiānnán de juézé.",
+      exampleEn: "At the crossroads of life, he made a difficult choice."
+    },
+    {
+      id: "hsk9_ex5",
+      character: "颠覆",
+      pinyin: "diānfù",
+      english: "to overturn, subvert",
+      pos: "Verb",
+      exampleCn: "他的理论彻底颠覆了历史常识。",
+      examplePy: "Tā de lǐlùn chèdǐ diānfù le lìshǐ chángshí.",
+      exampleEn: "His theory completely subverted historical common sense."
+    },
+    {
+      id: "hsk9_ex6",
+      character: "践行",
+      pinyin: "jiànxíng",
+      english: "to practice, fulfill (promises)",
+      pos: "Verb",
+      exampleCn: "我们要用实际行动践行诺言。",
+      examplePy: "Wǒmen yào yòng shíjì xíngdòng jiànxíng nuòyán.",
+      exampleEn: "We must practice our promises with actual actions."
+    }
+  ]
+};
