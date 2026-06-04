@@ -1499,6 +1499,58 @@ function openWordDetails(word) {
       };
     }
   }
+
+  // Dynamic Lookup for characters/words from Reading Essay not in main database
+  if (word.id.startsWith('mock_') && word.pinyin === "Lookup...") {
+    document.getElementById('modalPinyin').textContent = "Loading...";
+    document.getElementById('modalEnglish').textContent = "Translating...";
+    
+    const charEncoded = encodeURIComponent(word.character);
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=zh-CN&tl=en&dt=t&dt=rm&q=${charEncoded}`;
+    
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        let translation = "Character from reading essay";
+        let transliteration = "Lookup...";
+        
+        try {
+          if (data && data[0]) {
+            let transParts = [];
+            let pinyinPart = "";
+            
+            data[0].forEach(item => {
+              if (item[0]) transParts.push(item[0]);
+              if (item[3]) pinyinPart = item[3];
+            });
+            
+            if (transParts.length > 0) translation = transParts.join(" ");
+            if (pinyinPart) transliteration = pinyinPart.toLowerCase();
+          }
+        } catch (err) {
+          console.error("Error parsing translation data", err);
+        }
+        
+        word.pinyin = transliteration;
+        word.english = translation;
+        word.examplePy = transliteration;
+        word.exampleEn = translation;
+        
+        if (document.getElementById('modalChar').textContent === word.character) {
+          document.getElementById('modalPinyin').textContent = transliteration;
+          document.getElementById('modalEnglish').textContent = translation;
+          document.getElementById('modalExPy').textContent = transliteration;
+          document.getElementById('modalExEn').textContent = translation;
+        }
+      })
+      .catch(err => {
+        console.error("Error fetching translation", err);
+        if (document.getElementById('modalChar').textContent === word.character) {
+          document.getElementById('modalPinyin').textContent = "Lookup failed";
+          document.getElementById('modalEnglish').textContent = "Could not retrieve meaning";
+        }
+      });
+  }
   
   // HTML Dialog element trigger
   modal.showModal();
@@ -1688,12 +1740,26 @@ function renderEssay() {
 
 function handleEssayWordClick(char) {
   let foundWord = null;
+  
+  // 1. Search in primary HSK_DATA
   for (const level in HSK_DATA) {
     const list = HSK_DATA[level];
     const match = list.find(w => w.character === char);
     if (match) {
       foundWord = match;
       break;
+    }
+  }
+  
+  // 2. Search in EXTRA_HSK_DATA if not found in primary
+  if (!foundWord) {
+    for (const level in EXTRA_HSK_DATA) {
+      const list = EXTRA_HSK_DATA[level];
+      const match = list.find(w => w.character === char);
+      if (match) {
+        foundWord = match;
+        break;
+      }
     }
   }
   
