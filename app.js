@@ -1054,9 +1054,20 @@ function initStrokePractice() {
   strokeWordList = HSK_DATA[state.currentLevel] || [];
   strokeWordIndex = 0;
   
-  if (!canvasHelper) {
-    canvasHelper = new HanziWriterManager('strokeWriterContainer', 320);
+  // Calculate target canvas size based on mobile viewport width dynamically
+  const targetSize = Math.min(320, window.innerWidth - 48);
+  const container = document.getElementById('strokeWriterContainer');
+  if (container) {
+    container.style.width = `${targetSize}px`;
+    container.style.height = `${targetSize}px`;
+    const card = container.closest('.canvas-card');
+    if (card) {
+      card.style.width = `${targetSize}px`;
+      card.style.height = `${targetSize}px`;
+    }
   }
+  
+  canvasHelper = new HanziWriterManager('strokeWriterContainer', targetSize);
   
   renderStrokeWord();
 }
