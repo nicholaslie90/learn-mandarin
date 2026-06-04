@@ -1720,16 +1720,36 @@ body.light-theme select {
     gap: 0.75rem;
   }
   .header-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 0.75rem;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
   }
   .level-selector-wrapper {
     width: 100%;
-    justify-content: center;
+    order: -2;
+    display: flex;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    padding: 0.35rem 0.5rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.5rem;
+  }
+  .level-selector-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .level-btn {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
   .stats-bar {
-    width: 100%;
+    width: auto;
     justify-content: space-around;
   }
 }
@@ -1764,11 +1784,17 @@ body.light-theme select {
     padding: 1.15rem;
   }
   .voice-selector-wrapper {
-    width: 100%;
+    flex: 1;
     justify-content: center;
+    min-width: 120px;
   }
   .voice-select {
     width: 100%;
+  }
+  .stats-bar {
+    width: 100%;
+    order: 3;
+    justify-content: space-around;
   }
 }
 
