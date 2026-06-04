@@ -1421,6 +1421,48 @@ const HSK_ESSAYS = {
           correct: 0
         }
       ]
+    },
+    {
+      id: "essay_1_2",
+      titleCn: "我的朋友",
+      titlePy: "Wǒ de péngyou",
+      titleEn: "My Friend",
+      contentCn: "我叫大卫。我是美国人。在学校，我有一个很好的中国朋友，他叫王明。他二十岁，很喜欢看书和喝茶。我们星期天一起去商店买东西。",
+      contentPy: "Wǒ jiào Dàwèi. Wǒ shì Měiguórén. Zài xuéxiào, wǒ yǒu yī gè hěn hǎo de Zhōngguó péngyou, tā jiào Wáng Míng. Tā èrshí suì, hěn xǐhuan kànshū hé hē chá. Wǒmen xīngqītiān yīqǐ qù shāngdiàn mǎi dōngxi.",
+      contentEn: "My name is David. I am American. At school, I have a very good Chinese friend, his name is Wang Ming. He is twenty years old, and he likes reading books and drinking tea. We go to the store together on Sundays to buy things.",
+      questions: [
+        {
+          q: "王明喜欢做什么？",
+          options: ["看书和喝茶", "跑步和睡觉", "做饭"],
+          correct: 0
+        },
+        {
+          q: "他们星期天去哪里？",
+          options: ["学校", "商店", "朋友家"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_1_3",
+      titleCn: "去餐馆吃饭",
+      titlePy: "Qù cānguǎn chīfàn",
+      titleEn: "Eating at a Restaurant",
+      contentCn: "今天下午，我和妈妈去一家中餐馆吃饭。那里的菜很好吃，茶很好喝。我们要了米饭、鱼和一杯热茶。服务员是一个年轻的姑娘，她很高兴认识我们。",
+      contentPy: "Jīntiān xiàwǔ, wǒ hé māma qù yī jiā Zhōng cānguǎn chīfàn. Nàlǐ de cài hěn hǎochī, chá hěn hǎohē. Wǒmen yào le mǐfàn, yú hé yī bēi rè chá. Fúwùyuán shì yī gè niánqīng de gūniang, tā hěn gāoxìng rènshi wǒmen.",
+      contentEn: "This afternoon, my mother and I went to a Chinese restaurant to eat. The food there is very delicious, and the tea is very good. We ordered rice, fish, and a cup of hot tea. The waiter is a young girl, and she was very happy to meet us.",
+      questions: [
+        {
+          q: "他们今天去哪里？",
+          options: ["学校", "商店", "中餐馆"],
+          correct: 2
+        },
+        {
+          q: "他们要了什么菜和饮料？",
+          options: ["米饭、鱼和热茶", "面条和苹果汁", "蛋糕和咖啡"],
+          correct: 0
+        }
+      ]
     }
   ],
   2: [
@@ -1444,6 +1486,48 @@ const HSK_ESSAYS = {
           correct: 1
         }
       ]
+    },
+    {
+      id: "essay_2_2",
+      titleCn: "学习汉语",
+      titlePy: "Xuéxí Hànyǔ",
+      titleEn: "Learning Chinese",
+      contentCn: "我去年开始学习汉语。我觉得写汉字有点儿难，但是说汉语很有意思。我的汉语老师是一位非常有耐心的女老师。她每天帮助我们练习发音。我希望明年去中国旅游。",
+      contentPy: "Wǒ qùnián kāishǐ xuéxí Hànyǔ. Wǒ juéde xiě Hànzì yǒudiǎnr nán, dànshì shuō Hànyǔ hěn yǒu yìsi. Wǒ de Hànyǔ lǎoshī shì yī wèi fēicháng yǒu nàixīn de nǚ lǎoshī. Tā měitiān bāngzhù wǒmen liànxí fāyīn. Wǒ xīwàng míngnián qù Zhōngguó lǚyóu.",
+      contentEn: "I started learning Chinese last year. I think writing Chinese characters is a bit difficult, but speaking Chinese is very interesting. My Chinese teacher is a very patient female teacher. She helps us practice pronunciation every day. I hope to travel to China next year.",
+      questions: [
+        {
+          q: "说话人觉得什么有点儿难？",
+          options: ["听汉语", "说汉语", "写汉字"],
+          correct: 2
+        },
+        {
+          q: "老师每天帮助他们做什么？",
+          options: ["练习发音", "写作业", "做运动"],
+          correct: 0
+        }
+      ]
+    },
+    {
+      id: "essay_2_3",
+      titleCn: "我的新工作",
+      titlePy: "Wǒ de xīn gōngzuò",
+      titleEn: "My New Job",
+      contentCn: "上个月，我换了一份新工作。我在一家电脑公司上班。虽然工作有点儿累，但我的同事们都非常友好，经常帮助我。公司离我的家很近，每天走路十五分钟就到了。",
+      contentPy: "Shàng gè yuè, wǒ huàn le yī fèn xīn gōngzuò. Wǒ zài yī jiā diànnǎo gōngsī shàngbān. Suīrán gōngzuò yǒudiǎnr lèi, dàn wǒ de tóngshìmen dōu fēicháng yǒuhǎo, jīngcháng bāngzhù wǒ. Gōngsī lí wǒ de jiā hěn jìn, měitiān zǒulù shíwǔ fēnzhōng jiù dào le.",
+      contentEn: "Last month, I changed to a new job. I work in a computer company. Although the work is a bit tiring, my colleagues are very friendly and often help me. The company is very close to my house; it only takes fifteen minutes of walking to get there every day.",
+      questions: [
+        {
+          q: "他现在在什么公司上班？",
+          options: ["电脑公司", "衣服公司", "茶水公司"],
+          correct: 0
+        },
+        {
+          q: "他每天怎么去上班？",
+          options: ["坐公共汽车", "骑自行车", "走路"],
+          correct: 2
+        }
+      ]
     }
   ],
   3: [
@@ -1453,7 +1537,7 @@ const HSK_ESSAYS = {
       titlePy: "Jiànkāng de shēnghuó xíguàn",
       titleEn: "Healthy Life Habits",
       contentCn: "以前，我习惯晚睡晚起，身体不太健康，经常感冒。我的邻居是一位医生，他告诉我一个办法：每天早起跑步，多吃新鲜水果，多喝水。我决定做出改变。现在，我感冒少了，在办公室工作也更热情了。",
-      contentPy: "Yǐqián, wǒ xíguàn wǎn shuì wǎn qǐ, shēntǐ bú tài jiànkāng, jīngcháng gǎnmào. Wǒ de línjū shì yī wèi yīshēng, tā gàosu wǒ yī gè bànfǎ: měitiān zǎoqǐ pǎobù, duō chī xīnxiān shuǐguǒ, duō hē shuǐ. Wǒ juédìng zuò chū gǎibiàn. Xiànzài, wǒ gǎnmào shǎo le, zài bàngōngshì gōngzuò yě gèng rèqíng le.",
+      contentPy: "Yǐqián, wǒ xíguàn wǎn shuì wǎn qǐ, shēntǐ bú tai jiànkāng, jīngcháng gǎnmào. Wǒ de línjū shì yī wèi yīshēng, tā gàosu wǒ yī gè bànfǎ: měitiān zǎoqǐ pǎobù, duō chī xīnxiān shuǐguǒ, duō hē shuǐ. Wǒ juédìng zuò chū gǎibiàn. Xiànzài, wǒ gǎnmào shǎo le, zài bàngōngshì gōngzuò yě gèng rèqíng le.",
       contentEn: "Previously, I was accustomed to sleeping late and waking up late; my health was not very good, and I frequently caught colds. My neighbor is a doctor. He told me a solution: wake up early to run every day, eat more fresh fruit, and drink more water. I decided to make a change. Now, I have fewer colds, and I work in the office with more enthusiasm.",
       questions: [
         {
@@ -1467,6 +1551,48 @@ const HSK_ESSAYS = {
           correct: 2
         }
       ]
+    },
+    {
+      id: "essay_3_2",
+      titleCn: "爬山与健康",
+      titlePy: "Páshān yǔ jiànkāng",
+      titleEn: "Climbing Mountains and Health",
+      contentCn: "秋天是运动的好季节。上个周末，我和我的老朋友一起去爬了香山。山上的空气非常新鲜，树叶也红了，非常漂亮。爬山虽然很累，但是对身体很好。我们决定以后每个月都来一次。",
+      contentPy: "Qiūtiān shì yùndòng de hǎo jìjié. Shàng gè zhōumò, wǒ hé wǒ de lǎo péngyou yīqǐ qù pá le Xiāngshān. Shānshàng de kōngqì fēicháng xīnxiān, shùyè yě hóng le, fēicháng piàoliang. Páshān suīrán hěn lèi, dànshì duì shēntǐ hěn hǎo. Wǒmen juédìng yǐhòu měi gè yuè dōu lái yī cì.",
+      contentEn: "Autumn is a good season for sports. Last weekend, I went to climb Mount Xiang with my old friend. The air on the mountain was very fresh, and the leaves were red and very beautiful. Although climbing is tiring, it is very good for health. We decided to come here once a month in the future.",
+      questions: [
+        {
+          q: "他上个周末去做了什么？",
+          options: ["逛商店", "爬香山", "去看医生"],
+          correct: 1
+        },
+        {
+          q: "他们决定以后多久来一次？",
+          options: ["每周一次", "每年一次", "每个月一次"],
+          correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_3_3",
+      titleCn: "难忘的旅行",
+      titlePy: "Nánwàng de lǚxíng",
+      titleEn: "An Unforgettable Journey",
+      contentCn: "去年夏天，我独自坐火车去西安旅游。西安是一座非常有名的历史古城。在西安，我参观了兵马俑，还品尝了当地的特色面条。这次旅行让我学到了很多关于中国历史的知识，真的很难忘。",
+      contentPy: "Qùnián xiàwǔ, wǒ dúzì zuò huǒchē qù Xī'ān lǚyóu. Xī'ān shì yī zuò fēicháng yǒumíng de lìshǐ gǔchéng. Zài Xī'ān, wǒ cānguān le bīngmǎyǒng, hái pǐncháng le dāngdì de tèsè miàotiáo. Zhè cì lǚxíng ràng wǒ xué dào le hěn duō guānyú Zhōngguó lìshǐ de zhīshi, zhēnde hěn nánwàng.",
+      contentEn: "Last summer, I traveled to Xi'an alone by train. Xi'an is a very famous ancient historical city. In Xi'an, I visited the Terracotta Army and also tasted local specialty noodles. This trip taught me a lot of knowledge about Chinese history; it was truly unforgettable.",
+      questions: [
+        {
+          q: "他是怎么去西安的？",
+          options: ["坐飞机", "坐火车", "骑自行车"],
+          correct: 1
+        },
+        {
+          q: "他在西安参观了什么？",
+          options: ["故宫", "长城", "兵马俑"],
+          correct: 2
+        }
+      ]
     }
   ],
   4: [
@@ -1475,7 +1601,7 @@ const HSK_ESSAYS = {
       titleCn: "诚实与爱情",
       titlePy: "Chéngshí yǔ àiqíng",
       titleEn: "Honesty and Love",
-      contentCn: "在爱情中，最关键的品质是诚实。虽然抱歉的言语可以重新获得谅解，但经常拒绝沟通会导致困难。偶尔，我们需要写信表达对彼此的爱，这比任何表格或计划都更能暖和人心。",
+      contentCn: "在爱情中，最关键的品质是诚实。虽然抱歉的言语可以重新获得谅解，但经常拒绝沟通会导致困难。偶尔，我们需要写信表达对彼此 of 的爱，这比任何表格或计划都更能暖和人心。",
       contentPy: "Zài àiqíng zhōng, zuì guānjiàn de pǐnzhì shì chéngshí. Suīrán bàoqiàn de yányǔ kěyǐ chóngxīn huòdé liàngjiě, dàn jīngcháng jùjué gōutōng huì dǎozhì kùnnan. Ǒu'ěr, wǒmen xūyào xiěxìn biǎodá duì bǐcǐ de ài, zhè bǐ rènhé biǎogé huò jìhuà dōu gèng néng nuǎnhuo rénxīn.",
       contentEn: "In love, the most crucial quality is honesty. Although apologetic words can regain understanding, frequently refusing to communicate leads to difficulties. Occasionally, we need to write letters to express our love for each other, which warms hearts more than any forms or plans.",
       questions: [
@@ -1490,6 +1616,48 @@ const HSK_ESSAYS = {
           correct: 1
         }
       ]
+    },
+    {
+      id: "essay_4_2",
+      titleCn: "习惯与成功",
+      titlePy: "Xíguàn yǔ chénggōng",
+      titleEn: "Habits and Success",
+      contentCn: "成功往往取决于良好的日常习惯。许多研究表明，坚持早起和阅读的人更容易在事业上取得成就。优秀的人不仅善于制订计划，而且能够严格执行。偶尔的失败并不可怕，关键是要在失败中总结经验。",
+      contentPy: "Chénggōng wǎngwǎng qǔjué yú liánghǎo de rìcháng xíguàn. Xǔduō yánjiū biǎomíng, jiānchí zǎoqǐ hé yuèdú de rén gèng róngyì zài shìyè shàng qǔdé chéngjiù. Yōuxiù de rén bùjǐn shànyú zhìdìng jìhuà, érqiě nénggòu yángé zhíxíng. Ǒu'ěr de shībài bìng bù kěpà, guānjiàn shì yào zài shībài zhōng zǒngjié jīngyàn.",
+      contentEn: "Success often depends on good daily habits. Many studies show that people who persist in waking up early and reading are more likely to achieve accomplishments in their careers. Excellent people are not only good at making plans but can also execute them strictly. Occasional failure is not scary; the key is to summarize experiences from failures.",
+      questions: [
+        {
+          q: "成功往往取决于什么？",
+          options: ["良好的日常习惯", "运气 and 时间", "抱歉的言语"],
+          correct: 0
+        },
+        {
+          q: "偶尔失败时，关键要做什么？",
+          options: ["彻底放弃", "总结经验", "拒绝沟通"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_4_3",
+      titleCn: "友谊的价值",
+      titlePy: "Yǒuyì de jiàzhí",
+      titleEn: "The Value of Friendship",
+      contentCn: "友谊在生活中就像阳光一样重要。真正的朋友不仅会在你开心时与你分享快乐，还会在你遇到麻烦时主动伸出双手。在人际交往中，保持礼貌和幽默可以帮助我们结识更多新朋友，让生活变得更加精彩。",
+      contentPy: "Yǒuyì zài shēnghuó zhōng jiù xiàng yángguāng yīyàng zhòngyào. Zhēnzhèng de péngyou bùjǐn huì zài nǐ kāixīn shí yǔ nǐ fēnxiǎng kuàilè, hái huì zài nǐ yùdào máfan shí zhǔdòng shēnchū shuāngshǒu. Zài rénjì jiāowǎng zhōng, bǎochí lǐmào hé yōumò kěyǐ bāngzhù wǒmen jiéshí gèng duō xīn péngyou, ràng shēnghuó biàn de gèngjiā jīngcǎi.",
+      contentEn: "Friendship is as important as sunshine in life. True friends not only share happiness with you when you are happy but also take initiative to extend their hands when you face trouble. In interpersonal communication, maintaining politeness and humor can help us meet more new friends and make life more exciting.",
+      questions: [
+        {
+          q: "真正的朋友在你遇到麻烦时会做什么？",
+          options: ["拒绝谅解", "主动伸出双手", "写表格 and 计划"],
+          correct: 1
+        },
+        {
+          q: "怎样可以帮助我们结识更多新朋友？",
+          options: ["保持礼貌和幽默", "减少与人沟通", "经常向人表示抱歉"],
+          correct: 0
+        }
+      ]
     }
   ],
   5: [
@@ -1498,7 +1666,7 @@ const HSK_ESSAYS = {
       titleCn: "年轻人的独立与繁荣",
       titlePy: "Niánqīngrén de dúlì yǔ fánróng",
       titleEn: "Independence and Prosperity of Youth",
-      contentCn: "现在的年轻人更追求生活独立，他们认为应该把握时代机会。当面临激烈竞争时，他们不会慌张，而是通过调整逻辑和思维，彻底解决问题。他们独特的生活方式也促进了社会的多元繁荣。",
+      contentCn: "现在的年轻人更追求生活独立，他们认为应该把握时代机会。当面临激烈竞争时，他们不会慌张，而是通过调整逻辑 and 思维，彻底解决问题。他们独特的生活方式也促进了社会的多元繁荣。",
       contentPy: "Xiànzài de niánqīngrén gèng zhuīqiú shēnghuó dúlì, tāmen rènwéi yīnggāi bǎwò shídài jīhuì. Dāng miànlín jīliè jìngzhēng shí, tāmen búhuì huāngzhāng, érshì tōngguò tiáozhěng luójī hé sīwéi, chèdǐ jiějué wèntí. Tāmen dútè de shēnghuó fāngshì yě cùjìn le shèhuì de duōyuán fánróng.",
       contentEn: "Young people nowadays pursue independent living more; they believe they should grasp opportunities of the times. When facing intense competition, they do not panic, but solve problems thoroughly by adjusting their logic and thinking. Their unique lifestyles also promote multi-dimensional social prosperity.",
       questions: [
@@ -1513,6 +1681,48 @@ const HSK_ESSAYS = {
           correct: 0
         }
       ]
+    },
+    {
+      id: "essay_5_2",
+      titleCn: "读书与思考",
+      titlePy: "Dúshū yǔ sīkǎo",
+      titleEn: "Reading and Thinking",
+      contentCn: "在现代社会，人们习惯碎片化的阅读，但这往往会削弱系统思考的能力。深度阅读需要我们集中注意力，带着疑问去探究背后的逻辑。通过将书中的内容与实际生活进行对比，我们能更深刻地吸收知识，从而拓宽个人的眼界。",
+      contentPy: "Zài xiàndài shèhuì, rénmen xíguàn suìpiànhuà de yuèdú, dàn zhè wǎngwǎng huì xuēruò xìtǒng sīkǎo de nénglì. Shēndù yuèdú xūyào wǒmen jízhōng zhùyìlì, dàizhe yíwèn qù tànjiū bèihòu de luójī. Tōngguò jiāng shūzhōng de nèiróng yǔ shíjì shēnghuó jìnxíng duìbǐ, wǒmen néng gèng shēnkè de xīshōu zhīshi, cóng'ér tuòkuān gèrén de yǎnjiè.",
+      contentEn: "In modern society, people are used to fragmented reading, but this often weakens the ability for systematic thinking. Deep reading requires us to focus our attention and explore the underlying logic with questions. By comparing the book's content with real life, we can absorb knowledge more deeply, thereby broadening our personal horizons.",
+      questions: [
+        {
+          q: "碎片化阅读往往会带来什么负面影响？",
+          options: ["增加生活成本", "削弱系统思考能力", "产生焦虑和慌张"],
+          correct: 1
+        },
+        {
+          q: "深度阅读需要我们怎么做？",
+          options: ["快速浏览过一遍", "集中注意力，带着疑问探究", "只看文章的标题"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_5_3",
+      titleCn: "职场沟通的艺术",
+      titlePy: "Zhíchǎng gōutōng de yìshù",
+      titleEn: "The Art of Workplace Communication",
+      contentCn: "在职场中，优秀的沟通技巧是职业发展的重要支柱。沟通不仅是表达自己的想法，更包含真诚的倾听。当同事之间存在工作分歧时，冷静地进行逻辑 analysis 和客观探讨，有助于消除不必要的误会，并快速达成高效合作的共识。",
+      contentPy: "Zài zhíchǎng zhōng, yōuxiù de gōutōng jìqiǎo API shì zhíyè fāzhǎn de zhòngyào zhīzhù. Gōutōng bùjǐn shì biǎodá zìjǐ de xiǎngfǎ, gèng bāohán zhēnchéng de qīngtīng. Dāng tóngshì zhījiān cúnzài gōngzuò fēnqí shí, lěngjìng de jìnxíng luójī fēnxī hé kèguān tǎotán, yǒuzhù yú xiāochú bú bìyào de wùhuì, bìng kuàisù dáchéng gāoxiào hézuò de gòngshí.",
+      contentEn: "In the workplace, excellent communication skills are an important pillar of career development. Communication is not only expressing one's own ideas but also includes sincere listening. When there are work differences among colleagues, calmly conducting logical analysis and objective discussion helps eliminate unnecessary misunderstandings and quickly reach a consensus on efficient cooperation.",
+      questions: [
+        {
+          q: "沟通除了表达自己的想法，还包含什么？",
+          options: ["真诚的倾听", "无条件的服从", "长篇大论的报告"],
+          correct: 0
+        },
+        {
+          q: "同事之间有分歧时应该怎么办？",
+          options: ["大声争吵树立权威", "选择回避彻底忽视", "冷静地进行逻辑分析和探讨"],
+          correct: 2
+        }
+      ]
     }
   ],
   6: [
@@ -1522,7 +1732,7 @@ const HSK_ESSAYS = {
       titlePy: "Kējì chuàngxīn yǔ jīngjì juéqǐ",
       titleEn: "Tech Innovation and Economic Rise",
       contentCn: "随着科技创新的崛起，全球瞩目的经济繁荣正在经历宏观层面的构想与调整。在筹备重大决策时，我们应该衡量发展过程中的纽带关系。虽然会遇到很多颠簸甚至崩溃的尴尬时刻，但只要遵循客观规律，决不向困难妥协，必能弥补不足，成就未来。",
-      contentPy: "Suízhe kējì chuàngxīn de juéqǐ, quánqiú zhǔmù de jīngjì fánróng zhèngzài jīnglì hóngguān céngmiàn de gòuxiǎng yǔ tiáozhěng. Zài chóubèi zhòngdà juécè shí, wǒmen yīnggāi héngliáng fāzhǎn guòchéng zhōng de niǔdài guānxì. Suīrán huì yùdào hěn duō diānbǒ shènzhì bēngkuì de gāngà shíkè, dàn zhǐyào zūnxún kèguān guīlǜ, jué bù xiàng kùnnan tuǒxié, bì néng míbǔ bùzú, chéngjiù wèilái.",
+      contentPy: "Suízhe kējì chuàngxīn de juéqǐ, quánqiú zhǔmù de jīngjì fánróng zhèngzài jīnglì hóngguān céngmiàn de gòuxiǎng yǔ tiáozhěng. Zài chóubèi zhòngdà juécè shí, wǒmen yīnggāi héngliáng fāzhǎn guòchéng zhōng de niǔdài guānxì. Suīrán huì yùdào hěn duō diānbǒ shènzhì bēngkuì de gāngà shíkè, dàn zhǐyào zūnxún kèguān guīlǜ, jué bù xiàng kùnnan tuǒxié, bì néng míbǔ bùzú, xoéxí wèilái.",
       contentEn: "With the rise of scientific and technological innovation, globally watched economic prosperity is undergoing macro-level conceptualization and adjustment. When preparing major decisions, we must weigh the bonding relationships in the development process. Although we will encounter many bumpy or even breakdown moments of embarrassment, as long as we follow objective laws and never compromise with difficulties, we will compensate for deficiencies and secure the future.",
       questions: [
         {
@@ -1533,6 +1743,48 @@ const HSK_ESSAYS = {
         {
           q: "面对颠簸或困难时应该怎么办？",
           options: ["彻底放弃崩溃", "决不妥协，遵循规律", "向困难做出妥协"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_6_2",
+      titleCn: "文化交流与全球视野",
+      titlePy: "Wénhuà jiāoliú yǔ quánqiú shìyě",
+      titleEn: "Cultural Exchange and Global Vision",
+      contentCn: "在多元化世界里，不同文明的交流是促进人类繁荣的重要桥梁。通过翻译和研究各国经典著作，我们不仅能弥补文化视角的盲区，更能构想出一个和谐共处的未来格局。这种长期的纽带关系，需要我们用宏观的眼界去培育与呵护。",
+      contentPy: "Zài duōyuánhuà shìjiè lǐ, bùtóng wénmíng de jiāoliú shì cùjìn rénlèi fánróng de zhòngyào qiáoliáng. Tōngguò fānyì hé yánjiū gèguó jīngdiǎn zhùzuò, wǒmen bùjǐn néng míbǔ wénhuà shìjiǎo de mángqū, gèng néng gòu xiǎngchū yī gè héxié gòngchǔ de wèilái géjú. Zhèzhǒng chángqī de niǔdài guānxì, xūyào wǒmen yòng hóngguān de yǎnjiè qù péiyù yǔ hēhù.",
+      contentEn: "In a pluralistic world, the exchange of different civilizations is an important bridge to promote human prosperity. By translating and studying the classic works of various countries, we can not only compensate for blind spots in cultural perspectives but also conceptualize a harmonious future pattern. This long-term bonding relationship requires us to cultivate and nurture with a macro vision.",
+      questions: [
+        {
+          q: "什么是促进人类繁荣的重要桥梁？",
+          options: ["经济封锁与对抗", "不同文明的交流", "尴尬的颠簸时刻"],
+          correct: 1
+        },
+        {
+          q: "这种长期的纽带关系需要我们用什么去培育？",
+          options: ["局部的短期利益", "盲目的悲观情绪", "宏观的眼界"],
+          correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_6_3",
+      titleCn: "环境保护与可持续发展",
+      titlePy: "Huánjìng bǎohù yǔ kěchíxù fāzhǎn",
+      titleEn: "Environmental Protection and Sustainable Development",
+      contentCn: "实现经济的长足崛起，必须遵循自然界的客观规律，绝不能以牺牲环境为代价。环境崩溃带来的生态恶化是全人类共同面临的威胁。我们需要协调各方利益，筹备更严格的环境保护法案，唯有如此，才能为子孙后代留下绿水青山。",
+      contentPy: "Shíxiàn jīngjì de chángzú juéqǐ, bìxū zūnxún zìránjiè de kèguān guīlǜ, jué bùnéng yǐ xīshēng huánjìng wéi dàijià. Huánjìng bēngkuì dàilái de shēngtài èhuà shì quán rénlèi gòngtóng miànlín de wēixié. Wǒmen xūyào xiétiáo gèfāng lìyì, chóubèi gèng yángé de huánjìng bǎohù fǎ'àn, wéi yǒu rúcǐ, cái néng wèi zǐsūn hòudài liúxià lǜshuǐ qīngshān.",
+      contentEn: "To achieve the long-term rise of the economy, we must follow the objective laws of nature, and must not do so at the cost of sacrificing the environment. The ecological deterioration brought by environmental collapse is a threat faced by all mankind. We need to coordinate interests of all parties and prepare stricter environmental protection bills. Only in this way can we leave green waters and mountains for future generations.",
+      questions: [
+        {
+          q: "发展经济时，我们必须遵循什么？",
+          options: ["大国之间的博弈", "自然界的客观规律", "商业利润的最高点"],
+          correct: 1
+        },
+        {
+          q: "怎样才能为子孙后代留下绿水青山？",
+          options: ["过度开发自然资源", "协调利益筹备环保法案", "向环境问题妥协"],
           correct: 1
         }
       ]
@@ -1559,6 +1811,48 @@ const HSK_ESSAYS = {
           correct: 2
         }
       ]
+    },
+    {
+      id: "essay_7_2",
+      titleCn: "终身学习的重要性",
+      titlePy: "Zhōngshēn xuéxí de zhòngyàoxìng",
+      titleEn: "The Importance of Lifelong Learning",
+      contentCn: "知识的更新换代日新月异，树立终身学习的观念显得尤为关键。在知识的海洋中，我们需要相互借鉴与融合，打破固有的认知局限。通过拓宽学习渠道和参与实践，我们才能不断完善自我，奠定长久立足于社会的坚实基石。",
+      contentPy: "Zhīshi de gēngxīn huàndài rìxīnyuèyì, shùlì zhōngshēn xuéxí de guānniàn xiǎnde yóuwéi guānjiàn. Zài zhīshi de hǎiyáng zhōng, wǒmen xūyào xiānghù jièjiàn yǔ rónghé, dǎpò gùyǒu de rènzhī júxiàn. Tōngguò tuòkuān xuéxí qúdào hé cānyǔ shíjiàn, wǒmen cái néng bùduàn wánshàn zìwǒ, diàndìng chángjiǔ lìzú yú shèhuì de jiānshí jīshí.",
+      contentEn: "The updating of knowledge is changing day by day, making the establishment of the concept of lifelong learning particularly crucial. In the ocean of knowledge, we need to draw on and integrate with each other, breaking through inherent cognitive limitations. By broadening learning channels and participating in practice, we can continuously improve ourselves and lay a solid cornerstone for long-term footing in society.",
+      questions: [
+        {
+          q: "在网络时代下，什么观念特别关键？",
+          options: ["安于现状的态度", "终身学习的观念", "保持绝对的沉默"],
+          correct: 1
+        },
+        {
+          q: "怎么做才能完善自我并奠定社会基石？",
+          options: ["拓宽学习渠道和参与实践", "拒绝与外界进行沟通", "盲目模仿他人的表面行为"],
+          correct: 0
+        }
+      ]
+    },
+    {
+      id: "essay_7_3",
+      titleCn: "跨文化谈判的奥秘",
+      titlePy: "Kuà wénhuà tánpàn de àomì",
+      titleEn: "The Secret of Cross-Cultural Negotiation",
+      contentCn: "在跨国商务谈判中，理解文化差异是达成一致的诀窍。谈判代表需要具备敏锐的观察力，阐述明确的合作远景。双方应该遵循平等互利的原则，积极寻找利益共同点，以便更顺畅地协调矛盾，开创长足稳定的双赢局面。",
+      contentPy: "Zài kuàguó shāngwù tánpàn zhōng, lǐjiě wénhuà chāyì shì dáchéng yīzhì de juéqiào. Tánpàn dàibiǎo xūyào jùbèi mǐnrù de guānchálì, chǎnshù míngquè de hézuò yuǎnjǐng. Shuāngfāng yīnggāi zūnxún píngděng hùlì de yuánzé, jījí xúnzhǎo lìyì gòngtóngdiǎn, yǐbiàn gèng shùnchàng de xiétiáo máodù, kāichuàng chángzú wěndìng de shuāngyíng júmiàn.",
+      contentEn: "In transnational business negotiations, understanding cultural differences is the trick to reaching an agreement. Negotiators need to possess sharp observation skills and expound clear cooperative visions. Both sides should follow the principles of equality and mutual benefit, actively search for common interests, so as to coordinate conflicts more smoothly and initiate a long-term stable win-win situation.",
+      questions: [
+        {
+          q: "跨国谈判中达成一致的诀窍是什么？",
+          options: ["理解文化差异", "采取强硬的手段", "单方面拟定合同"],
+          correct: 0
+        },
+        {
+          q: "谈判代表应该遵循什么原则？",
+          options: ["主观武断的原则", "平等互利的原则", "各自为战的原则"],
+          correct: 1
+        }
+      ]
     }
   ],
   8: [
@@ -1582,6 +1876,48 @@ const HSK_ESSAYS = {
           correct: 0
         }
       ]
+    },
+    {
+      id: "essay_8_2",
+      titleCn: "科技革命与人文关怀",
+      titlePy: "Kējì gémìng yǔ rénwén guānhuái",
+      titleEn: "Tech Revolution and Humanistic Care",
+      contentCn: "新一轮科技革命正以惊人的速度跨越传统物理界限，重塑我们的社会。然而，在飞速创新的同时，我们绝不能丧失人文关怀。只有将智能技术与人类的核心价值相融合，弥补道德规范的真空，才能建立一个更加和谐融洽的数字社会。",
+      contentPy: "Xīn yī lún kējì gémìng zhèng yǐ jīngrén de sùdù kuàyuè chuántǒng wùlǐ jièxiàn, zhòngsù wǒmen de shèhuì. Rán'ér, zài fēisù chuàngxīn de tóngshí, wǒmen jué bùnéng sàngshī rénwén guānhuái. Zhǐyào jiāng zhìnéng jìshù yǔ rénlèi de héxīn jiàzhí xiāng rónghé, míbǔ dàodé guīfàn de zhēnkōng, cái néng jiànlì yī gè gèngjiā héxié róngqià de shùzì shèhuì.",
+      contentEn: "A new round of technological revolution is reshaping our society by leaping over traditional physical boundaries at an astonishing speed. However, while innovating rapidly, we must never lose humanistic care. Only by integrating intelligent technology with core human values and filling the vacuum of moral codes can we establish a more harmonious digital society.",
+      questions: [
+        {
+          q: "新一轮科技革命正在跨越什么界限？",
+          options: ["传统的物理界限", "人与人的交往摩擦", "国家安全的防御范围"],
+          correct: 0
+        },
+        {
+          q: "如何建立一个更加和谐融洽的数字社会？",
+          options: ["无限制发展智能技术", "智能技术与人类核心价值融合", "向技术的漏洞妥协"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_8_3",
+      titleCn: "经典文学的现代价值",
+      titlePy: "Jīngdiǎn wénxué de xiàndài jiàzhí",
+      titleEn: "The Modern Value of Classical Literature",
+      contentCn: "阅读经典文学能让我们穿越历史，体验不同时代的智慧。经典之所以不朽，是因为它所探讨的人性规律超越了时间阻碍。我们应在现代社会频繁汲取其精神见解，通过创新解读方式，弥补时代的差异，使传统文学在新时代重放异彩。",
+      contentPy: "Yuèdú jīngdiǎn wénxué néng ràng wǒmen chuānyuè lìshǐ, tǐyàn bùtóng shídài de zhìhuì. Jīngdiǎn zhīsuǒyǐ bùxiǔ, shì yīnwèi tā suǒ tǎotán de rénxìng guīlǜ chāoyuè le shíjiān zǔ'ài. Wǒmen yīng zài xiàndài shèhuì pínfán jíqǔ qí jīngshén jiànjiě, tōngguò chuàngxīn jiědú fāngshì, míbǔ shídài de chāyì, shǐ chuántǒng wénxué zài xīn shídài chóng fàng yìcǎi.",
+      contentEn: "Reading classical literature allows us to travel through history and experience the wisdom of different eras. The reason classics are immortal is that the human laws they explore transcend time barriers. We should frequently absorb their spiritual insights in modern society, and through innovative interpretation methods, compensate for differences of eras, letting traditional literature shine again in the new era.",
+      questions: [
+        {
+          q: "经典文学之所以不朽的原因是什么？",
+          options: ["其纸张保存时间长", "探讨的人性规律超越时间", "具有昂贵的收藏价值"],
+          correct: 1
+        },
+        {
+          q: "我们在现代应该如何对待经典文学？",
+          options: ["完全用传统方式禁锢", "频繁汲取其见解并创新解读", "彻底将其边缘化"],
+          correct: 1
+        }
+      ]
     }
   ],
   9: [
@@ -1601,15 +1937,55 @@ const HSK_ESSAYS = {
         },
         {
           q: "瞻望未来，如何取得瞩目的成就？",
-          options: ["彼此忽视和拒绝沟通", "凝聚各方智慧与力量", "停止一切创新和合作"],
+          options: ["彼此忽视 and 拒绝沟通", "凝聚各方智慧与力量", "停止一切创新和合作"],
           correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_9_2",
+      titleCn: "多边贸易与区域繁荣",
+      titlePy: "Duōbiān màoyì yǔ qūyù fánróng",
+      titleEn: "Multilateral Trade and Regional Prosperity",
+      contentCn: "在逆全球化思潮抬头的背景下，坚持多边贸易协议是维护区域经济繁荣的关键。各国决策者必须抛弃狭隘偏见，构想一个包容互惠的全球供应链。通过缔结战略纽带，共同遏制单边主义行径，方能迎接全球化浪潮中瞩目的长远成果。",
+      contentPy: "Zài nì quánqiúhuà sīcháo táitóu de bèijǐng xià, jiānchí duōbiān màoyì xiéyì shì wéihù qūyù jīngjì fánróng de guānjiàn. Gèguó juécèzhě bìxū pāoqì xiá'ài piānjiàn, gòuxiǎng yī gè bāoróng hùhuì de quánqiú gōngyìnglìan. Tōngguò dìjié zhànlüè niǔdài, gòngtóng èzhì dānbiān zhǔyì xíngjìng, fāng néng yíngjiē quánqiúhuà làngcháo zhōng zhǔmù de chángyuǎn chéngguǒ.",
+      contentEn: "Under the background of the rise of anti-globalization thoughts, adhering to multilateral trade agreements is key to maintaining regional economic prosperity. National policymakers must discard narrow prejudices and conceptualize an inclusive and mutually beneficial global supply chain. By concluding strategic bonds and jointly containing unilateralist actions, they can welcome remarkable long-term achievements in the tide of globalization.",
+      questions: [
+        {
+          q: "什么是维护区域经济繁荣的的关健？",
+          options: ["坚持多边贸易协议", "推行闭关自守政策", "盲目参与战略博弈"],
+          correct: 0
+        },
+        {
+          q: "各国决策者必须抛弃什么？",
+          options: ["长远利益的构想", "狭隘偏见", "全球化的合作纽带"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_9_3",
+      titleCn: "哲学反思与时代抉择",
+      titlePy: "Zhéxué fǎnsī yǔ shídài juézé",
+      titleEn: "Philosophical Reflection and Choices of the Times",
+      contentCn: "面对人工智能等新兴颠覆性技术的爆发，人类正站在前所未有的十字路口。我们需要进行深刻的哲学反思，思考文明演变的终极方向。这不仅是一项重大的伦理决策，更关乎人类未来的命运抉择。我们必须用理性与智慧去践行我们的历史承诺。",
+      contentPy: "Miànduì réngōng zhìnéng děng xīnxīng diānfùxìng jìshù de bàofā, rénlèi zhèng zhàn zài qiánsuǒwèiyǒu de shízìlùkǒu. Wǒmen xūyào jìnxíng shēnkè de zhéxué fǎnsī, sīkǎo wénmíng yǎnbiàn de zhōngjí fāngxiàng. Zhè bùjǐn -shì yī xiàng zhòngdà de lúnlǐ juécè, gèng guānhū rénlèi wèilái de mìngyùn juézé. Wǒmen bìxū yòng lǐxìng yǔ zhìhuì qù jiànxíng wǒmen de lìshǐ chéngnuò.",
+      contentEn: "Facing the explosion of emerging disruptive technologies like artificial intelligence, humanity is standing at an unprecedented crossroads. We need to conduct deep philosophical reflections and think about the ultimate direction of civilizational evolution. This is not only a major ethical decision, but concerns the choice of destiny of humanity's future. We must practice our historical commitments with reason and wisdom.",
+      questions: [
+        {
+          q: "面对人工智能等新兴技术爆发，人类处于什么境地？",
+          options: ["安全无虞的发展大道", "前所未有的十字路口", "可以随意撤销的舒适圈"],
+          correct: 1
+        },
+        {
+          q: "我们必须用什么去践行历史承诺？",
+          options: ["冷漠与推托的惯性", "感性的逃避与慌张", "理性与智慧"],
+          correct: 2
         }
       ]
     }
   ]
-};
-
-const EXTRA_HSK_DATA = {
+}\n\nconst EXTRA_HSK_DATA = {
   1: [
     {
       id: "hsk1_ex1",

@@ -1798,3 +1798,17 @@ body.light-theme select {
   }
 }
 
+/* Spinner & Pulse animations for dynamic content generation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}

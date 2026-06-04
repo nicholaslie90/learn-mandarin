@@ -239,6 +239,7 @@ const state = {
   showEssayTranslation: false,
   essayQuizAnswers: {}, // questionIndex -> selectedOptionIndex
   essayQuizGraded: false,
+  currentEssayIndex: 0,
 };
 
 // Spaced Repetition Intervals (in hours)
@@ -673,6 +674,7 @@ function switchTab(tabId) {
 // Level Change Trigger
 function switchLevel(level) {
   state.currentLevel = parseInt(level, 10);
+  state.currentEssayIndex = 0; // Reset essay index when switching level
   document.querySelectorAll('.level-btn').forEach(btn => {
     if (parseInt(btn.getAttribute('data-level'), 10) === state.currentLevel) {
       btn.classList.add('active');
@@ -1602,7 +1604,10 @@ function renderEssay() {
     return;
   }
   
-  const essay = essays[0];
+  if (state.currentEssayIndex === undefined || state.currentEssayIndex >= essays.length) {
+    state.currentEssayIndex = 0;
+  }
+  const essay = essays[state.currentEssayIndex];
   
   // Set Title and Description
   const titleCnEl = document.getElementById('essayTitleCn');
@@ -1778,7 +1783,11 @@ function selectEssayAnswer(qIdx, optIdx) {
 function gradeEssayQuiz() {
   const essays = HSK_ESSAYS[state.currentLevel];
   if (!essays || essays.length === 0) return;
-  const essay = essays[0];
+  
+  if (state.currentEssayIndex === undefined || state.currentEssayIndex >= essays.length) {
+    state.currentEssayIndex = 0;
+  }
+  const essay = essays[state.currentEssayIndex];
   
   const totalQuestions = essay.questions.length;
   const answeredCount = Object.keys(state.essayQuizAnswers).length;
@@ -1946,6 +1955,62 @@ function generateMoreFlashcards() {
   // Refresh view
   switchTab(state.activeTab);
   updateProgressPill();
+}
+
+// -------------------------------------------------------------
+// Dynamic Reading Lab Test Generation
+// -------------------------------------------------------------
+function generateNewReadingTest() {
+  const essays = HSK_ESSAYS[state.currentLevel];
+  if (!essays || essays.length <= 1) {
+    alert(`No alternative reading tests available for HSK Level ${state.currentLevel} yet!`);
+    return;
+  }
+  
+  // Show a beautiful loading state to simulate generating a new essay
+  const textContentEl = document.getElementById('essayTextContent');
+  if (textContentEl) {
+    textContentEl.innerHTML = `
+      <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1.25rem; padding:5rem 2rem; text-align:center;">
+        <div class="spinner" style="width:48px; height:48px; border:4px solid rgba(0, 242, 254, 0.1); border-top-color:var(--accent-cyan); border-radius:50%;"></div>
+        <div>
+          <h4 style="font-size:1.1rem; font-weight:600; color:var(--text-primary); margin-bottom:0.25rem; animation: pulse 1.5s ease-in-out infinite;">Generating Reading Passage...</h4>
+          <p style="font-size:0.875rem; color:var(--text-muted);">Formulating appropriate vocabulary for HSK Level ${state.currentLevel}</p>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Disable the generate button during load
+  const genBtn = document.getElementById('generateEssayBtn');
+  if (genBtn) {
+    genBtn.disabled = true;
+    genBtn.style.opacity = '0.6';
+    genBtn.style.cursor = 'not-allowed';
+  }
+  
+  setTimeout(() => {
+    // Select a different essay index than current one
+    let nextIndex;
+    do {
+      nextIndex = Math.floor(Math.random() * essays.length);
+    } while (nextIndex === state.currentEssayIndex && essays.length > 1);
+    
+    state.currentEssayIndex = nextIndex;
+    
+    // Re-enable button
+    if (genBtn) {
+      genBtn.disabled = false;
+      genBtn.style.opacity = '1';
+      genBtn.style.cursor = 'pointer';
+    }
+    
+    renderEssay();
+    
+    if (sounds && typeof sounds.playFlip === 'function') {
+      sounds.playFlip();
+    }
+  }, 1200);
 }
 
 // Startup trigger
