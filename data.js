@@ -1463,6 +1463,48 @@ const HSK_ESSAYS = {
           correct: 0
         }
       ]
+    },
+    {
+      id: "essay_1_4",
+      titleCn: "喜欢的水果",
+      titlePy: "Xǐhuan de shuǐguǒ",
+      titleEn: "Favorite Fruit",
+      contentCn: "我喜欢吃水果。苹果和香蕉都很好吃。我不喜欢喝茶，我喜欢喝冷水。我星期六去商店买了很多苹果。妈妈说多吃水果对身体好。",
+      contentPy: "Wǒ xǐhuan chī shuǐguǒ. Píngguǒ hé xiāngjiāo dōu hěn hǎochī. Wǒ bù xǐhuan hē chá, wǒ xǐhuan hē lěngshuǐ. Wǒ xīngqīliù qù shāngdiàn mǎi le hěn duō píngguǒ. Māma shuō duō chī shuǐguǒ duì shēntǐ hǎo.",
+      contentEn: "I like eating fruit. Apples and bananas are both very delicious. I don't like drinking tea, I like drinking cold water. I went to the store on Saturday and bought many apples. Mother says eating more fruit is good for the body.",
+      questions: [
+        {
+          q: "他喜欢吃什么？",
+          options: ["苹果和香蕉", "米饭和鱼", "面条"],
+          correct: 0
+        },
+        {
+          q: "他星期六去哪里了？",
+          options: ["学校", "餐馆", "商店"],
+          correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_1_5",
+      titleCn: "老师的猫",
+      titlePy: "Lǎoshī de māo",
+      titleEn: "The Teacher's Cat",
+      contentCn: "我们的汉语老师有一只猫。这只猫很小，它是白色的。它叫雪儿。老师每天下课后喂它。我们都很喜欢去老师家看这只可爱的猫。",
+      contentPy: "Wǒmen de Hànyǔ lǎoshī yǒu yī zhī māo. Zhè zhī māo hěn xiǎo, tā shì báisè de. Tā jiào Xuě'er. Lǎoshī měitiān xiàkè hòu wèi tā. Wǒmen dōu hěn xǐhuan qù lǎoshī jiā kàn zhè zhī kě'ài de māo.",
+      contentEn: "Our Chinese teacher has a cat. This cat is very small, and it is white. Its name is Xue'er. The teacher feeds it every day after class. We all like to go to the teacher's house to see this cute cat.",
+      questions: [
+        {
+          q: "老师的猫叫什么名字？",
+          options: ["李华", "雪儿", "大卫"],
+          correct: 1
+        },
+        {
+          q: "老师的猫是什么颜色的？",
+          options: ["黑色", "黄色", "白色"],
+          correct: 2
+        }
+      ]
     }
   ],
   2: [
@@ -1526,6 +1568,48 @@ const HSK_ESSAYS = {
           q: "他每天怎么去上班？",
           options: ["坐公共汽车", "骑自行车", "走路"],
           correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_2_4",
+      titleCn: "介绍我的学校",
+      titlePy: "Jièshào wǒ de xuéxiào",
+      titleEn: "Introducing My School",
+      contentCn: "我的学校很大，有两千多个学生。学校里有很大的运动场和图书馆。我喜欢在图书馆看书，我的朋友喜欢在运动场踢足球。我们每天坐公共汽车去学校。",
+      contentPy: "Wǒ de xuéxiào hěn dà, yǒu liǎng qiān duō gè xuéshēng. Xuéxiào lǐ yǒu hěn dà de yùndòngchǎng hé túshūguǎn. Wǒ xǐhuan zài túshūguǎn kànshū, wǒ de péngyou xǐhuan zài yùndòngchǎng tī zúqiú. Wǒmen měitiān zuò gōnggòng qìchē qù xuéxiào.",
+      contentEn: "My school is very large, with more than two thousand students. In the school, there is a very large sports field and a library. I like reading books in the library, and my friend likes playing football on the sports field. We take a bus to school every day.",
+      questions: [
+        {
+          q: "说话人的朋友喜欢在运动场做什么？",
+          options: ["踢足球", "看书", "跑步"],
+          correct: 0
+        },
+        {
+          q: "他们每天怎么去学校？",
+          options: ["骑自行车", "坐公共汽车", "走路"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_2_5",
+      titleCn: "天气与运动",
+      titlePy: "Tiānqì yǔ yùndòng",
+      titleEn: "Weather and Sports",
+      contentCn: "昨天下了一整天大雨，我只能在家里看电视和做饭。今天天气非常好，阳光很暖和。我和哥哥准备下午去公园打篮球。多运动让我觉得非常快乐。",
+      contentPy: "Zuótiān xià le yī zhěng tiān dàyǔ, wǒ zhǐnéng zài jiālǐ kàn diànshì hé zuòfàn. Jīntiān tiānqì fēicháng hǎo, yángguāng hěn nuǎnhuo. Wǒ hé gēge zhǔnbèi xiàwǔ qù gōngyuán dǎ lánqiú. Duō yùndòng ràng wǒ juéde fēicháng kuàilè.",
+      contentEn: "It rained heavily all day yesterday, so I could only watch TV and cook at home. The weather is very good today, and the sunshine is very warm. My brother and I prepare to go to the park to play basketball this afternoon. Exercising more makes me feel very happy.",
+      questions: [
+        {
+          q: "说话人昨天在家里做了什么？",
+          options: ["看电视和做饭", "打篮球", "跑步"],
+          correct: 0
+        },
+        {
+          q: "他今天下午准备和谁去公园？",
+          options: ["老师", "哥哥", "朋友"],
+          correct: 1
         }
       ]
     }
@@ -1593,6 +1677,48 @@ const HSK_ESSAYS = {
           correct: 2
         }
       ]
+    },
+    {
+      id: "essay_3_4",
+      titleCn: "网上购物的便利",
+      titlePy: "Wǎngshàng gòuwù de biànlì",
+      titleEn: "The Convenience of Online Shopping",
+      contentCn: "现在，越来越多的年轻人习惯在网上买东西。网上购物非常方便，你只需要用手机选择商品，过几天快递员就会送到你家。虽然网上购物很省时间，但我们也应该注意保护个人信息安全。",
+      contentPy: "Xiànzài, yuè lái yuè duō de niánqīngrén xíguàn zài wǎngshàng mǎi dōngxi. Wǎngshàng gòuwù fēicháng fāngbiàn, nǐ zhǐ xūyào yòng shǒujī xuǎnzhé shāngpǐn, guò jǐ tiān kuàidìyuán jiù huì sòng dào nǐ jiā. Suīrán wǎngshàng gòuwù hěn shěng shíjiān, dàn wǒmen yě yīnggāi zhùyì bǎohù gèrén xìnxī ānquán.",
+      contentEn: "Nowadays, more and more young people are used to buying things online. Online shopping is very convenient; you only need to use your phone to select products, and the courier will deliver them to your home in a few days. Although online shopping saves time, we should also pay attention to protecting personal information security.",
+      questions: [
+        {
+          q: "网上购物有什么好处？",
+          options: ["可以认识更多朋友", "非常方便和省时间", "商品都是免费的"],
+          correct: 1
+        },
+        {
+          q: "网上购物时我们应该注意什么？",
+          options: ["保护个人信息安全", "快递员的年龄", "手机的颜色"],
+          correct: 0
+        }
+      ]
+    },
+    {
+      id: "essay_3_5",
+      titleCn: "春天的郊游",
+      titlePy: "Chūntiān de jiāowóu",
+      titleEn: "Spring Outing",
+      contentCn: "春天来了，公园里的花都开了，草也绿了。上个星期天，我们全家去郊外野餐。爸爸带了面包和饮料，妈妈带了新鲜的水果。我们在草地上聊天、做游戏，度过了一个非常愉快的下午。",
+      contentPy: "Chūntiān lái le, gōngyuán lǐ de huā dōu kāi le, cǎo yě lǜ le. Shàng gè xīngqītiān, wǒmen quánjiā qù jiāowài yěcān. Bàba dài le miànbāo hé yǐnliào, māma dài le xīnxiān de shuǐguǒ. Wǒmen zài cǎodì shàng liáotiān, zuò yóuxì, dùguò le yī gè fēicháng yúkuài de xiàwǔ.",
+      contentEn: "Spring is here; the flowers in the park are blooming, and the grass is green. Last Sunday, our whole family went for a picnic in the suburbs. Father brought bread and drinks, and mother brought fresh fruit. We chatted and played games on the grass, spending a very pleasant afternoon.",
+      questions: [
+        {
+          q: "他们上个星期天去哪里了？",
+          options: ["学校", "郊外野餐", "电脑公司"],
+          correct: 1
+        },
+        {
+          q: "谁带了新鲜的水果？",
+          options: ["爸爸", "妈妈", "哥哥"],
+          correct: 1
+        }
+      ]
     }
   ],
   4: [
@@ -1601,8 +1727,8 @@ const HSK_ESSAYS = {
       titleCn: "诚实与爱情",
       titlePy: "Chéngshí yǔ àiqíng",
       titleEn: "Honesty and Love",
-      contentCn: "在爱情中，最关键的品质是诚实。虽然抱歉的言语可以重新获得谅解，但经常拒绝沟通会导致困难。偶尔，我们需要写信表达对彼此 of 的爱，这比任何表格或计划都更能暖和人心。",
-      contentPy: "Zài àiqíng zhōng, zuì guānjiàn de pǐnzhì shì chéngshí. Suīrán bàoqiàn de yányǔ kěyǐ chóngxīn huòdé liàngjiě, dàn jīngcháng jùjué gōutōng huì dǎozhì kùnnan. Ǒu'ěr, wǒmen xūyào xiěxìn biǎodá duì bǐcǐ de ài, zhè bǐ rènhé biǎogé huò jìhuà dōu gèng néng nuǎnhuo rénxīn.",
+      contentCn: "在爱情中，最关键的品质是诚实。虽然抱歉的言语可以重新获得谅解，但经常拒绝沟通会导致困难。偶尔，我们需要写信表达对彼此的爱，这比任何表格或计划都更能暖和人心。",
+      contentPy: "Zài àiqíng zhōng, zuì guānjiàn de pǐnzhì. Suīrán bàoqiàn de yányǔ kěyǐ chóngxīn huòdé liàngjiě, dàn jīngcháng jùjué gōutōng huì dǎozhì kùnnan. Ǒu'ěr, wǒmen xūyào xiěxìn biǎodá duì bǐcǐ de ài, zhè bǐ rènhé biǎogé huò jìhuà dōu gèng néng nuǎnhuo rénxīn.",
       contentEn: "In love, the most crucial quality is honesty. Although apologetic words can regain understanding, frequently refusing to communicate leads to difficulties. Occasionally, we need to write letters to express our love for each other, which warms hearts more than any forms or plans.",
       questions: [
         {
@@ -1628,7 +1754,7 @@ const HSK_ESSAYS = {
       questions: [
         {
           q: "成功往往取决于什么？",
-          options: ["良好的日常习惯", "运气 and 时间", "抱歉的言语"],
+          options: ["良好的日常习惯", "运气和时间", "抱歉的言语"],
           correct: 0
         },
         {
@@ -1649,13 +1775,55 @@ const HSK_ESSAYS = {
       questions: [
         {
           q: "真正的朋友在你遇到麻烦时会做什么？",
-          options: ["拒绝谅解", "主动伸出双手", "写表格 and 计划"],
+          options: ["拒绝谅解", "主动伸出双手", "写表格与计划"],
           correct: 1
         },
         {
           q: "怎样可以帮助我们结识更多新朋友？",
           options: ["保持礼貌和幽默", "减少与人沟通", "经常向人表示抱歉"],
           correct: 0
+        }
+      ]
+    },
+    {
+      id: "essay_4_4",
+      titleCn: "环保与垃圾分类",
+      titlePy: "Huánbǎo yǔ lājī fēnlèi",
+      titleEn: "Environmental Protection and Waste Sorting",
+      contentCn: "为了保护我们共同生活的环境，许多城市开始实行垃圾分类制度。虽然刚开始大家觉得分类有些麻烦，但坚持下去能有效减少污染。只要每个人都积极参与，就能让我们的家园变得更加清洁和美丽。",
+      contentPy: "Wèile bǎohù wǒmen gòngtóng shēnghuó de huánjìng, xǔduō chéngshì kāishǐ shíxíng lājī fēnlèi zhìdù. Suīrán gāng kāishǐ dàjiā juéde fēnlèi yǒuxiē máfan, dàn jiānchí xiàqù néng yǒuxiào jiǎnshǎo wūrǎn. Zhǐyào měi gè rén dōu jījí cānyù, jiù néng ràng wǒmen de jiāyuán biàn de gèngjiā qīngjié hé měilì.",
+      contentEn: "In order to protect the environment we live in together, many cities have started to implement a waste sorting system. Although everyone felt sorting was a bit troublesome at first, persisting in it can effectively reduce pollution. As long as everyone actively participates, we can make our homeland cleaner and more beautiful.",
+      questions: [
+        {
+          q: "为什么许多城市开始实行垃圾分类？",
+          options: ["为了增加城市收入", "为了保护共同生活的环境", "为了减少锻炼时间"],
+          correct: 1
+        },
+        {
+          q: "坚持垃圾分类有什么好处？",
+          options: ["能有效减少污染", "可以节省水资源", "能降低面包价格"],
+          correct: 0
+        }
+      ]
+    },
+    {
+      id: "essay_4_5",
+      titleCn: "运动对身心的影响",
+      titlePy: "Yùndòng duì shēnxīn de yǐngxiǎng",
+      titleEn: "Impact of Sports on Mind and Body",
+      contentCn: "科学的运动能带来身体的健康，也是释放压力的绝佳方式。当我们在学习或工作中感到疲倦时，跑跑步或者打打羽毛球能让大脑得到充分的放松。运动不仅能强壮身体，更能培养我们面对困难时的毅力。",
+      contentPy: "Kēxué de yùndòng néng dài lái shēntǐ de jiànkāng, yě shì shìfàng yālì de juéjiā fāngshì. Dāng wǒmen zài xuéxí huò gōngzuò zhōng gǎndào píjuàn shí, pǎo pǎobù huòzhě dǎ dǎ yǔmáoqí lián ràng dànǎo dédào chōngfèn de fàngsōng. Yùndòng bùjǐn néng qiángzhuàng shēntǐ, gèng néng péiyǎng wǒmen miànduì kùnnan shí de yìlì.",
+      contentEn: "Scientific exercise can bring physical health and is also an excellent way to release stress. When we feel tired during study or work, running or playing badminton can allow the brain to fully relax. Exercise can not only strengthen the body but also cultivate our perseverance when facing difficulties.",
+      questions: [
+        {
+          q: "感到工作疲倦时，做什么可以让大脑放松？",
+          options: ["长时间加班", "跑跑步或者打羽毛球", "拒绝与人沟通"],
+          correct: 1
+        },
+        {
+          q: "运动除了强壮身体，还能培养什么？",
+          options: ["悲观的情绪", "面对困难时的毅力", "抱歉的言语"],
+          correct: 1
         }
       ]
     }
@@ -1666,7 +1834,7 @@ const HSK_ESSAYS = {
       titleCn: "年轻人的独立与繁荣",
       titlePy: "Niánqīngrén de dúlì yǔ fánróng",
       titleEn: "Independence and Prosperity of Youth",
-      contentCn: "现在的年轻人更追求生活独立，他们认为应该把握时代机会。当面临激烈竞争时，他们不会慌张，而是通过调整逻辑 and 思维，彻底解决问题。他们独特的生活方式也促进了社会的多元繁荣。",
+      contentCn: "现在的年轻人更追求生活独立，他们认为应该把握时代机会。当面临激烈竞争时，他们不会慌张，而是通过调整逻辑与思维，彻底解决问题。他们独特的生活方式也促进了社会的多元繁荣。",
       contentPy: "Xiànzài de niánqīngrén gèng zhuīqiú shēnghuó dúlì, tāmen rènwéi yīnggāi bǎwò shídài jīhuì. Dāng miànlín jīliè jìngzhēng shí, tāmen búhuì huāngzhāng, érshì tōngguò tiáozhěng luójī hé sīwéi, chèdǐ jiějué wèntí. Tāmen dútè de shēnghuó fāngshì yě cùjìn le shèhuì de duōyuán fánróng.",
       contentEn: "Young people nowadays pursue independent living more; they believe they should grasp opportunities of the times. When facing intense competition, they do not panic, but solve problems thoroughly by adjusting their logic and thinking. Their unique lifestyles also promote multi-dimensional social prosperity.",
       questions: [
@@ -1708,7 +1876,7 @@ const HSK_ESSAYS = {
       titleCn: "职场沟通的艺术",
       titlePy: "Zhíchǎng gōutōng de yìshù",
       titleEn: "The Art of Workplace Communication",
-      contentCn: "在职场中，优秀的沟通技巧是职业发展的重要支柱。沟通不仅是表达自己的想法，更包含真诚的倾听。当同事之间存在工作分歧时，冷静地进行逻辑 analysis 和客观探讨，有助于消除不必要的误会，并快速达成高效合作的共识。",
+      contentCn: "在职场中，优秀的沟通技巧是职业发展的重要支柱。沟通不仅是表达自己的想法，更包含真诚的倾听。当同事之间存在工作分歧时，冷静地进行逻辑分析和客观探讨，有助于消除不必要的误会，并快速达成高效合作的共识。",
       contentPy: "Zài zhíchǎng zhōng, yōuxiù de gōutōng jìqiǎo API shì zhíyè fāzhǎn de zhòngyào zhīzhù. Gōutōng bùjǐn shì biǎodá zìjǐ de xiǎngfǎ, gèng bāohán zhēnchéng de qīngtīng. Dāng tóngshì zhījiān cúnzài gōngzuò fēnqí shí, lěngjìng de jìnxíng luójī fēnxī hé kèguān tǎotán, yǒuzhù yú xiāochú bú bìyào de wùhuì, bìng kuàisù dáchéng gāoxiào hézuò de gòngshí.",
       contentEn: "In the workplace, excellent communication skills are an important pillar of career development. Communication is not only expressing one's own ideas but also includes sincere listening. When there are work differences among colleagues, calmly conducting logical analysis and objective discussion helps eliminate unnecessary misunderstandings and quickly reach a consensus on efficient cooperation.",
       questions: [
@@ -1721,6 +1889,48 @@ const HSK_ESSAYS = {
           q: "同事之间有分歧时应该怎么办？",
           options: ["大声争吵树立权威", "选择回避彻底忽视", "冷静地进行逻辑分析和探讨"],
           correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_5_4",
+      titleCn: "拖延症的根源与对策",
+      titlePy: "Tuōyánzhèng de gēnyuán yǔ duìcè",
+      titleEn: "The Root and Solution of Procrastination",
+      contentCn: "许多人在工作中都有拖延的毛病，他们习惯把重要任务推迟到最后一刻。心理学研究指出，拖延的根源往往是对失败的恐惧。要解决这个问题，我们可以尝试将复杂的任务拆分为具体的小步骤，并制订合理的完成期限，逐步建立信心。",
+      contentPy: "Xǔduō rén zài gōngzuò zhōng dōu yǒu tuōyán de máobing, tāmen xíguàn bǎ zhòngyào rènwù tuīchí dào zuìhòu yīkè. Xīnlǐxué yánjiū zhǐchū, tuōyán de gēnyuán wǎngwǎng shì duì shībài de kǒngjù. Yào jiějué zhège wèntí, wǒmen kěyǐ chángshì jiāng fùzá de rènwù chāifēn wéi jùtǐ de xiǎo bùzhòu, bìng zhìdìng hélǐ de wánchéng qīxiàn, zhúbù jiànlì xìnxīn.",
+      contentEn: "Many people have the habit of procrastination in their work; they are used to postponing important tasks until the last moment. Psychological research points out that the root of procrastination is often the fear of failure. To solve this problem, we can try to break down complex tasks into specific small steps and set reasonable deadlines, building confidence step by step.",
+      questions: [
+        {
+          q: "心理学研究认为拖延症的根源是什么？",
+          options: ["工作时间太短", "对失败的恐惧", "逻辑思维太复杂"],
+          correct: 1
+        },
+        {
+          q: "我们可以采取什么对策来解决拖延问题？",
+          options: ["彻底放弃所有工作", "将任务拆分为小步骤并制订期限", "只看书不进行 any 思考"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_5_5",
+      titleCn: "创意的来源",
+      titlePy: "Chuàngyì de láiyuán",
+      titleEn: "The Source of Creativity",
+      contentCn: "创意并非凭空产生，而是建立在广泛积累的基础之上。一个拥有独特创意的人，通常善于观察生活中的细节，并敢于打破常规。当我们在思考中遇到瓶颈时，换一个全新的工作环境，或者与不同领域的专家交流，往往能碰撞出意想不到的火花。",
+      contentPy: "Chuàngyì bìngfēi píngkōng chǎnshù, érshì jiànlì zài guǎngfàn jīlěi de jīchǔ zhī shàng. Yī gè yōngyǒu dútè chuàngyì de rén, tōngcháng shànyú guānchá shēnghuó zhōng de xìjié, bìng gǎnyú dǎpò chángguī. Dāng wǒmen zài sīkǎo zhōng yùdào píngjǐng shí, huàn yī gè quánxīn de gōngzuò huánjìng, huòzhě yǔ bùtóng lǐngyù de zhuānjiā jiāoliú, wǎngwǎng néng pèngzhuàng chū yìxiǎngbùdào de huǒhuā.",
+      contentEn: "Creativity is not generated out of air, but is built on the foundation of extensive accumulation. A person with unique creativity is usually good at observing details in life and dares to break conventions. When we encounter a bottleneck in thinking, changing to a brand-new work environment or communicating with experts in different fields can often spark unexpected ideas.",
+      questions: [
+        {
+          q: "创意是建立在什么基础之上的？",
+          options: ["偶然的运气", "广泛的积累", "严密的逻辑逻辑"],
+          correct: 1
+        },
+        {
+          q: "遇到思考瓶颈时可以尝试什么？",
+          options: ["换环境或与不同领域专家交流", "极度慌张并放弃解决问题", "深度阅读相同的书本"],
+          correct: 0
         }
       ]
     }
@@ -1752,7 +1962,7 @@ const HSK_ESSAYS = {
       titleCn: "文化交流与全球视野",
       titlePy: "Wénhuà jiāoliú yǔ quánqiú shìyě",
       titleEn: "Cultural Exchange and Global Vision",
-      contentCn: "在多元化世界里，不同文明的交流是促进人类繁荣的重要桥梁。通过翻译和研究各国经典著作，我们不仅能弥补文化视角的盲区，更能构想出一个和谐共处的未来格局。这种长期的纽带关系，需要我们用宏观的眼界去培育与呵护。",
+      contentCn: "在多元化世界里，不同文明 of 的交流是促进人类繁荣的重要桥梁。通过翻译和研究各国经典著作，我们不仅能弥补文化视角的盲区，更能构想出一个和谐共处的未来格局。这种长期的纽带关系，需要我们用宏观的眼界去培育与呵护。",
       contentPy: "Zài duōyuánhuà shìjiè lǐ, bùtóng wénmíng de jiāoliú shì cùjìn rénlèi fánróng de zhòngyào qiáoliáng. Tōngguò fānyì hé yánjiū gèguó jīngdiǎn zhùzuò, wǒmen bùjǐn néng míbǔ wénhuà shìjiǎo de mángqū, gèng néng gòu xiǎngchū yī gè héxié gòngchǔ de wèilái géjú. Zhèzhǒng chángqī de niǔdài guānxì, xūyào wǒmen yòng hóngguān de yǎnjiè qù péiyù yǔ hēhù.",
       contentEn: "In a pluralistic world, the exchange of different civilizations is an important bridge to promote human prosperity. By translating and studying the classic works of various countries, we can not only compensate for blind spots in cultural perspectives but also conceptualize a harmonious future pattern. This long-term bonding relationship requires us to cultivate and nurture with a macro vision.",
       questions: [
@@ -1786,6 +1996,48 @@ const HSK_ESSAYS = {
           q: "怎样才能为子孙后代留下绿水青山？",
           options: ["过度开发自然资源", "协调利益筹备环保法案", "向环境问题妥协"],
           correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_6_4",
+      titleCn: "传统手艺的传承",
+      titlePy: "Chuántǒng shǒuyì de chuánchéng",
+      titleEn: "Inheritance of Traditional Crafts",
+      contentCn: "在全球化和工业化高度发达的今天，许多宝贵的传统手艺正面临失传的尴尬处境。传承手艺不仅需要弥补资金和市场的不足，更需要遵循手艺自身的艺术规律。我们应该鼓励年轻一代去继承和创新，使这些人类文明的结晶得以世代繁荣。",
+      contentPy: "Zài quánqiúhuà hé gōngyèhuà gāodù fāzhǎn de jīntiān, xǔduō bǎoguì de chuántǒng shǒuyì zhèng miànlín shīchuán de gāngà chǔjìng. Chuánchéng shǒuyì bùjǐn xūyào míbǔ zījīn hé shìchǎng de bùzú, gèng xūyào zūnxún shǒuyì zìshēn de yìshù guīlǜ. Wǒmen yīnggāi gǔlì niánqīng yīdài qù jìchéng hé chuàngxīn, shǐ zhèxiē rénlèi wénmíng de jiéjīng déyǐ shìdài fánróng.",
+      contentEn: "Today, with highly developed globalization and industrialization, many valuable traditional crafts are facing the embarrassing situation of being lost. Inheriting crafts not only requires compensating for deficiencies in funding and markets, but also requires following the artistic laws of the crafts themselves. We should encourage the younger generation to inherit and innovate, so that these crystallizations of human civilization can prosper for generations.",
+      questions: [
+        {
+          q: "传统手艺在今天面临什么处境？",
+          options: ["过度饭粒的趋势", "失传的尴尬处境", "占据主要市场的地位"],
+          correct: 1
+        },
+        {
+          q: "如何更好地传承传统手艺？",
+          options: ["遵循手艺自身的规律并鼓励创新", "决不向任何现代科技妥协", "彻底停止与外界的交流"],
+          correct: 0
+        }
+      ]
+    },
+    {
+      id: "essay_6_5",
+      titleCn: "危机管理中的决策力",
+      titlePy: "Wēijī guǎnlǐ zhōng de juécèlì",
+      titleEn: "Decision-Making Power in Crisis Management",
+      contentCn: "在应对重大突发危机时，决策者的宏观视野与定力至关重要。任何慌张与犹豫都会导致事态崩溃。我们需要在千头万绪中，衡量最核心的纽带关系，迅速做出冷静的判断。事后，还要及时弥补管理上的疏漏，奠定未来的安全基石。",
+      contentPy: "Zài yìngduì zhòngdà tūfā wēijī shí, juécèzhě de hóngguān shìyě yǔ dìnglì zhìguān zhòngyào. Rènhé huāngzhāng yǔ yóuyù dōu huì dǎozhì shìtài bēngkuì. Wǒmen xūyào zài qiāntóuwànxù zhōng, héngliáng zuì héxīn de niǔdài guānxì, xùnsù zuòchū lěngjìng de pànduàn. Shìhòu, hái yào jíshí míbǔ guǎnlǐ shàng de shūlòu, diàndìng wèilái de ānquán jīshí.",
+      contentEn: "When dealing with major sudden crises, the macro vision and stability of policymakers are crucial. Any panic and hesitation will lead to the collapse of the situation. We need to weigh the most core bonding relationships among a multitude of threads and quickly make a calm judgment. Afterwards, we must also timely compensate for management loopholes and lay the foundation for future security.",
+      questions: [
+        {
+          q: "应对危机时，什么态度会导致事态崩溃？",
+          options: ["冷静理智和遵循客观规律", "慌张与犹豫", "宏观的构想与衡量"],
+          correct: 1
+        },
+        {
+          q: "危机解决后，还需要做什么？",
+          options: ["弥补管理疏漏奠定安全基石", "宣布合作关系彻底终止", "向困难妥协并放弃管理"],
+          correct: 0
         }
       ]
     }
@@ -1850,6 +2102,48 @@ const HSK_ESSAYS = {
         {
           q: "谈判代表应该遵循什么原则？",
           options: ["主观武断的原则", "平等互利的原则", "各自为战的原则"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_7_4",
+      titleCn: "科技创新与社会演变",
+      titlePy: "Kējì chuàngxīn yǔ shèhuì yǎnbiàn",
+      titleEn: "Tech Innovation and Social Evolution",
+      contentCn: "新兴科技的爆发式增长正在加速人类社会的演变进程。在面对这些变革时，我们不能抱有片面的偏见，而应积极借鉴先进理念。政府与社会各界需要建立有效的沟通渠道，协调技术创新与社会稳定之间的利益关系，实现各领域的长足进步。",
+      contentPy: "Xīnxīng kējì de bàofāshì zēngzhǎng zhèngzài jiāsù rénlèi shèhuì de yǎnbiàn jìnchéng. Zài miànduì zhèxiē biàngé shí, wǒmen bùnéng bào yǒu piànmiàn de piānjiàn, ér yīng jījí jièjiàn xiānjìn lǐniàn. Zhèngfǔ yǔ shèhuì gèjiè xūyào jiànlì yǒuxiào de gōutōng qúdào, xiétiáo jìshù chuàngxīn yǔ shèhuì wěndìng zhījiān de lìyì guānxì, shíxiàn gè lǐngyù de chángzú jìnbù.",
+      contentEn: "The explosive growth of emerging technologies is accelerating the evolution process of human society. When facing these changes, we should not hold one-sided prejudices, but actively draw on advanced concepts. The government and all sectors of society need to establish effective communication channels to coordinate the relationship between technological innovation and social stability, achieving long-term progress in all fields.",
+      questions: [
+        {
+          q: "面对科技变革，我们应该抱有什么态度？",
+          options: ["抱有绝对片面的偏见", "积极借鉴先进理念", "保持完全的沉默"],
+          correct: 1
+        },
+        {
+          q: "为了协调技术创新与社会稳定，我们需要建立什么？",
+          options: ["保密体制", "防范措施", "有效的沟通渠道"],
+          correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_7_5",
+      titleCn: "企业文化的凝聚力",
+      titlePy: "Qǐyè wénhuà de níngjùlì",
+      titleEn: "Cohesion of Corporate Culture",
+      contentCn: "构建优秀的企业文化是奠定公司长久发展的基石。企业不仅要注重业务增长，更要重视员工的成长与见解。通过搭建开放的沟通机制，使员工的个人目标与企业愿景相融合，从而减少内部摩擦，共同迈向繁荣。",
+      contentPy: "Gòujiàn yōuxiù de qǐyè wénhuà shì diàndìng gōngsī chángjiǔ fāzhǎn de jīshí. Qǐyè bùjǐn yào zhùzhòng yèwù zēngzhǎng, gèng yào zhòngshì yuángōng de chéngzhǎng yǔ jiànjiě. Tōngguò dājiàn kāifàng de gōutōng jīzhì, shǐ yuángōng de gèrén mùbiāo yǔ qǐyè yuànjǐng xiāng rónghé, cóng'ér jiǎnshǎo nèibù mócā, gòngtóng màixiàng fánróng.",
+      contentEn: "Building an excellent corporate culture is the cornerstone of the long-term development of a company. Enterprises must not only focus on business growth but also attach importance to employees' growth and insights. By building an open communication mechanism, employees' personal goals and corporate vision are integrated, thereby reducing internal friction and moving towards prosperity together.",
+      questions: [
+        {
+          q: "什么是奠定公司长远发展的基石？",
+          options: ["构建优秀的企业文化", "单方面的业务指标", "严格的保密协议"],
+          correct: 0
+        },
+        {
+          q: "怎样可以减少企业内部的摩擦？",
+          options: ["拒绝一切员工反馈", "搭建开放的沟通机制融合同事愿景", "增加激烈的辩论赛"],
           correct: 1
         }
       ]
@@ -1918,6 +2212,48 @@ const HSK_ESSAYS = {
           correct: 1
         }
       ]
+    },
+    {
+      id: "essay_8_4",
+      titleCn: "人机协同的时代前景",
+      titlePy: "Rénjī xiétóng de shídài qiánjǐng",
+      titleEn: "Era Prospect of Human-Machine Collaboration",
+      contentCn: "随着人工智能的发展，人机协同已成为不可逆转的时代趋势。这并非是对人类价值的颠覆，而是双方能力的优势互补。人类凭借深刻的哲理反思与道德抉择来遵循伦理红线，而机器则跨越算力阻碍来完成精密计算。这种和谐融洽的合作，将开辟全新的文明篇章。",
+      contentPy: "Suízhe réngōng zhìnéng de fāzhǎn, rénjī xiétóng yǐ chéngwéi bùkě nìzhuǎn de shídài qūshì. Zhè bìngfēi shì duì rénlèi jiàzhí de diānfù, érshì shuāngfāng nénglì de yōushì hùbǔ. Rénlèi píngjì shēnkè de zhélǐ fǎnsī yǔ dàodé juézé lái zūnxún lúnlǐ hóngxiàn, ér jīqì zé kuàyuè suànlì zǔ'ài lái wánchéng jīngmì jìsuàn. Zhèzhǒng héxié róngqià de hézuò, jiāng kāipì quánxīn de wénmíng piānzhāng.",
+      contentEn: "With the development of artificial intelligence, human-machine collaboration has become an irreversible trend of the times. This is not a subversion of human values, but a complementary advantage of both capabilities. Humans rely on profound philosophical reflection and moral choices to follow ethical red lines, while machines cross computing obstacles to complete precise calculations. This harmonious collaboration will open a brand-new chapter of civilization.",
+      questions: [
+        {
+          q: "人机协同时代，人类凭借什么遵循伦理红线？",
+          options: ["超越机器的计算速度", "深刻的哲理反思与道德抉择", "频繁的商业运作"],
+          correct: 1
+        },
+        {
+          q: "人机协同的关系是怎样的？",
+          options: ["机器彻底颠覆人类价值", "双方能力的优势互补", "各自独立，拒绝沟通"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_8_5",
+      titleCn: "全球公共卫生的未来",
+      titlePy: "Quánqiú gōnggòng wèishēng de wèilái",
+      titleEn: "The Future of Global Public Health",
+      contentCn: "在应对跨国流行性疾病的全球性挑战中，任何单一国家都无法独善其身。频繁的国际信息共享与科学协作是弥补各方防控体系不足的捷径。我们需要遵循医学科学规律，跨越政治障碍，携手构建一个健康安全的世界共同体。",
+      contentPy: "Zài yìngduì kuàguó liúxíngxìng jíbìng de quánqiúxìng tiǎozhàn zhōng, rènhé dānyī guójiā dōu wúfǎ dúshànqíshēn. Pínfán de guójì xìnxī gòngxiǎng yǔ kēxué xiézuò shì míbǔ gèfāng fángkòng tǐxì bùzú de jiéjìng. Wǒmen xūyào zūnxún yīxué kēxué guīlǜ, kuàyuè zhèngzhì zhàng'ài, xiéshǒu gòujiàn yī gè jiànkāng ānquán de shìjiè gòngtóngtǐ.",
+      contentEn: "In addressing the global challenge of transnational infectious diseases, no single country can stand alone. Frequent international information sharing and scientific collaboration is the shortcut to make up for deficiencies in prevention and control systems of all parties. We need to follow medical science laws, cross political barriers, and join hands to build a healthy and safe world community.",
+      questions: [
+        {
+          q: "什么是弥补各方防控体系不足的捷径？",
+          options: ["对边境摩擦采妥协态度", "频繁的国际信息共享与科学协作", "封锁一切交流渠道"],
+          correct: 1
+        },
+        {
+          q: "构建健康安全的世界共同体需要跨越什么？",
+          options: ["物理治疗的红线", "政治障碍", "艺术规律"],
+          correct: 1
+        }
+      ]
     }
   ],
   9: [
@@ -1937,7 +2273,7 @@ const HSK_ESSAYS = {
         },
         {
           q: "瞻望未来，如何取得瞩目的成就？",
-          options: ["彼此忽视 and 拒绝沟通", "凝聚各方智慧与力量", "停止一切创新和合作"],
+          options: ["彼此忽视与拒绝沟通", "凝聚各方智慧与力量", "停止一切创新和合作"],
           correct: 1
         }
       ]
@@ -1947,7 +2283,7 @@ const HSK_ESSAYS = {
       titleCn: "多边贸易与区域繁荣",
       titlePy: "Duōbiān màoyì yǔ qūyù fánróng",
       titleEn: "Multilateral Trade and Regional Prosperity",
-      contentCn: "在逆全球化思潮抬头的背景下，坚持多边贸易协议是维护区域经济繁荣的关键。各国决策者必须抛弃狭隘偏见，构想一个包容互惠的全球供应链。通过缔结战略纽带，共同遏制单边主义行径，方能迎接全球化浪潮中瞩目的长远成果。",
+      contentCn: "在逆全球化思潮抬头 的背景下，坚持多边贸易协议是维护区域经济繁荣的关键。各国决策者必须抛弃狭隘偏见，构想一个包容互惠的全球供应链。通过缔结战略纽带，共同遏制单边主义行径，方能迎接全球化浪潮中瞩目的长远成果。",
       contentPy: "Zài nì quánqiúhuà sīcháo táitóu de bèijǐng xià, jiānchí duōbiān màoyì xiéyì shì wéihù qūyù jīngjì fánróng de guānjiàn. Gèguó juécèzhě bìxū pāoqì xiá'ài piānjiàn, gòuxiǎng yī gè bāoróng hùhuì de quánqiú gōngyìnglìan. Tōngguò dìjié zhànlüè niǔdài, gòngtóng èzhì dānbiān zhǔyì xíngjìng, fāng néng yíngjiē quánqiúhuà làngcháo zhōng zhǔmù de chángyuǎn chéngguǒ.",
       contentEn: "Under the background of the rise of anti-globalization thoughts, adhering to multilateral trade agreements is key to maintaining regional economic prosperity. National policymakers must discard narrow prejudices and conceptualize an inclusive and mutually beneficial global supply chain. By concluding strategic bonds and jointly containing unilateralist actions, they can welcome remarkable long-term achievements in the tide of globalization.",
       questions: [
@@ -1969,7 +2305,7 @@ const HSK_ESSAYS = {
       titlePy: "Zhéxué fǎnsī yǔ shídài juézé",
       titleEn: "Philosophical Reflection and Choices of the Times",
       contentCn: "面对人工智能等新兴颠覆性技术的爆发，人类正站在前所未有的十字路口。我们需要进行深刻的哲学反思，思考文明演变的终极方向。这不仅是一项重大的伦理决策，更关乎人类未来的命运抉择。我们必须用理性与智慧去践行我们的历史承诺。",
-      contentPy: "Miànduì réngōng zhìnéng děng xīnxīng diānfùxìng jìshù de bàofā, rénlèi zhèng zhàn zài qiánsuǒwèiyǒu de shízìlùkǒu. Wǒmen xūyào jìnxíng shēnkè de zhéxué fǎnsī, sīkǎo wénmíng yǎnbiàn de zhōngjí fāngxiàng. Zhè bùjǐn -shì yī xiàng zhòngdà de lúnlǐ juécè, gèng guānhū rénlèi wèilái de mìngyùn juézé. Wǒmen bìxū yòng lǐxìng yǔ zhìhuì qù jiànxíng wǒmen de lìshǐ chéngnuò.",
+      contentPy: "Miànduì réngōng zhìnéng děng xīnxīng diānfùxìng jìshù de bàofā, rénlèi zhèng zhàn zài qiánsuǒwèiyǒu de shízìlùkǒu. Wǒmen xūyào jìnxíng shēnkè de zhéxué fǎnsī, sīkǎo wénmíng yǎnbiàn de zhōngjí fāngxiàng. Zhè bùjǐn shì yī xiàng zhòngdà de lúnlǐ juécè, gèng guānhū rénlèi wèilái de mìngyùn juézé. Wǒmen bìxū yòng lǐxìng yǔ zhìhuì qù jiànxíng wǒmen de lìshǐ chéngnuò.",
       contentEn: "Facing the explosion of emerging disruptive technologies like artificial intelligence, humanity is standing at an unprecedented crossroads. We need to conduct deep philosophical reflections and think about the ultimate direction of civilizational evolution. This is not only a major ethical decision, but concerns the choice of destiny of humanity's future. We must practice our historical commitments with reason and wisdom.",
       questions: [
         {
@@ -1981,6 +2317,48 @@ const HSK_ESSAYS = {
           q: "我们必须用什么去践行历史承诺？",
           options: ["冷漠与推托的惯性", "感性的逃避与慌张", "理性与智慧"],
           correct: 2
+        }
+      ]
+    },
+    {
+      id: "essay_9_4",
+      titleCn: "全球金融危机的化解",
+      titlePy: "Quánqiú jīnróng wēijī de huàjiě",
+      titleEn: "Resolving the Global Financial Crisis",
+      contentCn: "全球金融市场的波动具有传染性，必须从宏观角度审视系统性风险。化解金融危机的决策关乎全球经济的命运，不容丝毫拖延。各国监管机构必须摈弃狭隘偏见，共同遏制恶性投机行为，才能瞻望稳定与繁荣的发展前景。",
+      contentPy: "Quánqiú jīnróng shìchǎng de bōdòng jùyǒu chuánrǎnxìng, bìxū cóng hóngguān jiǎodù shěnshì xìtǒngxìng fēngxiǎn. Huàjiě jīnróng wēijī de juécè guānhū quánqiú jīngjì de mìngyùn, bùróng sīháo tuōyán. Gèguó jiānguǎn jīgòu bìxū bìnqì xiá'ài piānjiàn, gòngtóng èzhì èxìng tóujī xíngwéi, cái néng zhānwàng wěndìng yǔ fánróng de fāzhǎn qiánjǐng.",
+      contentEn: "Fluctuations in global financial markets are contagious, and systemic risks must be examined from a macro perspective. The decision to resolve financial crises concerns the destiny of the global economy and allows no delay. National regulatory agencies must abandon narrow prejudices and jointly contain malicious speculative behavior in order to look forward to the development prospects of stability and prosperity.",
+      questions: [
+        {
+          q: "为什么需要从宏观角度审视金融市场？",
+          options: ["因为波动具有传染性", "为了打击多边贸易", "为了宣扬各国的偏见"],
+          correct: 0
+        },
+        {
+          q: "如何才能瞻望稳定与繁荣的发展前景？",
+          options: ["推迟做出一半的重大决策", "摈弃偏见，共同遏制恶性投机", "听任单边主义的发展"],
+          correct: 1
+        }
+      ]
+    },
+    {
+      id: "essay_9_5",
+      titleCn: "气候变化的国际承诺",
+      titlePy: "Qìhòu biànhuà de guójì chéngnuò",
+      titleEn: "International Commitments on Climate Change",
+      contentCn: "应对全球气候变化是人类生存发展的重大命运抉择。这是一个跨越世纪的多边合作命题，任何缔约方都不能践踏承诺。我们必须遵循地球生态演变的规律，积极践行绿色减排行动，才能遏制气候恶化，实现人与自然瞩目的和谐共生。",
+      contentPy: "Yìngduì quánqiú qìhòu biànhuà shì rénlèi shēngcún fāzhǎn de zhòngdà mìngyùn juézé. Zhè shì yī gè kuàyuè shìjì de duōbiān hézuò mìngtí, rènhé dìyuēfāng dōu bùnéng jiàntà chéngnuò. Wǒmen bìxū zūnxún dìqiú shēngtài yǎnbiàn de guīlǜ, jījí jiànxíng lǜsè jiǎnpái xíngdòng, cái néng èzhì qìhòu èhuà, shíxiàn rén yǔ zìrán zhǔmù de héxié gòngshēng.",
+      contentEn: "Addressing global climate change is a major destiny choice for human survival and development. This is a century-spanning proposition of multilateral cooperation, and no contracting party can trample on commitments. We must follow the laws of earth's ecological evolution and actively practice green emission reduction actions to contain climate deterioration and achieve remarkable harmonious coexistence between humans and nature.",
+      questions: [
+        {
+          q: "应对全球气候变化被视为什么？",
+          options: ["短暂而尴尬的阶段", "人类生存发展的重大命运抉择", "单边主义博弈的工具"],
+          correct: 1
+        },
+        {
+          q: "怎样才能遏制气候恶化并实现和谐共生？",
+          options: ["践踏减排承诺并拖延治理", "遵循生态规律，积极践行绿色减排", "放弃多边贸易战略"],
+          correct: 1
         }
       ]
     }
