@@ -1985,7 +1985,9 @@ const HSK_ESSAYS = {
       ]
     }
   ]
-}\n\nconst EXTRA_HSK_DATA = {
+};
+
+const EXTRA_HSK_DATA = {
   1: [
     {
       id: "hsk1_ex1",
