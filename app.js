@@ -244,32 +244,138 @@ const state = {
 // Spaced Repetition Intervals (in hours)
 const SRS_INTERVALS = [0, 4, 12, 24, 72, 168]; // Level 0 (new) to 5 (fully mastered)
 
-// LocalStorage Sync Helpers
-function saveToLocalStorage() {
-  localStorage.setItem('hsk_sensei_progress', JSON.stringify(state.progress));
-  localStorage.setItem('hsk_sensei_streak', state.streak.toString());
-  localStorage.setItem('hsk_sensei_last_study', state.lastStudyDate);
+// IndexedDB Database Wrapper for browser persistence
+class ProgressDB {
+  constructor() {
+    this.dbName = 'HSKSenseiDB';
+    this.dbVersion = 1;
+    this.storeName = 'progressStore';
+    this.db = null;
+  }
+
+  init() {
+    return new Promise((resolve, reject) => {
+      const request = indexedDB.open(this.dbName, this.dbVersion);
+      request.onerror = (e) => reject(e.target.error);
+      request.onsuccess = (e) => {
+        this.db = e.target.result;
+        resolve(this.db);
+      };
+      request.onupgradeneeded = (e) => {
+        const db = e.target.result;
+        if (!db.objectStoreNames.contains(this.storeName)) {
+          db.createObjectStore(this.storeName);
+        }
+      };
+    });
+  }
+
+  get(key) {
+    return new Promise((resolve, reject) => {
+      if (!this.db) {
+        reject(new Error("Database not initialized"));
+        return;
+      }
+      const transaction = this.db.transaction([this.storeName], 'readonly');
+      const store = transaction.objectStore(this.storeName);
+      const request = store.get(key);
+      request.onerror = (e) => reject(e.target.error);
+      request.onsuccess = (e) => resolve(request.result);
+    });
+  }
+
+  set(key, value) {
+    return new Promise((resolve, reject) => {
+      if (!this.db) {
+        reject(new Error("Database not initialized"));
+        return;
+      }
+      const transaction = this.db.transaction([this.storeName], 'readwrite');
+      const store = transaction.objectStore(this.storeName);
+      const request = store.put(value, key);
+      request.onerror = (e) => reject(e.target.error);
+      request.onsuccess = (e) => resolve(request.result);
+    });
+  }
 }
 
-function loadFromLocalStorage() {
-  const localProg = localStorage.getItem('hsk_sensei_progress');
-  if (localProg) state.progress = JSON.parse(localProg);
-  
-  const localStreak = localStorage.getItem('hsk_sensei_streak');
-  if (localStreak) state.streak = parseInt(localStreak, 10);
-  
-  const localDate = localStorage.getItem('hsk_sensei_last_study');
-  if (localDate) state.lastStudyDate = localDate;
-  
-  // Load unlocked extra words
-  const storedExtraIds = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
-  if (storedExtraIds) {
-    const unlockedIds = new Set(JSON.parse(storedExtraIds));
+const db = new ProgressDB();
+
+async function saveProgressToDB() {
+  try {
+    if (!db.db) await db.init();
+    await db.set('progress', state.progress);
+    await db.set('streak', state.streak);
+    await db.set('lastStudyDate', state.lastStudyDate);
+    
+    // Backup unlocked extra card IDs
+    const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
+    if (stored) {
+      await db.set('unlockedExtraIds', JSON.parse(stored));
+    }
+  } catch (error) {
+    console.error("Failed to save progress to IndexedDB:", error);
+    
+    // Resilient fallback: use LocalStorage if database fails (e.g. private mode)
+    localStorage.setItem('hsk_sensei_progress', JSON.stringify(state.progress));
+    localStorage.setItem('hsk_sensei_streak', state.streak.toString());
+    localStorage.setItem('hsk_sensei_last_study', state.lastStudyDate);
+  }
+}
+
+function saveToLocalStorage() {
+  saveProgressToDB();
+}
+
+async function loadProgressFromDB() {
+  try {
+    await db.init();
+    
+    // Fetch values from IndexedDB
+    const progress = await db.get('progress');
+    const streak = await db.get('streak');
+    const lastStudyDate = await db.get('lastStudyDate');
+    const unlockedExtraIds = await db.get('unlockedExtraIds');
+    
+    if (progress) {
+      state.progress = progress;
+    } else {
+      // Migrate legacy localStorage progress if present
+      const localProg = localStorage.getItem('hsk_sensei_progress');
+      if (localProg) state.progress = JSON.parse(localProg);
+    }
+    
+    if (streak !== undefined) {
+      state.streak = parseInt(streak, 10) || 0;
+    } else {
+      const localStreak = localStorage.getItem('hsk_sensei_streak');
+      if (localStreak) state.streak = parseInt(localStreak, 10) || 0;
+    }
+    
+    if (lastStudyDate) {
+      state.lastStudyDate = lastStudyDate;
+    } else {
+      const localDate = localStorage.getItem('hsk_sensei_last_study');
+      if (localDate) state.lastStudyDate = localDate;
+    }
+    
+    let unlockedIds = [];
+    if (unlockedExtraIds) {
+      unlockedIds = unlockedExtraIds;
+    } else {
+      const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
+      if (stored) {
+        unlockedIds = JSON.parse(stored);
+        await db.set('unlockedExtraIds', unlockedIds);
+      }
+    }
+    
+    const unlockedIdsSet = new Set(unlockedIds);
     for (const level in EXTRA_HSK_DATA) {
       const extraList = EXTRA_HSK_DATA[level];
       if (extraList) {
         extraList.forEach(word => {
-          if (unlockedIds.has(word.id)) {
+          if (unlockedIdsSet.has(word.id)) {
             const currentWords = HSK_DATA[level] || [];
             if (!currentWords.some(w => w.id === word.id)) {
               HSK_DATA[level].push(word);
@@ -278,22 +384,68 @@ function loadFromLocalStorage() {
         });
       }
     }
-  }
-  
-  // Initialize progress slots for any words that don't exist yet
-  Object.values(HSK_DATA).forEach(levelWords => {
-    levelWords.forEach(word => {
-      if (!state.progress[word.id]) {
-        state.progress[word.id] = {
-          srsLevel: 0,
-          dueTime: 0,
-          starred: false,
-          learned: false
-        };
-      }
+    
+    // Auto-initialize progress slots for missing words
+    Object.values(HSK_DATA).forEach(levelWords => {
+      levelWords.forEach(word => {
+        if (!state.progress[word.id]) {
+          state.progress[word.id] = {
+            srsLevel: 0,
+            dueTime: 0,
+            starred: false,
+            learned: false
+          };
+        }
+      });
     });
-  });
-  saveToLocalStorage();
+    
+    await saveProgressToDB();
+  } catch (error) {
+    console.error("Failed to load progress from IndexedDB, falling back to LocalStorage:", error);
+    
+    // Resilient fallback: read from LocalStorage
+    const localProg = localStorage.getItem('hsk_sensei_progress');
+    if (localProg) state.progress = JSON.parse(localProg);
+    const localStreak = localStorage.getItem('hsk_sensei_streak');
+    if (localStreak) state.streak = parseInt(localStreak, 10) || 0;
+    const localDate = localStorage.getItem('hsk_sensei_last_study');
+    if (localDate) state.lastStudyDate = localDate;
+    
+    const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
+    if (stored) {
+      const unlockedIdsSet = new Set(JSON.parse(stored));
+      for (const level in EXTRA_HSK_DATA) {
+        const extraList = EXTRA_HSK_DATA[level];
+        if (extraList) {
+          extraList.forEach(word => {
+            if (unlockedIdsSet.has(word.id)) {
+              const currentWords = HSK_DATA[level] || [];
+              if (!currentWords.some(w => w.id === word.id)) {
+                HSK_DATA[level].push(word);
+              }
+            }
+          });
+        }
+      }
+    }
+    
+    Object.values(HSK_DATA).forEach(levelWords => {
+      levelWords.forEach(word => {
+        if (!state.progress[word.id]) {
+          state.progress[word.id] = {
+            srsLevel: 0,
+            dueTime: 0,
+            starred: false,
+            learned: false
+          };
+        }
+      });
+    });
+  }
+}
+
+function loadFromLocalStorage() {
+  loadProgressFromDB();
 }
 
 // Streak Maintenance Engine
@@ -1797,15 +1949,19 @@ function generateMoreFlashcards() {
 }
 
 // Startup trigger
-window.addEventListener('DOMContentLoaded', () => {
-  loadFromLocalStorage();
+window.addEventListener('DOMContentLoaded', async () => {
   initTheme();
   setupFloatingBackground();
-  updateProgressPill();
-  renderStreakUI();
   
   // Load voices if already cached by browser
   loadChineseVoices();
+  
+  // Load progress asynchronously from IndexedDB
+  await loadProgressFromDB();
+  
+  // Now render UI with loaded values
+  updateProgressPill();
+  renderStreakUI();
   
   // Dashboard default
   switchTab('dashboard');
