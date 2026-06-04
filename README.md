@@ -28,7 +28,7 @@ HSK Sensei is a premium, interactive Mandarin learning application designed to h
 
 ### 5. Reading Lab (Comprehension Tests)
 - **Passages for HSK 1–9**: Level-appropriate essays to practice contextual reading.
-- **Dynamic Test Generator**: Randomly generates alternative reading tests from a curated pool of **27 high-quality essays** (3 unique passages per HSK level).
+- **Dynamic Test Generator**: Programmatically generates and rotates through a pool of **180 unique essays** (20 unique passages per HSK level) to test your reading and comprehension.
 - **TTS Audio Player**: Listen to the entire passage spoken aloud in native Mandarin.
 - **Vocabulary Lookup**: Click any Chinese character in the essay text to display its quick dictionary lookup card.
 - **Interactive Quizzes**: Multiple-choice comprehension check questions with instant grading and highlights.
