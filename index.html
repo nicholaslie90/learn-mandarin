@@ -593,12 +593,20 @@
                     <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
                   </svg>
                 </button>
-                <!-- Generate Test Button -->
+                 <!-- Generate Test Button -->
                 <button class="btn-primary" id="generateEssayBtn" onclick="generateNewReadingTest()" style="margin:0; padding:0 0.75rem; height:42px; font-size:0.85rem; display:flex; align-items:center; gap:0.35rem; border-radius:0.75rem;" title="Generate new reading comprehension test">
                   <svg viewBox="0 0 24 24" style="width:16px; height:16px; fill:currentColor;">
                     <path d="M19 8l-4 4h3c0 3.31-2.69 6-6 6-1.01 0-1.97-.25-2.8-.7l-1.46 1.46C8.97 19.54 10.43 20 12 20c4.42 0 8-3.58 8-8h3l-4-4zM6 12c0-3.31 2.69-6 6-6 1.01 0 1.97.25 2.8.7l1.46-1.46C15.03 4.46 13.57 4 12 4c-4.42 0-8 3.58-8 8H1l4 4 4-4H6z"/>
                   </svg>
                   <span>Generate Test</span>
+                </button>
+                <!-- Reset Read Stories Button -->
+                <button class="canvas-btn" id="resetReadingBtn" onclick="resetReadEssays()" style="margin:0; padding:0 0.75rem; height:42px; font-size:0.85rem; display:flex; align-items:center; gap:0.35rem; border-radius:0.75rem;" title="Reset read materials">
+                  <svg viewBox="0 0 24 24" style="width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2;">
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                    <path d="M3 3v5h5"></path>
+                  </svg>
+                  <span>Reset (<span id="readStoriesCount">0/0</span>)</span>
                 </button>
                 <!-- Toggle Pinyin/Translation Buttons -->
                 <button class="canvas-btn" id="toggleEssayPinyinBtn" onclick="toggleEssayPinyin(this)">Pinyin</button>

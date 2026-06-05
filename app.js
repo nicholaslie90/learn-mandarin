@@ -308,6 +308,7 @@ const state = {
   showQuizPinyin: false,
   showQuizTranslation: false,
   currentEssayIndex: 0,
+  readEssayIds: [],
   dictionaryLimit: 100,
   points: 0,
 };
@@ -379,6 +380,7 @@ async function saveProgressToDB() {
     await db.set('streak', state.streak);
     await db.set('lastStudyDate', state.lastStudyDate);
     await db.set('points', state.points);
+    await db.set('readEssayIds', state.readEssayIds);
     
     // Backup unlocked extra card IDs
     const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
@@ -393,6 +395,7 @@ async function saveProgressToDB() {
     localStorage.setItem('hsk_sensei_streak', state.streak.toString());
     localStorage.setItem('hsk_sensei_last_study', state.lastStudyDate);
     localStorage.setItem('hsk_sensei_points', state.points.toString());
+    localStorage.setItem('hsk_sensei_read_essay_ids', JSON.stringify(state.readEssayIds));
   }
 }
 
@@ -410,6 +413,7 @@ async function loadProgressFromDB() {
     const lastStudyDate = await db.get('lastStudyDate');
     const unlockedExtraIds = await db.get('unlockedExtraIds');
     const points = await db.get('points');
+    const readEssayIds = await db.get('readEssayIds');
     
     if (progress) {
       state.progress = progress;
@@ -438,6 +442,13 @@ async function loadProgressFromDB() {
     } else {
       const localPoints = localStorage.getItem('hsk_sensei_points');
       if (localPoints) state.points = parseInt(localPoints, 10) || 0;
+    }
+
+    if (readEssayIds !== undefined && readEssayIds !== null) {
+      state.readEssayIds = readEssayIds;
+    } else {
+      const localReadIds = localStorage.getItem('hsk_sensei_read_essay_ids');
+      if (localReadIds) state.readEssayIds = JSON.parse(localReadIds);
     }
     
     let unlockedIds = [];
@@ -631,6 +642,41 @@ function resetEssayAudioBtn() {
       </svg>
     `;
   }
+}
+
+// Reading Lab progress tracking and reset
+function updateReadStoriesCountUI() {
+  const countEl = document.getElementById('readStoriesCount');
+  if (!countEl) return;
+  
+  const essays = HSK_ESSAYS[state.currentLevel];
+  if (!essays || essays.length === 0) {
+    countEl.textContent = '0/0';
+    return;
+  }
+  
+  const essayIdsOfCurrentLevel = essays.map(e => e.id);
+  const readCount = state.readEssayIds.filter(id => essayIdsOfCurrentLevel.includes(id)).length;
+  countEl.textContent = `${readCount}/${essays.length}`;
+}
+
+function resetReadEssays() {
+  const essays = HSK_ESSAYS[state.currentLevel];
+  if (!essays) return;
+  
+  const essayIdsOfCurrentLevel = essays.map(e => e.id);
+  state.readEssayIds = state.readEssayIds.filter(id => !essayIdsOfCurrentLevel.includes(id));
+  
+  // Re-register the currently loaded essay as read so we continue tracking it
+  const currentEssay = essays[state.currentEssayIndex];
+  if (currentEssay) {
+    state.readEssayIds.push(currentEssay.id);
+  }
+  
+  saveToLocalStorage();
+  updateReadStoriesCountUI();
+  
+  alert(`Successfully reset reading progress for HSK Level ${state.currentLevel}!`);
 }
 
 // Pinyin parsing and correction helper maps
@@ -1112,7 +1158,15 @@ function switchTab(tabId) {
   } else if (tabId === 'reading') {
     const essays = HSK_ESSAYS[state.currentLevel];
     if (essays && essays.length > 0) {
-      state.currentEssayIndex = Math.floor(Math.random() * essays.length);
+      // Try to select a random unread essay if possible
+      const unreadEssays = essays.filter(e => !state.readEssayIds.includes(e.id));
+      if (unreadEssays.length > 0) {
+        const randomEssay = unreadEssays[Math.floor(Math.random() * unreadEssays.length)];
+        state.currentEssayIndex = essays.findIndex(e => e.id === randomEssay.id);
+      } else {
+        // Fallback: pick any random essay if all are read
+        state.currentEssayIndex = Math.floor(Math.random() * essays.length);
+      }
     }
     renderEssay();
   }
@@ -2242,6 +2296,15 @@ function renderEssay() {
     state.currentEssayIndex = 0;
   }
   const essay = essays[state.currentEssayIndex];
+
+  // Mark this essay as read and save progress
+  if (essay && !state.readEssayIds.includes(essay.id)) {
+    state.readEssayIds.push(essay.id);
+    saveToLocalStorage();
+  }
+  
+  // Update read stories progress UI
+  updateReadStoriesCountUI();
   
   // Set Title and Description
   const titleCnEl = document.getElementById('essayTitleCn');
@@ -2799,8 +2862,21 @@ function generateMoreFlashcards() {
 // -------------------------------------------------------------
 function generateNewReadingTest() {
   const essays = HSK_ESSAYS[state.currentLevel];
-  if (!essays || essays.length <= 1) {
-    alert(`No alternative reading tests available for HSK Level ${state.currentLevel} yet!`);
+  if (!essays || essays.length === 0) {
+    alert(`No reading tests available for HSK Level ${state.currentLevel} yet!`);
+    return;
+  }
+  
+  // Filter for unread essays
+  const unreadEssays = essays.filter(e => !state.readEssayIds.includes(e.id));
+  
+  if (unreadEssays.length === 0) {
+    const resetConfirm = confirm(`You have read all ${essays.length} stories for HSK Level ${state.currentLevel}! Would you like to reset your read materials to read them again?`);
+    if (resetConfirm) {
+      resetReadEssays();
+      // After resetting, all essays except the current one are unread, so we can shuffle again
+      generateNewReadingTest();
+    }
     return;
   }
   
@@ -2827,11 +2903,9 @@ function generateNewReadingTest() {
   }
   
   setTimeout(() => {
-    // Select a different essay index than current one
-    let nextIndex;
-    do {
-      nextIndex = Math.floor(Math.random() * essays.length);
-    } while (nextIndex === state.currentEssayIndex && essays.length > 1);
+    // Select a random essay from the unread ones
+    const randomEssay = unreadEssays[Math.floor(Math.random() * unreadEssays.length)];
+    const nextIndex = essays.findIndex(e => e.id === randomEssay.id);
     
     state.currentEssayIndex = nextIndex;
     
