@@ -1486,10 +1486,26 @@ function renderDictionary() {
     
     // Text search query filter
     if (state.searchQuery) {
-      const query = state.searchQuery.toLowerCase();
-      const matchChar = word.character.includes(query);
-      const matchPin = word.pinyin.toLowerCase().includes(query);
-      const matchEng = word.english.toLowerCase().includes(query);
+      const rawQuery = state.searchQuery.toLowerCase();
+      
+      const stripToneMarks = (str) => {
+        const toneMap = {
+          'ā':'a', 'á':'a', 'ǎ':'a', 'à':'a',
+          'ē':'e', 'é':'e', 'ě':'e', 'è':'e',
+          'ī':'i', 'í':'i', 'ǐ':'i', 'ì':'i',
+          'ō':'o', 'ó':'o', 'ǒ':'o', 'ò':'o',
+          'ū':'u', 'ú':'u', 'ǔ':'u', 'ù':'u',
+          'ǖ':'u', 'ǘ':'u', 'ǚ':'u', 'ǜ':'u', 'ü':'u'
+        };
+        return str.replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/g, m => toneMap[m] || m);
+      };
+
+      const queryNormalized = stripToneMarks(rawQuery).replace(/\s+/g, '');
+      const pinyinNormalized = stripToneMarks(word.pinyin.toLowerCase()).replace(/\s+/g, '');
+      
+      const matchChar = word.character.includes(rawQuery);
+      const matchPin = pinyinNormalized.includes(queryNormalized);
+      const matchEng = word.english.toLowerCase().includes(rawQuery);
       return matchChar || matchPin || matchEng;
     }
     
@@ -2249,11 +2265,75 @@ function cleanDatabaseDefinitions() {
     });
   };
 
+  const formatPinyinSpacing = (pinyin) => {
+    if (!pinyin) return '';
+    
+    const segmentPinyin = (str) => {
+      const initials = ['zh', 'ch', 'sh', 'b', 'p', 'm', 'f', 'd', 't', 'n', 'l', 'g', 'k', 'h', 'j', 'q', 'x', 'r', 'z', 'c', 's', 'y', 'w'];
+      const vowels = 'aeiouvüāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ';
+      
+      let result = [];
+      let i = 0;
+      while (i < str.length) {
+        if (str[i] === "'" || str[i] === '’' || str[i] === '-') {
+          i++;
+          continue;
+        }
+        
+        let initial = '';
+        for (let len = 2; len >= 1; len--) {
+          const part = str.substring(i, i + len).toLowerCase();
+          if (initials.includes(part)) {
+            initial = str.substring(i, i + len);
+            i += len;
+            break;
+          }
+        }
+        
+        let vowelGroup = '';
+        while (i < str.length && vowels.includes(str[i].toLowerCase())) {
+          vowelGroup += str[i];
+          i++;
+        }
+        
+        let coda = '';
+        if (i < str.length) {
+          const remaining = str.substring(i).toLowerCase();
+          if (remaining.startsWith('ng')) {
+            const nextChar = str[i + 2];
+            if (!nextChar || !vowels.includes(nextChar.toLowerCase())) {
+              coda = str.substring(i, i + 2);
+              i += 2;
+            }
+          } else if (remaining.startsWith('n') || remaining.startsWith('r')) {
+            const nextChar = str[i + 1];
+            if (!nextChar || !vowels.includes(nextChar.toLowerCase())) {
+              coda = str.substring(i, i + 1);
+              i += 1;
+            }
+          }
+        }
+        
+        const syllable = initial + vowelGroup + coda;
+        if (syllable) {
+          result.push(syllable);
+        } else {
+          result.push(str[i]);
+          i++;
+        }
+      }
+      return result.join(' ');
+    };
+
+    return pinyin.split(/\s+/).map(segmentPinyin).join(' ');
+  };
+
   // Clean HSK_DATA
   for (const level in HSK_DATA) {
     if (HSK_DATA[level]) {
       HSK_DATA[level].forEach(word => {
         word.english = cleanTranslation(word.english);
+        word.pinyin = formatPinyinSpacing(word.pinyin);
       });
     }
   }
@@ -2263,6 +2343,7 @@ function cleanDatabaseDefinitions() {
     if (EXTRA_HSK_DATA[level]) {
       EXTRA_HSK_DATA[level].forEach(word => {
         word.english = cleanTranslation(word.english);
+        word.pinyin = formatPinyinSpacing(word.pinyin);
       });
     }
   }
