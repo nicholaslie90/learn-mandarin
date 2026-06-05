@@ -122428,6 +122428,598 @@ const HSK_ESSAYS = {
           "correct": 1
         }
       ]
+    },
+    {
+      "id": "essay_1_8",
+      "titleCn": "小小的家",
+      "titlePy": "Xiǎo xiǎo de jiā",
+      "titleEn": "Little Home",
+      "contentCn": "今天早上，在小小的家，邓雨坐在床上。邓雨的手里有电话。邓雨要打电话给外婆。\n外婆说：“小雨，你吃饭了吗？”\n邓雨说：“外婆，我还没有吃饭。”\n外婆说：“为什么你不吃饭？”\n邓雨说：“外婆，我的新家很小。我的新家只有一张床和一张桌子。我没有厨房。”\n外婆说：“你没有厨房？你在哪里做饭？”\n邓雨说：“外婆，我不做饭。我在学校的食堂吃饭。”\n外婆说：“食堂的饭好吃吗？”\n邓雨说：“外婆，食堂的饭很好吃。今天的午饭是饺子。”\n外婆说：“饺子很好。你要吃饺子。”\n邓雨说：“外婆，我现在要去学校的食堂。我要吃饺子。”\n外婆说：“好。你吃饭以后，再给我打电话。”\n邓雨说：“好的，外婆。再见。”\n邓雨放下电话。邓雨站起来。邓雨走出小小的家。邓雨走在路上。路上的树是黄色的。秋天的风很冷。\n中午，在学校的食堂，邓雨买饺子。邓雨坐在桌子前。邓雨吃饺子。饺子很热，很好吃。\n下午，在小小的家，邓雨给外婆打电话。\n邓雨说：“外婆，我吃了饺子。饺子很好吃。”\n外婆说：“很好。你吃饱了吗？”\n邓雨说：“外婆，我吃饱了。我吃了二十个饺子。”\n外婆笑了。外婆说：“二十个饺子很多！”\n邓雨说：“外婆，我很高，也很饿。”\n外婆说：“你要好好学习，也要好好吃饭。”\n邓雨说：“外婆，我会好好学习，也会好好吃饭。”",
+      "contentPy": "Jīntiān zǎoshang, zài xiǎo xiǎo de jiā, dèng yǔ zuò zài chuángshàng. Dèng yǔ de shǒu li yǒu diànhuà. Dèng yǔ yào dǎ diànhuà gěi wàipó.\nWàipó shuō:“Xiǎoyǔ, nǐ chīfànle ma?”\nDèng yǔ shuō:“Wàipó, wǒ hái méiyǒu chīfàn.”\nWàipó shuō:“Wèishéme nǐ bù chīfàn?”\nDèng yǔ shuō:“Wàipó, wǒ de xīnjiā hěn xiǎo. Wǒ de xīnjiā zhǐyǒu yī zhāng chuáng hé yī zhāng zhuōzǐ. Wǒ méiyǒu chúfáng.”\nWàipó shuō:“Nǐ méiyǒu chúfáng? Nǐ zài nǎlǐ zuò fàn?”\nDèng yǔ shuō:“Wàipó, wǒ bù zuò fàn. Wǒ zài xuéxiào de shítáng chīfàn.”\nWàipó shuō: “Shítáng de fàn hǎochī ma?”\nDèng yǔ shuō:“Wàipó, shítáng de fàn hěn hào chī. Jīntiān de wǔfàn shì jiǎozǐ.”\nWàipó shuō:“Jiǎozǐ hěn hǎo. Nǐ yào chī jiǎozǐ.”\nDèng yǔ shuō:“Wàipó, wǒ xiànzài yào qù xuéxiào de shítáng. Wǒ yào chī jiǎozǐ.”\nWàipó shuō:“Hǎo. Nǐ chīfàn yǐhòu, zài gěi wǒ dǎ diànhuà.”\nDèng yǔ shuō:“Hǎo de, wàipó. Zàijiàn.”\nDèng yǔ fàngxià diànhuà. Dèng yǔ zhàn qǐlái. Dèng yǔ zǒuchū xiǎo xiǎo de jiā. Dèng yǔ zǒu zài lùshàng. Lùshàng de shù shì huángsè de. Qiūtiān de fēng hěn lěng.\nZhōngwǔ, zài xuéxiào de shítáng, dèng yǔ mǎi jiǎozǐ. Dèng yǔ zuò zài zhuōzǐ qián. Dèng yǔ chī jiǎozǐ. Jiǎozǐ hěn rè, hěn hào chī.\nXiàwǔ, zài xiǎo xiǎo de jiā, dèng yǔ gěi wàipó dǎ diànhuà.\nDèng yǔ shuō:“Wàipó, wǒ chīle jiǎozǐ. Jiǎozǐ hěn hào chī.”\nWàipó shuō: “Hěnhǎo. Nǐ chī bǎole ma?”\nDèng yǔ shuō:“Wàipó, wǒ chī bǎole. Wǒ chīle èrshí gè jiǎozǐ.”\nWàipó xiàole. Wàipó shuō:“Èrshí gè jiǎozǐ hěnduō!”\nDèng yǔ shuō:“Wàipó, wǒ hěn gāo, yě hěn è.”\nWàipó shuō:“Nǐ yào hǎo hào xuéxí, yě yào hǎo hào chīfàn.”\nDèng yǔ shuō: “Wàipó, wǒ huì hǎohǎo xuéxí, yě huì hǎohǎo chīfàn.”",
+      "contentEn": "This morning, Deng Yu sat on the bed in his small home. Deng Yu has a phone in his hand. Deng Yu wants to call grandma.\nGrandma said: \"Xiaoyu, have you eaten?\"\nDeng Yu said: \"Grandma, I haven't eaten yet.\"\nGrandma said: \"Why don't you eat?\"\nDeng Yu said: \"Grandma, my new home is very small. My new home only has one bed and one table. I don't have a kitchen.\"\nGrandma said, \"You don't have a kitchen? Where do you cook?\"\nDeng Yu said: \"Grandma, I don't cook. I eat in the school cafeteria.\"\nGrandma said: \"Is the food in the cafeteria delicious?\"\nDeng Yu said: \"Grandma, the food in the cafeteria is delicious. Today's lunch is dumplings.\"\nGrandma said: \"The dumplings are very good. You want to eat the dumplings.\"\nDeng Yu said: \"Grandma, I'm going to the school cafeteria now. I want to eat dumplings.\"\nGrandma said: \"Okay. After you eat, call me again.\"\nDeng Yu said: \"Okay, grandma. Goodbye.\"\nDeng Yu put down the phone. Deng Yu stood up. Deng Yu walked out of his small home. Deng Yu walked on the road. The trees on the road are yellow. The autumn wind is very cold.\nAt noon, in the school cafeteria, Deng Yu bought dumplings. Deng Yu sat at the table. Deng Yu ate dumplings. The dumplings were hot and delicious.\nIn the afternoon, at her small home, Deng Yu called her grandmother.\nDeng Yu said: \"Grandma, I ate dumplings. The dumplings are delicious.\"\nGrandma said: \"Very good. Are you full?\"\nDeng Yu said: \"Grandma, I'm full. I ate twenty dumplings.\"\nGrandma smiled. Grandma said: \"Twenty dumplings is a lot!\"\nDeng Yu said: \"Grandma, I am very tall and very hungry.\"\nGrandma said: \"You have to study hard and eat well.\"\nDeng Yu said: \"Grandma, I can study well and eat well.\"",
+      "questions": [
+        {
+          "q": "邓雨在哪儿吃午饭？",
+          "qPy": "Dèng Yǔ zài nǎr chī wǔfàn?",
+          "qEn": "Where does Deng Yu eat lunch?",
+          "options": [
+            "新家",
+            "学校的食堂",
+            "外婆的家"
+          ],
+          "optionsPy": [
+            "Xīnjiā",
+            "Xuéxiào de shítáng",
+            "Wàipó de jiā"
+          ],
+          "optionsEn": [
+            "New home",
+            "School cafeteria",
+            "Grandma's home"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "邓雨今天中午吃了什么？",
+          "qPy": "Dèng Yǔ jīntiān zhōngwǔ chīle shénme?",
+          "qEn": "What did Deng Yu eat for lunch today?",
+          "options": [
+            "苹果",
+            "面包",
+            "饺子"
+          ],
+          "optionsPy": [
+            "Píngguǒ",
+            "Miànbāo",
+            "Jiǎozǐ"
+          ],
+          "optionsEn": [
+            "Apples",
+            "Bread",
+            "Dumplings"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "邓雨吃了多少个饺子？",
+          "qPy": "Dèng Yǔ chīle duōshǎo gè jiǎozǐ?",
+          "qEn": "How many dumplings did Deng Yu eat?",
+          "options": [
+            "十个",
+            "二十个",
+            "三十个"
+          ],
+          "optionsPy": [
+            "Shí gè",
+            "Èrshí gè",
+            "Sānshí gè"
+          ],
+          "optionsEn": [
+            "Ten",
+            "Twenty",
+            "Thirty"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_1_9",
+      "titleCn": "雨中的相遇",
+      "titlePy": "Yǔ zhōng de xiāngyù",
+      "titleEn": "Meeting in the Rain",
+      "contentCn": "今天下午，在学校外的大树下，孙雨看见一只小猫。小猫在树下，身体很小，毛是白色的。雨从天上下来，小猫很冷。孙雨说：“小猫，你在这里做什么？”\n小猫不说话，只是叫：“喵……”\n孙雨打开书包，拿出一个苹果。她把苹果给小猫，小猫不吃。孙雨说：“你饿吗？”小猫走过来，闻孙雨的手。孙雨没有食物，只有苹果。雨更大了，孙雨的衣服湿了。\n孙雨抱起小猫，小猫很轻。小猫在孙雨怀里不叫了。孙雨说：“我带你回家。”孙雨跑回家，小猫在她怀里睡觉。\n晚上，在家门口，孙雨敲门。孙先生开门，看见孙雨和小猫。孙先生说：“这是什么？”\n孙雨说：“爸爸，我在学校外的大树下找到小猫。小猫没有家，很饿，很冷。”\n孙先生看小猫，小猫睁开眼睛，叫一声：“喵。”\n孙太太从厨房出来，她说：“谁的小猫？”\n孙雨说：“妈妈，小猫现在是我的。我可以养小猫吗？”\n孙太太说：“小猫饿了，我们给它牛奶。”孙雨笑，她很高兴。小猫喝牛奶，孙雨摸小猫的头。",
+      "contentPy": "Jīntiān xiàwǔ, zài xuéxiào wài de dà shù xià, sūn yǔ kànjiàn yī zhǐ xiǎo māo. Xiǎo māo zài shù xià, shēntǐ hěn xiǎo, máo shì báisè de. Yǔ cóng tiānshàng xiàlái, xiǎo māo hěn lěng. Sūn yǔ shuō:“Xiǎo māo, nǐ zài zhèlǐ zuò shénme?”\nXiǎo māo bù shuōhuà, zhǐshì jiào:“Miāo……”\nSūn yǔ dǎkāi shūbāo, ná chū yīgè píngguǒ. Tā bǎ píngguǒ gěi xiǎo māo, xiǎo māo bù chī. Sūn yǔ shuō:“Nǐ è ma?” Xiǎo māo zǒu guòlái, wén sūn yǔ de shǒu. Sūn yǔ méiyǒu shíwù, zhǐyǒu píngguǒ. Yǔ gèng dàle, sūn yǔ de yīfú shīle.\nSūn yǔ bào qǐ xiǎo māo, xiǎo māo hěn qīng. Xiǎo māo zài sūnyǔhuái lǐ bù jiàole. Sūn yǔ shuō:“Wǒ dài nǐ huí jiā.” Sūn yǔ pǎo huí jiā, xiǎo māo zài tā huái lǐ shuìjiào.\nWǎnshàng, zài jiā ménkǒu, sūn yǔ qiāo mén. Sūn xiānshēng kāi mén, kànjiàn sūn yǔ hé xiǎo māo. Sūn xiānshēng shuō: “Zhè shì shénme?”\nSūn yǔ shuō:“Bàba, wǒ zài xuéxiào wài de dà shù xià zhǎodào xiǎo māo. Xiǎo māo méiyǒu jiā, hěn è, hěn lěng.”\nSūn xiānshēng kàn xiǎo māo, xiǎo māo zhēng kāi yǎnjīng, jiào yīshēng:“Miāo.”\nSūn tàitài cóng chúfáng chūlái, tā shuō:“Shéi de xiǎo māo?”\nSūn yǔ shuō:“Māmā, xiǎo māo xiànzài shì wǒ de. Wǒ kěyǐ yǎng xiǎo māo ma?”\nSūn tàitài shuō:“Xiǎo māo èle, wǒmen gěi tā niúnǎi.” Sūn yǔ xiào, tā hěn gāoxìng. Xiǎo māo hē niúnǎi, sūn yǔ mō xiǎo māo de tóu.",
+      "contentEn": "This afternoon, Sun Yu saw a kitten under the big tree outside the school. The kitten is under the tree. It has a small body and white fur. The rain fell from the sky and the kitten was very cold. Sun Yu said: \"Kitty cat, what are you doing here?\"\nThe little girl didn't speak, she just called: \"Meow...\"\nSun Yu opened his schoolbag and took out an apple. She gave the apple to the kitten, but the kitten didn't eat it. Sun Yu said, \"Are you hungry?\" The kitten came over and smelled Sun Yu's hand. Sun Yu had no food, only apples. The rain became heavier and Sun Yu's clothes got wet.\nThe kitten stopped crying in Sun Yu's arms. Sun Yu said: \"I will take you home.\" Sun Yu ran home, and the kitten fell asleep in her arms.\nIn the evening, at the doorway of the house, Sun Yu knocked on the door. Mr. Sun opened the door and saw Sun Yu and the kitten. Mr. Sun said: \"What is this?\"\nSun Yu said: \"Dad, I found the kitten under the big tree outside the school. The kitten has no home, is very hungry, and is very cold.\"\nMr. Sun looked at the kitten. The kitten opened its eyes and cried: \"Meow.\"\nMrs. Sun came out of the kitchen and said, \"Whose kitten is it?\"\nSun Yu said: \"Mom, the kitten is mine now. Can I raise the kitten?\"\nMrs. Sun said: \"The kitten is hungry, let's give it milk.\" Sun Yu smiled, she was very happy. The kitten drinks milk, and Sun Yu touches the kitten's head.",
+      "questions": [
+        {
+          "q": "孙雨在什么地方看见小猫？",
+          "qPy": "Sūn Yǔ zài shénme dìfāng kànjiàn xiǎomāo?",
+          "qEn": "Where did Sun Yu see the kitten?",
+          "options": [
+            "在大树下",
+            "在厨房里",
+            "在公交车站"
+          ],
+          "optionsPy": [
+            "Zài dàshù xià",
+            "Zài chúfáng lǐ",
+            "Zài gōngjiāochē zhàn"
+          ],
+          "optionsEn": [
+            "Under the big tree",
+            "In the kitchen",
+            "At the bus stop"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "孙雨从书包里拿出了什么？",
+          "qPy": "Sūn Yǔ cóng shūbāo lǐ ná chūle shénme?",
+          "qEn": "What did Sun Yu take out of her schoolbag?",
+          "options": [
+            "苹果",
+            "衣服",
+            "牛奶"
+          ],
+          "optionsPy": [
+            "Píngguǒ",
+            "Yīfú",
+            "Niúnǎi"
+          ],
+          "optionsEn": [
+            "An apple",
+            "Clothes",
+            "Milk"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "爸爸妈妈给小猫喝了什么？",
+          "qPy": "Bàba māmā gěi xiǎomāo hēle shénme?",
+          "qEn": "What did mom and dad give the kitten to drink?",
+          "options": [
+            "水",
+            "茶",
+            "牛奶"
+          ],
+          "optionsPy": [
+            "Shuǐ",
+            "Chá",
+            "Niúnǎi"
+          ],
+          "optionsEn": [
+            "Water",
+            "Tea",
+            "Milk"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": "essay_1_10",
+      "titleCn": "饭店见面",
+      "titlePy": "Fàndiàn jiànmiàn",
+      "titleEn": "Meeting at the Restaurant",
+      "contentCn": "今天晚上，在北京大学门口，程东说：“我饿了！”\n苏雪说：“我们知道。你说五次了。”\n叶梅说：“我想吃鱼。饭店有鱼吗？”\n谢小文说：“有。我昨天看了菜单。”\n方小丽说：“我们走吧！饭店在前面。”\n五个人一起走。程东走得快。苏雪说：“程东，你慢点！”\n程东说：“肉在等我！”\n叶梅笑：“鱼也在等我。”\n他们走到饭店门口。饭店不大，可是很亮。\n谢小文说：“我们进去吧。”\n在饭店里，一个服务员说：“晚上好！你们几位？”\n苏雪说：“五位。”\n服务员说：“请跟我来。”\n他们坐在一张大桌子旁边。\n程东马上拿菜单。程东说：“我要这个肉，这个肉，还有这个肉！”\n叶梅说：“我要鱼。”\n方小丽说：“我要青菜。”\n谢小文说：“我要汤。”\n苏雪说：“我要米饭。”\n服务员写完了，说：“还要什么？”\n程东说：“啤酒！今天苏雪生日！”\n服务员笑：“生日快乐！”\n苏雪说：“谢谢。”\n叶梅小声说：“苏雪，你高兴吗？”\n苏雪说：“我很高兴。和你们在一起，我最高兴。”\n菜来了。肉很多。鱼很大。\n程东吃第一口，说：“好吃！”\n叶梅吃鱼，说：“鱼很新鲜。”\n方小丽说：“青菜也好吃。”\n谢小文说：“汤热热的，好喝。”\n苏雪说：“我们喝一杯！”\n五个人一起站起来。\n程东说：“为苏雪，为朋友，为肉！”\n大家都笑。\n这时，灯突然灭了。\n在黑暗里，一个声音唱：“祝你生日快乐……”\n一个小蛋糕慢慢过来。蛋糕上有五支小蜡烛。\n苏雪说：“哇！”\n叶梅说：“快许愿！”\n苏雪闭眼，不说话。\n程东小声说：“她许什么愿？”\n谢小文说：“不能说！”\n苏雪睁眼，吹蜡烛。\n灯亮了。\n苏雪说：“谢谢你们！这是最好的生日！”\n方小丽说：“我们吃蛋糕吧！”\n程东说：“先吃最后一口肉！”\n大家又笑。",
+      "contentPy": "Jīntiān wǎnshàng, zài běijīng dàxué ménkǒu, chéng dōng shuō:“Wǒ èle!”\nSū xuě shuō:“Wǒmen zhīdào. Nǐ shuō wǔ cìle.”\nYè méi shuō:“Wǒ xiǎng chī yú. Fàndiàn yǒu yú ma?”\nXièxiǎowén shuō:“Yǒu. Wǒ zuótiān kànle càidān.”\nFāngxiǎolì shuō:“Wǒmen zǒu ba! Fàndiàn zài qiánmiàn.”\nWǔ gèrén yīqǐ zǒu. Chéng dōng zǒu dé kuài. Sū xuě shuō:“Chéng dōng, nǐ màn diǎn!”\nChéng dōng shuō: “Ròu zài děng wǒ!”\nYè méi xiào: “Yú yě zài děng wǒ.”\nTāmen zǒudào fàndiàn ménkǒu. Fàndiàn bù dà, kěshì hěn liàng.\nXièxiǎowén shuō: “Wǒmen jìnqù ba.”\nZài fàndiàn lǐ, yīgè fúwùyuán shuō:“Wǎnshàng hǎo! Nǐmen jǐ wèi?”\nSū xuě shuō:“Wǔ wèi.”\nFúwùyuán shuō:“Qǐng gēn wǒ lái.”\nTāmen zuò zài yī zhāngdà zhuōzǐ pángbiān.\nChéng dōng mǎshàng ná càidān. Chéng dōng shuō:“Wǒ yào zhège ròu, zhège ròu, hái yǒu zhège ròu!”\nYè méi shuō: “Wǒ yào yú.”\nFāngxiǎolì shuō: “Wǒ yào qīngcài.”\nXièxiǎowén shuō: “Wǒ yào tāng.”\nSū xuě shuō: “Wǒ yào mǐfàn.”\nFúwùyuán xiěwánle, shuō: “Hái yào shénme?”\nChéng dōng shuō: “Píjiǔ! Jīntiān sū xuě shēngrì!”\nFúwùyuán xiào: “Shēngrì kuàilè!”\nSū xuě shuō: “Xièxiè.”\nYè méi xiǎoshēng shuō: “Sū xuě, nǐ gāoxìng ma?”\nSū xuě shuō:“Wǒ hěn gāoxìng. Hé nǐmen zài yīqǐ, wǒ zuì gāoxìng.”\nCài láile. Ròu hěnduō. Yú hěn dà.\nChéng dōng chī dì yī kǒu, shuō: “Hǎochī!”\nYè méi chī yú, shuō: “Yú hěn xīnxiān.”\nFāngxiǎolì shuō: “Qīngcài yě hǎochī.”\nXièxiǎowén shuō: “Tāng rè rè de, hǎohē.”\nSū xuě shuō: “Wǒmen hē yībēi!”\nWǔ gèrén yīqǐ zhàn qǐlái.\nChéng dōng shuō:“Wèi sū xuě, wèi péngyǒu, wèi ròu!”\nDàjiā dōu xiào.\nZhè shí dēng tūrán mièle.\nZài hēi'àn lǐ, yīgè shēngyīn chàng:“Zhù nǐ shēngrì kuàilè……”\nYīgè xiǎo dàngāo mànmàn guòlái. Dàngāo shàng yǒu wǔ zhī xiǎo làzhú.\nSū xuě shuō:“Wa!”\nYè méi shuō:“Kuài xǔyuàn!”\nSū xuě bì yǎn, bù shuōhuà.\nChéng dōng xiǎoshēng shuō:“Tā xǔ shénme yuàn?”\nXièxiǎowén shuō:“Bùnéng shuō!”\nSū xuě zhēng yǎn, chuī làzhú.\nDēngliàngle.\nSū xuě shuō:“Xièxiè nǐmen! Zhè shì zuì hǎo de shēngrì!”\nFāngxiǎolì shuō:“Wǒmen chī dàngāo ba!”\nChéng dōng shuō:“Xiān chī zuìhòu yīkǒu ròu!”\nDàjiā yòu xiào.",
+      "contentEn": "Tonight, at the gate of Peking University, Cheng Dong said: \"I'm hungry!\"\nSu Xue said: \"We know. You said it five times.\"\nYe Mei said: \"I want to eat fish. Is there any fish in the restaurant?\"\nXie Xiaowen said: \"Yes. I looked at the menu yesterday.\"\nFang Xiaoli said: \"Let's go! The restaurant is in front.\"\nFive people walked together. Cheng Dong walked quickly.\nCheng Dong said: \"The meat is waiting for me!\"\nYe Mei smiled: \"The fish is also waiting for me.\"\nThey walked to the restaurant entrance. The restaurant was not big, but it was very bright.\nXie Xiaowen said: \"Let's go in.\"\nIn the restaurant, a waiter said: \"Good evening! How many of you are there?\"\nSu Xue said: \"Five.\"\nThe waiter said: \"Please follow me.\"\nThey sat at a large table.\nCheng Dong immediately took the menu. Cheng Dong said: \"I want this meat, this meat, and this meat!\"\nYe Mei said: \"I want fish.\"\nFang Xiaoli said: \"I want green vegetables.\"\nXie Xiaowen said: \"I want soup.\"\nSu Xue said: \"I want rice.\"\nThe waiter finished writing and said: \"What else would you like?\"\nCheng Dong said: \"Beer! Today is Su Xue's birthday!\"\nThe waiter smiled: \"Happy birthday!\"\nSu Xue said: \"Thank you.\"\nYe Mei whispered: \"Su Xue, are you happy?\"\nSu Xue said: \"I am very happy. I am happiest when I am with you.\"\nThe food is here. Lots of meat. The fish is huge.\nCheng Dong took the first bite and said: \"Delicious!\"\nYe Mei ate the fish and said: \"The fish is very fresh.\"\nFang Xiaoli said: \"The green vegetables are also delicious.\"\nXie Xiaowen said: \"The soup is warm and tasty.\"\nSu Xue said: \"Let's have a drink!\"\nThe five people stood up together.\nCheng Dong said: \"For Su Xue, for friends, and for meat!\"\nEveryone laughs.\nAt this moment, the lights suddenly went out.\nIn the darkness, a voice sang: \"Happy birthday to you...\"\nA small cake came over slowly. There were five small candles on the cake.\nSu Xue said: \"Wow!\"\nYe Mei said: \"Hurry up and make a wish!\"\nSu Xue closed her eyes and said nothing.\nCheng Dong whispered: \"What did she wish for?\"\nXie Xiaowen said: \"I can't say it!\"\nSu Xue opened her eyes and blew out the candles.\nThe lights are on.\nSu Xue said: \"Thank you! This is the best birthday!\"\nFang Xiaoli said: \"Let's eat cake!\"\nCheng Dong said: \"Eat the last bite of meat first!\"\nEveryone laughed again.",
+      "questions": [
+        {
+          "q": "今天是谁的生日？",
+          "qPy": "Jīntiān shì shéi de shēngrì?",
+          "qEn": "Whose birthday is it today?",
+          "options": [
+            "苏雪",
+            "叶梅",
+            "程东"
+          ],
+          "optionsPy": [
+            "Sū Xuě",
+            "Yè Méi",
+            "Chéng Dōng"
+          ],
+          "optionsEn": [
+            "Su Xue",
+            "Ye Mei",
+            "Cheng Dong"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "他们在哪儿见面？",
+          "qPy": "Tāmen zài nǎr jiànmiàn?",
+          "qEn": "Where did they meet?",
+          "options": [
+            "学校",
+            "饭店",
+            "家里"
+          ],
+          "optionsPy": [
+            "Xuéxiào",
+            "Fàndiàn",
+            "Jiālǐ"
+          ],
+          "optionsEn": [
+            "School",
+            "Restaurant",
+            "Home"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "蛋糕上有几支小蜡烛？",
+          "qPy": "Dàngāo shàng yǒu jǐ zhī xiǎo làzhú?",
+          "qEn": "How many small candles were on the cake?",
+          "options": [
+            "三支",
+            "四支",
+            "五支"
+          ],
+          "optionsPy": [
+            "Sān zhī",
+            "Sì zhī",
+            "Wǔ zhī"
+          ],
+          "optionsEn": [
+            "Three",
+            "Four",
+            "Five"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": "essay_1_11",
+      "titleCn": "天晴的早上",
+      "titlePy": "Tiān qíng de zǎoshang",
+      "titleEn": "Clear Morning",
+      "contentCn": "星期六早上，在何天的家里，何天起得很早。何天打开窗户，看见蓝色的天空。何天叫叶月：“叶月，快起来！今天天气真好！”\n叶月从床上起来，走到窗户旁边。叶月说：“真的！天空很蓝，没有云。我们今天可以去爬山！”\n在厨房里，何天做早饭。何天煮鸡蛋，烤面包。叶月泡绿茶。叶月说：“茶好了，来喝茶！”\n他们坐在小桌子旁边吃早饭。何天吃两个鸡蛋，吃两片面包。叶月吃一个鸡蛋，吃一片面包。他们喝茶，看外面的蓝天。\n何天说：“我们七点出门，好吗？”\n叶月说：“好！我准备去。我要穿红色的衣服，你呢？”\n何天说：“我穿蓝色的衣服。我们带水和苹果。”\n叶月点头：“还要带相机！”\n他们很快吃完早饭。何天洗杯子，洗盘子。叶月整理桌子。他们都很高兴，因为今天可以一起爬山。\n叶月看着外面，说：“今天天气真好！我喜欢这样的早上！”",
+      "contentPy": "Xīngqíliù zǎoshang, zài hé tiān de jiālǐ, hé tiān qǐ dé hěn zǎo. Hé tiān dǎkāi chuānghù, kànjiàn lán sè de tiānkōng. Hé tiān jiào yè yuè:“Yè yuè, kuài qǐlái! Jīntiān tiānqì zhēn hǎo!”\nYè yuè cóng chuángshàng qǐlái, zǒu dào chuānghù pángbiān. Yè yuè shuō:“Zhēn de! Tiānkōng hěn lán, méiyǒu yún. Wǒmen jīntiān kěyǐ qù páshān!”\nZài chúfáng lǐ, hé tiān zuò zǎofàn. Hé tiān zhǔ jīdàn, kǎo miànbāo. Yè yuè pào lǜchá. Yè yuè shuō:“Chá hǎole, lái hē chá!”\nTāmen zuòzài xiǎo zhuōzi pángbiān chī zǎofàn. Hé tiān chī liǎng gè jīdàn, chī liǎng piàn miànbāo. Yè yuè chī yīgè jīdàn, chī yīpiàn miànbāo. Tāmen hē chá, kàn wàimiàn de lántiān.\nHé tiān shuō: “Wǒmen qī diǎn chūmén, hǎo ma?”\nYè yuè shuō:“Hǎo! Wǒ zhǔnbèi qù. Wǒ yào chuān hóngsè de yīfú, nǐ ne?”\nHé tiān shuō:“Wǒ chuān lán sè de yīfú. Wǒmen dài shuǐ hé píngguǒ.”\nYè yuè diǎntóu: “Hái yào dài xiàngjī!”\nTāmen hěn kuài chī wán zǎofàn. Hé tiān xǐ bēizǐ, xǐ pánzǐ. Yè yuè zhěnglǐ zhuōzǐ. Tāmen dōu hěn gāoxìng, yīn wéi jīntiān kěyǐ yīqǐ páshān.\nYè yuè kànzhe wàimiàn, shuō:“Jīntiān tiānqì zhēn hǎo! Wǒ xǐhuān zhèyàng de zǎoshang!”",
+      "contentEn": "On Saturday morning, at He Tian's home, He Tian got up very early. He Tian opened the window and saw the blue sky. He Tian called Ye Yue: \"Ye Yue, get up quickly! The weather is so good today!\"\nYe Yue got up from the bed and walked to the window. Ye Yue said: \"Really! The sky is very blue and there are no clouds. We can go hiking today!\"\nIn the kitchen, He Tian made breakfast. He Tian boiled eggs and toasted bread. Ye Yue brewed green tea. Ye Yue said: \"The tea is ready, come and drink tea!\"\nThey sat at the small table to eat breakfast. He Tian ate two eggs and two slices of bread. Ye Yue ate one egg and one slice of bread. They drank tea and looked at the blue sky outside.\nHe Tian said: \"We will go out at seven o'clock, okay?\"\nYe Yue said: \"Okay! I'm going to go. I want to wear red clothes, what about you?\"\nHe Tian said: \"I wear blue clothes. We bring water and apples.\"\nYe Yue nodded: \"We also need to bring a camera!\"\nThey finished their breakfast quickly. He Tian washes the cups and dishes. Hazuki tidied the table. They were all very happy because they could climb the mountain together today.\nHazuki looked outside and said, \"The weather is so nice today! I love mornings like this!\"",
+      "questions": [
+        {
+          "q": "他们今天要去做什么？",
+          "qPy": "Tāmen jīntiān yào qù zuò shénme?",
+          "qEn": "What are they going to do today?",
+          "options": [
+            "买衣服",
+            "去爬山",
+            "喝茶"
+          ],
+          "optionsPy": [
+            "Mǎi yīfú",
+            "Qù páshān",
+            "Hē chá"
+          ],
+          "optionsEn": [
+            "Buy clothes",
+            "Go hiking",
+            "Drink tea"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "何天今天穿什么颜色的衣服？",
+          "qPy": "Hé Tiān jīntiān chuān shénme yánsè de yīfú?",
+          "qEn": "What color clothes is He Tian wearing today?",
+          "options": [
+            "红色的",
+            "蓝色的",
+            "黄色的"
+          ],
+          "optionsPy": [
+            "Hóngsè de",
+            "Lánsè de",
+            "Huángsè de"
+          ],
+          "optionsEn": [
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "他们几点出门？",
+          "qPy": "Tāmen jǐ diǎn chūmén?",
+          "qEn": "What time are they going out?",
+          "options": [
+            "六点",
+            "七点",
+            "八点"
+          ],
+          "optionsPy": [
+            "Liù diǎn",
+            "Qī diǎn",
+            "Bā diǎn"
+          ],
+          "optionsEn": [
+            "Six o'clock",
+            "Seven o'clock",
+            "Eight o'clock"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_1_12",
+      "titleCn": "球场边的相遇",
+      "titlePy": "Qiúchǎng biān de xiāngyù",
+      "titleEn": "Sideline Encounter",
+      "contentCn": "星期六上午，在公园球场，苏大文坐在长椅上看书。叶小武跑来，手里拿着篮球。\n叶小武说：“大文，我们打篮球！”\n苏大文摇头，说：“小武，我想看书。”\n叶小武坐下，说：“今天是星期六，天气好，打球最好！”\n苏大文说：“我的书很好，我想看完。”\n叶小武站起来，说：“你昨天说今天打球！”\n苏大文说：“我昨天没说，我说今天看书。”\n叶小武不高兴，说：“你总是看书，不运动！”\n苏大文也不高兴，说：“你总是打球，不看书！”\n两个人不说话。叶小武拍篮球，声音很大。苏大文翻书，声音很小。\n一个小女孩走来，说：“哥哥，你们打球吗？”\n叶小武说：“我想打，他不想。”\n小女孩看苏大文，说：“哥哥，你为什么不打？”\n苏大文说：“我的书没看完。”\n小女孩说：“打完球再看，好吗？”\n苏大文看小女孩，小女孩笑。苏大文看叶小武，叶小武也笑。\n苏大文说：“好，我们打十分钟，然后我看书。”\n叶小武高兴，说：“十分钟也好！”\n三个人打球。叶小武投球，小女孩拍手。苏大文投球，没进。大家都笑。\n十分钟后，苏大文说：“时间到了，我看书。”\n叶小武说：“谢谢你，大文！”\n苏大文坐回长椅，看书。叶小武和小女孩继续打球。\n苏大文看书，也看叶小武和小女孩。苏大文想：打球也开心，看书也开心。明天找小武一起打球和看书。",
+      "contentPy": "Xīngqíliù shàngwǔ, zài gōngyuán qiúchǎng, sūdàwén zuò zài cháng yǐ shàng kànshū. Yèxiǎowǔ pǎo lái, shǒu lǐ názhe lánqiú.\nYèxiǎowǔ shuō: “Dàwén, wǒmen dǎ lánqiú!”\nSūdàwén yáotóu, shuō:“Xiǎo wǔ, wǒ xiǎng kànshū.”\nYèxiǎowǔ zuò xià, shuō:“Jīntiān shì xīngqíliù, tiānqì hǎo, dǎqiú zuì hǎo!”\nSūdàwén shuō:“Wǒ de shū hěn hǎo, wǒ xiǎng kàn wán.”\nYèxiǎowǔ zhàn qǐlái, shuō: “Nǐ zuótiān shuō jīntiān dǎqiú!”\nSūdàwén shuō:“Wǒ zuótiān méi shuō, wǒ shuō jīntiān kànshū.”\nYèxiǎowǔ bù gāoxìng, shuō:“Nǐ zǒng shì kànshū, bù yùndòng!”\nSūdàwén yě bù gāoxìng, shuō:“Nǐ zǒng shì dǎqiú, bù kànshū!”\nLiǎng gèrén bù shuōhuà. Yèxiǎowǔ pāi lánqiú, shēngyīn hěn dà. Sūdàwén fān shū, shēngyīn hěn xiǎo.\nYīgè xiǎo nǚhái zǒu lái, shuō:“Gēgē, nǐmen dǎqiú ma?”\nYèxiǎowǔ shuō: “Wǒ xiǎng dǎ, tā bù xiǎng.”\nXiǎo nǚhái kàn sūdàwén, shuō:“Gēgē, nǐ wèishéme bù dǎ?”\nSūdàwén shuō: “Wǒ de shū méi kàn wán.”\nXiǎo nǚhái shuō: “Dǎ wán qiú zài kàn, hǎo ma?”\nSūdàwén kàn xiǎo nǚhái, xiǎo nǚhái xiào. Sūdàwén kàn Yèxiǎowǔ, Yèxiǎowǔ yě xiào.\nSūdàwén shuō:“Hǎo, wǒmen dǎ shí fēnzhōng, ránhòu wǒ kànshū.”\nYèxiǎowǔ gāoxìng shuō: “Shí fēnzhōng yě hǎo!”\nSān gèrén dǎqiú. Yèxiǎowǔ tóuqiú, xiǎo nǚhái pāishǒu. Sūdàwén tóuqiú, méi jìn. Dàjiā dōu xiào.\nShí fēnzhōng hòu, sūdàwén shuō:“Shíjiān dàole, wǒ kànshū.”\nYèxiǎowǔ shuō: “Xièxiè nǐ, Dàwén!”\nSūdàwén zuò huí chángyǐ kànshū. Yèxiǎowǔ hé xiǎo nǚhái jìxù dǎqiú.\nSūdàwén kànshū, yě kàn yèxiǎowǔ hé xiǎo nǚhái. Sūdàwén xiǎng: Dǎqiú yě kāixīn, kànshū yě kāixīn. Míngtiān zhǎo xiǎo wǔ yīqǐ dǎqiú hé kànshū.",
+      "contentEn": "On Saturday morning, Su Dawen sat on the bench and read a book at the park court.\nYe Xiaowu said: \"Dawen, let's play basketball!\"\nSu Dawen shook his head and said, \"Xiao Wu, I want to read a book.\"\nYe Xiaowu sat down and said, \"Today is Saturday, the weather is nice, it's the best time to play ball!\"\nSu Dawen said: \"My book is very good, I want to finish it.\"\nYe Xiaowu stood up and said: \"Yesterday you said you would play today!\" \"\nSu Dawen said: \"I didn't say anything yesterday, I said I would read a book today.\"\nYe Xiaowu was unhappy and said, \"You always read books and don't exercise!\"\nSu Dawen was also unhappy and said, \"You always play ball and don't read!\"\nThe two of them didn't speak.\nA little girl came over and said, \"Brother, do you play ball?\"\nYe Xiaowu said: \"I want to play, he doesn't.\"\nThe little girl looked at Su Dawen and said, \"Brother, why don't you fight?\"\nSu Dawen said: \"I haven't finished reading my book.\"\nThe little girl said: \"Read it after playing, okay?\"\nSu Dawen looked at the little girl, and the little girl smiled. Su Dawen looked at Ye Xiaowu, and Ye Xiaowu also smiled.\nSu Dawen said: \"Okay, let's play for ten minutes, and then I will read.\"\nYe Xiaowu was happy and said: \"Ten minutes is fine too!\"\nThe three of them played ball. Ye Xiaowu shot the ball, and the little girl clapped. Su Dawen shot the ball, but missed. Everyone laughed.\nTen minutes later, Su Dawen said: \"It's time, I'll read a book.\"\nYe Xiaowu said: \"Thank you, Dawen!\"\nSu Dawen sat back on the bench to read his book. Ye Xiaowu and the little girl continued to play ball.\nSu Dawen read his book, and also watched Ye Xiaowu and the little girl. Su Dawen thought: Playing ball is fun, and reading is also fun. Tomorrow I will ask Xiao Wu to play ball and read books together.",
+      "questions": [
+        {
+          "q": "星期六上午，苏大文想做什么？",
+          "qPy": "Xīngqíliù shàngwǔ, Sū Dàwén xiǎng zuò shénme?",
+          "qEn": "What does Su Dawen want to do on Saturday morning?",
+          "options": [
+            "看书",
+            "打篮球",
+            "去公园"
+          ],
+          "optionsPy": [
+            "Kànshū",
+            "Dǎ lánqiú",
+            "Qù gōngyuán"
+          ],
+          "optionsEn": [
+            "Read a book",
+            "Play basketball",
+            "Go to the park"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "他们一共打球打了多少时间？",
+          "qPy": "Tāmen yīgòng dǎqiú dǎle duōshǎo shíjiān?",
+          "qEn": "How long did they play ball in total?",
+          "options": [
+            "五分钟",
+            "十分钟",
+            "三分种"
+          ],
+          "optionsPy": [
+            "Wǔ fēnzhōng",
+            "Shí fēnzhōng",
+            "Sān fēnzhōng"
+          ],
+          "optionsEn": [
+            "Five minutes",
+            "Ten minutes",
+            "Three minutes"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "苏大文投球投进了吗？",
+          "qPy": "Sū Dàwén tóuqiú tóu jìnle ma?",
+          "qEn": "Did Su Dawen make the shot?",
+          "options": [
+            "投进了",
+            "没投进",
+            "他没投球"
+          ],
+          "optionsPy": [
+            "Tóu jìnle",
+            "Méi tóu jìn",
+            "Tā méi tóuqiú"
+          ],
+          "optionsEn": [
+            "He made it",
+            "He missed",
+            "He didn't shoot"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_1_13",
+      "titleCn": "雨中的等待",
+      "titlePy": "Yǔ zhōng de děngdài",
+      "titleEn": "Waiting in the Rain",
+      "contentCn": "今天早上七点，在马东的家里，马东起床了。马东走到窗户前面，马东看到外面下雨了。雨很大，风也很大。马东说：“不好了，我要迟到了！”\n马东马上穿衣服，马东拿黑色的雨伞。马东快步走出家门，马东走向公交车站。雨打在马东的脸上，马东的鞋子进水了。马东的衣服湿了，马东的裤子也湿了。\n在公交车站，马东站着等公交车。马东拿出手机，马东看今天的新闻。新闻说：“今天雨很大，很多人迟到了。”\n马东说：“我也要迟到了。”\n雨越来越大，风越来越冷。马东的身体发抖了，但是马东继续等公交车。马东看到路上有很多水，马东看到很多人跑向公交车站。马东想：“公交车怎么还不来？”\n突然，马东听到刹车的声音。在马东的前面，一辆黑色的汽车差点撞到一棵大树。马东吓了一跳，马东的手机差点掉下来。马东说：“好危险！”\n在公交车站，很多人现在站着。大家都看路，大家都等公交车。一个小女孩哭了，小女孩的妈妈说：“不要哭，公交车马上来了。”\n马东看手表，马东说：“已经七点四十分了，我的公司八点上班。”马东很着急，马东走来走去。雨还是很大，马东的雨伞挡不住雨。\n突然，马东看到一辆黄色的公交车来了。马东看到公交车上的号码：108。马东说：“对了，108路去我的公司！”马东马上向前走，马东准备上车。",
+      "contentPy": "Jīntiān zǎoshang qī diǎn, zài mǎ dōng de jiālǐ, mǎ dōng qǐchuángle. Mǎ dōng zǒu dào chuānghù qiánmiàn, mǎ dōng kàn dào wàimiàn xià yǔle. Yǔ hěn dà, fēng yě hěn dà. Mǎ dōng shuō:“Bù hǎole, wǒ yào chídàole!”\nMǎ dōng mǎshàng chuān yīfú, mǎ dōng ná hēisè de yǔsǎn. Mǎ dōng kuài bù zǒuchū jiāmén, mǎ dōng zǒuxiàng gōngjiāo chē zhàn. Yǔ dǎ zài mǎ dōng de liǎn shàng, mǎ dōng de xiézǐ jìn shuǐle. Mǎ dōng de yīfú shīle, mǎ dōng de kùzǐ yě shīle.\nZài gōngjiāo chē zhàn, mǎ dōng zhànzhe děng gōngjiāo chē. Mǎ dōng ná chū shǒujī, mǎ dōng kàn jīntiān de xīnwén. Xīnwén shuō:“Jīntiān yǔ hěn dà, hěnduō rén chídàole.”\nMǎ dōng shuō: “Wǒ yě yào chídàole.”\nYǔ yuè lái yuè dà, fēng yuè lái yuè lěng. Mǎ dōng de shēntǐ fādǒule, dànshì mǎ dōng jìxù děng gōngjiāo chē. Mǎ dōng kàn dào lùshàng yǒu hěnduō shuǐ, mǎ dōng kàn dào hěnduō rén pǎo xiàng gōngjiāo chē zhàn. Mǎ dōng xiǎng:“Gōngjiāo chē zěnme hái bù lái?”\nTúrán, mǎ dōng tīng dào shāchē de shēngyīn. Zài mǎ dōng de qiánmiàn, yī liàng hēisè de qìchē chàdiǎn zhuàng dào yī kē dà shù. Mǎ dōng xiàle yī tiào, mǎ dōng de shǒujī chàdiǎn diào xiàlái. Mǎ dōng shuō:“Hǎo wéixiǎn!”\nZài gōngjiāo chē zhàn, hěnduō rén xiànzài zhànzhe. Dàjiā dōu kàn lù, dàjiā dōu děng gōngjiāo chē. Yīgè xiǎo nǚhái kūle, xiǎo nǚhái de māmā shuō:“Bùyào kū, gōngjiāo chē mǎshàng láile.”\nMǎ dōng kàn shǒubiǎo, mǎ dōng shuō:“Yǐjīng qī diǎn sìshí fēnle, wǒ de gōngsī bā diǎn shàngbān.” Mǎ dōng hěn zhāojí, mǎ dōng zǒu lái zǒu qù. Yǔ háishì hěn dà, mǎ dōng de yǔsǎn dǎng bù zhù yǔ.\nTúrán, mǎ dōng kàn dào yī liàng huángsè de gōngjiāo chē láile. Mǎ dōng kàn dào gōngjiāo chē shàng de hàomǎ:108. Mǎ dōng shuō:“Duìle,108 lù qù wǒ de gōngsī!” Mǎ dōng mǎshàng xiàng qián zǒu, mǎ dōng zhǔnbèi shàng chē.",
+      "contentEn": "At seven o'clock this morning, Ma Dong got up at Ma Dong's house. Ma Dong walked to the window. Ma Dong saw it was raining outside.\nMa Dong put on his clothes immediately, and Ma Dong took the black umbrella. Ma Dong walked out of the house quickly, and Ma Dong walked to the bus stop. The rain hit Ma Dong's face, and Ma Dong's shoes got wet. Ma Dong's clothes were wet, and Ma Dong's pants were also wet.\nAt the bus stop, Ma Dong stood and waited for the bus. Ma Dong took out his phone and read today's news. The news said: \"It is raining heavily today, and many people are late.\"\nMa Dong said: \"I am going to be late too.\"\nThe rain became heavier and the wind became colder. Ma Dong's body shivered, but Ma Dong continued to wait for the bus. Ma Dong saw a lot of water on the road, and he saw many people running to the bus stop. Ma Dong thought: \"Why hasn't the bus come yet?\"\nSuddenly, Ma Dong heard the sound of braking. In front of Ma Dong, a black car almost hit a big tree. Ma Dong was startled, and his phone almost fell. Ma Dong said: \"So dangerous!\"\nAt the bus stop, many people were standing now. Everyone looked at the road, everyone waited for the bus. A little girl cried, and the little girl's mother said: \"Don't cry, the bus is coming soon.\"\nMa Dong looked at his watch. Ma Dong said, \"It's already 7:40, and my company goes to work at 8 o'clock.\" Ma Dong was very anxious, and Ma Dong walked around.\nSuddenly, Ma Dong saw a yellow bus coming. Ma Dong saw the number on the bus: 108. Ma Dong said: \"That's right, Route 108 goes to my company!\" Ma Dong immediately walked forward, ready to get on the bus.",
+      "questions": [
+        {
+          "q": "马东几点起床？",
+          "qPy": "Mǎ Dōng jǐ diǎn qǐchuáng?",
+          "qEn": "What time did Ma Dong get up?",
+          "options": [
+            "六点",
+            "七点",
+            "八点"
+          ],
+          "optionsPy": [
+            "Liù diǎn",
+            "Qī diǎn",
+            "Bā diǎn"
+          ],
+          "optionsEn": [
+            "Six o'clock",
+            "Seven o'clock",
+            "Eight o'clock"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "马东的公司几点上班？",
+          "qPy": "Mǎ Dōng de gōngsī jǐ diǎn shàngbān?",
+          "qEn": "What time does Ma Dong's company start work?",
+          "options": [
+            "七点",
+            "七点四十分",
+            "八点"
+          ],
+          "optionsPy": [
+            "Qī diǎn",
+            "Qī diǎn sìshí fēn",
+            "Bā diǎn"
+          ],
+          "optionsEn": [
+            "Seven o'clock",
+            "Seven forty",
+            "Eight o'clock"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "几路公交车去马东的公司？",
+          "qPy": "Jǐ lù gōngjiāochē qù Mǎ Dōng de gōngsī?",
+          "qEn": "Which bus route goes to Ma Dong's company?",
+          "options": [
+            "101路",
+            "108路",
+            "118路"
+          ],
+          "optionsPy": [
+            "Yī líng yī lù",
+            "Yī líng bā lù",
+            "Yī yī bā lù"
+          ],
+          "optionsEn": [
+            "Route 101",
+            "Route 108",
+            "Route 118"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_1_14",
+      "titleCn": "厨房里的爸爸",
+      "titlePy": "Chúfáng lǐ de bàba",
+      "titleEn": "Dad Cooks",
+      "contentCn": "早上七点，在厨房，梁大伟打鸡蛋。鸡蛋落在锅里，发出“zi”的声音。梁大伟看手表，手表显示七点零五分。梁大伟说：“不好了！大家会迟到！”\n在厨房，梁大伟把面包放进烤面包机。烤面包机开始工作，发出“wu”的声音。梁大伟又看手表，现在七点零七分。梁大伟大声喊：“小云！小东！快起床！”\n在厨房，鸡蛋熟了。梁大伟把鸡蛋放在四个盘子里。面包也好了，跳出烤面包机。梁大伟把面包放在盘子里。梁大伟闻味道，味道很好。梁大伟微笑，但是很快又不笑了，因为时间不够。\n在厨房，梁大伟听到脚步声。叶美走进厨房。叶美穿工作衣服，头发还有一些乱。叶美说：“大伟，现在几点？”\n梁大伟说：“七点十分。我们要快。”\n叶美说：“小云和小东起床了吗？”\n梁大伟摇头说：“没有。我叫他们，但是他们没有回答。”\n在厨房，叶美拿起一个鸡蛋。叶美吃一口，然后说：“鸡蛋很好吃。谢谢你。”\n梁大伟说：“不谢。你快吃。我去叫孩子。”梁大伟走出厨房。\n在走廊，梁大伟走到小云房间门口。梁大伟敲门，说：“小云！七点十五分！快起床！”\n小云在房间里说：“爸爸，我很困！”\n梁大伟说：“不行！学校八点上课！”\n在走廊，梁大伟走到小东房间门口。梁大伟敲门，说：“小东！起床！我们要迟到了！”\n小东在房间里说：“我的袜子在哪里？”\n梁大伟说：“先起床！再找袜子！”\n在厨房，叶美吃面包。叶美看手表，显示七点二十分。叶美大声喊：“大伟！孩子起床了吗？”\n梁大伟走进厨房，摇头说：“小云说很困。小东找袜子。”\n叶美放下面包，说：“我去帮小东找袜子。你去帮小云起床。”\n在厨房，梁大伟把早饭放在桌子上。梁大伟又看手表，七点二十二分。梁大伟说：“大家快！我们没有时间！”",
+      "contentPy": "Zǎoshang qī diǎn, zài chúfáng, liángdàwěi dǎ jīdàn. Jīdàn luò zài guō lǐ, fāchū “zi” de shēngyīn. Liángdàwěi kàn shǒubiǎo, shǒubiǎo xiǎnshì qī diǎn líng wǔ fēn. Liángdàwěi shuō:“Bù hǎole! Dàjiā huì chídào!”\nZài chúfáng, liángdàwěi bǎ miànbāo fàng jìn kǎo miànbāo jī. Kǎo miànbāo jī kāishǐ gōngzuò, fāchū “wu” de shēngyīn. Liángdàwěi yòu kàn shǒubiǎo, xiànzài qī diǎn líng qī fēn. Liáng dà wěidà shēng hǎn:“Xiǎo yún! Xiǎo dōng! Kuài qǐchuáng!”\nZài chúfáng, jīdàn shúle. Liángdàwěi bǎ jīdàn fàng zài sì gè pánzǐ lǐ. Miànbāo yě hǎole, tiàochū kǎo miànbāo jī. Liángdàwěi bǎ miànbāo fàng zài pánzǐ lǐ. Liángdàwěi wén wèidào, wèidào hěn hǎo. Liángdàwěi wéixiào, dànshì hěn kuài yòu bù xiàole, yīn wéi shíjiān bùgòu.\nZài chúfáng, liángdàwěi tīng dào jiǎobù shēng. Yè měi zǒu jìn chúfáng. Yè měi chuān gōngzuò yīfú, tóufǎ hái yǒu yīxiē luàn. Yè měi shuō:“Dà wěi, xiànzài jǐ diǎn?”\nLiángdàwěi shuō:“Qī diǎn shí fēn. Wǒmen yào kuài.”\nYè měi shuō: “Xiǎoyún hé Xiǎodōng qǐchuángle ma?”\nLiángdàwěi yáotóu shuō:“Méiyǒu. Wǒ jiào tāmen, dànshì tāmen méiyǒu huídá.”\nZài chúfáng, yè měi ná qǐ yīgè jīdàn. Yè měi chī yīkǒu, ránhòu shuō:“Jīdàn hěn hào chī. Xièxiè nǐ.”\nLiángdàwěi shuō:“Bù xiè. Nǐ kuài chī. Wǒ qù jiào háizǐ.” Liángdàwěi zǒuchū chúfáng.\nZài zǒuláng, liángdàwěi zǒu dào xiǎo yún fángjiān ménkǒu. Liángdàwěi qiāo mén, shuō:“Xiǎo yún! Qī diǎn shíwǔ fēn! Kuài qǐchuáng!”\nXiǎo yún zài fángjiān lǐ shuō:“Bàba, wǒ hěn kùn!”\nLiángdàwěi shuō: “Bùxíng! Xuéxiào bā diǎn shàngkè!”\nZài zǒuláng, liángdàwěi zǒu dào xiǎo dōng fángjiān ménkǒu. Liángdàwěi qiāo mén, shuō:“Xiǎo dōng! Qǐchuáng! Wǒmen yào chídàole!”\nXiǎo dōng zài fángjiān lǐ shuō:“Wǒ de wàzǐ zài nǎlǐ?”\nLiángdàwěi shuō:“Xiān qǐchuáng! Zài zhǎo wàzǐ!”\nZài chúfáng, yè měi chī miànbāo. Yè měi kàn shǒubiǎo, xiǎnshì qī diǎn èrshí fēn. Yè měi dàshēng hǎn:“Dà wěi! Háizǐ qǐchuángle ma?”\nLiángdàwěi zǒu jìn chúfáng, yáotóu shuō:“Xiǎo yún shuō hěn kùn. Xiǎo dōng zhǎo wàzǐ.”\nYè měi fàngxià miànbāo, shuō:“Wǒ qù bāng xiǎo dōng zhǎo wàzǐ. Nǐ qù bāng xiǎo yún qǐchuáng.”\nZài chúfáng, liángdàwěi bǎ zǎofàn fàng zài zhuōzǐ shàng. Liángdàwěi yòu kàn shǒubiǎo, qī diǎn èrshí'èr fēn. Liángdàwěi shuō:“Dàjiā kuài! Wǒmen méiyǒu shíjiān!”",
+      "contentEn": "At seven o'clock in the morning, in the kitchen, Liang Dawei cracked eggs. The eggs fell into the pan, making a \"sizzle\" sound. Liang Dawei looked at his watch, which showed 7:05. Liang Dawei said: \"Oh no! Everyone will be late!\"\nIn the kitchen, Liang Dawei put bread into the toaster. The toaster started working, making a \"whirring\" sound. Liang Dawei looked at his watch again, it was 7:07 now. Liang Dawei shouted loudly: \"Xiaoyun! Xiaodong! Get up quickly!\"\nIn the kitchen, the eggs were cooked. Liang Dawei put the eggs on four plates. The bread was also ready and popped out of the toaster. Liang Dawei put the bread on the plates. Liang Dawei smelled the aroma, it smelled very good. Liang Dawei smiled, but soon stopped smiling because there was not enough time.\nIn the kitchen, Liang Dawei heard footsteps. Ye Mei walked into the kitchen. Ye Mei was wearing work clothes, and her hair was still a bit messy. Ye Mei said: \"Dawei, what time is it now?\"\nLiang Dawei said: \"Seven ten. We have to be fast.\"\nYe Mei said: \"Have Xiaoyun and Xiaodong gotten up?\"\nLiang Dawei shook his head and said, \"No. I called them, but they didn't answer.\"\nIn the kitchen, Ye Mei picked up an egg. Ye Mei took a bite and then said: \"The eggs are delicious. Thank you.\"\nLiang Dawei said: \"No thanks. Eat quickly. I'll go get the child.\" Liang Dawei walked out of the kitchen.\nIn the corridor, Liang Dawei walked to the door of Xiaoyun's room. Liang Dawei knocked on the door and said: \"Xiaoyun! It's 7:15! Get up quickly!\"\nXiaoyun said in the room: \"Dad, I'm very sleepy!\"\nLiang Dawei said: \"No way! School starts at eight o'clock!\"\nIn the corridor, Liang Dawei walked to the door of Xiaodong's room. Liang Dawei knocked on the door and said: \"Xiaodong! Get up! We are going to be late!\"\nXiaodong said in the room: \"Where are my socks?\"\nLiang Dawei said: \"Get up first! Then look for socks!\"\nIn the kitchen, Ye Mei eats bread. Ye Mei looked at her watch, which showed 7:20. Ye Mei shouted: \"Dawei! Has the child gotten up?\"\nLiang Dawei walked into the kitchen, shook his head and said, \"Xiaoyun said he was very sleepy. Xiaodong is looking for socks.\"\nYe Mei put down the bread and said, \"I'm going to help Xiaodong find socks. You go and help Xiaoyun get up.\"\nIn the kitchen, Liang Dawei put breakfast on the table. Liang Dawei looked at his watch again, it was seven twenty-two. Liang Dawei said: \"Everyone, hurry up! We don't have time!\"",
+      "questions": [
+        {
+          "q": "谁在厨房做早饭？",
+          "qPy": "Shéi zài chúfáng zuò zǎofàn?",
+          "qEn": "Who is making breakfast in the kitchen?",
+          "options": [
+            "爸爸梁大伟",
+            "妈妈叶美",
+            "小云和小东"
+          ],
+          "optionsPy": [
+            "Bàba Liáng Dàwěi",
+            "Māmā Yè Měi",
+            "Xiǎoyún hé Xiǎodōng"
+          ],
+          "optionsEn": [
+            "Dad Liang Dawei",
+            "Mom Ye Mei",
+            "Xiaoyun and Xiaodong"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "学校几点上课？",
+          "qPy": "Xuéxiào jǐ diǎn shàngkè?",
+          "qEn": "What time does school start?",
+          "options": [
+            "七点",
+            "七点半",
+            "八点"
+          ],
+          "optionsPy": [
+            "Qī diǎn",
+            "Qī diǎn bàn",
+            "Bā diǎn"
+          ],
+          "optionsEn": [
+            "Seven o'clock",
+            "Seven thirty",
+            "Eight o'clock"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "儿子小东在房间里找什么？",
+          "qPy": "Érzi Xiǎodōng zài fángjiān lǐ zhǎo shénme?",
+          "qEn": "What is the son Xiaodong looking for in his room?",
+          "options": [
+            "书包",
+            "衣服",
+            "袜子"
+          ],
+          "optionsPy": [
+            "Shūbāo",
+            "Yīfú",
+            "Wàzǐ"
+          ],
+          "optionsEn": [
+            "Schoolbag",
+            "Clothes",
+            "Socks"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": "essay_1_15",
+      "titleCn": "新的城市",
+      "titlePy": "Xīn de chéngshì",
+      "titleEn": "New City",
+      "contentCn": "今天早上八点，在火车站外面，曹大文拿着一个红色的包。曹大文看着很多高楼，楼很高，天很蓝。曹大文说：“这个城市真大！”\n叶美在火车站门口等曹大文。叶美穿着黄色的裙子，叶美对曹大文挥手。叶美说：“大文！我在这里！”\n曹大文看到叶美，曹大文很高兴。曹大文说：“叶美，好久不见！”\n叶美说：“你第一次来大城市，我带你去坐地铁。”\n曹大文问：“地铁是什么？”\n叶美笑，叶美说：“地铁是在地下的火车，很快！”\n他们走到地铁站。在地铁站里面，有很多人。曹大文看到很多机器，机器前面排着长队。\n曹大文说：“这些机器是做什么的？”\n叶美说：“这些机器卖票。我们去买票。”\n他们排在队伍后面。曹大文看着前面的人，一个人放钱进机器，机器给那个人一张小票。\n曹大文说：“我需要准备钱。”曹大文打开包，包里面有钱包。曹大文拿出二十块钱。\n叶美说：“不用你的钱，我有地铁卡。”\n曹大文问：“地铁卡是什么？”\n叶美拿出一张蓝色的卡，叶美说：“这张卡可以坐地铁，不用每次买票。”\n他们走到机器前面，叶美把卡放在机器上，机器说“嘀”的一声。叶美给曹大文一张票。\n曹大文拿着票，曹大文说：“这张票很小。”\n叶美说：“我们走吧，地铁来了！”\n他们走到站台，在站台上面，一列白色的地铁车停下来。车门开了，很多人走出来，很多人走进去。\n曹大文说：“很多人！”\n叶美说：“不要怕，我们进去。”\n他们走进地铁车，车里面有很多座位。他们找到两个空座位，他们坐下来。\n曹大文说：“地铁车很干净。”\n叶美说：“是，地铁很快，五分钟就到我的朋友家。”\n地铁车开始动，曹大文看着窗外，窗外很黑。曹大文说：“外面为什么是黑的？”\n叶美说：“因为我们在地下。”\n曹大文说：“地下没有太阳，也没有风。”\n叶美笑，叶美说：“大城市有很多新东西，你会喜欢。”",
+      "contentPy": "Jīntiān zǎoshang bā diǎn, zài huǒchē zhàn wàimiàn, cáodàwén názhe yīgè hóngsè de bāo. Cáodàwén kànzhe hěnduō gāolóu, lóu hěn gāo, tiān hěn lán. Cáodàwén shuō:“Zhège chéngshì zhēn dà!”\nYè měi zài huǒchē zhàn ménkǒu děng cáodàwén. Yè měi chuānzhuó huángsè de qúnzǐ, yè měi duì cáodàwén huīshǒu. Yè měi shuō:“Dà wén! Wǒ zài zhèlǐ!”\nCáodàwén kàn dào yè měi, cáodàwén hěn gāoxìng. Cáodàwén shuō:“Yè měi, hǎojiǔ bùjiàn!”\nYè měi shuō:“Nǐ dì yī cì lái dà chéngshì, wǒ dài nǐ qù zuò dìtiě.”\nCáodàwén wèn:“Dìtiě shì shénme?”\nYè měi xiào, yè měi shuō:“Dìtiě shì zài dìxià de huǒchē, hěn kuài!”\nTāmen zǒu dào dìtiě zhàn. Zài dìtiě zhàn lǐmiàn, yǒu hěnduō rén. Cáodàwén kàn dào hěnduō jīqì, jīqì qiánmiàn páizhe cháng duì.\nCáodàwén shuō:“Zhèxiē jīqì shì zuò shénme de?”\nYè měi shuō:“Zhèxiē jīqì mài piào. Wǒmen qù mǎi piào.”\nTāmen pái zài duìwǔ hòumiàn. Cáodàwén kànzhe qiánmiàn de rén, yīgè rén fàng qián jìn jīqì, jīqì gěi nàgè rén yī zhāng xiǎo piào.\nCáodàwén shuō:“Wǒ xūyào zhǔnbèi qián.” Cáodàwén dǎkāi bāo, bāo lǐmiàn yǒu qiánbāo. Cáodàwén ná chū èrshí kuài qián.\nYè měi shuō:“Bùyòng nǐ de qián, wǒ yǒu dìtiě kǎ.”\nCáodàwén wèn: “Dìtiě kǎ shì shénme?”\nYè měi ná chū yī zhāng lán sè de kǎ, yè měi shuō:“Zhè zhāng kǎ kěyǐ zuò dìtiě, bùyòng měi cì mǎi piào.”\nTāmen zǒu dào jīqì qiánmiàn, yè měi bǎ kǎ fàng zài jīqì shàng, jīqì shuō “dí” de yīshēng. Yè měi gěi cáodàwén yī zhāng piào.\nCáodàwén názhe piào, cáodàwén shuō:“Zhè zhāng piào hěn xiǎo.”\nYè měi shuō: “Wǒmen zǒu ba, dìtiě láile!”\nTāmen zǒu dào zhàntái, zài zhàntái shàngmiàn, yīliè báisè dì dìtiě chē tíng xiàlái. Chēmén kāile, hěnduō rén zǒu chūlái, hěnduō rén zǒu jìnqù.\nCáodàwén shuō: “Hěnduō rén!”\nYè měi shuō: “Bùyào pà, wǒmen jìnqù.”\nTāmen zǒu jìn dìtiě chē, chē lǐmiàn yǒu hěnduō zuòwèi. Tāmen zhǎodào liǎng gè kōng zuòwèi, tāmen zuò xiàlái.\nCáodàwén shuō: “Dìtiě chē hěn gānjìng.”\nYè měi shuō:“Shì, dìtiě hěn kuài, wǔ fēnzhōng jiù dào wǒ de péngyǒu jiā.”\nDìtiě chē kāishǐ dòng, cáodàwén kànzhe chuāngwài, chuāngwài hěn hēi. Cáodàwén shuō:“Wàimiàn wèishéme shì hēi de?”\nYè měi shuō: “Yīnwèi wǒmen zài dìxià.”\nCáodàwén shuō:“Dìxià méiyǒu tàiyáng, yě méiyǒu fēng.”\nYè měi xiào, yè měi shuō:“Dà chéngshì yǒu hěnduō xīn dōngxī, nǐ huì xǐhuān.”",
+      "contentEn": "At eight o'clock this morning, outside the train station, Cao Dawen was holding a red bag. Cao Dawen looked at many tall buildings. The buildings were very high and the sky was blue. Cao Dawen said: \"This city is so big!\"\nYe Mei was waiting for Cao Dawen at the entrance of the train station. Ye Mei was wearing a yellow skirt, and Ye Mei waved to Cao Dawen. Ye Mei said: \"Dawen! I am here!\"\nCao Dawen was very happy to see Ye Mei. Cao Dawen said: \"Ye Mei, long time no see!\"\nYe Mei said: \"It's your first time in a big city, I'll take you to take the subway.\"\nCao Dawen asked: \"What is the subway?\"\nYe Mei smiled, and Ye Mei said: \"The subway is an underground train, it's very fast!\"\nThey walked to the subway station. There are many people in the subway station. Cao Dawen saw many machines and there was a long queue in front of the machines.\nCao Dawen said: \"What do these machines do?\"\nYe Mei said: \"These machines sell tickets. Let's go and buy tickets.\"\nThey lined up at the back of the queue. Cao Dawen looked at the people in front of him. A person put money into the machine, and the machine gave that person a small ticket.\nCao Dawen said: \"I need to prepare money.\" Cao Dawen opened the bag and there was a wallet inside.\nYe Mei said: \"I don't need your money, I have a subway card.\"\nCao Dawen asked: \"What is a subway card?\"\nYe Mei took out a blue card and said, \"This card can take the subway without having to buy a ticket every time.\"\nThey walked to the machine, Ye Mei put the card on the machine, and the machine beeped.\nCao Dawen held the ticket, and Cao Dawen said: \"This ticket is very small.\"\nYe Mei said: \"Let's go, the subway is coming!\"\nThey walked to the platform, and on the platform, a white subway car stopped. The car door opened, many people walked out, and many people walked in.\nCao Dawen said: \"So many people!\"\nYe Mei said: \"Don't be afraid, let's go in.\"\nThey entered the subway car, which had many seats.\nCao Dawen said: \"The subway car is very clean.\"\nYe Mei said: \"Yes, the subway is very fast. It takes five minutes to reach my friend's house.\"\nThe subway car started to move. Cao Dawen looked out the window. It was dark outside.\nYe Mei said: \"Because we are underground.\"\nCao Dawen said: \"There is no sun and no wind underground.\"\nYe Mei smiled, and Ye Mei said: \"There are many new things in big cities, you will like them.\"",
+      "questions": [
+        {
+          "q": "曹大文是第几次来大城市？",
+          "qPy": "Cáo Dàwén shì dì jǐ cì lái dà chéngshì?",
+          "qEn": "How many times has Cao Dawen been to the big city?",
+          "options": [
+            "第一次",
+            "第二次",
+            "第三次"
+          ],
+          "optionsPy": [
+            "Dì yī cì",
+            "Dì èr cì",
+            "Dì sān cì"
+          ],
+          "optionsEn": [
+            "First time",
+            "Second time",
+            "Third time"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "叶美穿什么颜色的裙子？",
+          "qPy": "Yè Měi chuān shénme yánsè de qúnzi?",
+          "qEn": "What color skirt is Ye Mei wearing?",
+          "options": [
+            "红色的",
+            "蓝色的",
+            "黄色的"
+          ],
+          "optionsPy": [
+            "Hóngsè de",
+            "Lánsè de",
+            "Huángsè de"
+          ],
+          "optionsEn": [
+            "Red",
+            "Blue",
+            "Yellow"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "他们坐什么去朋友家？",
+          "qPy": "Tāmen zuò shénme qù péngyǒu jiā?",
+          "qEn": "What do they take to go to their friend's house?",
+          "options": [
+            "飞机",
+            "地铁",
+            "公交车"
+          ],
+          "optionsPy": [
+            "Fēijī",
+            "Dìtiě",
+            "Gōngjiāochē"
+          ],
+          "optionsEn": [
+            "Airplane",
+            "Subway",
+            "Bus"
+          ],
+          "correct": 1
+        }
+      ]
     }
   ],
   "2": [
