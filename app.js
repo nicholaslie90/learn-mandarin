@@ -1518,6 +1518,16 @@ function initPronounceLab() {
   pronounceWordList = HSK_DATA[state.currentLevel] || [];
   pronounceIndex = 0;
   
+  // Sync toggle state and layout class
+  const toggle = document.getElementById('hidePronouncePinyinToggle');
+  if (toggle) {
+    toggle.checked = state.hidePronouncePinyin;
+  }
+  const layoutCard = document.querySelector('.pronounce-layout');
+  if (layoutCard) {
+    layoutCard.classList.toggle('hide-pinyin', state.hidePronouncePinyin);
+  }
+  
   // Reset speech states
   state.isListening = false;
   state.speechFeedbackText = 'Press the microphone and say the characters aloud.';
@@ -1544,7 +1554,6 @@ function renderPronounceWord() {
   if (charEl) charEl.textContent = word.character;
   if (pinEl) {
     pinEl.textContent = word.pinyin;
-    pinEl.style.display = state.hidePronouncePinyin ? 'none' : 'block';
   }
   if (engEl) engEl.textContent = word.english;
   if (idEl) idEl.value = word.id;
@@ -2405,14 +2414,19 @@ function initHidePronouncePinyinToggle() {
   const toggle = document.getElementById('hidePronouncePinyinToggle');
   if (toggle) {
     toggle.checked = state.hidePronouncePinyin;
+    
+    const layoutCard = document.querySelector('.pronounce-layout');
+    if (layoutCard) {
+      layoutCard.classList.toggle('hide-pinyin', state.hidePronouncePinyin);
+    }
+    
     toggle.addEventListener('change', (e) => {
       state.hidePronouncePinyin = e.target.checked;
       localStorage.setItem('hsk_sensei_hide_pronounce_pinyin', state.hidePronouncePinyin);
       
-      // Update pinyin visibility immediately
-      const pinEl = document.getElementById('speechTargetPy');
-      if (pinEl) {
-        pinEl.style.display = state.hidePronouncePinyin ? 'none' : 'block';
+      // Update pinyin visibility class immediately
+      if (layoutCard) {
+        layoutCard.classList.toggle('hide-pinyin', state.hidePronouncePinyin);
       }
     });
   }
