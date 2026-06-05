@@ -122280,6 +122280,80 @@ const HSK_ESSAYS = {
           "correct": 2
         }
       ]
+    },
+    {
+      "id": "essay_1_6",
+      "titleCn": "电话里的争吵",
+      "titlePy": "Diànhuà lǐ de zhēngchǎo",
+      "titleEn": "Argument over the Phone",
+      "contentCn": "今天早上九点，在家，林月给赵思远打电话。\n“思远，今天天气很好，我想去商场买东西，你和我一起去，好吗？”林月说，她很高兴。\n“我不想出去，我想在家看书。”赵思远说，他坐在椅子上，手里有一本书。\n“看书？今天是星期六，不要在家看书。我们去商场，那里有很多好看的衣服。”林月说。\n“我不喜欢去商场，人很多。我喜欢在家看书，看书很好。”赵思远说。\n林月不高兴了，她说：“你为什么不喜欢去商场？我想买新衣服，你不想看看吗？”\n“我不想看衣服，我想看这本书。你也来我家，我们一起看书，好吗？”赵思远说。\n“不要！我不喜欢看书，我喜欢买东西。”林月说，她找了一个苹果，一边吃一边说。\n赵思远想了想，说：“那你想做什么？我们不能一天都在家，也不能一天都在商场。”\n“我不知道。”林月说，她吃了一口苹果。\n“我们吃午饭，好吗？中午十二点，我们去吃饭。”赵思远说。\n“好，吃饭很好。但是去哪里吃？”林月问。\n“我知道一个地方，那里的米饭很好吃。”赵思远说。\n“我不想吃米饭，我想吃水果。今天天气很好，我想吃水果。”林月说。\n“吃饭的时候不能只吃水果，你要吃饭。”赵思远说。\n“那你想吃什么？”林月问。\n“我想吃米饭，你呢？”赵思远说。\n“我不知道，我找找手机，看看有没有好餐厅。”林月说，她看手机，找餐厅。\n“你找到了吗？”赵思远问。\n“没有，我不知道去哪里吃。”林月说。\n“那我们中午十二点去学校门口见面，好吗？”赵思远说。\n“好，十二点在学校门口见面。我们去了那里，再找餐厅。”林月说，她高兴了。\n“好，我学习一会儿，中午见。”赵思远说。\n“我也休息一会儿，中午见。”林月说，她挂了电话。\n林月想，今天不能去商场买东西，但是和思远吃午饭也很好。她很高兴，又吃了一个苹果。\n赵思远在家看书，他想，中午和林月吃饭，他很高兴。他又看了几页书，觉得今天很好。",
+      "contentPy": "Jīntiān zǎoshang jiǔ diǎn, zài jiā, Lín Yuè gěi Zhào Sīyuǎn dǎ diànhuà.\n“Sīyuǎn, jīntiān tiānqì hěn hǎo, wǒ xiǎng qù shāngchǎng mǎi dōngxi, nǐ hé wǒ yīqǐ qù, hǎo ma?” Lín Yuè shuō, tā hěn gāoxìng.\n“Wǒ bù xiǎng chūqù, wǒ xiǎng zài jiā kànshū.” Zhào Sīyuǎn shuō, tā zuò zài yǐzi shàng, shǒulǐ yǒu yī běn shū.\n“Kànshū? Jīntiān shì xīngqīliù, bùyào zài jiā kànshū. Wǒmen qù shāngchǎng, nàlǐ yǒu hěnduō hǎokàn de yīfu.” Lín Yuè shuō.\n“Wǒ bù xǐhuan qù shāngchǎng, rén hěnduō. Wǒ xǐhuan zài jiā kànshū, kànshū hěnhǎo.” Zhào Sīyuǎn shuō.\nLín Yuè bù gāoxìng le, tā shuō: “Nǐ wèishénme bù xǐhuan qù shāngchǎng? Wǒ xiǎng mǎi xīn yīfu, nǐ bù xiǎng kànkan ma?”\n“Wǒ bù xiǎng kàn yīfu, wǒ xiǎng kàn zhè běn shū. Nǐ yě lái wǒ jiā, wǒmen yīqǐ kànshū, hǎo ma?” Zhào Sīyuǎn shuō.\n“Bùyào! Wǒ bù xǐhuan kànshū, wǒ xǐhuan mǎi dōngxi.” Lín Yuè shuō, tā zhǎole yī gè píngguǒ, yībiān chī yībiān shuō.\nZhào Sīyuǎn xiǎngle xiǎng, shuō: “Nà nǐ xiǎng zuò shénme? Wǒmen bùnéng yītiān dōu zài jiā, yě bùnéng yītiān dōu zài shāngchǎng.”\n“Wǒ bù zhīdào.” Lín Yuè shuō, tā chīle yīkǒu píngguǒ.\n“Wǒmen chī wǔfàn, hǎo ma? Zhōngwǔ shí'èr diǎn, wǒmen qù chīfàn.” Zhào Sīyuǎn shuō.\n“Hǎo, chīfàn hěnhǎo. Dànshì qù nǎlǐ chī?” Lín Yuè wèn.\n“Wǒ zhīdào yī gè dìfang, nàlǐ de mǐfàn hěn hǎochī.” Zhào Sīyuǎn shuō.\n“Wǒ bù xiǎng chī mǐfàn, wǒ xiǎng chī shuǐguǒ. Jīntiān tiānqì hěn hǎo, wǒ xiǎng chī shuǐguǒ.” Lín Yuè shuō.\n“Chīfàn de shíhou bùnéng zhǐ chī shuǐguǒ, nǐ yào chīfàn.” Zhào Sīyuǎn shuō.\n“Nà nǐ xiǎng chī shénme?” Lín Yuè wèn.\n“Wǒ xiǎng chī mǐfàn, nǐ ne?” Zhào Sīyuǎn shuō.\n“Wǒ bù zhīdào, wǒ zhǎozhao shǒujī, kànkan yǒu méiyǒu hǎo cāntīng.” Lín Yuè shuō, tā kàn shǒujī, zhǎo cāntīng.\n“Nǐ zhǎodào le ma?” Zhào Sīyuǎn wèn.\n“Méiyǒu, wǒ bù zhīdào qù nǎlǐ chī.” Lín Yuè shuō.\n“Nà wǒmen zhōngwǔ shí'èr diǎn qù xuéxiào ménkǒu jiànmiàn, hǎo ma?” Zhào Sīyuǎn shuō.\n“Hǎo, shí'èr diǎn zài xuéxiào ménkǒu jiànmiàn. Wǒmen qùle nàlǐ, zài zhǎo cāntīng.” Lín Yuè shuō, tā gāoxìng le.\n“Hǎo, wǒ xuéxí yīhuìr, zhōngwǔ jiàn.” Zhào Sīyuǎn shuō.\n“Wǒ yě xiūxi yīhuìr, zhōngwǔ jiàn.” Lín Yuè shuō, tā guàle diànhuà.\nLín Yuè xiǎng, jīntiān bùnéng qù shāngchǎng mǎi dōngxi, dànshì hé Sīyuǎn chī wǔfàn yě hěnhǎo. Tā hěn gāoxìng, yòu chīle yī gè píngguǒ.\nZhào Sīyuǎn zài jiā kànshū, tā xiǎng, zhōngwǔ hé Lín Yuè chīfàn, tā hěn gāoxìng. Tā yòu kànle jǐ yè shū, juéde jīntiān hěnhǎo.",
+      "contentEn": "Today at nine in the morning, at home, Lin Yue calls Zhao Siyuan.\n\"Siyuan, the weather is very good today. I want to go to the mall to buy things. Will you go with me, okay?\" Lin Yue says, she is very happy.\n\"I don't want to go out, I want to read at home.\" Zhao Siyuan says, he is sitting on a chair, with a book in his hand.\n\"Read? Today is Saturday, don't read at home. Let's go to the mall, there are many beautiful clothes there.\" Lin Yue says.\n\"I don't like going to the mall, there are too many people. I like reading at home, reading is very good.\" Zhao Siyuan says.\nLin Yue is not happy, she says: \"Why don't you like going to the mall? I want to buy new clothes, don't you want to take a look?\"\n\"I don't want to look at clothes, I want to read this book. You also come to my house, we can read together, okay?\" Zhao Siyuan says.\n\"No! I don't like reading, I like buying things.\" Lin Yue says, she finds an apple, eating while talking.\nZhao Siyuan thinks for a moment and says: \"Then what do you want to do? We can't stay home all day, nor can we be at the mall all day.\"\n\"I don't know.\" Lin Yue says, she takes a bite of the apple.\n\"Let's have lunch, okay? At twelve noon, we'll go eat.\" Zhao Siyuan says.\n\"Okay, eating is very good. But where do we go to eat?\" Lin Yue asks.\n\"I know a place, the rice there is very delicious.\" Zhao Siyuan says.\n\"I don't want to eat rice, I want to eat fruit. The weather is very good today, I want to eat fruit.\" Lin Yue says.\n\"You can't just eat fruit when having a meal, you need to eat real food.\" Zhao Siyuan says.\n\"Then what do you want to eat?\" Lin Yue asks.\n\"I want to eat rice, how about you?\" Zhao Siyuan says.\n\"I don't know, I'll check my phone to see if there are any good restaurants.\" Lin Yue says, she looks at her phone, looking for restaurants.\n\"Did you find one?\" Zhao Siyuan asks.\n\"No, I don't know where to go to eat.\" Lin Yue says.\n\"Then let's meet at the school gate at twelve noon, okay?\" Zhao Siyuan says.\n\"Okay, meet at the school gate at twelve. Once we get there, we'll look for a restaurant.\" Lin Yue says, she is happy.\n\"Okay, I'll study for a bit, see you at noon.\" Zhao Siyuan says.\n\"I'll also rest for a bit, see you at noon.\" Lin Yue says, she hangs up the phone.\nLin Yue thinks, today she cannot go to the mall to buy things, but having lunch with Siyuan is also very good. She is very happy and eats another apple.\nZhao Siyuan reads at home, he thinks, having lunch with Lin Yue at noon, he is very happy. He reads a few more pages and feels today is very good.",
+      "questions": [
+        {
+          "q": "林月想去商场做什么？",
+          "qPy": "Lín Yuè xiǎng qù shāngchǎng zuò shénme?",
+          "qEn": "What does Lin Yue want to do at the mall?",
+          "options": [
+            "买书",
+            "买衣服",
+            "买苹果"
+          ],
+          "optionsPy": [
+            "mǎi shū",
+            "mǎi yīfu",
+            "mǎi píngguǒ"
+          ],
+          "optionsEn": [
+            "Buy books",
+            "Buy clothes",
+            "Buy apples"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "赵思远今天想做什么？",
+          "qPy": "Zhào Sīyuǎn jīntiān xiǎng zuò shénme?",
+          "qEn": "What does Zhao Siyuan want to do today?",
+          "options": [
+            "看书",
+            "买东西",
+            "吃水果"
+          ],
+          "optionsPy": [
+            "kàn shū",
+            "mǎi dōngxi",
+            "chī shuǐguǒ"
+          ],
+          "optionsEn": [
+            "Read books",
+            "Buy things",
+            "Eat fruit"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "他们商定几点在学校门口见面？",
+          "qPy": "Tāmen shāngdìng jǐ diǎn zài xuéxiào ménkǒu jiànmiàn?",
+          "qEn": "What time did they agree to meet at the school gate?",
+          "options": [
+            "上午九点",
+            "中午十二点",
+            "下午三点"
+          ],
+          "optionsPy": [
+            "shàngwǔ jiǔ diǎn",
+            "zhōngwǔ shí'èr diǎn",
+            "xiàwǔ sān diǎn"
+          ],
+          "optionsEn": [
+            "9:00 AM",
+            "12:00 PM",
+            "3:00 PM"
+          ],
+          "correct": 1
+        }
+      ]
     }
   ],
   "2": [

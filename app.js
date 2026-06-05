@@ -590,12 +590,17 @@ const PINYIN_TONE_MAP = {
 
 function parsePinyinTones(pinyinStr) {
   if (!pinyinStr) return [];
-  const syllables = pinyinStr.toLowerCase()
-    .replace(/[^a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü\s]/g, '')
-    .trim()
-    .split(/\s+/);
   
-  return syllables.map(syllable => {
+  let cleaned = pinyinStr.toLowerCase()
+    .replace(/v/g, 'ü')
+    .replace(/[^a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü\s']/g, '')
+    .trim();
+  
+  const syllableRegex = /(zh|ch|sh|[b-df-hj-np-rstwyz])?([aāáǎà][ioōóǒò]?(ng?|n)?|[eēéěè][i]?(ng?|n|r)?|[oōóǒò][u]?(ng)?|[iīíǐì][aāáǎàoōóǒòeēéěèuūúǔù]?(ng?|n)?|[uūúǔù][aāáǎàiīíǐìeēéěèoōóǒò]?(ng?|n)?|[üǖǘǚǜ][aāáǎàeēéěè]?(ng?|n)?)/g;
+  
+  const matches = cleaned.match(syllableRegex) || [];
+  
+  return matches.map(syllable => {
     let tone = 5; // Neutral tone by default
     let base = "";
     for (const char of syllable) {
@@ -739,6 +744,51 @@ function generateFeedbackHint(targetPinyin, spokenPinyin, currentText, targetWor
 }
 
 // Initializing Web Speech Recognition
+function checkPinyinMatch(targetPinyin, spokenPinyin) {
+  const targetParsed = parsePinyinTones(targetPinyin);
+  const spokenParsed = parsePinyinTones(spokenPinyin);
+  
+  if (targetParsed.length === 0 || spokenParsed.length === 0) return false;
+  if (targetParsed.length !== spokenParsed.length) return false;
+  
+  for (let i = 0; i < targetParsed.length; i++) {
+    const t = targetParsed[i];
+    const s = spokenParsed[i];
+    if (t.base !== s.base || t.tone !== s.tone) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function triggerSpeechSuccess(currentText, currentWordId, isHomophone = false, spokenPinyin = "", targetPinyin = "", targetWord = "") {
+  state.speechFeedbackStatus = "success";
+  if (isHomophone) {
+    state.speechFeedbackText = `Pronunciation is correct! You said a homophone character "${currentText}" (${spokenPinyin}) instead of "${targetWord}" (${targetPinyin}). 🎉`;
+  } else {
+    state.speechFeedbackText = `You said: "${currentText}" — Perfect Match! 🎉`;
+  }
+  updateSpeechUI();
+  
+  try {
+    if (state.recognition) {
+      state.recognition.stop();
+    }
+  } catch (err) {
+    console.warn("Failed to stop recognition on success:", err);
+  }
+  
+  sounds.playCorrect();
+  state.points += 10;
+  if (currentWordId) {
+    promoteSRSWord(currentWordId);
+  } else {
+    saveProgressToDB();
+  }
+  renderPointsUI();
+}
+
+// Initializing Web Speech Recognition
 function setupSpeechRecognition() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
@@ -774,6 +824,7 @@ function setupSpeechRecognition() {
     
     const targetWord = document.getElementById('speechTargetChar').textContent.trim();
     const currentWordId = document.getElementById('speechTargetWordId').value;
+    const targetPinyin = document.getElementById('speechTargetPy').textContent.trim();
     
     const currentText = (finalTranscript || interimTranscript || '').trim();
     if (!currentText) return;
@@ -782,53 +833,51 @@ function setupSpeechRecognition() {
     const cleanText = currentText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()！？，。；：“”（）\s]/g,"").toLowerCase();
     const cleanTarget = targetWord.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()！？，.；：“”（）\s]/g,"").toLowerCase();
     
-    const isMatch = cleanText.includes(cleanTarget) || cleanTarget.includes(cleanText);
+    if (cleanText === cleanTarget) {
+      triggerSpeechSuccess(currentText, currentWordId, false);
+      return;
+    }
     
-    if (isMatch) {
-      state.speechFeedbackStatus = "success";
-      state.speechFeedbackText = `You said: "${currentText}" — Perfect Match! 🎉`;
+    // If it's not an exact character match, we handle it on final results
+    const isFinal = event.results[event.results.length - 1].isFinal;
+    if (isFinal) {
+      // Show analyzing status to give feedback that we are verifying pronunciation
+      state.speechFeedbackText = `You said: "${currentText}"... Verifying pronunciation...`;
       updateSpeechUI();
       
-      try {
-        state.recognition.stop();
-      } catch (err) {
-        console.warn("Failed to stop recognition on success:", err);
+      const spokenPinyin = await getPinyinWithFallback(cleanText);
+      
+      // Double check success status hadn't already been set by something else
+      if (state.speechFeedbackStatus === "success") return;
+      
+      let isHomophoneMatch = false;
+      if (spokenPinyin) {
+        isHomophoneMatch = checkPinyinMatch(targetPinyin, spokenPinyin);
       }
       
-      sounds.playCorrect();
-      state.points += 10;
-      if (currentWordId) {
-        promoteSRSWord(currentWordId);
+      if (isHomophoneMatch) {
+        triggerSpeechSuccess(currentText, currentWordId, true, spokenPinyin, targetPinyin, targetWord);
       } else {
-        saveProgressToDB();
-      }
-      renderPointsUI();
-    } else {
-      state.speechFeedbackText = `You said: "${currentText}"`;
-      
-      // Only treat it as an error when the final result has arrived
-      const isFinal = event.results[event.results.length - 1].isFinal;
-      if (isFinal) {
         state.speechFeedbackStatus = "error";
         sounds.playWrong();
         
-        // Generate corrective pronunciation suggestion!
-        const targetPinyin = document.getElementById('speechTargetPy').textContent.trim();
-        const spokenPinyin = await getPinyinWithFallback(currentText);
-        
+        let feedbackHint = "";
         if (spokenPinyin) {
-          const feedbackHint = generateFeedbackHint(targetPinyin, spokenPinyin, currentText, targetWord);
-          if (feedbackHint) {
-            state.speechFeedbackText += `\n\n💡 Hint: ${feedbackHint}`;
-          } else {
-            state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
-          }
+          feedbackHint = generateFeedbackHint(targetPinyin, spokenPinyin, cleanText, targetWord);
+        }
+        
+        state.speechFeedbackText = `You said: "${currentText}"`;
+        if (feedbackHint) {
+          state.speechFeedbackText += `\n\n💡 Hint: ${feedbackHint}`;
         } else {
           state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
         }
-      } else {
-        state.speechFeedbackStatus = "neutral";
+        updateSpeechUI();
       }
+    } else {
+      // During interim speech, show what the user is saying but don't mark as error yet
+      state.speechFeedbackStatus = "neutral";
+      state.speechFeedbackText = `You said: "${currentText}"`;
       updateSpeechUI();
     }
   };
@@ -997,6 +1046,10 @@ function switchTab(tabId) {
     state.dictionaryLimit = 100;
     renderDictionary();
   } else if (tabId === 'reading') {
+    const essays = HSK_ESSAYS[state.currentLevel];
+    if (essays && essays.length > 0) {
+      state.currentEssayIndex = Math.floor(Math.random() * essays.length);
+    }
     renderEssay();
   }
 }
