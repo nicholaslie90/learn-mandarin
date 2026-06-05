@@ -146,6 +146,7 @@ header {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 /* HSK Level Selection Pill */
@@ -157,7 +158,14 @@ header {
   padding: 0.25rem;
   border-radius: 0.75rem;
   border: 1px solid var(--border-glass);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -webkit-overflow-scrolling: touch;
+}
+
+.level-selector-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari/Webkit */
 }
 
 .level-btn {
@@ -171,6 +179,7 @@ header {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all var(--transition-fast);
+  flex: 0 0 auto;
 }
 
 .level-btn:hover {
@@ -578,7 +587,26 @@ header {
   color: var(--text-primary);
   margin-top: 1rem;
   user-select: none;
+  white-space: nowrap;
+  word-break: keep-all;
 }
+
+.card-character[data-length="1"] { font-size: 7.8rem; }
+.card-character[data-length="2"] { font-size: 7.5rem; }
+.card-character[data-length="3"] { font-size: 5.5rem; }
+.card-character[data-length="4"] { font-size: 4.2rem; }
+.card-character[data-length="5"] { font-size: 3.4rem; }
+.card-character[data-length="6"] { font-size: 2.8rem; }
+.card-character[data-length="7"] { font-size: 2.4rem; }
+.card-character[data-length="8"] { font-size: 2rem; }
+.card-character[data-length="9"],
+.card-character[data-length="10"],
+.card-character[data-length="11"],
+.card-character[data-length="12"],
+.card-character[data-length="13"],
+.card-character[data-length="14"],
+.card-character[data-length="15"] { font-size: 1.8rem; }
+
 
 .audio-trigger-btn {
   background: rgba(255, 255, 255, 0.03);
@@ -1774,6 +1802,22 @@ body.light-theme select {
   .card-character {
     font-size: 5rem;
   }
+  .card-character[data-length="1"] { font-size: 5rem; }
+  .card-character[data-length="2"] { font-size: 4.5rem; }
+  .card-character[data-length="3"] { font-size: 3.5rem; }
+  .card-character[data-length="4"] { font-size: 2.6rem; }
+  .card-character[data-length="5"] { font-size: 2.1rem; }
+  .card-character[data-length="6"] { font-size: 1.8rem; }
+  .card-character[data-length="7"] { font-size: 1.5rem; }
+  .card-character[data-length="8"] { font-size: 1.3rem; }
+  .card-character[data-length="9"],
+  .card-character[data-length="10"],
+  .card-character[data-length="11"],
+  .card-character[data-length="12"],
+  .card-character[data-length="13"],
+  .card-character[data-length="14"],
+  .card-character[data-length="15"] { font-size: 1.1rem; }
+
   .card-scene {
     height: 420px;
   }

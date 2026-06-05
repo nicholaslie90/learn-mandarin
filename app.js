@@ -173,7 +173,14 @@ class HanziWriterManager {
     });
     
     // Automatically start tracing practice mode
-    this.writer.quiz();
+    this.writer.quiz({
+      onComplete: (summary) => {
+        sounds.playCorrect();
+        state.points += 10;
+        saveProgressToDB();
+        renderPointsUI();
+      }
+    });
   }
   
   animate() {
@@ -184,7 +191,14 @@ class HanziWriterManager {
   
   practice() {
     if (this.writer) {
-      this.writer.quiz();
+      this.writer.quiz({
+        onComplete: (summary) => {
+          sounds.playCorrect();
+          state.points += 10;
+          saveProgressToDB();
+          renderPointsUI();
+        }
+      });
     }
   }
   
@@ -240,6 +254,8 @@ const state = {
   essayQuizAnswers: {}, // questionIndex -> selectedOptionIndex
   essayQuizGraded: false,
   currentEssayIndex: 0,
+  dictionaryLimit: 100,
+  points: 0,
 };
 
 // Spaced Repetition Intervals (in hours)
@@ -308,6 +324,7 @@ async function saveProgressToDB() {
     await db.set('progress', state.progress);
     await db.set('streak', state.streak);
     await db.set('lastStudyDate', state.lastStudyDate);
+    await db.set('points', state.points);
     
     // Backup unlocked extra card IDs
     const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
@@ -321,6 +338,7 @@ async function saveProgressToDB() {
     localStorage.setItem('hsk_sensei_progress', JSON.stringify(state.progress));
     localStorage.setItem('hsk_sensei_streak', state.streak.toString());
     localStorage.setItem('hsk_sensei_last_study', state.lastStudyDate);
+    localStorage.setItem('hsk_sensei_points', state.points.toString());
   }
 }
 
@@ -337,6 +355,7 @@ async function loadProgressFromDB() {
     const streak = await db.get('streak');
     const lastStudyDate = await db.get('lastStudyDate');
     const unlockedExtraIds = await db.get('unlockedExtraIds');
+    const points = await db.get('points');
     
     if (progress) {
       state.progress = progress;
@@ -358,6 +377,13 @@ async function loadProgressFromDB() {
     } else {
       const localDate = localStorage.getItem('hsk_sensei_last_study');
       if (localDate) state.lastStudyDate = localDate;
+    }
+
+    if (points !== undefined) {
+      state.points = parseInt(points, 10) || 0;
+    } else {
+      const localPoints = localStorage.getItem('hsk_sensei_points');
+      if (localPoints) state.points = parseInt(localPoints, 10) || 0;
     }
     
     let unlockedIds = [];
@@ -411,6 +437,9 @@ async function loadProgressFromDB() {
     if (localStreak) state.streak = parseInt(localStreak, 10) || 0;
     const localDate = localStorage.getItem('hsk_sensei_last_study');
     if (localDate) state.lastStudyDate = localDate;
+    const localPoints = localStorage.getItem('hsk_sensei_points');
+    if (localPoints) state.points = parseInt(localPoints, 10) || 0;
+
     
     const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
     if (stored) {
@@ -529,11 +558,15 @@ function setupSpeechRecognition() {
       state.speechFeedbackStatus = "success";
       state.speechFeedbackText += ` — Perfect Match! 🎉`;
       sounds.playCorrect();
+      state.points += 10;
       // Reward user in SRS for perfect speech
       const currentWordId = document.getElementById('speechTargetWordId').value;
       if (currentWordId) {
         promoteSRSWord(currentWordId);
+      } else {
+        saveProgressToDB();
       }
+      renderPointsUI();
     } else {
       state.speechFeedbackStatus = "error";
       state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
@@ -665,6 +698,7 @@ function switchTab(tabId) {
   } else if (tabId === 'pronounce') {
     initPronounceLab();
   } else if (tabId === 'dictionary') {
+    state.dictionaryLimit = 100;
     renderDictionary();
   } else if (tabId === 'reading') {
     renderEssay();
@@ -675,6 +709,7 @@ function switchTab(tabId) {
 function switchLevel(level) {
   state.currentLevel = parseInt(level, 10);
   state.currentEssayIndex = 0; // Reset essay index when switching level
+  state.dictionaryLimit = 100; // Reset dictionary limit when switching level
   document.querySelectorAll('.level-btn').forEach(btn => {
     if (parseInt(btn.getAttribute('data-level'), 10) === state.currentLevel) {
       btn.classList.add('active');
@@ -712,6 +747,14 @@ function renderStreakUI() {
     val.textContent = state.streak;
   }
 }
+
+function renderPointsUI() {
+  const val = document.getElementById('headerPointsVal');
+  if (val) {
+    val.textContent = state.points;
+  }
+}
+
 
 // -------------------------------------------------------------
 // View Renderers: 1. Dashboard
@@ -797,6 +840,14 @@ function renderDashboard() {
 // -------------------------------------------------------------
 let activeFlashcardList = [];
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function initFlashcards() {
   const allWords = HSK_DATA[state.currentLevel] || [];
   // Review Mode checking
@@ -818,6 +869,7 @@ function initFlashcards() {
     }
   }
   
+  shuffleArray(activeFlashcardList); // Randomize flashcard order
   state.flashcardIndex = 0;
   state.flashcardFlipped = false;
   renderFlashcard();
@@ -844,7 +896,10 @@ function renderFlashcard() {
   const levelBadge = document.getElementById('cardLevelBadge');
   const starBtn = document.getElementById('cardStarBtn');
   
-  if (charEl) charEl.textContent = word.character;
+  if (charEl) {
+    charEl.textContent = word.character;
+    charEl.setAttribute('data-length', word.character.length);
+  }
   if (levelBadge) levelBadge.textContent = `HSK ${state.currentLevel}`;
   
   if (starBtn) {
@@ -875,11 +930,8 @@ function renderFlashcard() {
   
   if (posEl) posEl.textContent = word.pos;
   if (englishEl) englishEl.textContent = word.english;
-  if (exCn) exCn.textContent = word.exampleCn;
-  if (exPy) exPy.textContent = word.examplePy;
-  if (exEn) exEn.textContent = word.exampleEn;
   
-  // Setup audio speech button on front & back
+  // Setup audio speech button on front
   const frontAudioBtn = document.querySelector('#flashcardsSection .card-front .audio-trigger-btn');
   if (frontAudioBtn) {
     frontAudioBtn.onclick = (e) => {
@@ -888,12 +940,25 @@ function renderFlashcard() {
     };
   }
 
+  // Handle example box visibility & content
+  const exampleBox = document.querySelector('#flashcardsSection .card-example-box');
   const backAudioBtn = document.querySelector('#flashcardsSection .card-back .audio-trigger-btn');
-  if (backAudioBtn) {
-    backAudioBtn.onclick = (e) => {
-      e.stopPropagation();
-      playTextToSpeech(word.exampleCn);
-    };
+  
+  if (word.exampleCn) {
+    if (exampleBox) exampleBox.style.display = '';
+    if (backAudioBtn) {
+      backAudioBtn.style.display = '';
+      backAudioBtn.onclick = (e) => {
+        e.stopPropagation();
+        playTextToSpeech(word.exampleCn);
+      };
+    }
+    if (exCn) exCn.textContent = word.exampleCn;
+    if (exPy) exPy.textContent = word.examplePy;
+    if (exEn) exEn.textContent = word.exampleEn;
+  } else {
+    if (exampleBox) exampleBox.style.display = 'none';
+    if (backAudioBtn) backAudioBtn.style.display = 'none';
   }
   
   // Reset flipped state
@@ -926,7 +991,9 @@ function handleFlashcardAnswer(mastered) {
   updateStreak(); // Track active learning days
   
   if (mastered) {
+    state.points += 10;
     promoteSRSWord(word.id);
+    renderPointsUI();
   } else {
     demoteSRSWord(word.id);
   }
@@ -1121,7 +1188,10 @@ function selectQuizOption(btn, isCorrect, targetWordId) {
     btn.classList.add('correct');
     sounds.playCorrect();
     state.quizScore++;
+    state.points += 10;
     state.quizAnswersHistory.push({ wordId: targetWordId, correct: true });
+    saveProgressToDB();
+    renderPointsUI();
   } else {
     btn.classList.add('wrong');
     sounds.playWrong();
@@ -1379,7 +1449,12 @@ function renderDictionary() {
   if (!vocabGrid) return;
   vocabGrid.innerHTML = '';
   
-  const words = HSK_DATA[state.currentLevel] || [];
+  const coreWords = HSK_DATA[state.currentLevel] || [];
+  const extraWords = EXTRA_HSK_DATA[state.currentLevel] || [];
+  
+  // Combine all words for search and lookups, keeping core words first
+  const allWordIds = new Set(coreWords.map(w => w.id));
+  const words = [...coreWords, ...extraWords.filter(w => !allWordIds.has(w.id))];
   
   // Apply Search and Star filters
   const filtered = words.filter(word => {
@@ -1414,7 +1489,11 @@ function renderDictionary() {
     return;
   }
   
-  filtered.forEach(word => {
+  // Slice to the current dictionary limit
+  const limit = state.dictionaryLimit || 100;
+  const sliced = filtered.slice(0, limit);
+  
+  sliced.forEach(word => {
     const prog = state.progress[word.id] || {};
     const card = document.createElement('div');
     card.className = 'vocab-card';
@@ -1441,10 +1520,32 @@ function renderDictionary() {
     `;
     vocabGrid.appendChild(card);
   });
+  
+  // If there are more matching items than the limit, append a "Load More" button
+  if (filtered.length > limit) {
+    const loadMoreContainer = document.createElement('div');
+    loadMoreContainer.style.gridColumn = '1 / -1';
+    loadMoreContainer.style.display = 'flex';
+    loadMoreContainer.style.justify = 'center';
+    loadMoreContainer.style.marginTop = '1.5rem';
+    
+    const loadMoreBtn = document.createElement('button');
+    loadMoreBtn.className = 'btn-secondary';
+    loadMoreBtn.style.padding = '0.6rem 2rem';
+    loadMoreBtn.textContent = `Load More (${filtered.length - limit} remaining)`;
+    loadMoreBtn.onclick = () => {
+      state.dictionaryLimit += 100;
+      renderDictionary();
+    };
+    
+    loadMoreContainer.appendChild(loadMoreBtn);
+    vocabGrid.appendChild(loadMoreContainer);
+  }
 }
 
 function handleDictFilterChange(btn, filterType) {
   state.vocabFilter = filterType;
+  state.dictionaryLimit = 100; // Reset limit
   document.querySelectorAll('.filter-btn').forEach(b => {
     if (b === btn) b.classList.add('active');
     else b.classList.remove('active');
@@ -1454,6 +1555,7 @@ function handleDictFilterChange(btn, filterType) {
 
 function handleDictSearch(e) {
   state.searchQuery = e.target.value;
+  state.dictionaryLimit = 100; // Reset limit
   renderDictionary();
 }
 
@@ -1470,19 +1572,27 @@ function openWordDetails(word) {
   document.getElementById('modalPinyin').textContent = word.pinyin;
   document.getElementById('modalPos').textContent = word.pos;
   document.getElementById('modalEnglish').textContent = word.english;
-  document.getElementById('modalExCn').textContent = word.exampleCn;
-  document.getElementById('modalExPy').textContent = word.examplePy;
-  document.getElementById('modalExEn').textContent = word.exampleEn;
-  
   // Speaker Play
   const playBtn = document.getElementById('modalAudioBtn');
   if (playBtn) {
     playBtn.onclick = () => playTextToSpeech(word.character);
   }
 
+  // Handle example box visibility & content
+  const modalExBox = document.querySelector('#wordDetailModal .card-example-box');
   const playExBtn = document.getElementById('modalExAudioBtn');
-  if (playExBtn) {
-    playExBtn.onclick = () => playTextToSpeech(word.exampleCn);
+  
+  if (word.exampleCn) {
+    if (modalExBox) modalExBox.style.display = '';
+    if (playExBtn) {
+      playExBtn.style.display = '';
+      playExBtn.onclick = () => playTextToSpeech(word.exampleCn);
+    }
+    document.getElementById('modalExCn').textContent = word.exampleCn;
+    document.getElementById('modalExPy').textContent = word.examplePy;
+    document.getElementById('modalExEn').textContent = word.exampleEn;
+  } else {
+    if (modalExBox) modalExBox.style.display = 'none';
   }
   
   // Star button
@@ -2093,6 +2203,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   // Now render UI with loaded values
   updateProgressPill();
   renderStreakUI();
+  renderPointsUI();
   
   // Dashboard default
   switchTab('dashboard');
