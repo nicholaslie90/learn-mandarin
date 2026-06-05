@@ -1239,6 +1239,7 @@ header {
   font-size: 1.15rem;
   font-weight: 500;
   color: var(--text-primary);
+  white-space: pre-line;
 }
 
 .speech-result-badge {

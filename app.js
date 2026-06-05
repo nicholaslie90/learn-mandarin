@@ -578,6 +578,166 @@ function playTextToSpeech(text, callback) {
   speechSynthesis.speak(utterance);
 }
 
+// Pinyin parsing and correction helper maps
+const PINYIN_TONE_MAP = {
+  'ā': { char: 'a', tone: 1 }, 'á': { char: 'a', tone: 2 }, 'ǎ': { char: 'a', tone: 3 }, 'à': { char: 'a', tone: 4 },
+  'ē': { char: 'e', tone: 1 }, 'é': { char: 'e', tone: 2 }, 'ě': { char: 'e', tone: 3 }, 'è': { char: 'e', tone: 4 },
+  'ī': { char: 'i', tone: 1 }, 'í': { char: 'i', tone: 2 }, 'ǐ': { char: 'i', tone: 3 }, 'ì': { char: 'i', tone: 4 },
+  'ō': { char: 'o', tone: 1 }, 'ó': { char: 'o', tone: 2 }, 'ǒ': { char: 'o', tone: 3 }, 'ò': { char: 'o', tone: 4 },
+  'ū': { char: 'u', tone: 1 }, 'ú': { char: 'u', tone: 2 }, 'ǔ': { char: 'u', tone: 3 }, 'ù': { char: 'u', tone: 4 },
+  'ǖ': { char: 'ü', tone: 1 }, 'ǘ': { char: 'ü', tone: 2 }, 'ǚ': { char: 'ü', tone: 3 }, 'ǜ': { char: 'ü', tone: 4 }
+};
+
+function parsePinyinTones(pinyinStr) {
+  if (!pinyinStr) return [];
+  const syllables = pinyinStr.toLowerCase()
+    .replace(/[^a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü\s]/g, '')
+    .trim()
+    .split(/\s+/);
+  
+  return syllables.map(syllable => {
+    let tone = 5; // Neutral tone by default
+    let base = "";
+    for (const char of syllable) {
+      if (PINYIN_TONE_MAP[char]) {
+        base += PINYIN_TONE_MAP[char].char;
+        tone = PINYIN_TONE_MAP[char].tone;
+      } else {
+        base += char;
+      }
+    }
+    return { syllable, base, tone };
+  }).filter(s => s.base.length > 0);
+}
+
+function getPinyinForCharacter(charSequence) {
+  if (!charSequence) return null;
+  // 1. Search full matches locally
+  if (typeof HSK_DATA !== 'undefined') {
+    for (const level in HSK_DATA) {
+      const word = HSK_DATA[level].find(w => w.character === charSequence);
+      if (word && word.pinyin) return word.pinyin;
+    }
+  }
+  if (typeof EXTRA_HSK_DATA !== 'undefined') {
+    for (const level in EXTRA_HSK_DATA) {
+      const word = EXTRA_HSK_DATA[level].find(w => w.character === charSequence);
+      if (word && word.pinyin) return word.pinyin;
+    }
+  }
+  
+  // 2. Character-by-character search compilation
+  let compiledPinyin = [];
+  let allFound = true;
+  for (const char of charSequence) {
+    let found = false;
+    if (typeof HSK_DATA !== 'undefined') {
+      for (const level in HSK_DATA) {
+        const word = HSK_DATA[level].find(w => w.character === char);
+        if (word && word.pinyin) {
+          compiledPinyin.push(word.pinyin);
+          found = true;
+          break;
+        }
+      }
+    }
+    if (!found && typeof EXTRA_HSK_DATA !== 'undefined') {
+      for (const level in EXTRA_HSK_DATA) {
+        const word = EXTRA_HSK_DATA[level].find(w => w.character === char);
+        if (word && word.pinyin) {
+          compiledPinyin.push(word.pinyin);
+          found = true;
+          break;
+        }
+      }
+    }
+    if (!found) {
+      allFound = false;
+      break;
+    }
+  }
+  
+  if (allFound && compiledPinyin.length > 0) {
+    return compiledPinyin.join(' ');
+  }
+  return null;
+}
+
+async function getPinyinWithFallback(charSequence) {
+  const localVal = getPinyinForCharacter(charSequence);
+  if (localVal) return localVal;
+  
+  try {
+    const charEncoded = encodeURIComponent(charSequence);
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=zh-CN&tl=en&dt=t&dt=rm&q=${charEncoded}`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if (data && data[0]) {
+      let transliteration = "";
+      data[0].forEach(item => {
+        if (item[3]) transliteration = item[3];
+      });
+      if (transliteration) return transliteration.toLowerCase();
+    }
+  } catch (err) {
+    console.error("Error fetching translation pinyin", err);
+  }
+  return null;
+}
+
+function generateFeedbackHint(targetPinyin, spokenPinyin, currentText, targetWord) {
+  const targetParsed = parsePinyinTones(targetPinyin);
+  const spokenParsed = parsePinyinTones(spokenPinyin);
+  
+  if (targetParsed.length === 0 || spokenParsed.length === 0) return null;
+  
+  if (targetParsed.length !== spokenParsed.length) {
+    if (spokenParsed.length > targetParsed.length) {
+      return `Syllables count mismatched. Spoke too many syllables. Focus on saying only "${targetWord}" (${targetPinyin}).`;
+    } else {
+      return `Syllables count mismatched. Missed some characters. Say all of "${targetWord}" (${targetPinyin}).`;
+    }
+  }
+  
+  let hints = [];
+  for (let i = 0; i < targetParsed.length; i++) {
+    const t = targetParsed[i];
+    const s = spokenParsed[i];
+    
+    if (t.syllable === s.syllable) continue;
+    
+    if (t.base === s.base && t.tone !== s.tone) {
+      const toneNames = ["", "1st (high flat ˉ)", "2nd (rising ˊ)", "3rd (dipping ˇ)", "4th (falling ˋ)", "5th (neutral)"];
+      hints.push(`For "${targetWord[i] || ''}", check your tone. You said "${s.syllable}" (${toneNames[s.tone]} tone) instead of "${t.syllable}" (${toneNames[t.tone]} tone).`);
+    } else {
+      const confusions = [
+        { pair: ['sh', 's'], msg: "tongue position for 'sh' (curl tongue back) vs 's' (flat tongue)" },
+        { pair: ['ch', 'c'], msg: "tongue position for 'ch' (curl tongue back with air burst) vs 'c' (flat tongue with air burst)" },
+        { pair: ['zh', 'z'], msg: "tongue position for 'zh' (curl tongue back) vs 'z' (flat tongue)" },
+        { pair: ['n', 'l'], msg: "nasal 'n' vs lateral 'l' sound" },
+        { pair: ['f', 'h'], msg: "frictional 'f' (teeth on bottom lip) vs 'h' (throat friction sound)" }
+      ];
+      
+      let confusionMsg = "";
+      for (const conf of confusions) {
+        const hasT = t.base.startsWith(conf.pair[0]) || t.base.startsWith(conf.pair[1]);
+        const hasS = s.base.startsWith(conf.pair[0]) || s.base.startsWith(conf.pair[1]);
+        if (hasT && hasS && t.base.charAt(0) !== s.base.charAt(0)) {
+          confusionMsg = ` Watch out: ${conf.msg}.`;
+          break;
+        }
+      }
+      hints.push(`For "${targetWord[i] || ''}", you pronounced it like "${s.syllable}" instead of "${t.syllable}".${confusionMsg}`);
+    }
+  }
+  
+  if (hints.length > 0) {
+    return hints.join(' ');
+  }
+  
+  return `Pronunciation is correct! You said a homophone character "${currentText}" (${spokenPinyin}) instead of "${targetWord}" (${targetPinyin}).`;
+}
+
 // Initializing Web Speech Recognition
 function setupSpeechRecognition() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -598,7 +758,7 @@ function setupSpeechRecognition() {
     updateSpeechUI();
   };
   
-  state.recognition.onresult = (event) => {
+  state.recognition.onresult = async (event) => {
     if (state.speechFeedbackStatus === "success") return;
     
     let interimTranscript = '';
@@ -650,8 +810,22 @@ function setupSpeechRecognition() {
       const isFinal = event.results[event.results.length - 1].isFinal;
       if (isFinal) {
         state.speechFeedbackStatus = "error";
-        state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
         sounds.playWrong();
+        
+        // Generate corrective pronunciation suggestion!
+        const targetPinyin = document.getElementById('speechTargetPy').textContent.trim();
+        const spokenPinyin = await getPinyinWithFallback(currentText);
+        
+        if (spokenPinyin) {
+          const feedbackHint = generateFeedbackHint(targetPinyin, spokenPinyin, currentText, targetWord);
+          if (feedbackHint) {
+            state.speechFeedbackText += `\n\n💡 Hint: ${feedbackHint}`;
+          } else {
+            state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
+          }
+        } else {
+          state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
+        }
       } else {
         state.speechFeedbackStatus = "neutral";
       }
