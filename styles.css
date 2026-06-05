@@ -1917,6 +1917,10 @@ body.light-theme select {
     justify-content: center;
     margin-bottom: 0.25rem;
   }
+  .header-controls {
+    justify-content: center;
+    width: 100%;
+  }
   .card-face {
     padding: 1.25rem;
   }
@@ -1948,6 +1952,34 @@ body.light-theme select {
   .glass-card {
     padding: 1.15rem;
   }
+  .welcome-card {
+    padding: 1.15rem 1.15rem 2rem 1.15rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .welcome-text h2 {
+    font-size: 1.5rem;
+  }
+  .welcome-deco {
+    right: 1rem;
+    bottom: -3rem;
+    font-size: 6rem;
+  }
+  .srs-info-box {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+    text-align: center;
+  }
+  .srs-counter-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .srs-info-box button {
+    width: 100%;
+    justify-content: center;
+  }
   .voice-selector-wrapper {
     flex: 1;
     justify-content: center;
@@ -1959,7 +1991,44 @@ body.light-theme select {
   .stats-bar {
     width: 100%;
     order: 3;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .canvas-toolbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .canvas-btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  .dict-filters {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+    width: 100%;
+  }
+  .filter-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+    flex: 1 1 calc(50% - 0.4rem);
+    text-align: center;
+  }
+  dialog.detail-modal {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+  .modal-writing-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+  }
+  .modal-writing-wrapper > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
