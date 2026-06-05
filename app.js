@@ -287,6 +287,7 @@ const state = {
   
   // Audio state
   isSpeaking: false,
+  essaySpeaking: false,
   
   // Speech Recognition state
   isListening: false,
@@ -556,8 +557,14 @@ function updateStreak() {
 }
 
 // Sound playback wrapper
-function playTextToSpeech(text, callback) {
+function playTextToSpeech(text, callback, isEssay = false) {
   if (typeof speechSynthesis === 'undefined') return;
+
+  // If we were speaking an essay and a different text-to-speech request starts, reset the essay audio button
+  if (state.essaySpeaking && !isEssay) {
+    resetEssayAudioBtn();
+  }
+
   speechSynthesis.cancel(); // Stop any current speaking
   
   const utterance = new SpeechSynthesisUtterance(text);
@@ -576,6 +583,54 @@ function playTextToSpeech(text, callback) {
   
   state.isSpeaking = true;
   speechSynthesis.speak(utterance);
+}
+
+// Reading Lab Essay Audio Control Helpers
+function toggleEssayAudio(essayText) {
+  if (typeof speechSynthesis === 'undefined') return;
+  
+  const audioBtn = document.getElementById('essayAudioBtn');
+  if (!audioBtn) return;
+  
+  // If we are currently reading the essay, stop it
+  if (speechSynthesis.speaking && state.essaySpeaking) {
+    stopEssayAudio();
+    return;
+  }
+  
+  // Update state and visual button to show "Stop" square icon with pulse effect
+  state.essaySpeaking = true;
+  audioBtn.classList.add('speaking');
+  audioBtn.title = "Stop Reading";
+  audioBtn.innerHTML = `
+    <svg viewBox="0 0 24 24" style="width:18px; height:18px; fill:currentColor;">
+      <rect x="6" y="6" width="12" height="12" rx="1" />
+    </svg>
+  `;
+  
+  playTextToSpeech(essayText, () => {
+    resetEssayAudioBtn();
+  }, true);
+}
+
+function stopEssayAudio() {
+  if (typeof speechSynthesis === 'undefined') return;
+  speechSynthesis.cancel();
+  resetEssayAudioBtn();
+}
+
+function resetEssayAudioBtn() {
+  state.essaySpeaking = false;
+  const audioBtn = document.getElementById('essayAudioBtn');
+  if (audioBtn) {
+    audioBtn.classList.remove('speaking');
+    audioBtn.title = "Listen to Essay";
+    audioBtn.innerHTML = `
+      <svg viewBox="0 0 24 24" style="width:18px; height:18px;">
+        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+    `;
+  }
 }
 
 // Pinyin parsing and correction helper maps
@@ -1011,6 +1066,15 @@ function switchTab(tabId) {
     } catch (e) {
       console.warn("Failed to abort speech recognition on tab switch:", e);
     }
+  }
+  
+  // Stop active speech synthesis when switching tabs
+  if (typeof speechSynthesis !== 'undefined') {
+    speechSynthesis.cancel();
+    if (state.essaySpeaking) {
+      resetEssayAudioBtn();
+    }
+    state.isSpeaking = false;
   }
   
   // Update Tab buttons
@@ -2158,6 +2222,9 @@ function isChineseChar(c) {
 }
 
 function renderEssay() {
+  // Stop any active essay audio when loading/rendering a new essay
+  stopEssayAudio();
+
   const essays = HSK_ESSAYS[state.currentLevel];
   const textContentEl = document.getElementById('essayTextContent');
   if (!textContentEl) return;
@@ -2233,7 +2300,7 @@ function renderEssay() {
   // Listen Button
   const audioBtn = document.getElementById('essayAudioBtn');
   if (audioBtn) {
-    audioBtn.onclick = () => playTextToSpeech(essay.contentCn);
+    audioBtn.onclick = () => toggleEssayAudio(essay.contentCn);
   }
   
   // Reset Quiz State

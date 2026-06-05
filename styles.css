@@ -663,6 +663,31 @@ header {
   fill: currentColor;
 }
 
+.audio-trigger-btn.speaking {
+  background: rgba(239, 68, 68, 0.15) !important;
+  color: #ef4444 !important;
+  border-color: #ef4444 !important;
+  animation: pulse-red 1.5s infinite;
+}
+
+.audio-trigger-btn.speaking:hover {
+  background: rgba(239, 68, 68, 0.25) !important;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
 .flip-hint {
   position: absolute;
   bottom: 1.5rem;
