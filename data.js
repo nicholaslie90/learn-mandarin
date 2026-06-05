@@ -122354,6 +122354,80 @@ const HSK_ESSAYS = {
           "correct": 1
         }
       ]
+    },
+    {
+      "id": "essay_1_7",
+      "titleCn": "错送的包裹",
+      "titlePy": "Cuò sòng de bāoguǒ",
+      "titleEn": "The Misdelivered Package",
+      "contentCn": "今天傍晚六点，方明远下班回家。他走到自己住的楼，上了三楼。楼道里很安静，没有人在外面。\n方明远走到自己的门前，看见门口有一个大箱子。箱子是棕色的，上面有一张白纸。\n他想：“这是什么？我没有买东西。”\n他看了看箱子上的白纸。白纸上写着一个名字：林若云。方明远不认识这个名字。他又看了看，白纸上还写着“302”。方明远住在301。\n“302是邻居。”他想。\n方明远打开箱子。箱子里有很多东西：几本书，一件衣服，还有一些茶叶。书的名字他看不清楚。衣服是女生的衣服，红色的。茶叶放在一个小盒子里，盒子很好看。\n方明远知道这些东西不是他的。是林若云的。是302的邻居的。\n他想了想，拿起手机，给房东太太打电话。\n“喂，房东太太，我是301的方明远。”他说。\n“小方啊，你好！有什么事吗？”房东太太问。\n“我门口有一个箱子，是302的。名字是林若云。我不认识她。您知道她吗？”\n房东太太说：“林若云？我知道，我知道。她是302的，两个月前搬来的。她是一个很好的人。你可以去找她。”\n“好的，谢谢您。”方明远说。\n方明远放下手机，看了看箱子。他想：“我应该把箱子给她。”\n他搬起箱子。箱子不太重。他走到302的门前，门是关着的。\n方明远想敲门，但是他不知道林若云在不在家。他站在302的门口，看了看门，又看了看箱子。\n“现在敲门吗？”他想。",
+      "contentPy": "Jīntiān bāngwǎn liù diǎn, Fāng Míngyuǎn xiàbān huíjiā. Tā zǒudào zìjǐ zhù de lóu, shàngle sānlóu. Lóudào lǐ hěn ānjìng, méiyǒu rén zài wàimiàn.\nFāng Míngyuǎn zǒudào zìjǐ de ménqián, kànjiàn ménkǒu yǒu yī gè dà xiāngzi. Xiāngzi shì zōngsè de, shàngmiàn yǒu yī zhāng báizhǐ.\nTā xiǎng: “Zhè shì shénme? Wǒ méiyǒu mǎi dōngxi.”\nTā kànle kàn xiāngzi shàng de báizhǐ. Báizhǐ shàng xiězhe yī gè míngzì: Lín Ruòyún. Fāng Míngyuǎn bù rènshi zhè gè míngzì. Tā yòu kànle kàn, báizhǐ shàng hái xiězhe “sān líng èr”. Fāng Míngyuǎn zhùzài sān líng yī.\n“Sān líng èr shì línjū.” Tā xiǎng.\nFāng Míngyuǎn dǎkāi xiāngzi. Xiāngzi lǐ yǒu hěnduō dōngxi: jǐ běn shū, yī jiàn yīfu, hái yǒu yīxiē cháyè. Shū de míngzì tā kànbùqīngchu. Yīfu shì nǚshēng de yīfu, hóngsè de. Cháyè fàngzài yī gè xiǎo hézi lǐ, hézi hěnhǎokàn.\nFāng Míngyuǎn zhīdào zhèxiē dōngxi búshì tā de. Shì Lín Ruòyún de. Shì sān líng èr de línjū de.\nTā xiǎngle xiǎng, náqǐ shǒujī, gěi fángdōng tàitai dǎ diànhuà.\n“Wèi, fángdōng tàitai, wǒ shì sān líng yī de Fāng Míngyuǎn.” Tā shuō.\n“Xiǎo Fāng a, nǐ hǎo! Yǒu shénme shì ma?” Fángdōng tàitai wèn.\n“Wǒ ménkǒu yǒu yī gè xiāngzi, shì sān líng èr de. Míngzì shì Lín Ruòyún. Wǒ bù rènshi tā. Nín zhīdào tā ma?”\nFángdōng tàitai shuō: “Lín Ruòyún? Wǒ zhīdào, wǒ zhīdào. Tā shì sān líng èr de, liǎng gè yuè qián bānlái de. Tā shì yī gè hěnhǎo de rén. Nǐ kěyǐ qù zhǎo tā.”\n“Hǎo de, xièxie nín.” Fāng Míngyuǎn shuō.\nFāng Míngyuǎn fàngxià shǒujī, kànle kàn xiāngzi. Tā xiǎng: “Wǒ yīnggāi bǎ xiāngzi gěi tā.”\nTā bānqǐ xiāngzi. Xiāngzi bútài zhòng. Tā zǒudào sān líng èr de ménqián, mén shì guānzhe de.\nFāng Míngyuǎn xiǎng qiāomén, dànshì tā bù zhīdào Lín Ruòyún zài bú zài jiā. Tā zhànzài sān líng èr de ménkǒu, kànle kàn mén, yòu kànle kàn xiāngzi.\n“Xiànzài qiāomén ma?” Tā xiǎng.",
+      "contentEn": "Today at six in the evening, Fang Mingyuan got off work and went home. He walked to the building where he lived and went up to the third floor. The hallway was very quiet, with no one outside.\nFang Mingyuan walked to his door and saw a big box at the entrance. The box was brown, and there was a sheet of white paper on top of it.\nHe thought, \"What is this? I didn't buy anything.\"\nHe looked at the white paper on the box. A name was written on the white paper: Lin Ruoyun. Fang Mingyuan did not know this name. He looked again; the white paper also had \"302\" written on it. Fang Mingyuan lived in 301.\n\"302 is the neighbor,\" he thought.\nFang Mingyuan opened the box. There were many things inside the box: a few books, a piece of clothing, and some tea leaves. He couldn't read the names of the books clearly. The clothing was a woman's clothing, red. The tea leaves were placed in a small box, and the box was very nice-looking.\nFang Mingyuan knew these things were not his. They were Lin Ruoyun's. They belonged to the neighbor in 302.\nHe thought for a moment, picked up his phone, and called the landlady.\n\"Hello, landlady, I am Fang Mingyuan from 301,\" he said.\n\"Xiao Fang, hello! Is there something wrong?\" the landlady asked.\n\"There is a box at my door, it belongs to 302. The name is Lin Ruoyun. I don't know her. Do you know her?\"\nThe landlady said, \"Lin Ruoyun? I know, I know. She is in 302, she moved in two months ago. She is a very good person. You can go look for her.\"\n\"Okay, thank you,\" Fang Mingyuan said.\nFang Mingyuan put down the phone and looked at the box. He thought, \"I should give the box to her.\"\nHe picked up the box. The box was not too heavy. He walked to the door of 302; the door was closed.\nFang Mingyuan wanted to knock on the door, but he didn't know if Lin Ruoyun was home. He stood at the door of 302, looked at the door, and then looked at the box.\n\"Should I knock on the door now?\" he thought.",
+      "questions": [
+        {
+          "q": "方明远住在几号房间？",
+          "qPy": "Fāng Míngyuǎn zhùzài jǐ hào fángjiān?",
+          "qEn": "Which room does Fang Mingyuan live in?",
+          "options": [
+            "301",
+            "302",
+            "303"
+          ],
+          "optionsPy": [
+            "sān líng yī",
+            "sān líng èr",
+            "sān líng sān"
+          ],
+          "optionsEn": [
+            "301",
+            "302",
+            "303"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "箱子里的衣服是什么颜色的？",
+          "qPy": "Xiāngzi lǐ de yīfu shì shénme yánsè de?",
+          "qEn": "What color is the clothing inside the box?",
+          "options": [
+            "黄色的",
+            "红色的",
+            "蓝色的"
+          ],
+          "optionsPy": [
+            "huángsè de",
+            "hóngsè de",
+            "lánsè de"
+          ],
+          "optionsEn": [
+            "Yellow",
+            "Red",
+            "Blue"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "林若云是什么时候搬来的？",
+          "qPy": "Lín Ruòyún shì shénme shíhou bānlái de?",
+          "qEn": "When did Lin Ruoyun move in?",
+          "options": [
+            "两个星期前",
+            "两个月前",
+            "两天前"
+          ],
+          "optionsPy": [
+            "liǎng gè xīngqī qián",
+            "liǎng gè yuè qián",
+            "liǎng tiān qián"
+          ],
+          "optionsEn": [
+            "Two weeks ago",
+            "Two months ago",
+            "Two days ago"
+          ],
+          "correct": 1
+        }
+      ]
     }
   ],
   "2": [
