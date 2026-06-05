@@ -920,12 +920,12 @@ function renderFlashcard() {
   
   if (pinyinEl) {
     pinyinEl.textContent = word.pinyin;
-    pinyinEl.style.display = 'none';
+    pinyinEl.style.display = 'block';
   }
   
   const cardPinyinToggle = document.getElementById('cardPinyinToggle');
   if (cardPinyinToggle) {
-    cardPinyinToggle.style.display = '';
+    cardPinyinToggle.style.display = 'none';
   }
   
   if (posEl) posEl.textContent = word.pos;
@@ -1136,8 +1136,17 @@ function renderQuizQuestion() {
   }
   
   // Generate options (1 correct, 3 wrong distractors)
-  const distractors = (HSK_DATA[state.currentLevel] || [])
-    .filter(w => w.id !== word.id)
+  // Ensure that single-character questions only present single-character distractors,
+  // and multi-character questions present multi-character distractors.
+  const isSingleWord = word.character.length === 1;
+  const pool = HSK_DATA[state.currentLevel] || [];
+  let eligible = pool.filter(w => w.id !== word.id && (w.character.length === 1) === isSingleWord);
+  
+  if (eligible.length < 3) {
+    eligible = pool.filter(w => w.id !== word.id);
+  }
+  
+  const distractors = eligible
     .sort(() => 0.5 - Math.random())
     .slice(0, 3);
   
@@ -2189,8 +2198,59 @@ function generateNewReadingTest() {
   }, 1200);
 }
 
+// Clean raw dictionary classifier strings in definitions dynamically at load time
+function cleanDatabaseDefinitions() {
+  const cleanTranslation = (text) => {
+    if (!text) return '';
+    return text.replace(/CL:([^\s,]+(?:,[^\s,]+)*)/g, (match, p1) => {
+      const parts = p1.split(',').map(part => {
+        let char = part.split('[')[0];
+        if (char.includes('|')) {
+          char = char.split('|')[1]; // Use Simplified character
+        }
+        let tone = '';
+        const toneMatch = part.match(/\[([^\]]+)\]/);
+        if (toneMatch) {
+          tone = toneMatch[1];
+          const tones = {
+            'ge4': 'gè', 'pian1': 'piān', 'ben3': 'běn', 'men2': 'mén', 'zhang1': 'zhāng',
+            'da2': 'dá', 'bu4': 'bù', 'zhi1': 'zhī', 'ci4': 'cì', 'fen4': 'fèn',
+            'dun4': 'dùn', 'can1': 'cān', 'jia1': 'jiā', 'liang4': 'liàng', 'kuai4': 'kuài',
+            'tai2': 'tái', 'shuang1': 'shuāng', 'dui4': 'duì', 'ba3': 'bǎ', 'gen1': 'gēn',
+            'zu3': 'zǔ', 'zuo4': 'zuò', 'pian4': 'piàn', 'shou3': 'shǒu', 'jian4': 'jiàn',
+            'duo3': 'duǒ', 'tiao2': 'tiáo', 'kou3': 'kǒu', 'ke1': 'kē', 'tou2': 'tóu',
+            'pi3': 'pǐ', 'jia4': 'jià'
+          };
+          tone = tones[tone] || tone;
+        }
+        return tone ? `${char} (${tone})` : char;
+      });
+      return `(measure word: ${parts.join(', ')})`;
+    });
+  };
+
+  // Clean HSK_DATA
+  for (const level in HSK_DATA) {
+    if (HSK_DATA[level]) {
+      HSK_DATA[level].forEach(word => {
+        word.english = cleanTranslation(word.english);
+      });
+    }
+  }
+
+  // Clean EXTRA_HSK_DATA
+  for (const level in EXTRA_HSK_DATA) {
+    if (EXTRA_HSK_DATA[level]) {
+      EXTRA_HSK_DATA[level].forEach(word => {
+        word.english = cleanTranslation(word.english);
+      });
+    }
+  }
+}
+
 // Startup trigger
 window.addEventListener('DOMContentLoaded', async () => {
+  cleanDatabaseDefinitions();
   initTheme();
   setupFloatingBackground();
   
