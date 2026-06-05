@@ -126007,6 +126007,11 @@ function expandHskEssays() {
     const baseEssays = HSK_ESSAYS[lvl];
     if (!baseEssays || baseEssays.length === 0) continue;
     
+    // Skip variation expansion if the level already has plenty of unique base stories (20 or more)
+    if (baseEssays.length >= 20) {
+      continue;
+    }
+    
     const expandedList = [];
     baseEssays.forEach((base, baseIdx) => {
       // Add the original essay as Variation 0
