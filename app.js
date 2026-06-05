@@ -271,6 +271,7 @@ const state = {
   searchQuery: '',
   vocabFilter: 'all', // 'all', 'starred', 'due', 'learned'
   skipMastered: true,
+  mutePronounceAutoTTS: false,
   
   // Flashcards state
   flashcardIndex: 0,
@@ -586,7 +587,7 @@ function setupSpeechRecognition() {
   
   state.recognition = new SpeechRecognition();
   state.recognition.lang = 'zh-CN';
-  state.recognition.interimResults = false;
+  state.recognition.interimResults = true; // Enable real-time interim results for faster feedback and instant matches
   state.recognition.maxAlternatives = 1;
   
   state.recognition.onstart = () => {
@@ -597,21 +598,44 @@ function setupSpeechRecognition() {
   };
   
   state.recognition.onresult = (event) => {
-    const result = event.results[0][0].transcript;
+    if (state.speechFeedbackStatus === "success") return;
+    
+    let interimTranscript = '';
+    let finalTranscript = '';
+    
+    for (let i = 0; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) {
+        finalTranscript += event.results[i][0].transcript;
+      } else {
+        interimTranscript += event.results[i][0].transcript;
+      }
+    }
+    
     const targetWord = document.getElementById('speechTargetChar').textContent.trim();
+    const currentWordId = document.getElementById('speechTargetWordId').value;
     
-    // Clean string matches
-    const cleanResult = result.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-    const isMatch = cleanResult.includes(targetWord) || targetWord.includes(cleanResult);
+    const currentText = (finalTranscript || interimTranscript || '').trim();
+    if (!currentText) return;
     
-    state.speechFeedbackText = `You said: "${result}"`;
+    // Clean string matches - remove punctuation and spaces, convert to lowercase
+    const cleanText = currentText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()！？，。；：“”（）\s]/g,"").toLowerCase();
+    const cleanTarget = targetWord.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()！？，.；：“”（）\s]/g,"").toLowerCase();
+    
+    const isMatch = cleanText.includes(cleanTarget) || cleanTarget.includes(cleanText);
+    
     if (isMatch) {
       state.speechFeedbackStatus = "success";
-      state.speechFeedbackText += ` — Perfect Match! 🎉`;
+      state.speechFeedbackText = `You said: "${currentText}" — Perfect Match! 🎉`;
+      updateSpeechUI();
+      
+      try {
+        state.recognition.stop();
+      } catch (err) {
+        console.warn("Failed to stop recognition on success:", err);
+      }
+      
       sounds.playCorrect();
       state.points += 10;
-      // Reward user in SRS for perfect speech
-      const currentWordId = document.getElementById('speechTargetWordId').value;
       if (currentWordId) {
         promoteSRSWord(currentWordId);
       } else {
@@ -619,9 +643,18 @@ function setupSpeechRecognition() {
       }
       renderPointsUI();
     } else {
-      state.speechFeedbackStatus = "error";
-      state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
-      sounds.playWrong();
+      state.speechFeedbackText = `You said: "${currentText}"`;
+      
+      // Only treat it as an error when the final result has arrived
+      const isFinal = event.results[event.results.length - 1].isFinal;
+      if (isFinal) {
+        state.speechFeedbackStatus = "error";
+        state.speechFeedbackText += ` — Didn't quite match "${targetWord}". Try again!`;
+        sounds.playWrong();
+      } else {
+        state.speechFeedbackStatus = "neutral";
+      }
+      updateSpeechUI();
     }
   };
   
@@ -629,10 +662,23 @@ function setupSpeechRecognition() {
     console.error("Speech Recognition Error:", event.error);
     if (event.error === 'no-speech') {
       state.speechFeedbackText = "No speech detected. Please speak clearly into your mic.";
+      state.speechFeedbackStatus = "error";
+    } else if (event.error === 'not-allowed') {
+      state.speechFeedbackText = "Microphone access blocked. Please enable microphone permissions in your browser settings.";
+      state.speechFeedbackStatus = "error";
+    } else if (event.error === 'audio-capture') {
+      state.speechFeedbackText = "No microphone hardware found. Please check your mic connection.";
+      state.speechFeedbackStatus = "error";
+    } else if (event.error === 'aborted') {
+      // Aborted manually (e.g. by stop() on success, or tab switch)
+      if (state.speechFeedbackStatus !== 'success') {
+        state.speechFeedbackText = "Listening stopped.";
+        state.speechFeedbackStatus = "neutral";
+      }
     } else {
       state.speechFeedbackText = `Recognition error: ${event.error}`;
+      state.speechFeedbackStatus = "error";
     }
-    state.speechFeedbackStatus = "error";
     state.isListening = false;
     updateSpeechUI();
   };
@@ -672,7 +718,6 @@ function updateSpeechUI() {
   }
 }
 
-// Speech recognition trigger
 function toggleListening() {
   if (!state.recognition) {
     alert("Speech Recognition is not supported on this browser. We recommend using Google Chrome for the Pronunciation Lab.");
@@ -680,9 +725,26 @@ function toggleListening() {
   }
   
   if (state.isListening) {
-    state.recognition.stop();
+    try {
+      state.recognition.stop();
+    } catch (err) {
+      console.warn("Failed to stop recognition:", err);
+    }
   } else {
-    state.recognition.start();
+    // Cancel any ongoing TTS audio synthesis so it doesn't overlap or feed back into the mic
+    if (typeof speechSynthesis !== 'undefined' && speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+      state.isSpeaking = false;
+    }
+    
+    try {
+      state.recognition.start();
+    } catch (err) {
+      console.warn("Failed to start recognition:", err);
+      // Force UI sync if state got desynced
+      state.isListening = true;
+      updateSpeechUI();
+    }
   }
 }
 
@@ -715,9 +777,17 @@ function demoteSRSWord(wordId) {
   renderDictionary();
 }
 
-// Navigation & Screen Control
 function switchTab(tabId) {
   state.activeTab = tabId;
+  
+  // Abort speech recognition if active when switching tabs to release microphone access
+  if (state.recognition && state.isListening) {
+    try {
+      state.recognition.abort();
+    } catch (e) {
+      console.warn("Failed to abort speech recognition on tab switch:", e);
+    }
+  }
   
   // Update Tab buttons
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -1477,8 +1547,10 @@ function renderPronounceWord() {
   if (numEl) numEl.textContent = pronounceIndex + 1;
   if (totEl) totEl.textContent = pronounceWordList.length;
   
-  // Play TTS
-  setTimeout(() => { playTextToSpeech(word.character); }, 300);
+  // Play TTS if not muted
+  if (!state.mutePronounceAutoTTS) {
+    setTimeout(() => { playTextToSpeech(word.character); }, 300);
+  }
   
   // Reset status cards
   state.speechFeedbackText = 'Press the microphone and say the characters aloud.';
@@ -2308,6 +2380,20 @@ function initSkipMasteredToggle() {
   }
 }
 
+function initMutePronounceAutoTTSToggle() {
+  const localMute = localStorage.getItem('hsk_sensei_mute_pronounce_auto_tts');
+  state.mutePronounceAutoTTS = localMute !== null ? localMute === 'true' : false;
+  
+  const toggle = document.getElementById('mutePronounceTTSToggle');
+  if (toggle) {
+    toggle.checked = state.mutePronounceAutoTTS;
+    toggle.addEventListener('change', (e) => {
+      state.mutePronounceAutoTTS = e.target.checked;
+      localStorage.setItem('hsk_sensei_mute_pronounce_auto_tts', state.mutePronounceAutoTTS);
+    });
+  }
+}
+
 // -------------------------------------------------------------
 // Card Pinyin Visibility Toggle
 // -------------------------------------------------------------
@@ -2552,6 +2638,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   cleanDatabaseDefinitions();
   initTheme();
   initSkipMasteredToggle();
+  initMutePronounceAutoTTSToggle();
   setupFloatingBackground();
   
   // Load voices if already cached by browser
