@@ -272,6 +272,7 @@ const state = {
   vocabFilter: 'all', // 'all', 'starred', 'due', 'learned'
   skipMastered: true,
   mutePronounceAutoTTS: false,
+  hidePronouncePinyin: false,
   
   // Flashcards state
   flashcardIndex: 0,
@@ -1541,7 +1542,10 @@ function renderPronounceWord() {
   const totEl = document.getElementById('speechTotalCount');
   
   if (charEl) charEl.textContent = word.character;
-  if (pinEl) pinEl.textContent = word.pinyin;
+  if (pinEl) {
+    pinEl.textContent = word.pinyin;
+    pinEl.style.display = state.hidePronouncePinyin ? 'none' : 'block';
+  }
   if (engEl) engEl.textContent = word.english;
   if (idEl) idEl.value = word.id;
   if (numEl) numEl.textContent = pronounceIndex + 1;
@@ -2394,6 +2398,26 @@ function initMutePronounceAutoTTSToggle() {
   }
 }
 
+function initHidePronouncePinyinToggle() {
+  const localHide = localStorage.getItem('hsk_sensei_hide_pronounce_pinyin');
+  state.hidePronouncePinyin = localHide !== null ? localHide === 'true' : false;
+  
+  const toggle = document.getElementById('hidePronouncePinyinToggle');
+  if (toggle) {
+    toggle.checked = state.hidePronouncePinyin;
+    toggle.addEventListener('change', (e) => {
+      state.hidePronouncePinyin = e.target.checked;
+      localStorage.setItem('hsk_sensei_hide_pronounce_pinyin', state.hidePronouncePinyin);
+      
+      // Update pinyin visibility immediately
+      const pinEl = document.getElementById('speechTargetPy');
+      if (pinEl) {
+        pinEl.style.display = state.hidePronouncePinyin ? 'none' : 'block';
+      }
+    });
+  }
+}
+
 // -------------------------------------------------------------
 // Card Pinyin Visibility Toggle
 // -------------------------------------------------------------
@@ -2639,6 +2663,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   initTheme();
   initSkipMasteredToggle();
   initMutePronounceAutoTTSToggle();
+  initHidePronouncePinyinToggle();
   setupFloatingBackground();
   
   // Load voices if already cached by browser

@@ -477,13 +477,23 @@
         <div class="glass-card pronounce-layout">
           <span class="quiz-question-type" style="color:var(--accent-orange);">Speak & Evaluate Pronunciation</span>
           
-          <label class="toggle-container" style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; user-select: none;" title="Mute automatic TTS playback when word is loaded">
-            <span class="switch">
-              <input type="checkbox" id="mutePronounceTTSToggle">
-              <span class="slider"></span>
-            </span>
-            <span style="font-size: 0.8rem; color: var(--text-secondary);">Mute Auto TTS</span>
-          </label>
+          <div style="display: flex; gap: 1rem; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 0.25rem;">
+            <label class="toggle-container" style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; user-select: none;" title="Mute automatic TTS playback when word is loaded">
+              <span class="switch">
+                <input type="checkbox" id="mutePronounceTTSToggle">
+                <span class="slider"></span>
+              </span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">Mute Auto TTS</span>
+            </label>
+            
+            <label class="toggle-container" style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; user-select: none;" title="Hide the Pinyin helper guide for pronunciation">
+              <span class="switch">
+                <input type="checkbox" id="hidePronouncePinyinToggle">
+                <span class="slider"></span>
+              </span>
+              <span style="font-size: 0.8rem; color: var(--text-secondary);">Hide Pinyin</span>
+            </label>
+          </div>
           
           <div style="margin-top:1rem;">
             <h2 id="speechTargetChar" style="font-family:var(--font-serif); font-size:4.5rem; font-weight:700;">我</h2>
