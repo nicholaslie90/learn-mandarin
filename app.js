@@ -5,21 +5,62 @@ let chineseVoice = null;
 let allChineseVoices = [];
 let selectedVoiceURI = localStorage.getItem('hsk_sensei_voice_uri') || '';
 
+function isGoogleTaiwan(v) {
+  const nameLower = v.name.toLowerCase();
+  const uriLower = v.voiceURI.toLowerCase();
+  const langLower = v.lang.toLowerCase();
+  const hasGoogle = nameLower.includes('google') || uriLower.includes('google');
+  const hasTaiwan = nameLower.includes('taiwan') || uriLower.includes('taiwan') || 
+                    langLower.includes('tw') || langLower.includes('hant') || 
+                    v.name.includes('國語') || v.name.includes('国语');
+  return hasGoogle && hasTaiwan;
+}
+
+function getDefaultVoice(voices) {
+  let voice = voices.find(isGoogleTaiwan);
+  if (voice) return voice;
+  
+  voice = voices.find(v => v.name.includes('Meijia') || v.voiceURI.includes('Meijia'));
+  if (voice) return voice;
+  
+  voice = voices.find(v => v.name.includes('Tingting') || v.voiceURI.includes('Tingting'));
+  if (voice) return voice;
+  
+  voice = voices.find(v => v.name.toLowerCase().includes('google') || v.voiceURI.toLowerCase().includes('google'));
+  if (voice) return voice;
+  
+  return voices[0] || null;
+}
+
 function loadChineseVoices() {
   if (typeof speechSynthesis === 'undefined') return;
   const voices = speechSynthesis.getVoices();
   
-  // Filter for Chinese, Hong Kong, Taiwan, or Chinese-adjacent voices
-  allChineseVoices = voices.filter(v => 
-    v.lang.includes('zh') || 
-    v.lang.includes('ZH') || 
-    v.lang.includes('Chinese')
-  );
+  // Filter for Chinese and keep only Meijia, Tingting, or Google ones
+  const filtered = voices.filter(v => {
+    const isChinese = v.lang.includes('zh') || v.lang.includes('ZH') || v.lang.includes('Chinese');
+    const matchesRequired = v.name.includes('Meijia') || v.name.includes('Tingting') || v.name.toLowerCase().includes('google') ||
+                            v.voiceURI.includes('Meijia') || v.voiceURI.includes('Tingting') || v.voiceURI.toLowerCase().includes('google');
+    return isChinese && matchesRequired;
+  });
+  
+  if (filtered.length > 0) {
+    allChineseVoices = filtered;
+  } else {
+    // Resilient fallback: all Chinese voices if none of the requested ones exist
+    allChineseVoices = voices.filter(v => 
+      v.lang.includes('zh') || 
+      v.lang.includes('ZH') || 
+      v.lang.includes('Chinese')
+    );
+  }
   
   // Populate dropdown UI
   const select = document.getElementById('ttsVoiceSelect');
   if (select) {
     select.innerHTML = '<option value="">Default Chinese Voice</option>';
+    const defaultVoice = getDefaultVoice(allChineseVoices);
+    
     allChineseVoices.forEach(v => {
       const option = document.createElement('option');
       option.value = v.voiceURI;
@@ -27,7 +68,7 @@ function loadChineseVoices() {
       
       const isSelected = selectedVoiceURI 
         ? (v.voiceURI === selectedVoiceURI)
-        : (v.name.includes('Meijia') || v.voiceURI.includes('Meijia'));
+        : (defaultVoice && v.voiceURI === defaultVoice.voiceURI);
         
       if (isSelected) {
         option.selected = true;
@@ -48,11 +89,7 @@ function updateSelectedVoice() {
   }
   
   if (!voice) {
-    // Fallback: try to find Meijia first, then look for general zh-CN, or use first Chinese voice
-    voice = allChineseVoices.find(v => v.name.includes('Meijia') || v.voiceURI.includes('Meijia')) ||
-            allChineseVoices.find(v => v.lang.includes('zh-CN') || v.lang.includes('zh_CN')) || 
-            allChineseVoices.find(v => v.lang.startsWith('zh-')) ||
-            allChineseVoices[0];
+    voice = getDefaultVoice(allChineseVoices);
   }
   chineseVoice = voice;
 }

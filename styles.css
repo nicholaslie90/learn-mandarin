@@ -213,7 +213,8 @@ header {
   font-weight: 600;
   outline: none;
   cursor: pointer;
-  max-width: 150px;
+  max-width: 280px;
+  width: auto;
   text-overflow: ellipsis;
 }
 
