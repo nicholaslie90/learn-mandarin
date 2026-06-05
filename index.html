@@ -596,7 +596,13 @@
           
           <!-- Right Pane: Comprehension Questions & Quiz -->
           <div class="glass-card" style="display:flex; flex-direction:column; gap:1.5rem;">
-            <h3 style="font-size:1.15rem; font-weight:700; border-bottom:1px solid var(--border-glass); padding-bottom:0.75rem; margin-bottom:0.25rem;">Comprehension Check</h3>
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem; border-bottom:1px solid var(--border-glass); padding-bottom:0.75rem; margin-bottom:0.25rem;">
+              <h3 style="font-size:1.15rem; font-weight:700; margin:0;">Comprehension Check</h3>
+              <div style="display:flex; gap:0.4rem; align-items:center;">
+                <button class="canvas-btn" id="toggleQuizPinyinBtn" onclick="toggleQuizPinyin(this)" title="Show pinyin for questions & options">Pinyin</button>
+                <button class="canvas-btn" id="toggleQuizTranslationBtn" onclick="toggleQuizTranslation(this)" title="Show English translation for questions & options">Translation</button>
+              </div>
+            </div>
             
             <div id="essayQuestionsList" style="display:flex; flex-direction:column; gap:1.5rem;">
               <!-- Dynamically populated questions -->

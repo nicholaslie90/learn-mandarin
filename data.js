@@ -122027,19 +122027,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "李华家有几口人？",
+          "qPy": "Lǐ Huá jiā yǒu jǐ kǒu rén?",
+          "qEn": "How many people are in Li Hua's family?",
           "options": [
             "两口人",
             "三口人",
             "四口人"
           ],
+          "optionsPy": [
+            "liǎng kǒu rén",
+            "sān kǒu rén",
+            "sì kǒu rén"
+          ],
+          "optionsEn": [
+            "Two people",
+            "Three people",
+            "Four people"
+          ],
           "correct": 1
         },
         {
           "q": "他家有什么动物？",
+          "qPy": "Tā jiā yǒu shénme dòngwù?",
+          "qEn": "What animals does his family have?",
           "options": [
             "猫和狗",
             "苹果和茶",
             "电视和书"
+          ],
+          "optionsPy": [
+            "māo hé gǒu",
+            "píngguǒ hé chá",
+            "diànshì hé shū"
+          ],
+          "optionsEn": [
+            "Cat and dog",
+            "Apples and tea",
+            "TV and books"
           ],
           "correct": 0
         }
@@ -122056,19 +122080,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "王明喜欢做什么？",
+          "qPy": "Wáng Míng xǐhuan zuò shénme?",
+          "qEn": "What does Wang Ming like to do?",
           "options": [
             "看书和喝茶",
             "跑步和睡觉",
             "做饭"
           ],
+          "optionsPy": [
+            "kànshū hé hē chá",
+            "pǎobù hé shuìjiào",
+            "zuòfàn"
+          ],
+          "optionsEn": [
+            "Reading and drinking tea",
+            "Running and sleeping",
+            "Cooking"
+          ],
           "correct": 0
         },
         {
           "q": "他们星期天去哪里？",
+          "qPy": "Tāmen xīngqītiān qù nǎlǐ?",
+          "qEn": "Where do they go on Sunday?",
           "options": [
             "学校",
             "商店",
             "朋友家"
+          ],
+          "optionsPy": [
+            "xuéxiào",
+            "shāngdiàn",
+            "péngyou jiā"
+          ],
+          "optionsEn": [
+            "School",
+            "Store",
+            "Friend's house"
           ],
           "correct": 1
         }
@@ -122085,19 +122133,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "他们今天去哪里？",
+          "qPy": "Tāmen jīntiān qù nǎlǐ?",
+          "qEn": "Where did they go today?",
           "options": [
             "学校",
             "商店",
             "中餐馆"
           ],
+          "optionsPy": [
+            "xuéxiào",
+            "shāngdiàn",
+            "Zhōng cānguǎn"
+          ],
+          "optionsEn": [
+            "School",
+            "Store",
+            "Chinese restaurant"
+          ],
           "correct": 2
         },
         {
           "q": "他们要了什么菜和饮料？",
+          "qPy": "Tāmen yào le shénme cài hé yǐnliào?",
+          "qEn": "What food and drinks did they order?",
           "options": [
             "米饭、鱼和热茶",
             "面条和苹果汁",
             "蛋糕和咖啡"
+          ],
+          "optionsPy": [
+            "mǐfàn, yú hé rè chá",
+            "miàntiáo hé píngguǒ zhī",
+            "dàngāo hé kāfēi"
+          ],
+          "optionsEn": [
+            "Rice, fish and hot tea",
+            "Noodles and apple juice",
+            "Cake and coffee"
           ],
           "correct": 0
         }
@@ -122114,19 +122186,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "他喜欢吃什么？",
+          "qPy": "Tā xǐhuan chī shénme?",
+          "qEn": "What does he like to eat?",
           "options": [
             "苹果和香蕉",
             "米饭和鱼",
             "面条"
           ],
+          "optionsPy": [
+            "píngguǒ hé xiāngjiāo",
+            "mǐfàn hé yú",
+            "miàntiáo"
+          ],
+          "optionsEn": [
+            "Apples and bananas",
+            "Rice and fish",
+            "Noodles"
+          ],
           "correct": 0
         },
         {
           "q": "他星期六去哪里了？",
+          "qPy": "Tā xīngqīliù qù nǎlǐ le?",
+          "qEn": "Where did he go on Saturday?",
           "options": [
             "学校",
             "餐馆",
             "商店"
+          ],
+          "optionsPy": [
+            "xuéxiào",
+            "cānguǎn",
+            "shāngdiàn"
+          ],
+          "optionsEn": [
+            "School",
+            "Restaurant",
+            "Store"
           ],
           "correct": 2
         }
@@ -122143,19 +122239,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "老师的猫叫什么名字？",
+          "qPy": "Lǎoshī de māo jiào shénme míngzì?",
+          "qEn": "What is the teacher's cat's name?",
           "options": [
             "李华",
             "雪儿",
             "大卫"
           ],
+          "optionsPy": [
+            "Lǐ Huá",
+            "Xuě'er",
+            "Dàwèi"
+          ],
+          "optionsEn": [
+            "Li Hua",
+            "Xue'er",
+            "David"
+          ],
           "correct": 1
         },
         {
           "q": "老师的猫是什么颜色的？",
+          "qPy": "Lǎoshī de māo shì shénme yánsè de?",
+          "qEn": "What color is the teacher's cat?",
           "options": [
             "黑色",
             "黄色",
             "白色"
+          ],
+          "optionsPy": [
+            "hēisè",
+            "huángsè",
+            "báisè"
+          ],
+          "optionsEn": [
+            "Black",
+            "Yellow",
+            "White"
           ],
           "correct": 2
         }
@@ -122174,19 +122294,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "今天天气怎么样？",
+          "qPy": "Jīntiān tiānqì zěnmeyàng?",
+          "qEn": "How is the weather today?",
           "options": [
             "下雪天",
             "晴天",
             "阴天"
           ],
+          "optionsPy": [
+            "xiàxuě tiān",
+            "qíngtiān",
+            "yīntiān"
+          ],
+          "optionsEn": [
+            "Snowy day",
+            "Sunny day",
+            "Cloudy day"
+          ],
           "correct": 1
         },
         {
           "q": "他们怎么去旅游？",
+          "qPy": "Tāmen zěnme qù lǚyóu?",
+          "qEn": "How do they go traveling?",
           "options": [
             "骑自行车",
             "坐公共汽车",
             "跑步"
+          ],
+          "optionsPy": [
+            "qí zìxíngchē",
+            "zuò gōnggòng qìchē",
+            "pǎobù"
+          ],
+          "optionsEn": [
+            "Ride a bicycle",
+            "Take a bus",
+            "Run"
           ],
           "correct": 1
         }
@@ -122203,19 +122347,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "说话人觉得什么有点儿难？",
+          "qPy": "Shuōhuàrén juéde shénme yǒudiǎnr nán?",
+          "qEn": "What does the speaker find a bit difficult?",
           "options": [
             "听汉语",
             "说汉语",
             "写汉字"
           ],
+          "optionsPy": [
+            "tīng Hànyǔ",
+            "shuō Hànyǔ",
+            "xiě Hànzì"
+          ],
+          "optionsEn": [
+            "Listening to Chinese",
+            "Speaking Chinese",
+            "Writing Chinese characters"
+          ],
           "correct": 2
         },
         {
           "q": "老师每天帮助他们做什么？",
+          "qPy": "Lǎoshī měitiān bāngzhù tāmen zuò shénme?",
+          "qEn": "What does the teacher help them do every day?",
           "options": [
             "练习发音",
             "写作业",
             "做运动"
+          ],
+          "optionsPy": [
+            "liànxí fāyīn",
+            "xiě zuòyè",
+            "zuò yùndòng"
+          ],
+          "optionsEn": [
+            "Practice pronunciation",
+            "Do homework",
+            "Exercise"
           ],
           "correct": 0
         }
@@ -122232,19 +122400,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "他现在在什么公司上班？",
+          "qPy": "Tā xiànzài zài shénme gōngsī shàngbān?",
+          "qEn": "What kind of company does he work at now?",
           "options": [
             "电脑公司",
             "衣服公司",
             "茶水公司"
           ],
+          "optionsPy": [
+            "diànnǎo gōngsī",
+            "yīfu gōngsī",
+            "cháshuǐ gōngsī"
+          ],
+          "optionsEn": [
+            "Computer company",
+            "Clothing company",
+            "Tea company"
+          ],
           "correct": 0
         },
         {
           "q": "他每天怎么去上班？",
+          "qPy": "Tā měitiān zěnme qù shàngbān?",
+          "qEn": "How does he go to work every day?",
           "options": [
             "坐公共汽车",
             "骑自行车",
             "走路"
+          ],
+          "optionsPy": [
+            "zuò gōnggòng qìchē",
+            "qí zìxíngchē",
+            "zǒulù"
+          ],
+          "optionsEn": [
+            "Take a bus",
+            "Ride a bicycle",
+            "Walk"
           ],
           "correct": 2
         }
@@ -122261,19 +122453,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "说话人的朋友喜欢在运动场做什么？",
+          "qPy": "Shuōhuàrén de péngyou xǐhuan zài yùndòngchǎng zuò shénme?",
+          "qEn": "What does the speaker's friend like to do at the sports field?",
           "options": [
             "踢足球",
             "看书",
             "跑步"
           ],
+          "optionsPy": [
+            "tī zúqiú",
+            "kànshū",
+            "pǎobù"
+          ],
+          "optionsEn": [
+            "Play football",
+            "Read books",
+            "Run"
+          ],
           "correct": 0
         },
         {
           "q": "他们每天怎么去学校？",
+          "qPy": "Tāmen měitiān zěnme qù xuéxiào?",
+          "qEn": "How do they go to school every day?",
           "options": [
             "骑自行车",
             "坐公共汽车",
             "走路"
+          ],
+          "optionsPy": [
+            "qí zìxíngchē",
+            "zuò gōnggòng qìchē",
+            "zǒulù"
+          ],
+          "optionsEn": [
+            "Ride a bicycle",
+            "Take a bus",
+            "Walk"
           ],
           "correct": 1
         }
@@ -122290,19 +122506,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "说话人昨天在家里做了什么？",
+          "qPy": "Shuōhuàrén zuótiān zài jiālǐ zuò le shénme?",
+          "qEn": "What did the speaker do at home yesterday?",
           "options": [
             "看电视和做饭",
             "打篮球",
             "跑步"
           ],
+          "optionsPy": [
+            "kàn diànshì hé zuòfàn",
+            "dǎ lánqiú",
+            "pǎobù"
+          ],
+          "optionsEn": [
+            "Watched TV and cooked",
+            "Played basketball",
+            "Ran"
+          ],
           "correct": 0
         },
         {
           "q": "他今天下午准备和谁去公园？",
+          "qPy": "Tā jīntiān xiàwǔ zhǔnbèi hé shéi qù gōngyuán?",
+          "qEn": "Who is he planning to go to the park with this afternoon?",
           "options": [
             "老师",
             "哥哥",
             "朋友"
+          ],
+          "optionsPy": [
+            "lǎoshī",
+            "gēge",
+            "péngyou"
+          ],
+          "optionsEn": [
+            "Teacher",
+            "Older brother",
+            "Friend"
           ],
           "correct": 1
         }
@@ -122321,19 +122561,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "我的邻居是什么职业？",
+          "qPy": "Wǒ de línjū shì shénme zhíyè?",
+          "qEn": "What is my neighbor's profession?",
           "options": [
             "老师",
             "医生",
             "服务员"
           ],
+          "optionsPy": [
+            "lǎoshī",
+            "yīshēng",
+            "fúwùyuán"
+          ],
+          "optionsEn": [
+            "Teacher",
+            "Doctor",
+            "Waiter"
+          ],
           "correct": 1
         },
         {
           "q": "医生告诉了我什么办法？",
+          "qPy": "Yīshēng gàosu le wǒ shénme bànfǎ?",
+          "qEn": "What advice did the doctor give me?",
           "options": [
             "多吃药",
             "多看电视",
             "早起跑步、吃水果、多喝水"
+          ],
+          "optionsPy": [
+            "duō chī yào",
+            "duō kàn diànshì",
+            "zǎoqǐ pǎobù, chī shuǐguǒ, duō hē shuǐ"
+          ],
+          "optionsEn": [
+            "Take more medicine",
+            "Watch more TV",
+            "Wake up early to run, eat fruit, drink more water"
           ],
           "correct": 2
         }
@@ -122350,19 +122614,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "他上个周末去做了什么？",
+          "qPy": "Tā shàng gè zhōumò qù zuò le shénme?",
+          "qEn": "What did he do last weekend?",
           "options": [
             "逛商店",
             "爬香山",
             "去看医生"
           ],
+          "optionsPy": [
+            "guàng shāngdiàn",
+            "pá Xiāngshān",
+            "qù kàn yīshēng"
+          ],
+          "optionsEn": [
+            "Went shopping",
+            "Climbed Mount Xiang",
+            "Went to see a doctor"
+          ],
           "correct": 1
         },
         {
           "q": "他们决定以后多久来一次？",
+          "qPy": "Tāmen juédìng yǐhòu duōjiǔ lái yī cì?",
+          "qEn": "How often did they decide to come in the future?",
           "options": [
             "每周一次",
             "每年一次",
             "每个月一次"
+          ],
+          "optionsPy": [
+            "měi zhōu yī cì",
+            "měi nián yī cì",
+            "měi gè yuè yī cì"
+          ],
+          "optionsEn": [
+            "Once a week",
+            "Once a year",
+            "Once a month"
           ],
           "correct": 2
         }
@@ -122379,19 +122667,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "他是怎么去西安的？",
+          "qPy": "Tā shì zěnme qù Xī'ān de?",
+          "qEn": "How did he go to Xi'an?",
           "options": [
             "坐飞机",
             "坐火车",
             "骑自行车"
           ],
+          "optionsPy": [
+            "zuò fēijī",
+            "zuò huǒchē",
+            "qí zìxíngchē"
+          ],
+          "optionsEn": [
+            "By plane",
+            "By train",
+            "By bicycle"
+          ],
           "correct": 1
         },
         {
           "q": "他在西安参观了什么？",
+          "qPy": "Tā zài Xī'ān cānguān le shénme?",
+          "qEn": "What did he visit in Xi'an?",
           "options": [
             "故宫",
             "长城",
             "兵马俑"
+          ],
+          "optionsPy": [
+            "Gùgōng",
+            "Chángchéng",
+            "Bīngmǎyǒng"
+          ],
+          "optionsEn": [
+            "The Forbidden City",
+            "The Great Wall",
+            "The Terracotta Army"
           ],
           "correct": 2
         }
@@ -122408,19 +122720,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "网上购物有什么好处？",
+          "qPy": "Wǎngshàng gòuwù yǒu shénme hǎochù?",
+          "qEn": "What are the benefits of online shopping?",
           "options": [
             "可以认识更多朋友",
             "非常方便和省时间",
             "商品都是免费的"
           ],
+          "optionsPy": [
+            "kěyǐ rènshi gèng duō péngyou",
+            "fēicháng fāngbiàn hé shěng shíjiān",
+            "shāngpǐn dōu shì miǎnfèi de"
+          ],
+          "optionsEn": [
+            "Can meet more friends",
+            "Very convenient and saves time",
+            "All products are free"
+          ],
           "correct": 1
         },
         {
           "q": "网上购物时我们应该注意什么？",
+          "qPy": "Wǎngshàng gòuwù shí wǒmen yīnggāi zhùyì shénme?",
+          "qEn": "What should we pay attention to when shopping online?",
           "options": [
             "保护个人信息安全",
             "快递员的年龄",
             "手机的颜色"
+          ],
+          "optionsPy": [
+            "bǎohù gèrén xìnxī ānquán",
+            "kuàidìyuán de niánlíng",
+            "shǒujī de yánsè"
+          ],
+          "optionsEn": [
+            "Protecting personal information security",
+            "The courier's age",
+            "The phone's color"
           ],
           "correct": 0
         }
@@ -122437,19 +122773,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "他们上个星期天去哪里了？",
+          "qPy": "Tāmen shàng gè xīngqītiān qù nǎlǐ le?",
+          "qEn": "Where did they go last Sunday?",
           "options": [
             "学校",
             "郊外野餐",
             "电脑公司"
           ],
+          "optionsPy": [
+            "xuéxiào",
+            "jiāowài yěcān",
+            "diànnǎo gōngsī"
+          ],
+          "optionsEn": [
+            "School",
+            "Picnic in the suburbs",
+            "Computer company"
+          ],
           "correct": 1
         },
         {
           "q": "谁带了新鲜的水果？",
+          "qPy": "Shéi dài le xīnxiān de shuǐguǒ?",
+          "qEn": "Who brought fresh fruit?",
           "options": [
             "爸爸",
             "妈妈",
             "哥哥"
+          ],
+          "optionsPy": [
+            "bàba",
+            "māma",
+            "gēge"
+          ],
+          "optionsEn": [
+            "Father",
+            "Mother",
+            "Older brother"
           ],
           "correct": 1
         }
@@ -122468,19 +122828,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "爱情中什么品质最关键？",
+          "qPy": "Àiqíng zhōng shénme pǐnzhì zuì guānjiàn?",
+          "qEn": "What quality is most crucial in love?",
           "options": [
             "安排",
             "毕业",
             "诚实"
           ],
+          "optionsPy": [
+            "ānpái",
+            "bìyè",
+            "chéngshí"
+          ],
+          "optionsEn": [
+            "Arrangement",
+            "Graduation",
+            "Honesty"
+          ],
           "correct": 2
         },
         {
           "q": "拒绝沟通会导致什么？",
+          "qPy": "Jùjué gōutōng huì dǎozhì shénme?",
+          "qEn": "What does refusing to communicate lead to?",
           "options": [
             "安全",
             "困难",
             "暖和"
+          ],
+          "optionsPy": [
+            "ānquán",
+            "kùnnan",
+            "nuǎnhuo"
+          ],
+          "optionsEn": [
+            "Safety",
+            "Difficulties",
+            "Warmth"
           ],
           "correct": 1
         }
@@ -122497,19 +122881,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "成功往往取决于什么？",
+          "qPy": "Chénggōng wǎngwǎng qǔjué yú shénme?",
+          "qEn": "What does success often depend on?",
           "options": [
             "良好的日常习惯",
             "运气和时间",
             "抱歉的言语"
           ],
+          "optionsPy": [
+            "liánghǎo de rìcháng xíguàn",
+            "yùnqì hé shíjiān",
+            "bàoqiàn de yányǔ"
+          ],
+          "optionsEn": [
+            "Good daily habits",
+            "Luck and time",
+            "Apologetic words"
+          ],
           "correct": 0
         },
         {
           "q": "偶尔失败时，关键要做什么？",
+          "qPy": "Ǒu'ěr shībài shí, guānjiàn yào zuò shénme?",
+          "qEn": "When you occasionally fail, what is the key thing to do?",
           "options": [
             "彻底放弃",
             "总结经验",
             "拒绝沟通"
+          ],
+          "optionsPy": [
+            "chèdǐ fàngqì",
+            "zǒngjié jīngyàn",
+            "jùjué gōutōng"
+          ],
+          "optionsEn": [
+            "Give up completely",
+            "Summarize experiences",
+            "Refuse to communicate"
           ],
           "correct": 1
         }
@@ -122526,19 +122934,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "真正的朋友在你遇到麻烦时会做什么？",
+          "qPy": "Zhēnzhèng de péngyou zài nǐ yùdào máfan shí huì zuò shénme?",
+          "qEn": "What will true friends do when you encounter trouble?",
           "options": [
             "拒绝谅解",
             "主动伸出双手",
             "写表格与计划"
           ],
+          "optionsPy": [
+            "jùjué liàngjiě",
+            "zhǔdòng shēnchū shuāngshǒu",
+            "xiě biǎogé yǔ jìhuà"
+          ],
+          "optionsEn": [
+            "Refuse to forgive",
+            "Proactively extend their hands",
+            "Write forms and plans"
+          ],
           "correct": 1
         },
         {
           "q": "怎样可以帮助我们结识更多新朋友？",
+          "qPy": "Zěnyàng kěyǐ bāngzhù wǒmen jiéshí gèng duō xīn péngyou?",
+          "qEn": "How can we make more new friends?",
           "options": [
             "保持礼貌和幽默",
             "减少与人沟通",
             "经常向人表示抱歉"
+          ],
+          "optionsPy": [
+            "bǎochí lǐmào hé yōumò",
+            "jiǎnshǎo yǔ rén gōutōng",
+            "jīngcháng xiàng rén biǎoshì bàoqiàn"
+          ],
+          "optionsEn": [
+            "Maintain politeness and humor",
+            "Reduce communication with people",
+            "Frequently apologize to people"
           ],
           "correct": 0
         }
@@ -122555,19 +122987,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "为什么许多城市开始实行垃圾分类？",
+          "qPy": "Wèishénme xǔduō chéngshì kāishǐ shíxíng lājī fēnlèi?",
+          "qEn": "Why have many cities started implementing waste sorting?",
           "options": [
             "为了增加城市收入",
             "为了保护共同生活的环境",
             "为了减少锻炼时间"
           ],
+          "optionsPy": [
+            "wèile zēngjiā chéngshì shōurù",
+            "wèile bǎohù gòngtóng shēnghuó de huánjìng",
+            "wèile jiǎnshǎo duànliàn shíjiān"
+          ],
+          "optionsEn": [
+            "To increase city revenue",
+            "To protect the shared living environment",
+            "To reduce exercise time"
+          ],
           "correct": 1
         },
         {
           "q": "坚持垃圾分类有什么好处？",
+          "qPy": "Jiānchí lājī fēnlèi yǒu shénme hǎochù?",
+          "qEn": "What are the benefits of persisting in waste sorting?",
           "options": [
             "能有效减少污染",
             "可以节省水资源",
             "能降低面包价格"
+          ],
+          "optionsPy": [
+            "néng yǒuxiào jiǎnshǎo wūrǎn",
+            "kěyǐ jiéshěng shuǐ zīyuán",
+            "néng jiàngdī miànbāo jiàgé"
+          ],
+          "optionsEn": [
+            "Can effectively reduce pollution",
+            "Can save water resources",
+            "Can lower bread prices"
           ],
           "correct": 0
         }
@@ -122584,19 +123040,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "感到工作疲倦时，做什么可以让大脑放松？",
+          "qPy": "Gǎndào gōngzuò píjuàn shí, zuò shénme kěyǐ ràng dànǎo fàngsōng?",
+          "qEn": "What can you do to relax your brain when feeling tired from work?",
           "options": [
             "长时间加班",
             "跑跑步或者打羽毛球",
             "拒绝与人沟通"
           ],
+          "optionsPy": [
+            "cháng shíjiān jiābān",
+            "pǎo pǎobù huòzhě dǎ yǔmáoqiú",
+            "jùjué yǔ rén gōutōng"
+          ],
+          "optionsEn": [
+            "Work overtime for a long time",
+            "Go running or play badminton",
+            "Refuse to communicate with people"
+          ],
           "correct": 1
         },
         {
           "q": "运动除了强壮身体，还能培养什么？",
+          "qPy": "Yùndòng chúle qiángzhuàng shēntǐ, hái néng péiyǎng shénme?",
+          "qEn": "Besides strengthening the body, what else can exercise cultivate?",
           "options": [
             "悲观的情绪",
             "面对困难时的毅力",
             "抱歉的言语"
+          ],
+          "optionsPy": [
+            "bēiguān de qíngxù",
+            "miànduì kùnnan shí de yìlì",
+            "bàoqiàn de yányǔ"
+          ],
+          "optionsEn": [
+            "Pessimistic emotions",
+            "Perseverance when facing difficulties",
+            "Apologetic words"
           ],
           "correct": 1
         }
@@ -122615,19 +123095,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "年轻人面临竞争时会怎么样？",
+          "qPy": "Niánqīngrén miànlín jìngzhēng shí huì zěnmeyàng?",
+          "qEn": "How do young people react when facing competition?",
           "options": [
             "慌张不知所措",
             "选择沉默忽视",
             "不会慌张，彻底解决问题"
           ],
+          "optionsPy": [
+            "huāngzhāng bùzhī suǒ cuò",
+            "xuǎnzé chénmò hūshì",
+            "búhuì huāngzhāng, chèdǐ jiějué wèntí"
+          ],
+          "optionsEn": [
+            "Panic and feel lost",
+            "Choose silence and ignore",
+            "Won't panic, solve problems thoroughly"
+          ],
           "correct": 2
         },
         {
           "q": "年轻人独特的生活方式促进了什么？",
+          "qPy": "Niánqīngrén dútè de shēnghuó fāngshì cùjìn le shénme?",
+          "qEn": "What have young people's unique lifestyles promoted?",
           "options": [
             "社会的多元繁荣",
             "自然环境的破坏",
             "人口寿命的缩短"
+          ],
+          "optionsPy": [
+            "shèhuì de duōyuán fánróng",
+            "zìrán huánjìng de pòhuài",
+            "rénkǒu shòumìng de suōduǎn"
+          ],
+          "optionsEn": [
+            "Diverse social prosperity",
+            "Destruction of the natural environment",
+            "Shortening of life expectancy"
           ],
           "correct": 0
         }
@@ -122644,19 +123148,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "碎片化阅读往往会带来什么负面影响？",
+          "qPy": "Suìpiànhuà yuèdú wǎngwǎng huì dàilái shénme fùmiàn yǐngxiǎng?",
+          "qEn": "What negative effects does fragmented reading often bring?",
           "options": [
             "增加生活成本",
             "削弱系统思考能力",
             "产生焦虑和慌张"
           ],
+          "optionsPy": [
+            "zēngjiā shēnghuó chéngběn",
+            "xuēruò xìtǒng sīkǎo nénglì",
+            "chǎnshēng jiāolǜ hé huāngzhāng"
+          ],
+          "optionsEn": [
+            "Increases living costs",
+            "Weakens systematic thinking ability",
+            "Produces anxiety and panic"
+          ],
           "correct": 1
         },
         {
           "q": "深度阅读需要我们怎么做？",
+          "qPy": "Shēndù yuèdú xūyào wǒmen zěnme zuò?",
+          "qEn": "What does deep reading require us to do?",
           "options": [
             "快速浏览过一遍",
             "集中注意力，带着疑问探究",
             "只看文章的标题"
+          ],
+          "optionsPy": [
+            "kuàisù liúlǎn guò yī biàn",
+            "jízhōng zhùyìlì, dàizhe yíwèn tànjiū",
+            "zhǐ kàn wénzhāng de biāotí"
+          ],
+          "optionsEn": [
+            "Quickly skim through once",
+            "Focus attention and explore with questions",
+            "Only read the article's title"
           ],
           "correct": 1
         }
@@ -122673,19 +123201,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "沟通除了表达自己的想法，还包含什么？",
+          "qPy": "Gōutōng chúle biǎodá zìjǐ de xiǎngfǎ, hái bāohán shénme?",
+          "qEn": "Besides expressing your own ideas, what else does communication include?",
           "options": [
             "真诚的倾听",
             "无条件的服从",
             "长篇大论的报告"
           ],
+          "optionsPy": [
+            "zhēnchéng de qīngtīng",
+            "wú tiáojiàn de fúcóng",
+            "chángpiān dàlùn de bàogào"
+          ],
+          "optionsEn": [
+            "Sincere listening",
+            "Unconditional obedience",
+            "Lengthy reports"
+          ],
           "correct": 0
         },
         {
           "q": "同事之间有分歧时应该怎么办？",
+          "qPy": "Tóngshì zhījiān yǒu fēnqí shí yīnggāi zěnme bàn?",
+          "qEn": "What should be done when there are disagreements among colleagues?",
           "options": [
             "大声争吵树立权威",
             "选择回避彻底忽视",
             "冷静地进行逻辑分析和探讨"
+          ],
+          "optionsPy": [
+            "dàshēng zhēngchǎo shùlì quánwēi",
+            "xuǎnzé huíbì chèdǐ hūshì",
+            "lěngjìng de jìnxíng luójī fēnxī hé tàntǎo"
+          ],
+          "optionsEn": [
+            "Argue loudly to establish authority",
+            "Choose to avoid and completely ignore",
+            "Calmly conduct logical analysis and discussion"
           ],
           "correct": 2
         }
@@ -122702,19 +123254,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "心理学研究认为拖延症的根源是什么？",
+          "qPy": "Xīnlǐxué yánjiū rènwéi tuōyánzhèng de gēnyuán shì shénme?",
+          "qEn": "What does psychological research consider the root cause of procrastination?",
           "options": [
             "工作时间太短",
             "对失败的恐惧",
             "逻辑思维太复杂"
           ],
+          "optionsPy": [
+            "gōngzuò shíjiān tài duǎn",
+            "duì shībài de kǒngjù",
+            "luójī sīwéi tài fùzá"
+          ],
+          "optionsEn": [
+            "Working hours are too short",
+            "Fear of failure",
+            "Logical thinking is too complex"
+          ],
           "correct": 1
         },
         {
           "q": "我们可以采取什么对策来解决拖延问题？",
+          "qPy": "Wǒmen kěyǐ cǎiqǔ shénme duìcè lái jiějué tuōyán wèntí?",
+          "qEn": "What measures can we take to solve the procrastination problem?",
           "options": [
             "彻底放弃所有工作",
             "将任务拆分为小步骤并制订期限",
             "只看书不进行 any 思考"
+          ],
+          "optionsPy": [
+            "chèdǐ fàngqì suǒyǒu gōngzuò",
+            "jiāng rènwù chāifēn wéi xiǎo bùzhòu bìng zhìdìng qīxiàn",
+            "zhǐ kànshū bù jìnxíng sīkǎo"
+          ],
+          "optionsEn": [
+            "Give up all work completely",
+            "Break tasks into small steps and set deadlines",
+            "Only read without thinking"
           ],
           "correct": 1
         }
@@ -122731,19 +123307,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "创意是建立在什么基础之上的？",
+          "qPy": "Chuàngyì shì jiànlì zài shénme jīchǔ zhī shàng de?",
+          "qEn": "What foundation is creativity built upon?",
           "options": [
             "偶然的运气",
             "广泛的积累",
             "严密的逻辑逻辑"
           ],
+          "optionsPy": [
+            "ǒurán de yùnqì",
+            "guǎngfàn de jīlěi",
+            "yánmì de luójī"
+          ],
+          "optionsEn": [
+            "Random luck",
+            "Extensive accumulation",
+            "Rigorous logic"
+          ],
           "correct": 1
         },
         {
           "q": "遇到思考瓶颈时可以尝试什么？",
+          "qPy": "Yùdào sīkǎo píngjǐng shí kěyǐ chángshì shénme?",
+          "qEn": "What can you try when encountering a thinking bottleneck?",
           "options": [
             "换环境或与不同领域专家交流",
             "极度慌张并放弃解决问题",
             "深度阅读相同的书本"
+          ],
+          "optionsPy": [
+            "huàn huánjìng huò yǔ bùtóng lǐngyù zhuānjiā jiāoliú",
+            "jídù huāngzhāng bìng fàngqì jiějué wèntí",
+            "shēndù yuèdú xiāngtóng de shūběn"
+          ],
+          "optionsEn": [
+            "Change environment or communicate with experts in different fields",
+            "Panic extremely and give up solving problems",
+            "Read the same books in depth"
           ],
           "correct": 0
         }
@@ -122762,19 +123362,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "在重大决策时应该衡量什么？",
+          "qPy": "Zài zhòngdà juécè shí yīnggāi héngliáng shénme?",
+          "qEn": "What should be weighed when making major decisions?",
           "options": [
             "奢侈品的数量",
             "发展过程中的纽带关系",
             "筹备会的时间"
           ],
+          "optionsPy": [
+            "shēchǐpǐn de shùliàng",
+            "fāzhǎn guòchéng zhōng de niǔdài guānxì",
+            "chóubèihuì de shíjiān"
+          ],
+          "optionsEn": [
+            "The quantity of luxury goods",
+            "The bonding relationships in the development process",
+            "The time of the preparatory meeting"
+          ],
           "correct": 1
         },
         {
           "q": "面对颠簸或困难时应该怎么办？",
+          "qPy": "Miànduì diānbǒ huò kùnnan shí yīnggāi zěnme bàn?",
+          "qEn": "What should be done when facing bumps or difficulties?",
           "options": [
             "彻底放弃崩溃",
             "决不妥协，遵循规律",
             "向困难做出妥协"
+          ],
+          "optionsPy": [
+            "chèdǐ fàngqì bēngkuì",
+            "jué bù tuǒxié, zūnxún guīlǜ",
+            "xiàng kùnnan zuòchū tuǒxié"
+          ],
+          "optionsEn": [
+            "Give up completely and collapse",
+            "Never compromise, follow the rules",
+            "Compromise with difficulties"
           ],
           "correct": 1
         }
@@ -122791,19 +123415,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "什么是促进人类繁荣的重要桥梁？",
+          "qPy": "Shénme shì cùjìn rénlèi fánróng de zhòngyào qiáoliáng?",
+          "qEn": "What is an important bridge to promote human prosperity?",
           "options": [
             "经济封锁与对抗",
             "不同文明的交流",
             "尴尬的颠簸时刻"
           ],
+          "optionsPy": [
+            "jīngjì fēngsuǒ yǔ duìkàng",
+            "bùtóng wénmíng de jiāoliú",
+            "gāngà de diānbǒ shíkè"
+          ],
+          "optionsEn": [
+            "Economic blockade and confrontation",
+            "Exchange of different civilizations",
+            "Embarrassing bumpy moments"
+          ],
           "correct": 1
         },
         {
           "q": "这种长期的纽带关系需要我们用什么去培育？",
+          "qPy": "Zhèzhǒng chángqī de niǔdài guānxì xūyào wǒmen yòng shénme qù péiyù?",
+          "qEn": "What do we need to cultivate this long-term bonding relationship with?",
           "options": [
             "局部的短期利益",
             "盲目的悲观情绪",
             "宏观的眼界"
+          ],
+          "optionsPy": [
+            "júbù de duǎnqī lìyì",
+            "mángmù de bēiguān qíngxù",
+            "hóngguān de yǎnjiè"
+          ],
+          "optionsEn": [
+            "Partial short-term interests",
+            "Blind pessimism",
+            "A macro vision"
           ],
           "correct": 2
         }
@@ -122820,19 +123468,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "发展经济时，我们必须遵循什么？",
+          "qPy": "Fāzhǎn jīngjì shí, wǒmen bìxū zūnxún shénme?",
+          "qEn": "What must we follow when developing the economy?",
           "options": [
             "大国之间的博弈",
             "自然界的客观规律",
             "商业利润的最高点"
           ],
+          "optionsPy": [
+            "dàguó zhījiān de bóyì",
+            "zìránjiè de kèguān guīlǜ",
+            "shāngyè lìrùn de zuìgāodiǎn"
+          ],
+          "optionsEn": [
+            "The games between big powers",
+            "The objective laws of nature",
+            "The peak of commercial profits"
+          ],
           "correct": 1
         },
         {
           "q": "怎样才能为子孙后代留下绿水青山？",
+          "qPy": "Zěnyàng cái néng wèi zǐsūn hòudài liúxià lǜshuǐ qīngshān?",
+          "qEn": "How can we leave green waters and mountains for future generations?",
           "options": [
             "过度开发自然资源",
             "协调利益筹备环保法案",
             "向环境问题妥协"
+          ],
+          "optionsPy": [
+            "guòdù kāifā zìrán zīyuán",
+            "xiétiáo lìyì chóubèi huánbǎo fǎ'àn",
+            "xiàng huánjìng wèntí tuǒxié"
+          ],
+          "optionsEn": [
+            "Excessively exploit natural resources",
+            "Coordinate interests and prepare environmental protection bills",
+            "Compromise with environmental problems"
           ],
           "correct": 1
         }
@@ -122849,19 +123521,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "传统手艺在今天面临什么处境？",
+          "qPy": "Chuántǒng shǒuyì zài jīntiān miànlín shénme chǔjìng?",
+          "qEn": "What situation do traditional crafts face today?",
           "options": [
             "过度饭粒的趋势",
             "失传的尴尬处境",
             "占据主要市场的地位"
           ],
+          "optionsPy": [
+            "guòdù fànlàn de qūshì",
+            "shīchuán de gāngà chǔjìng",
+            "zhànjù zhǔyào shìchǎng de dìwèi"
+          ],
+          "optionsEn": [
+            "A trend of excessive flooding",
+            "The embarrassing situation of being lost",
+            "Occupying the main market position"
+          ],
           "correct": 1
         },
         {
           "q": "如何更好地传承传统手艺？",
+          "qPy": "Rúhé gèng hǎo de chuánchéng chuántǒng shǒuyì?",
+          "qEn": "How can traditional crafts be better inherited?",
           "options": [
             "遵循手艺自身的规律并鼓励创新",
             "决不向任何现代科技妥协",
             "彻底停止与外界的交流"
+          ],
+          "optionsPy": [
+            "zūnxún shǒuyì zìshēn de guīlǜ bìng gǔlì chuàngxīn",
+            "jué bù xiàng rènhé xiàndài kējì tuǒxié",
+            "chèdǐ tíngzhǐ yǔ wàijiè de jiāoliú"
+          ],
+          "optionsEn": [
+            "Follow the craft's own rules and encourage innovation",
+            "Never compromise with any modern technology",
+            "Completely stop communicating with the outside world"
           ],
           "correct": 0
         }
@@ -122878,19 +123574,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "应对危机时，什么态度会导致事态崩溃？",
+          "qPy": "Yìngduì wēijī shí, shénme tàidù huì dǎozhì shìtài bēngkuì?",
+          "qEn": "When dealing with a crisis, what attitude will lead to a collapse of the situation?",
           "options": [
             "冷静理智和遵循客观规律",
             "慌张与犹豫",
             "宏观的构想与衡量"
           ],
+          "optionsPy": [
+            "lěngjìng lǐzhì hé zūnxún kèguān guīlǜ",
+            "huāngzhāng yǔ yóuyù",
+            "hóngguān de gòuxiǎng yǔ héngliáng"
+          ],
+          "optionsEn": [
+            "Calm rationality and following objective rules",
+            "Panic and hesitation",
+            "Macro-level conceptualization and weighing"
+          ],
           "correct": 1
         },
         {
           "q": "危机解决后，还需要做什么？",
+          "qPy": "Wēijī jiějué hòu, hái xūyào zuò shénme?",
+          "qEn": "What else needs to be done after the crisis is resolved?",
           "options": [
             "弥补管理疏漏奠定安全基石",
             "宣布合作关系彻底终止",
             "向困难妥协并放弃管理"
+          ],
+          "optionsPy": [
+            "míbǔ guǎnlǐ shūlòu diàndìng ānquán jīshí",
+            "xuānbù hézuò guānxì chèdǐ zhōngzhǐ",
+            "xiàng kùnnan tuǒxié bìng fàngqì guǎnlǐ"
+          ],
+          "optionsEn": [
+            "Compensate for management loopholes and lay the security cornerstone",
+            "Announce the complete termination of cooperation",
+            "Compromise with difficulties and give up management"
           ],
           "correct": 0
         }
@@ -122909,19 +123629,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "如何奠定双方的信任基础？",
+          "qPy": "Rúhé diàndìng shuāngfāng de xìnrèn jīchǔ?",
+          "qEn": "How can the foundation of mutual trust be laid?",
           "options": [
             "阐述明确的合作计划",
             "保持沉默与推托",
             "完全忽视对方的需求"
           ],
+          "optionsPy": [
+            "chǎnshù míngquè de hézuò jìhuà",
+            "bǎochí chénmò yǔ tuītuō",
+            "wánquán hūshì duìfāng de xūqiú"
+          ],
+          "optionsEn": [
+            "Expound clear cooperation plans",
+            "Maintain silence and make excuses",
+            "Completely ignore the other party's needs"
+          ],
           "correct": 0
         },
         {
           "q": "为了协调分歧，双方需要建立什么？",
+          "qPy": "Wèile xiétiáo fēnqí, shuāngfāng xūyào jiànlì shénme?",
+          "qEn": "What do both parties need to establish in order to coordinate differences?",
           "options": [
             "保密制度",
             "激烈的辩论赛",
             "有效的沟通机制"
+          ],
+          "optionsPy": [
+            "bǎomì zhìdù",
+            "jīliè de biànlùnsài",
+            "yǒuxiào de gōutōng jīzhì"
+          ],
+          "optionsEn": [
+            "A confidentiality system",
+            "An intense debate competition",
+            "An effective communication mechanism"
           ],
           "correct": 2
         }
@@ -122938,19 +123682,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "在网络时代下，什么观念特别关键？",
+          "qPy": "Zài wǎngluò shídài xià, shénme guānniàn tèbié guānjiàn?",
+          "qEn": "In the internet era, what concept is particularly crucial?",
           "options": [
             "安于现状的态度",
             "终身学习的观念",
             "保持绝对的沉默"
           ],
+          "optionsPy": [
+            "ānyú xiànzhuàng de tàidù",
+            "zhōngshēn xuéxí de guānniàn",
+            "bǎochí juéduì de chénmò"
+          ],
+          "optionsEn": [
+            "An attitude of contentment with the status quo",
+            "The concept of lifelong learning",
+            "Maintaining absolute silence"
+          ],
           "correct": 1
         },
         {
           "q": "怎么做才能完善自我并奠定社会基石？",
+          "qPy": "Zěnme zuò cái néng wánshàn zìwǒ bìng diàndìng shèhuì jīshí?",
+          "qEn": "What should be done to improve oneself and lay a cornerstone for society?",
           "options": [
             "拓宽学习渠道和参与实践",
             "拒绝与外界进行沟通",
             "盲目模仿他人的表面行为"
+          ],
+          "optionsPy": [
+            "tuòkuān xuéxí qúdào hé cānyǔ shíjiàn",
+            "jùjué yǔ wàijiè jìnxíng gōutōng",
+            "mángmù mófǎng tārén de biǎomiàn xíngwéi"
+          ],
+          "optionsEn": [
+            "Broaden learning channels and participate in practice",
+            "Refuse to communicate with the outside world",
+            "Blindly imitate others' superficial behavior"
           ],
           "correct": 0
         }
@@ -122967,19 +123735,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "跨国谈判中达成一致的诀窍是什么？",
+          "qPy": "Kuàguó tánpàn zhōng dáchéng yīzhì de juéqiào shì shénme?",
+          "qEn": "What is the trick to reaching agreement in cross-national negotiations?",
           "options": [
             "理解文化差异",
             "采取强硬的手段",
             "单方面拟定合同"
           ],
+          "optionsPy": [
+            "lǐjiě wénhuà chāyì",
+            "cǎiqǔ qiángyìng de shǒuduàn",
+            "dānfāngmiàn nǐdìng hétong"
+          ],
+          "optionsEn": [
+            "Understanding cultural differences",
+            "Adopting tough measures",
+            "Unilaterally drafting contracts"
+          ],
           "correct": 0
         },
         {
           "q": "谈判代表应该遵循什么原则？",
+          "qPy": "Tánpàn dàibiǎo yīnggāi zūnxún shénme yuánzé?",
+          "qEn": "What principles should negotiation representatives follow?",
           "options": [
             "主观武断的原则",
             "平等互利的原则",
             "各自为战的原则"
+          ],
+          "optionsPy": [
+            "zhǔguān wǔduàn de yuánzé",
+            "píngděng hùlì de yuánzé",
+            "gèzì wéi zhàn de yuánzé"
+          ],
+          "optionsEn": [
+            "Subjective and arbitrary principles",
+            "Principles of equality and mutual benefit",
+            "Principles of fighting independently"
           ],
           "correct": 1
         }
@@ -122996,19 +123788,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "面对科技变革，我们应该抱有什么态度？",
+          "qPy": "Miànduì kējì biàngé, wǒmen yīnggāi bào yǒu shénme tàidù?",
+          "qEn": "What attitude should we hold when facing technological change?",
           "options": [
             "抱有绝对片面的偏见",
             "积极借鉴先进理念",
             "保持完全的沉默"
           ],
+          "optionsPy": [
+            "bào yǒu juéduì piànmiàn de piānjiàn",
+            "jījí jièjiàn xiānjìn lǐniàn",
+            "bǎochí wánquán de chénmò"
+          ],
+          "optionsEn": [
+            "Hold absolutely one-sided prejudices",
+            "Actively draw on advanced concepts",
+            "Maintain complete silence"
+          ],
           "correct": 1
         },
         {
           "q": "为了协调技术创新与社会稳定，我们需要建立什么？",
+          "qPy": "Wèile xiétiáo jìshù chuàngxīn yǔ shèhuì wěndìng, wǒmen xūyào jiànlì shénme?",
+          "qEn": "What do we need to establish to coordinate technological innovation and social stability?",
           "options": [
             "保密体制",
             "防范措施",
             "有效的沟通渠道"
+          ],
+          "optionsPy": [
+            "bǎomì tǐzhì",
+            "fángfàn cuòshī",
+            "yǒuxiào de gōutōng qúdào"
+          ],
+          "optionsEn": [
+            "A confidentiality system",
+            "Preventive measures",
+            "Effective communication channels"
           ],
           "correct": 2
         }
@@ -123025,19 +123841,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "什么是奠定公司长远发展的基石？",
+          "qPy": "Shénme shì diàndìng gōngsī chángyuǎn fāzhǎn de jīshí?",
+          "qEn": "What is the cornerstone of a company's long-term development?",
           "options": [
             "构建优秀的企业文化",
             "单方面的业务指标",
             "严格的保密协议"
           ],
+          "optionsPy": [
+            "gòujiàn yōuxiù de qǐyè wénhuà",
+            "dānfāngmiàn de yèwù zhǐbiāo",
+            "yángé de bǎomì xiéyì"
+          ],
+          "optionsEn": [
+            "Building an excellent corporate culture",
+            "One-sided business metrics",
+            "A strict confidentiality agreement"
+          ],
           "correct": 0
         },
         {
           "q": "怎样可以减少企业内部的摩擦？",
+          "qPy": "Zěnyàng kěyǐ jiǎnshǎo qǐyè nèibù de mócā?",
+          "qEn": "How can internal friction within an enterprise be reduced?",
           "options": [
             "拒绝一切员工反馈",
             "搭建开放的沟通机制融合同事愿景",
             "增加激烈的辩论赛"
+          ],
+          "optionsPy": [
+            "jùjué yīqiè yuángōng fǎnkuì",
+            "dājiàn kāifàng de gōutōng jīzhì rónghé tóngshì yuànjǐng",
+            "zēngjiā jīliè de biànlùnsài"
+          ],
+          "optionsEn": [
+            "Reject all employee feedback",
+            "Build an open communication mechanism to integrate colleagues' visions",
+            "Add more intense debate competitions"
           ],
           "correct": 1
         }
@@ -123056,19 +123896,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "艺术作品中一般蕴含什么？",
+          "qPy": "Yìshù zuòpǐn zhōng yībān yùnhán shénme?",
+          "qEn": "What do artworks generally contain?",
           "options": [
             "昂贵的奢侈成分",
             "深刻的人生哲理",
             "频繁的商业广告"
           ],
+          "optionsPy": [
+            "ángguì de shēchǐ chéngfèn",
+            "shēnkè de rénshēng zhélǐ",
+            "pínfán de shāngyè guǎnggào"
+          ],
+          "optionsEn": [
+            "Expensive luxury components",
+            "Profound philosophy of life",
+            "Frequent commercial advertisements"
+          ],
           "correct": 1
         },
         {
           "q": "艺术家们如何弥补传统不足？",
+          "qPy": "Yìshùjiāmen rúhé míbǔ chuántǒng bùzú?",
+          "qEn": "How do artists compensate for traditional deficiencies?",
           "options": [
             "通过不断创新",
             "彻底妥协放弃",
             "保持彼此的沉默"
+          ],
+          "optionsPy": [
+            "tōngguò bùduàn chuàngxīn",
+            "chèdǐ tuǒxié fàngqì",
+            "bǎochí bǐcǐ de chénmò"
+          ],
+          "optionsEn": [
+            "Through continuous innovation",
+            "Completely compromise and give up",
+            "Maintain mutual silence"
           ],
           "correct": 0
         }
@@ -123085,19 +123949,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "新一轮科技革命正在跨越什么界限？",
+          "qPy": "Xīn yī lún kējì gémìng zhèngzài kuàyuè shénme jièxiàn?",
+          "qEn": "What boundaries is the new round of technological revolution crossing?",
           "options": [
             "传统的物理界限",
             "人与人的交往摩擦",
             "国家安全的防御范围"
           ],
+          "optionsPy": [
+            "chuántǒng de wùlǐ jièxiàn",
+            "rén yǔ rén de jiāowǎng mócā",
+            "guójiā ānquán de fángyù fànwéi"
+          ],
+          "optionsEn": [
+            "Traditional physical boundaries",
+            "Interpersonal friction",
+            "National security defense range"
+          ],
           "correct": 0
         },
         {
           "q": "如何建立一个更加和谐融洽的数字社会？",
+          "qPy": "Rúhé jiànlì yī gè gèngjiā héxié róngqià de shùzì shèhuì?",
+          "qEn": "How can a more harmonious digital society be established?",
           "options": [
             "无限制发展智能技术",
             "智能技术与人类核心价值融合",
             "向技术的漏洞妥协"
+          ],
+          "optionsPy": [
+            "wúxiànzhì fāzhǎn zhìnéng jìshù",
+            "zhìnéng jìshù yǔ rénlèi héxīn jiàzhí rónghé",
+            "xiàng jìshù de lòudòng tuǒxié"
+          ],
+          "optionsEn": [
+            "Develop intelligent technology without limits",
+            "Integrate intelligent technology with core human values",
+            "Compromise with technological loopholes"
           ],
           "correct": 1
         }
@@ -123114,19 +124002,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "经典文学之所以不朽的原因是什么？",
+          "qPy": "Jīngdiǎn wénxué zhīsuǒyǐ bùxiǔ de yuányīn shì shénme?",
+          "qEn": "What is the reason classical literature is immortal?",
           "options": [
             "其纸张保存时间长",
             "探讨的人性规律超越时间",
             "具有昂贵的收藏价值"
           ],
+          "optionsPy": [
+            "qí zhǐzhāng bǎocún shíjiān cháng",
+            "tàntǎo de rénxìng guīlǜ chāoyuè shíjiān",
+            "jùyǒu ángguì de shōucáng jiàzhí"
+          ],
+          "optionsEn": [
+            "Its paper lasts a long time",
+            "The human laws it explores transcend time",
+            "It has expensive collectible value"
+          ],
           "correct": 1
         },
         {
           "q": "我们在现代应该如何对待经典文学？",
+          "qPy": "Wǒmen zài xiàndài yīnggāi rúhé duìdài jīngdiǎn wénxué?",
+          "qEn": "How should we treat classical literature in modern times?",
           "options": [
             "完全用传统方式禁锢",
             "频繁汲取其见解并创新解读",
             "彻底将其边缘化"
+          ],
+          "optionsPy": [
+            "wánquán yòng chuántǒng fāngshì jìngù",
+            "pínfán jíqǔ qí jiànjiě bìng chuàngxīn jiědú",
+            "chèdǐ jiāng qí biānyuánhuà"
+          ],
+          "optionsEn": [
+            "Completely confine it in traditional ways",
+            "Frequently draw on its insights and interpret innovatively",
+            "Completely marginalize it"
           ],
           "correct": 1
         }
@@ -123143,19 +124055,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "人机协同时代，人类凭借什么遵循伦理红线？",
+          "qPy": "Rénjī xiétóng shídài, rénlèi píngjì shénme zūnxún lúnlǐ hóngxiàn?",
+          "qEn": "In the era of human-machine collaboration, what do humans rely on to follow ethical red lines?",
           "options": [
             "超越机器的计算速度",
             "深刻的哲理反思与道德抉择",
             "频繁的商业运作"
           ],
+          "optionsPy": [
+            "chāoyuè jīqì de jìsuàn sùdù",
+            "shēnkè de zhélǐ fǎnsī yǔ dàodé juézé",
+            "pínfán de shāngyè yùnzuò"
+          ],
+          "optionsEn": [
+            "Surpassing machines' computing speed",
+            "Profound philosophical reflection and moral choices",
+            "Frequent commercial operations"
+          ],
           "correct": 1
         },
         {
           "q": "人机协同的关系是怎样的？",
+          "qPy": "Rénjī xiétóng de guānxì shì zěnyàng de?",
+          "qEn": "What is the relationship of human-machine collaboration like?",
           "options": [
             "机器彻底颠覆人类价值",
             "双方能力的优势互补",
             "各自独立，拒绝沟通"
+          ],
+          "optionsPy": [
+            "jīqì chèdǐ diānfù rénlèi jiàzhí",
+            "shuāngfāng nénglì de yōushì hùbǔ",
+            "gèzì dúlì, jùjué gōutōng"
+          ],
+          "optionsEn": [
+            "Machines completely overthrow human values",
+            "Complementary advantages of both capabilities",
+            "Each independent, refusing to communicate"
           ],
           "correct": 1
         }
@@ -123172,19 +124108,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "什么是弥补各方防控体系不足的捷径？",
+          "qPy": "Shénme shì míbǔ gèfāng fángkòng tǐxì bùzú de jiéjìng?",
+          "qEn": "What is the shortcut to compensating for deficiencies in prevention and control systems?",
           "options": [
             "对边境摩擦采妥协态度",
             "频繁的国际信息共享与科学协作",
             "封锁一切交流渠道"
           ],
+          "optionsPy": [
+            "duì biānjìng mócā cǎi tuǒxié tàidù",
+            "pínfán de guójì xìnxī gòngxiǎng yǔ kēxué xiézuò",
+            "fēngsuǒ yīqiè jiāoliú qúdào"
+          ],
+          "optionsEn": [
+            "Adopt a compromising attitude toward border friction",
+            "Frequent international information sharing and scientific collaboration",
+            "Block all communication channels"
+          ],
           "correct": 1
         },
         {
           "q": "构建健康安全的世界共同体需要跨越什么？",
+          "qPy": "Gòujiàn jiànkāng ānquán de shìjiè gòngtóngtǐ xūyào kuàyuè shénme?",
+          "qEn": "What needs to be crossed to build a healthy and safe world community?",
           "options": [
             "物理治疗的红线",
             "政治障碍",
             "艺术规律"
+          ],
+          "optionsPy": [
+            "wùlǐ zhìliáo de hóngxiàn",
+            "zhèngzhì zhàng'ài",
+            "yìshù guīlǜ"
+          ],
+          "optionsEn": [
+            "The red line of physical therapy",
+            "Political barriers",
+            "Artistic laws"
           ],
           "correct": 1
         }
@@ -123203,19 +124163,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "在做出重大决策时应该怎样做？",
+          "qPy": "Zài zuòchū zhòngdà juécè shí yīnggāi zěnyàng zuò?",
+          "qEn": "What should be done when making major decisions?",
           "options": [
             "从宏观角度审视大局",
             "只看局部的短期利益",
             "任由突发事件安排"
           ],
+          "optionsPy": [
+            "cóng hóngguān jiǎodù shěnshì dàjú",
+            "zhǐ kàn júbù de duǎnqī lìyì",
+            "rènyóu tūfā shìjiàn ānpái"
+          ],
+          "optionsEn": [
+            "Examine the big picture from a macro perspective",
+            "Only look at partial short-term interests",
+            "Let unexpected events dictate"
+          ],
           "correct": 0
         },
         {
           "q": "瞻望未来，如何取得瞩目的成就？",
+          "qPy": "Zhānwàng wèilái, rúhé qǔdé zhǔmù de chéngjiù?",
+          "qEn": "Looking forward to the future, how can remarkable achievements be attained?",
           "options": [
             "彼此忽视与拒绝沟通",
             "凝聚各方智慧与力量",
             "停止一切创新和合作"
+          ],
+          "optionsPy": [
+            "bǐcǐ hūshì yǔ jùjué gōutōng",
+            "níngjù gèfāng zhìhuì yǔ lìliàng",
+            "tíngzhǐ yīqiè chuàngxīn hé hézuò"
+          ],
+          "optionsEn": [
+            "Ignore each other and refuse communication",
+            "Gather the wisdom and strength of all parties",
+            "Stop all innovation and cooperation"
           ],
           "correct": 1
         }
@@ -123232,19 +124216,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "什么是维护区域经济繁荣的的关健？",
+          "qPy": "Shénme shì wéihù qūyù jīngjì fánróng de guānjiàn?",
+          "qEn": "What is key to maintaining regional economic prosperity?",
           "options": [
             "坚持多边贸易协议",
             "推行闭关自守政策",
             "盲目参与战略博弈"
           ],
+          "optionsPy": [
+            "jiānchí duōbiān màoyì xiéyì",
+            "tuīxíng bìguān zìshǒu zhèngcè",
+            "mángmù cānyǔ zhànlüè bóyì"
+          ],
+          "optionsEn": [
+            "Adhering to multilateral trade agreements",
+            "Implementing isolationist policies",
+            "Blindly participating in strategic games"
+          ],
           "correct": 0
         },
         {
           "q": "各国决策者必须抛弃什么？",
+          "qPy": "Gèguó juécèzhě bìxū pāoqì shénme?",
+          "qEn": "What must national policymakers abandon?",
           "options": [
             "长远利益的构想",
             "狭隘偏见",
             "全球化的合作纽带"
+          ],
+          "optionsPy": [
+            "chángyuǎn lìyì de gòuxiǎng",
+            "xiá'ài piānjiàn",
+            "quánqiúhuà de hézuò niǔdài"
+          ],
+          "optionsEn": [
+            "The vision of long-term interests",
+            "Narrow prejudices",
+            "The cooperative bonds of globalization"
           ],
           "correct": 1
         }
@@ -123261,19 +124269,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "面对人工智能等新兴技术爆发，人类处于什么境地？",
+          "qPy": "Miànduì réngōng zhìnéng děng xīnxīng jìshù bàofā, rénlèi chǔyú shénme jìngdì?",
+          "qEn": "What situation is humanity in when facing the explosion of emerging technologies like AI?",
           "options": [
             "安全无虞的发展大道",
             "前所未有的十字路口",
             "可以随意撤销的舒适圈"
           ],
+          "optionsPy": [
+            "ānquán wúyú de fāzhǎn dàdào",
+            "qiánsuǒwèiyǒu de shízìlùkǒu",
+            "kěyǐ suíyì chèxiāo de shūshìquān"
+          ],
+          "optionsEn": [
+            "A safe and secure development road",
+            "An unprecedented crossroads",
+            "A comfort zone that can be easily undone"
+          ],
           "correct": 1
         },
         {
           "q": "我们必须用什么去践行历史承诺？",
+          "qPy": "Wǒmen bìxū yòng shénme qù jiànxíng lìshǐ chéngnuò?",
+          "qEn": "What must we use to fulfill our historical commitments?",
           "options": [
             "冷漠与推托的惯性",
             "感性的逃避与慌张",
             "理性与智慧"
+          ],
+          "optionsPy": [
+            "lěngmò yǔ tuītuō de guànxìng",
+            "gǎnxìng de táobì yǔ huāngzhāng",
+            "lǐxìng yǔ zhìhuì"
+          ],
+          "optionsEn": [
+            "The inertia of indifference and excuses",
+            "Emotional avoidance and panic",
+            "Reason and wisdom"
           ],
           "correct": 2
         }
@@ -123290,19 +124322,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "为什么需要从宏观角度审视金融市场？",
+          "qPy": "Wèishénme xūyào cóng hóngguān jiǎodù shěnshì jīnróng shìchǎng?",
+          "qEn": "Why is it necessary to examine financial markets from a macro perspective?",
           "options": [
             "因为波动具有传染性",
             "为了打击多边贸易",
             "为了宣扬各国的偏见"
           ],
+          "optionsPy": [
+            "yīnwèi bōdòng jùyǒu chuánrǎnxìng",
+            "wèile dǎjī duōbiān màoyì",
+            "wèile xuānyáng gèguó de piānjiàn"
+          ],
+          "optionsEn": [
+            "Because fluctuations are contagious",
+            "To attack multilateral trade",
+            "To promote prejudices of various countries"
+          ],
           "correct": 0
         },
         {
           "q": "如何才能瞻望稳定与繁荣的发展前景？",
+          "qPy": "Rúhé cái néng zhānwàng wěndìng yǔ fánróng de fāzhǎn qiánjǐng?",
+          "qEn": "How can we look forward to stable and prosperous development prospects?",
           "options": [
             "推迟做出一半的重大决策",
             "摈弃偏见，共同遏制恶性投机",
             "听任单边主义的发展"
+          ],
+          "optionsPy": [
+            "tuīchí zuòchū yībàn de zhòngdà juécè",
+            "bìnqì piānjiàn, gòngtóng èzhì èxìng tóujī",
+            "tīngrèn dānbiān zhǔyì de fāzhǎn"
+          ],
+          "optionsEn": [
+            "Postpone making half of major decisions",
+            "Abandon prejudices and jointly contain malicious speculation",
+            "Allow unilateralism to develop"
           ],
           "correct": 1
         }
@@ -123319,19 +124375,43 @@ const HSK_ESSAYS = {
       "questions": [
         {
           "q": "应对全球气候变化被视为什么？",
+          "qPy": "Yìngduì quánqiú qìhòu biànhuà bèi shìwéi shénme?",
+          "qEn": "What is addressing global climate change regarded as?",
           "options": [
             "短暂而尴尬的阶段",
             "人类生存发展的重大命运抉择",
             "单边主义博弈的工具"
           ],
+          "optionsPy": [
+            "duǎnzàn ér gāngà de jiēduàn",
+            "rénlèi shēngcún fāzhǎn de zhòngdà mìngyùn juézé",
+            "dānbiān zhǔyì bóyì de gōngjù"
+          ],
+          "optionsEn": [
+            "A brief and embarrassing phase",
+            "A major destiny choice for human survival and development",
+            "A tool for unilateral games"
+          ],
           "correct": 1
         },
         {
           "q": "怎样才能遏制气候恶化并实现和谐共生？",
+          "qPy": "Zěnyàng cái néng èzhì qìhòu èhuà bìng shíxiàn héxié gòngshēng?",
+          "qEn": "How can climate deterioration be contained and harmonious coexistence achieved?",
           "options": [
             "践踏减排承诺并拖延治理",
             "遵循生态规律，积极践行绿色减排",
             "放弃多边贸易战略"
+          ],
+          "optionsPy": [
+            "jiàntà jiǎnpái chéngnuò bìng tuōyán zhìlǐ",
+            "zūnxún shēngtài guīlǜ, jījí jiànxíng lǜsè jiǎnpái",
+            "fàngqì duōbiān màoyì zhànlüè"
+          ],
+          "optionsEn": [
+            "Trample on emission reduction commitments and delay governance",
+            "Follow ecological laws and actively practice green emission reduction",
+            "Abandon multilateral trade strategies"
           ],
           "correct": 1
         }
@@ -123430,7 +124510,11 @@ function expandHskEssays() {
         // Update questions and options
         clone.questions = clone.questions.map(q => {
           q.q = replaceWords(q.q, 'cn');
+          q.qPy = replaceWords(q.qPy, 'py');
+          q.qEn = replaceWords(q.qEn, 'en');
           q.options = q.options.map(opt => replaceWords(opt, 'cn'));
+          q.optionsPy = q.optionsPy.map(opt => replaceWords(opt, 'py'));
+          q.optionsEn = q.optionsEn.map(opt => replaceWords(opt, 'en'));
           return q;
         });
 

@@ -213,9 +213,8 @@ header {
   font-weight: 600;
   outline: none;
   cursor: pointer;
-  max-width: 280px;
+  max-width: 450px;
   width: auto;
-  text-overflow: ellipsis;
 }
 
 .voice-select option {
@@ -1662,20 +1661,6 @@ dialog.detail-modal {
   gap: 0.5rem;
 }
 
-.essay-opt-label {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--border-glass);
-  padding: 0.65rem 0.85rem;
-  border-radius: 0.5rem;
-  transition: all var(--transition-fast);
-}
-
 .essay-opt-label:hover {
   background: rgba(255, 255, 255, 0.04);
   color: var(--text-primary);
@@ -1696,6 +1681,98 @@ dialog.detail-modal {
   background: var(--error-bg) !important;
   border-color: var(--error) !important;
   color: var(--error) !important;
+}
+
+/* Comprehension Check Annotations */
+.essay-q-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.quiz-sound-btn {
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.quiz-sound-btn:hover {
+  background: var(--accent-cyan);
+  color: #fff;
+  border-color: var(--accent-cyan);
+  transform: scale(1.1);
+}
+
+.quiz-opt-sound {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  opacity: 0;
+  transition: opacity var(--transition-fast), background var(--transition-fast);
+}
+
+.essay-opt-label:hover .quiz-opt-sound {
+  opacity: 1;
+}
+
+.quiz-pinyin-text {
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  font-style: italic;
+  margin-top: -0.15rem;
+  padding-left: 1.15rem;
+}
+
+.quiz-translation-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  padding-left: 1.15rem;
+  margin-top: -0.1rem;
+}
+
+.essay-opt-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.quiz-opt-pinyin {
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  font-style: italic;
+}
+
+.quiz-opt-translation {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.75;
+}
+
+.essay-opt-label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--border-glass);
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.5rem;
+  transition: all var(--transition-fast);
 }
 
 /* Writing character selector style */

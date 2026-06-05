@@ -302,6 +302,8 @@ const state = {
   showEssayTranslation: false,
   essayQuizAnswers: {}, // questionIndex -> selectedOptionIndex
   essayQuizGraded: false,
+  showQuizPinyin: false,
+  showQuizTranslation: false,
   currentEssayIndex: 0,
   dictionaryLimit: 100,
   points: 0,
@@ -2018,10 +2020,42 @@ function renderEssayQuestions(essay) {
     const card = document.createElement('div');
     card.className = 'essay-q-card';
     
+    // Question title row with sound button
+    const qHeader = document.createElement('div');
+    qHeader.className = 'essay-q-header';
+    
     const qTitle = document.createElement('div');
     qTitle.className = 'essay-q-title';
     qTitle.textContent = `${qIdx + 1}. ${qObj.q}`;
-    card.appendChild(qTitle);
+    qHeader.appendChild(qTitle);
+    
+    // Sound button for question
+    const qSoundBtn = document.createElement('button');
+    qSoundBtn.className = 'quiz-sound-btn';
+    qSoundBtn.title = 'Listen to question';
+    qSoundBtn.innerHTML = `<svg viewBox="0 0 24 24" style="width:14px; height:14px; fill:currentColor;"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>`;
+    qSoundBtn.onclick = (e) => { e.stopPropagation(); playTextToSpeech(qObj.q); };
+    qHeader.appendChild(qSoundBtn);
+    
+    card.appendChild(qHeader);
+    
+    // Pinyin for question
+    if (qObj.qPy) {
+      const qPyDiv = document.createElement('div');
+      qPyDiv.className = 'quiz-pinyin-text';
+      qPyDiv.textContent = qObj.qPy;
+      qPyDiv.style.display = state.showQuizPinyin ? 'block' : 'none';
+      card.appendChild(qPyDiv);
+    }
+    
+    // Translation for question
+    if (qObj.qEn) {
+      const qEnDiv = document.createElement('div');
+      qEnDiv.className = 'quiz-translation-text';
+      qEnDiv.textContent = qObj.qEn;
+      qEnDiv.style.display = state.showQuizTranslation ? 'block' : 'none';
+      card.appendChild(qEnDiv);
+    }
     
     const optionsContainer = document.createElement('div');
     optionsContainer.className = 'essay-options-container';
@@ -2030,15 +2064,67 @@ function renderEssayQuestions(essay) {
       const label = document.createElement('label');
       label.className = 'essay-opt-label';
       
+      const optPy = qObj.optionsPy ? qObj.optionsPy[optIdx] : '';
+      const optEn = qObj.optionsEn ? qObj.optionsEn[optIdx] : '';
+      
+      let optAnnotations = '';
+      if (optPy) {
+        optAnnotations += `<span class="quiz-opt-pinyin" style="display:${state.showQuizPinyin ? 'block' : 'none'}">${optPy}</span>`;
+      }
+      if (optEn) {
+        optAnnotations += `<span class="quiz-opt-translation" style="display:${state.showQuizTranslation ? 'block' : 'none'}">${optEn}</span>`;
+      }
+      
       label.innerHTML = `
         <input type="radio" class="essay-opt-input" name="essay_q_${qIdx}" value="${optIdx}" onclick="selectEssayAnswer(${qIdx}, ${optIdx})">
-        <span>${optText}</span>
+        <div class="essay-opt-content">
+          <span>${optText}</span>
+          ${optAnnotations}
+        </div>
+        <button class="quiz-sound-btn quiz-opt-sound" title="Listen" onclick="event.preventDefault(); event.stopPropagation(); playTextToSpeech('${optText.replace(/'/g, "\\'")}')">
+          <svg viewBox="0 0 24 24" style="width:12px; height:12px; fill:currentColor;"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+        </button>
       `;
       optionsContainer.appendChild(label);
     });
     
     card.appendChild(optionsContainer);
     qList.appendChild(card);
+  });
+}
+
+function toggleQuizPinyin(btn) {
+  state.showQuizPinyin = !state.showQuizPinyin;
+  if (state.showQuizPinyin) {
+    btn.classList.add('active-toggle');
+  } else {
+    btn.classList.remove('active-toggle');
+  }
+  updateQuizAnnotationVisibility();
+}
+
+function toggleQuizTranslation(btn) {
+  state.showQuizTranslation = !state.showQuizTranslation;
+  if (state.showQuizTranslation) {
+    btn.classList.add('active-toggle');
+  } else {
+    btn.classList.remove('active-toggle');
+  }
+  updateQuizAnnotationVisibility();
+}
+
+function updateQuizAnnotationVisibility() {
+  document.querySelectorAll('.quiz-pinyin-text').forEach(el => {
+    el.style.display = state.showQuizPinyin ? 'block' : 'none';
+  });
+  document.querySelectorAll('.quiz-opt-pinyin').forEach(el => {
+    el.style.display = state.showQuizPinyin ? 'block' : 'none';
+  });
+  document.querySelectorAll('.quiz-translation-text').forEach(el => {
+    el.style.display = state.showQuizTranslation ? 'block' : 'none';
+  });
+  document.querySelectorAll('.quiz-opt-translation').forEach(el => {
+    el.style.display = state.showQuizTranslation ? 'block' : 'none';
   });
 }
 
