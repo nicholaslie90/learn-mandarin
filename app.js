@@ -24,7 +24,12 @@ function loadChineseVoices() {
       const option = document.createElement('option');
       option.value = v.voiceURI;
       option.textContent = `${v.name} (${v.lang})`;
-      if (v.voiceURI === selectedVoiceURI) {
+      
+      const isSelected = selectedVoiceURI 
+        ? (v.voiceURI === selectedVoiceURI)
+        : (v.name.includes('Meijia') || v.voiceURI.includes('Meijia'));
+        
+      if (isSelected) {
         option.selected = true;
       }
       select.appendChild(option);
@@ -37,10 +42,15 @@ function loadChineseVoices() {
 function updateSelectedVoice() {
   if (allChineseVoices.length === 0) return;
   
-  let voice = allChineseVoices.find(v => v.voiceURI === selectedVoiceURI);
+  let voice = null;
+  if (selectedVoiceURI) {
+    voice = allChineseVoices.find(v => v.voiceURI === selectedVoiceURI);
+  }
+  
   if (!voice) {
-    // Fallback: look for zh-CN, or just use the first Chinese voice
-    voice = allChineseVoices.find(v => v.lang.includes('zh-CN') || v.lang.includes('zh_CN')) || 
+    // Fallback: try to find Meijia first, then look for general zh-CN, or use first Chinese voice
+    voice = allChineseVoices.find(v => v.name.includes('Meijia') || v.voiceURI.includes('Meijia')) ||
+            allChineseVoices.find(v => v.lang.includes('zh-CN') || v.lang.includes('zh_CN')) || 
             allChineseVoices.find(v => v.lang.startsWith('zh-')) ||
             allChineseVoices[0];
   }
@@ -1713,6 +1723,16 @@ function openWordDetails(word) {
 
 function closeWordDetails() {
   const modal = document.getElementById('wordDetailModal');
+  if (modal) modal.close();
+}
+
+function openVoiceHelpModal() {
+  const modal = document.getElementById('voiceHelpModal');
+  if (modal) modal.showModal();
+}
+
+function closeVoiceHelp() {
+  const modal = document.getElementById('voiceHelpModal');
   if (modal) modal.close();
 }
 

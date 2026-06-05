@@ -222,6 +222,31 @@ header {
   color: var(--text-primary);
 }
 
+.voice-help-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  margin-left: 0.25rem;
+}
+
+.voice-help-btn:hover {
+  background: var(--accent-cyan);
+  color: hsl(222, 25%, 8%);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+
 /* Stats Pill */
 .stats-bar {
   display: flex;
