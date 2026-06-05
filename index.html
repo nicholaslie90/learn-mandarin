@@ -15,7 +15,7 @@
   <!-- Application CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-theme">
 
   <!-- Floating Hanzi Background Particles -->
   <div id="hanziBgContainer" class="hanzi-bg-container"></div>
@@ -240,7 +240,16 @@
         <div class="flashcards-layout">
           
           <div class="quiz-header">
-            <span>Vocabulary Deck</span>
+            <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+              <span>Vocabulary Deck</span>
+              <label class="toggle-container" style="display: flex; align-items: center; gap: 0.4rem; margin-left: 0.5rem; cursor: pointer; user-select: none;" title="Skip mastered words in flashcard deck">
+                <span class="switch">
+                  <input type="checkbox" id="skipMasteredToggle" checked>
+                  <span class="slider"></span>
+                </span>
+                <span style="font-size: 0.8rem; color: var(--text-secondary);">Skip Mastered</span>
+              </label>
+            </div>
             <span>Card <strong id="cardCurrentIndex">0</strong> of <strong id="cardTotalCount">0</strong></span>
           </div>
           

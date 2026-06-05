@@ -169,14 +169,15 @@ class HanziWriterManager {
       return;
     }
     
+    const isLight = document.body.classList.contains('light-theme');
     this.writer = HanziWriter.create(this.containerId, char, {
       width: this.size,
       height: this.size,
       padding: 15,
       showOutline: this.showOutlineState,
-      strokeColor: '#00f2fe',
-      outlineColor: 'rgba(255, 255, 255, 0.08)',
-      drawingColor: '#ff0080',
+      strokeColor: isLight ? '#0284c7' : '#00f2fe',
+      outlineColor: isLight ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.08)',
+      drawingColor: isLight ? '#db2777' : '#ff0080',
       drawingWidth: 6,
       strokeAnimationSpeed: 1.2,
       delayBetweenStrokes: 350
@@ -232,6 +233,7 @@ const state = {
   starredOnly: false,
   searchQuery: '',
   vocabFilter: 'all', // 'all', 'starred', 'due', 'learned'
+  skipMastered: true,
   
   // Flashcards state
   flashcardIndex: 0,
@@ -867,15 +869,19 @@ function initFlashcards() {
       return prog && prog.learned && prog.dueTime <= Date.now();
     });
   } else {
-    // Normal Learning Path: Filter out already fully mastered words to prioritize new/learning
-    activeFlashcardList = allWords.filter(w => {
-      const prog = state.progress[w.id];
-      return !prog || prog.srsLevel < 4;
-    });
-    
-    // Fallback: If all are mastered, load everything
-    if (activeFlashcardList.length === 0) {
-      activeFlashcardList = allWords;
+    // Normal Learning Path: Filter out already fully mastered words if configured to do so
+    if (state.skipMastered) {
+      activeFlashcardList = allWords.filter(w => {
+        const prog = state.progress[w.id];
+        return !prog || prog.srsLevel < 4;
+      });
+      
+      // Fallback: If all are mastered, load everything
+      if (activeFlashcardList.length === 0) {
+        activeFlashcardList = allWords;
+      }
+    } else {
+      activeFlashcardList = [...allWords];
     }
   }
   
@@ -1535,8 +1541,10 @@ function renderDictionary() {
     card.onclick = () => openWordDetails(word);
     
     const starClass = prog.starred ? 'star-btn starred' : 'star-btn';
+    const isDue = prog.learned && prog.dueTime <= Date.now();
     const masteredBadge = prog.srsLevel >= 4 ? '<span class="vocab-badge mastered">Mastered</span>' : '';
-    const learningBadge = (prog.srsLevel > 0 && prog.srsLevel < 4) ? '<span class="vocab-badge">Learning</span>' : '';
+    const dueBadge = isDue ? '<span class="vocab-badge review-due">Review Due</span>' : '';
+    const learningBadge = (prog.srsLevel > 0 && prog.srsLevel < 4 && !isDue) ? '<span class="vocab-badge">Learning</span>' : '';
     
     card.innerHTML = `
       <button class="${starClass}" data-star-id="${word.id}" onclick="event.stopPropagation(); toggleStarWord('${word.id}')">
@@ -1550,6 +1558,7 @@ function renderDictionary() {
       <div class="vocab-badges">
         <span class="vocab-badge">HSK ${state.currentLevel}</span>
         ${masteredBadge}
+        ${dueBadge}
         ${learningBadge}
       </div>
     `;
@@ -2078,35 +2087,101 @@ function gradeEssayQuiz() {
 // -------------------------------------------------------------
 // Light & Dark Theme Controller
 // -------------------------------------------------------------
-function toggleTheme() {
-  const body = document.body;
-  const isLight = body.classList.toggle('light-theme');
-  localStorage.setItem('hsk_sensei_theme', isLight ? 'light' : 'dark');
-  
+function updateThemeUI(mode) {
   const icon = document.getElementById('themeToggleIcon');
-  if (icon) {
-    if (isLight) {
-      icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+  const button = document.getElementById('themeToggleBtn');
+  if (!icon || !button) return;
+  
+  if (mode === 'light') {
+    // Sun icon
+    icon.innerHTML = `<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>`;
+    button.setAttribute('title', 'Theme: Light Mode. Click to switch to Dark Mode.');
+  } else if (mode === 'dark') {
+    // Moon icon
+    icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
+    button.setAttribute('title', 'Theme: Dark Mode. Click to switch to Match System.');
+  } else {
+    // Monitor icon
+    icon.innerHTML = `<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>`;
+    button.setAttribute('title', 'Theme: Match System. Click to switch to Light Mode.');
+  }
+}
+
+function applyTheme(mode) {
+  if (mode === 'light') {
+    document.body.classList.add('light-theme');
+  } else if (mode === 'dark') {
+    document.body.classList.remove('light-theme');
+  } else if (mode === 'system') {
+    const systemIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (systemIsDark) {
+      document.body.classList.remove('light-theme');
     } else {
-      icon.innerHTML = `<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707m0-11.314l.707.707m10.608 10.608l.707.707M12 8a4 4 0 110 8 4 4 0 010-8z"/>`;
+      document.body.classList.add('light-theme');
     }
   }
+  updateThemeUI(mode);
+  
+  // Dynamically update SVG stroke writing canvas colors if loaded
+  if (typeof canvasHelper !== 'undefined' && canvasHelper && canvasHelper.character) {
+    canvasHelper.setCharacter(canvasHelper.character);
+  }
+  if (typeof modalCanvasHelper !== 'undefined' && modalCanvasHelper && modalCanvasHelper.character) {
+    modalCanvasHelper.setCharacter(modalCanvasHelper.character);
+  }
+}
+
+function toggleTheme() {
+  const currentMode = localStorage.getItem('hsk_sensei_theme') || 'light';
+  let nextMode = 'light';
+  if (currentMode === 'light') {
+    nextMode = 'dark';
+  } else if (currentMode === 'dark') {
+    nextMode = 'system';
+  } else {
+    nextMode = 'light';
+  }
+  
+  localStorage.setItem('hsk_sensei_theme', nextMode);
+  applyTheme(nextMode);
   sounds.playFlip();
 }
 
 function initTheme() {
-  const theme = localStorage.getItem('hsk_sensei_theme') || 'dark';
-  const icon = document.getElementById('themeToggleIcon');
-  if (theme === 'light') {
-    document.body.classList.add('light-theme');
-    if (icon) {
-      icon.innerHTML = `<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>`;
-    }
-  } else {
-    document.body.classList.remove('light-theme');
-    if (icon) {
-      icon.innerHTML = `<path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.364 17.636l-.707.707m0-11.314l.707.707m10.608 10.608l.707.707M12 8a4 4 0 110 8 4 4 0 010-8z"/>`;
-    }
+  const theme = localStorage.getItem('hsk_sensei_theme') || 'light';
+  applyTheme(theme);
+  
+  // Listen for system preference changes
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  try {
+    mediaQuery.addEventListener('change', () => {
+      const currentMode = localStorage.getItem('hsk_sensei_theme') || 'light';
+      if (currentMode === 'system') {
+        applyTheme('system');
+      }
+    });
+  } catch (e) {
+    mediaQuery.addListener(() => {
+      const currentMode = localStorage.getItem('hsk_sensei_theme') || 'light';
+      if (currentMode === 'system') {
+        applyTheme('system');
+      }
+    });
+  }
+}
+
+function initSkipMasteredToggle() {
+  const localSkip = localStorage.getItem('hsk_sensei_skip_mastered');
+  state.skipMastered = localSkip !== null ? localSkip === 'true' : true;
+  
+  const toggle = document.getElementById('skipMasteredToggle');
+  if (toggle) {
+    toggle.checked = state.skipMastered;
+    toggle.addEventListener('change', (e) => {
+      state.skipMastered = e.target.checked;
+      localStorage.setItem('hsk_sensei_skip_mastered', state.skipMastered);
+      initFlashcards();
+    });
   }
 }
 
@@ -2353,6 +2428,7 @@ function cleanDatabaseDefinitions() {
 window.addEventListener('DOMContentLoaded', async () => {
   cleanDatabaseDefinitions();
   initTheme();
+  initSkipMasteredToggle();
   setupFloatingBackground();
   
   // Load voices if already cached by browser
