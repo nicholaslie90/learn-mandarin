@@ -4,7 +4,8 @@
   "description": "Interactive Mandarin learning tool to master HSK vocabulary.",
   "main": "index.html",
   "scripts": {
-    "dev": "npx -y http-server -p 3000"
+    "dev": "npx -y http-server -p 3000",
+    "validate": "node validate.js"
   },
   "keywords": [
     "mandarin",

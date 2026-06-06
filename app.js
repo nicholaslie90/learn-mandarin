@@ -261,6 +261,13 @@ class HanziWriterManager {
       btn.classList.remove('active-toggle');
     }
   }
+
+  updateSize(newSize) {
+    this.size = newSize;
+    if (this.character) {
+      this.setCharacter(this.character);
+    }
+  }
 }
 
 // App State Definition
@@ -3061,4 +3068,30 @@ window.addEventListener('DOMContentLoaded', async () => {
   
   // Dashboard default
   switchTab('dashboard');
+  
+  // Register window resize listener
+  window.addEventListener('resize', handleWindowResize);
 });
+
+// Dynamic Resize Handlers for Mobile responsiveness
+let resizeTimeout = null;
+function handleWindowResize() {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    // 1. Resizing stroke writing practice tab canvas
+    if (state.activeTab === 'stroke' && canvasHelper) {
+      const targetSize = Math.min(320, window.innerWidth - 48);
+      const container = document.getElementById('strokeWriterContainer');
+      if (container) {
+        container.style.width = `${targetSize}px`;
+        container.style.height = `${targetSize}px`;
+        const card = container.closest('.canvas-card');
+        if (card) {
+          card.style.width = `${targetSize}px`;
+          card.style.height = `${targetSize}px`;
+        }
+      }
+      canvasHelper.updateSize(targetSize);
+    }
+  }, 200); // 200ms debounce
+}

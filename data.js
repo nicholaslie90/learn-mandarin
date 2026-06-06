@@ -124101,6 +124101,1486 @@ const HSK_ESSAYS = {
           "correct": 1
         }
       ]
+    },
+    {
+      "id": "essay_2_6",
+      "titleCn": "第一次点头",
+      "titlePy": "Dì-yī cì diǎntóu",
+      "titleEn": "First Nod",
+      "contentCn": "郑雨走进公园的时候，天已经黑了。她昨天对朋友说：“我要开始运动。”所以今天她来了。\n公园里有很多人。一些人在走路，一些人在跑步。郑雨慢慢走着，看着树上的黄叶。风把叶子吹下来，落在她的头发上。\n“真漂亮。”郑雨把叶子拿下来，放进衣服口袋里。\n她走到湖边的时候，看到一个高个子男人从对面跑过来。男人穿着黑色的运动衣服，跑得很快。他的头发被风吹起来，看起来很有精神。\n郑雨往右边走，给男人让路。男人对她点点头，说：“晚上好。”\n“晚上好。”郑雨也点点头。\n男人跑过去了，但是郑雨停下来，回头看了一眼。她想：“这个人我见过。”\n第二天，郑雨又来了。她六点出门，六点十五分到公园。她走了十分钟，又看到了那个男人。这次男人对她微笑，然后点点头。\n郑雨也微笑点头。她的心跳得有点快，不是因为走路，是因为那个微笑。\n第三天，下雨了。郑雨站在窗户前面看外面，她想：“他今天还会来吗？”\n雨停的时候已经七点了。郑雨拿了雨伞，还是去了公园。公园里人很少，她走了五分钟，没有看到那个男人。\n“也许他不来了。”郑雨有点失望。\n她准备回家的时候，听到后面有脚步声。她回头，看到那个男人跑过来，头发都是湿的。\n男人停下来，对她说：“你也来了。”\n郑雨点点头，说：“我来了。”\n他们从那天开始，每天见面都点头微笑。有时候男人会说：“今天空气很好。”\n郑雨就回答：“是啊，很适合走路。”\n一个星期过去了。星期五晚上，男人没有像平时那样跑过去。他走到郑雨面前，停下来。\n“我叫程风。”\n他说，“我们经常见面，但是我不知道你的名字。”\n郑雨看着他黑色的眼睛，说：“我叫郑雨。”\n程风笑了，说：“郑雨，明天星期六，公园有音乐会。你想一起来听吗？”\n郑雨的心跳得更快了。她点点头，说：“好，我来。”",
+      "contentPy": "Zhèng yǔ zǒu jìn gōngyuán de shíhòu, tiān yǐjīng hēile. Tā zuótiān duì péngyǒu shuō:“Wǒ yào kāishǐ yùndòng.” Suǒyǐ jīntiān tā láile.\nGōngyuán li yǒu hěnduō rén. Yīxiē rén zài zǒulù, yīxiē rén zài pǎobù. Zhèng yǔ màn man zǒuzhe, kànzhe shù shàng de huáng yè. Fēng bǎ yèzǐ chuī xiàlái, luò zài tā de tóufǎ shàng.\n“Zhēn piàoliang.” Zhèng yǔ bǎ yèzǐ ná xiàlái, fàng jìn yīfú kǒudài lǐ.\nTā zǒu dào hú biān de shíhòu, kàn dào yīgè gāo gèzǐ nánrén cóng duìmiàn pǎo guòlái. Nánrén chuānzhuó hēisè de yùndòng yīfú, pǎo dé hěn kuài. Tā de tóufǎ bèi fēng chuī qǐlái, kàn qǐlái hěn yǒu jīngshén.\nZhèng yǔ wǎng yòubiān zǒu, gěi nánrén rànglù. Nánrén duì tā diǎndiǎn tóu, shuō:“Wǎnshàng hǎo.”\n“Wǎnshàng hǎo.” Zhèng yǔ yě diǎndiǎn tóu.\nNánrén pǎo guòqùle, dànshì zhèng yǔ tíng xiàlái, huítóu kànle yīyǎn. Tā xiǎng:“Zhège rén wǒ jiànguò.”\nDì èr tiān, zhèng yǔ yòu láile. Tā liù diǎn chūmén, liù diǎn shíwǔ fēn dào gōngyuán. Tā zǒule shí fēnzhōng, yòu kàn dàole nàgè nánrén. Zhè cì nánrén duì tā wéixiào, ránhòu diǎndiǎn tóu.\nZhèng yǔ yě wéixiào diǎntóu. Tā de xīntiào dé yǒudiǎn kuài, bùshì yīnwèi zǒulù, shì yīnwèi nàgè wéixiào.\nDì sān tiān, xià yǔle. Zhèng yǔ zhàn zài chuānghù qiánmiàn kàn wàimiàn, tā xiǎng:“Tā jīntiān hái huì lái ma?”\nYǔ tíng de shíhòu yǐjīng qī diǎnle. Zhèng yǔ nále yǔsǎn, háishì qùle gōngyuán. Gōngyuán lǐ rén hěn shǎo, tā zǒule wǔ fēnzhōng, méiyǒu kàn dào nàgè nánrén.\n“Yěxǔ tā bù láile.” Zhèng yǔ yǒudiǎn shīwàng.\nTā zhǔnbèi huí jiā de shíhòu, tīng dào hòumiàn yǒu jiǎobù shēng. Tā huítóu, kàn dào nàgè nánrén pǎo guòlái, tóufǎ dōu shì shī de.\nNánrén tíng xiàlái, duì tā shuō:“Nǐ yě láile.”\nZhèng yǔdiǎn diǎntóu, shuō:“Wǒ láile.”\nTāmen cóng nèitiān kāishǐ, měitiān jiànmiàn dōu diǎntóu wéixiào. Yǒu shíhòu nánrén huì shuō:“Jīntiān kōngqì hěn hǎo.”\nZhèng yǔ jiù huídá:“Shì a, hěn shìhé zǒulù.”\nYīgè xīngqí guòqùle. Xīngqíwǔ wǎnshàng, nánrén méiyǒu xiàng píngshí nàyàng pǎo guòqù. Tā zǒu dào zhèng yǔ miànqián, tíng xiàlái.\n“Wǒ jiào chéng fēng.”\nTā shuō,“wǒmen jīngcháng jiànmiàn, dànshì wǒ bù zhīdào nǐ de míngzì.”\nZhèng yǔ kànzhe tā hēisè de yǎnjīng, shuō:“Wǒ jiào zhèng yǔ.”\nChéng fēng xiàole, shuō:“Zhèng yǔ, míngtiān xīngqíliù, gōngyuán yǒu yīnyuè huì. Nǐ xiǎng yī qǐlái tīng ma?”\nZhèng yǔ de xīntiào dé gèng kuàile. Tā diǎndiǎn tóu, shuō:“Hǎo, wǒ lái.”",
+      "contentEn": "When Zheng Yu walked into the park, it was already dark. She said to her friend yesterday: \"I want to start exercising.\" So she came today.\nThere are many people in the park. Some people are walking and some are running. Zheng Yu walked slowly and looked at the yellow leaves on the trees. The wind blew the leaves down and fell on her hair.\n\"It's so beautiful.\" Zheng Yu took off the leaves and put them in his pocket.\nWhen she walked to the lake, she saw a tall man running from the opposite side. The man is wearing black sports clothes and running very fast. His hair was blown by the wind and he looked energetic.\nZheng Yu walked to the right to make way for the man. The man nodded to her and said, \"Good evening.\"\n\"Good evening.\" Zheng Yu also nodded.\nThe man ran over, but Zheng Yu stopped and looked back. She thought, \"I've seen this guy before.\"\nThe next day, Zheng Yu came again. She goes out at six o'clock and arrives at the park at six fifteen. She walked for ten minutes and saw the man again. This time the man smiled at her and nodded.\nZheng Yu also smiled and nodded. Her heart was beating a little fast, not because of walking, but because of that smile.\nOn the third day, it rained. Zheng Yu stood in front of the window and looked outside. She thought: \"Will he come again today?\"\nIt was already seven o'clock when the rain stopped. Zheng Yu took the umbrella and went to the park anyway. There were very few people in the park. She walked for five minutes and didn't see the man.\n\"Maybe he won't come.\" Zheng Yu was a little disappointed.\nWhen she was about to go home, she heard footsteps behind her. She turned around and saw the man running over, his hair wet.\nThe man stopped and said to her: \"You are here too.\"\nZheng Yu nodded and said, \"I'm here.\"\nFrom that day on, they nodded and smiled every day they met. Sometimes men will say: \"The air is very good today.\"\nZheng Yu replied: \"Yes, it is very suitable for walking.\"\nA week has passed. On Friday night, the man didn't run over as he usually did. He walked to Zheng Yu and stopped.\n\"My name is Cheng Feng.\"\nHe said, \"We see each other often, but I don't know your name.\"\nZheng Yu looked into his black eyes and said, \"My name is Zheng Yu.\"\nCheng Feng smiled and said, \"Zheng Yu, there will be a concert in the park tomorrow, Saturday. Do you want to come and listen to it?\"\nZheng Yu's heart beat faster. She nodded and said, \"Okay, I'll do it.\"",
+      "questions": [
+        {
+          "q": "郑雨为什么要来公园？",
+          "qPy": "Zhèng Yǔ wèishénme yào lái gōngyuán?",
+          "qEn": "Why did Zheng Yu come to the park?",
+          "options": [
+            "去听音乐会",
+            "开始运动",
+            "看黄色的叶子"
+          ],
+          "optionsPy": [
+            "Qù tīng yīnyuèhuì",
+            "Kāishǐ yùndòng",
+            "Kàn huángsè de yèzi"
+          ],
+          "optionsEn": [
+            "To listen to a concert",
+            "To start exercising",
+            "To look at yellow leaves"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "第三天下了雨，郑雨最后去公园了吗？",
+          "qPy": "Dì-sān tiān xiàle yǔ, Zhèng Yǔ zuìhòu qù gōngyuán le ma?",
+          "qEn": "It rained on the third day, did Zheng Yu go to the park in the end?",
+          "options": [
+            "去了",
+            "没有去",
+            "不记得了"
+          ],
+          "optionsPy": [
+            "Qùle",
+            "Méiyǒu qù",
+            "Bù jìde le"
+          ],
+          "optionsEn": [
+            "Yes, she went",
+            "No, she didn't go",
+            "She doesn't remember"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "程风请郑雨星期六做什么？",
+          "qPy": "Chéng Fēng qǐng Zhèng Yǔ xīngqīliù zuò shénme?",
+          "qEn": "What did Cheng Feng invite Zheng Yu to do on Saturday?",
+          "options": [
+            "一起去跑步",
+            "一起喝咖啡",
+            "一起听音乐会"
+          ],
+          "optionsPy": [
+            "Yīqǐ qù pǎobù",
+            "Yīqǐ hē kāfēi",
+            "Yīqǐ tīng yīnyuèhuì"
+          ],
+          "optionsEn": [
+            "To go running together",
+            "To drink coffee together",
+            "To listen to a concert together"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": "essay_2_7",
+      "titleCn": "三个人的不同方向",
+      "titlePy": "Sān gè rén de bùtóng fāngxiàng",
+      "titleEn": "Three Paths Diverge",
+      "contentCn": "林雨晴、赵明远和孙小月是好朋友。今天周五晚上，三个人一起去学校的夜市。\n夜市在学校里的一条街上，人很多，很热闹。林雨晴一到夜市门口，就看到了前面的小吃摊。她很高兴，马上向小吃摊走去。\n“我要去买烤串！这里的烤串很好吃！”林雨晴说。\n赵明远拉住了她。“等一下，先去看手机壳。我的手机壳坏了，我想买一个新的。那边的手机壳很多，很便宜。”\n“手机壳可以等一下买，但是烤串不能等！”林雨晴说。\n这时候，孙小月没有去小吃摊，也没有去看手机壳。她站在路边，用手机拍照片。夜市里有很多红灯笼，很漂亮。\n“你们看，这些灯笼真好看！”孙小月说。\n赵明远看了看孙小月，又看了看林雨晴。“我们先去看手机壳，然后去买烤串，最后看灯笼，好吗？”\n“不好！”\n林雨晴说，“先买烤串，我饿了！”\n孙小月走过来，说：“我想在这里拍照片。这里的人很多，灯笼很好看，我想多拍几张。”\n三个人站在夜市入口，谁也不想去别的地方。\n“我们只有今天晚上有时间，”赵明远说，“我真的很想买手机壳。”\n“我也真的很想吃烤串，”林雨晴说。\n孙小月没说话，她又拍了一张照片。\n这时候，一个卖手机壳的人走到赵明远旁边，说：“同学，来看看手机壳，很便宜，一个只要十块。”\n赵明远看到了那个人手里的手机壳，有很多颜色。他跟着那个人走了几步，想看看还有什么别的手机壳。\n“赵明远，你去哪里？”林雨晴问。\n“我去看看手机壳，很快回来！”赵明远说。\n林雨晴看赵明远走了，她对孙小月说：“那我去买烤串，你在这里等我。”\n“好，”孙小月说。\n林雨晴向小吃摊走去。小吃摊前面有很多人，她站在人群里等着买烤串。\n孙小月在路边拍灯笼。她拍了几张照片，回头看，发现赵明远和林雨晴都不见了。",
+      "contentPy": "Lín yǔqíng, zhàomíngyuǎn hé sūnxiǎoyuè shì hǎo péngyǒu. Jīntiān zhōu wǔ wǎnshàng, sān gèrén yīqǐ qù xuéxiào de yèshì.\nYèshì zài xuéxiào lǐ de yītiáo jiē shàng, rén hěnduō, hěn rènào. Lín yǔqíng yī dào yèshì ménkǒu, jiù kàn dàole qiánmiàn de xiǎochī tān. Tā hěn gāoxìng, mǎshàng xiàng xiǎochī tān zǒu qù.\n“Wǒ yào qù mǎi kǎo chuàn! Zhèlǐ de kǎo chuàn hěn hào chī!” Lín yǔqíng shuō.\nZhàomíngyuǎn lā zhùle tā.“Děng yīxià, xiān qù kàn shǒujī ké. Wǒ de shǒujī ké huàile, wǒ xiǎng mǎi yīgè xīn de. Nà biān de shǒujī ké hěnduō, hěn piányí.”\n“Shǒujī ké kěyǐ děng yīxià mǎi, dànshì kǎo chuàn bùnéng děng!” Lín yǔqíng shuō.\nZhè shíhòu, sūnxiǎoyuè méiyǒu qù xiǎochī tān, yě méiyǒu qù kàn shǒujī ké. Tā zhàn zài lù biān, yòng shǒujī pāi zhàopiàn. Yèshì li yǒu hěnduō hóng dēnglóng, hěn piàoliang.\n“Nǐmen kàn, zhèxiē dēnglóng zhēn hǎokàn!” Sūnxiǎoyuè shuō.\nZhàomíngyuǎn kànle kàn sūnxiǎoyuè, yòu kànle kàn lín yǔqíng.“Wǒmen xiān qù kàn shǒujī ké, ránhòu qù mǎi kǎo chuàn, zuìhòu kàn dēnglóng, hǎo ma?”\n“Bù hǎo!”\nLín yǔqíng shuō,“xiān mǎi kǎo chuàn, wǒ èle!”\nSūnxiǎoyuè zǒu guòlái, shuō:“Wǒ xiǎng zài zhèlǐ pāi zhàopiàn. Zhèlǐ de rén hěnduō, dēnglóng hěn hǎokàn, wǒ xiǎng duō pāi jǐ zhāng.”\nSān gèrén zhàn zài yèshì rùkǒu, shéi yě bùxiǎng qù bié dì dìfāng.\n“Wǒmen zhǐyǒu jīntiān wǎnshàng yǒu shíjiān,” zhàomíngyuǎn shuō,“wǒ zhēn de hěn xiǎng mǎi shǒujī ké.”\n“Wǒ yě zhēn de hěn xiǎng chī kǎo chuàn,” lín yǔqíng shuō.\nSūnxiǎoyuè méi shuōhuà, tā yòu pāile yī zhāng zhàopiàn.\nZhè shíhòu, yīgè mài shǒujī ké de rén zǒu dào zhàomíngyuǎn pángbiān, shuō:“Tóngxué, lái kàn kàn shǒujī ké, hěn piányí, yīgè zhǐyào shí kuài.”\nZhàomíngyuǎn kàn dàole nàgè rénshǒu lǐ de shǒujī ké, yǒu hěnduō yánsè. Tā gēnzhe nàgè rén zǒule jǐ bù, xiǎng kàn kàn hái yǒu shé me bié de shǒujī ké.\n“Zhàomíngyuǎn, nǐ qù nǎlǐ?” Lín yǔqíng wèn.\n“Wǒ qù kàn kàn shǒujī ké, hěn kuài huílái!” Zhàomíngyuǎn shuō.\nLín yǔqíng kàn zhàomíngyuǎn zǒule, tā duì sūnxiǎoyuè shuō:“Nà wǒ qù mǎi kǎo chuàn, nǐ zài zhèlǐ děng wǒ.”\n“Hǎo,” sūnxiǎoyuè shuō.\nLín yǔqíng xiàng xiǎochī tān zǒu qù. Xiǎochī tān qiánmiàn yǒu hěnduō rén, tā zhàn zài rénqún lǐ děngzhe mǎi kǎo chuàn.\nSūnxiǎoyuè zài lù biān pāi dēnglóng. Tā pāile jǐ zhāng zhàopiàn, huítóu kàn, fāxiàn zhàomíngyuǎn hé lín yǔqíng dōu bùjiànle.",
+      "contentEn": "Lin Yuqing, Zhao Mingyuan and Sun Xiaoyue are good friends. Today, Friday night, the three of us went to the school night market together.\nThe night market is on a street in the school. There are many people and it is very lively. As soon as Lin Yuqing arrived at the entrance of the night market, she saw the food stall in front. She was very happy and immediately walked towards the food stall.\n\"I'm going to buy skewers! The skewers here are delicious!\" Lin Yuqing said.\nZhao Mingyuan held her back. \"Wait a minute, let's go look at the mobile phone case first. My mobile phone case is broken and I want to buy a new one. There are many mobile phone cases over there and they are very cheap.\"\n\"You can wait to buy the mobile phone case, but you can't wait to buy the skewers!\" Lin Yuqing said.\nAt this time, Sun Xiaoyue did not go to the food stall, nor did she look at the mobile phone case. She stood on the side of the road taking pictures with her phone. There are many red lanterns in the night market, which are very beautiful.\n\"Look, these lanterns are so beautiful!\" Sun Xiaoyue said.\nZhao Mingyuan looked at Sun Xiaoyue and then at Lin Yuqing. \"Let's look at the phone cases first, then buy skewers, and finally look at the lanterns, okay?\"\n\"not good!\"\nLin Yuqing said, \"Buy skewers first, I'm hungry!\"\nSun Xiaoyue came over and said, \"I want to take photos here. There are many people here and the lanterns are very beautiful. I want to take a few more photos.\"\nThe three of them stood at the entrance of the night market, and no one wanted to go anywhere else.\n\"We only have time tonight,\" Zhao Mingyuan said, \"I really want to buy a mobile phone case.\"\n\"I really want to eat skewers too,\" Lin Yuqing said.\nSun Xiaoyue said nothing, and she took another photo.\nAt this time, a man selling mobile phone cases walked up to Zhao Mingyuan and said, \"Classmate, come and take a look at the mobile phone cases. They are very cheap. They only cost ten yuan each.\"\nZhao Mingyuan saw the mobile phone case in the man's hand, which had many colors. He followed the man a few steps to see if there were any other phone cases.\n\"Zhao Mingyuan, where are you going?\" Lin Yuqing asked.\n\"I'm going to take a look at the phone case. I'll be back soon!\" Zhao Mingyuan said.\nLin Yuqing saw Zhao Mingyuan leaving, and she said to Sun Xiaoyue, \"Then I'll buy skewers. You wait for me here.\"\n\"Okay,\" Sun Xiaoyue said.\nLin Yuqing walked towards the food stall. There were many people in front of the food stall, and she stood in the crowd waiting to buy kebabs.\nSun Xiaoyue took pictures of lanterns on the roadside. She took a few photos, looked back, and found that Zhao Mingyuan and Lin Yuqing were gone.",
+      "questions": [
+        {
+          "q": "王林今天下午三点要做什么？",
+          "qPy": "Wáng Lín jīntiān xiàwǔ sāndiǎn yào zuò shénme?",
+          "qEn": "What does Wang Lin need to do at 3:00 PM today?",
+          "options": [
+            "坐火车去上海",
+            "去学校当老师",
+            "去一家大公司面试"
+          ],
+          "optionsPy": [
+            "Zuò huǒchē qù Shànghǎi",
+            "Qù xuéxiào dāng lǎoshī",
+            "Qù yī jiā dà gōngsī miànshì"
+          ],
+          "optionsEn": [
+            "Take a train to Shanghai",
+            "Go to a school to be a teacher",
+            "Go to a big company for an interview"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "张华为什么要去上海？",
+          "qPy": "Zhāng Huá wèishénme yào qù Shànghǎi?",
+          "qEn": "Why is Zhang Hua going to Shanghai?",
+          "options": [
+            "因为他爸爸在那里等他",
+            "因为他喜欢上海的大学",
+            "因为他要去上海工作"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā bàba zài nàlǐ děng tā",
+            "Yīnwèi tā xǐhuan Shànghǎi de dàxué",
+            "Yīnwèi tā yào qù Shànghǎi gōngzuò"
+          ],
+          "optionsEn": [
+            "Because his dad is waiting for him there",
+            "Because he likes Shanghai's universities",
+            "Because he is going to work in Shanghai"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "很多年以后，谁成了一名 school 老师？",
+          "qPy": "Hěnduō nián yǐhòu, shéi chéngle yī míng xuéxiào lǎoshī?",
+          "qEn": "Many years later, who became a school teacher?",
+          "options": [
+            "张华",
+            "李明",
+            "王林"
+          ],
+          "optionsPy": [
+            "Zhāng Huá",
+            "Lǐ Míng",
+            "Wáng Lín"
+          ],
+          "optionsEn": [
+            "Zhang Hua",
+            "Li Ming",
+            "Wang Lin"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_8",
+      "titleCn": "第一次约定",
+      "titlePy": "Dì-yī cì yuēdìng",
+      "titleEn": "First Promise",
+      "contentCn": "程阳走过来，坐在苏雪的桌子旁边。他小声说：“苏雪，我可以问你一个问题吗？”\n苏雪抬起头，看见程阳的脸很红。她说：“程阳，你怎么了？你的脸怎么这么红？”\n程阳说：“因为我很紧张。我想问你……我们可以一起学习吗？我的中文不太好。”\n苏雪笑了。她说：“可以啊！我的中文也还需要练习。”\n程阳的眼睛亮了。他问：“真的吗？那我们今天下午一起学习？”\n苏雪摇摇头。她说：“今天不行，因为我三点要去上课。但是下个星期二，我们可以在这里见面。”\n程阳点点头。他说：“好！下个星期二下午两点，我在这里等你。”\n苏雪拿出她的笔记本。她说：“程阳，你平时怎么学习中文？”\n程阳说：“我只是看书，但是我不说话。所以我的说话很不好。”\n苏雪说：“那我们星期二可以一起说话。我用中文问你问题，你用中文回答。”\n程阳笑了。他说：“这个办法很好！谢谢你，苏雪。”\n图书馆的钟响了。苏雪站起来，把书放进包里。她说：“我要走了。程阳，星期二见！”\n程阳也站起来。他说：“星期二见！苏雪，谢谢你给我这个机会。”\n苏雪走出图书馆的时候，程阳还站在桌子旁边。他的心跳得很快。他想：“下个星期二，我要早点来。”\n一个星期过去了。程阳每天都很高兴，因为他知道星期二要来了。他每天晚上都练习说中文。他说：“你好，苏雪。今天天气很好。”\n他还练习说：“苏雪，这个汉字怎么读？”\n星期二早上，程阳七点就起床了。他洗了脸，吃了早饭，然后又开始练习中文。他的室友问他：“程阳，你为什么这么高兴？”\n程阳说：“因为今天下午我要和苏雪一起学习！”\n室友说：“苏雪是谁？”\n程阳的脸又红了。他说：“她是图书馆的一个同学。她的中文很好。”\n下午一点半，程阳就到了图书馆。他找了一个很好的桌子，可以看见门。他坐下来，把中文书放在桌子上。他的心又跳得很快。\n一点四十五分，苏雪还没有来。程阳开始担心了。他想：“苏雪会来吧？她不会忘记吧？”\n一点五十分，程阳看见苏雪走进图书馆。她穿着蓝色的毛衣，头发很漂亮。程阳站起来，向她招手。\n苏雪走过来，笑着说：“程阳，你来得这么早！”\n程阳说：“因为我很兴奋。苏雪，谢谢你来了。”\n他们坐下来，开始学习。苏雪拿出她的笔记本，上面写着很多汉字。她说：“程阳，我们先读这些句子，好吗？”\n程阳点点头。他说：“好！我们一起读。”",
+      "contentPy": "Chéng yáng zǒu guòlái, zuò zài sū xuě de zhuōzǐ pángbiān. Tā xiǎoshēng shuō:“Sū xuě, wǒ kěyǐ wèn nǐ yīgè wèntí ma?”\nSū xuě tái qǐtóu, kànjiàn chéng yáng de liǎn hěn hóng. Tā shuō:“Chéng yáng, nǐ zěnmeliǎo? Nǐ de liǎn zěnme zhème hóng?”\nChéng yáng shuō:“Yīnwèi wǒ hěn jǐnzhāng. Wǒ xiǎng wèn nǐ……wǒmen kěyǐ yīqǐ xuéxí ma? Wǒ de zhōngwén bù tài hǎo.”\nSū xuě xiàole. Tā shuō:“Kěyǐ a! Wǒ de zhōngwén yě hái xūyào liànxí.”\nChéng yáng de yǎnjīng liàngle. Tā wèn:“Zhēn de ma? Nà wǒmen jīntiān xiàwǔ yīqǐ xuéxí?”\nSū xuě yáo yáotóu. Tā shuō:“Jīntiān bùxíng, yīnwèi wǒ sān diǎn yào qù shàngkè. Dànshì xià gè xīngqí'èr, wǒmen kěyǐ zài zhèlǐ jiànmiàn.”\nChéng yáng diǎndiǎn tóu. Tā shuō:“Hǎo! Xià gè xīngqí'èr xiàwǔ liǎng diǎn, wǒ zài zhèlǐ děng nǐ.”\nSū xuě ná chū tā de bǐjìběn. Tā shuō:“Chéng yáng, nǐ píngshí zěnme xuéxí zhōngwén?”\nChéng yáng shuō:“Wǒ zhǐshì kànshū, dànshì wǒ bù shuōhuà. Suǒyǐ wǒ de shuōhuà hěn bù hǎo.”\nSū xuě shuō:“Nà wǒmen xīngqí'èr kěyǐ yīqǐ shuōhuà. Wǒ yòng zhōngwén wèn nǐ wèntí, nǐ yòng zhōngwén huídá.”\nChéng yáng xiàole. Tā shuō:“Zhège bànfǎ hěn hǎo! Xièxiè nǐ, sū xuě.”\nTúshū guǎn de zhōng xiǎngle. Sū xuě zhàn qǐlái, bǎ shū fàng jìn bāo lǐ. Tā shuō:“Wǒ yào zǒule. Chéng yáng, xīngqí'èr jiàn!”\nChéng yáng yě zhàn qǐlái. Tā shuō:“Xīngqí'èr jiàn! Sū xuě, xièxiè nǐ gěi wǒ zhège jīhuì.”\nSū xuě zǒuchū túshū guǎn de shíhòu, chéng yáng hái zhàn zài zhuōzǐ pángbiān. Tā de xīntiào dé hěn kuài. Tā xiǎng:“Xià gè xīngqí'èr, wǒ yào zǎodiǎn lái.”\nYīgè xīngqí guòqùle. Chéng yáng měitiān dū hěn gāoxìng, yīnwèi tā zhīdào xīngqí'èr yào láile. Tā měitiān wǎnshàng dū liànxí shuō zhōngwén. Tā shuō:“Nǐ hǎo, sū xuě. Jīntiān tiānqì hěn hǎo.”\nTā hái liànxí shuō:“Sū xuě, zhège hànzì zěnme dú?”\nXīngqí'èr zǎoshang, chéng yáng qī diǎn jiù qǐchuángle. Tā xǐle liǎn, chīle zǎofàn, ránhòu yòu kāishǐ liànxí zhōngwén. Tā de shìyǒu wèn tā:“Chéng yáng, nǐ wèishéme zhème gāoxìng?”\nChéng yáng shuō:“Yīn wéi jīntiān xiàwǔ wǒ yào hé sū xuě yīqǐ xuéxí!”\nShìyǒu shuō:“Sū xuě shì shéi?”\nChéng yáng de liǎn yòu hóngle. Tā shuō:“Tā shì túshū guǎn de yīgè tóngxué. Tā de zhōngwén hěn hǎo.”\nXiàwǔ yīdiǎn bàn, chéng yáng jiù dàole túshū guǎn. Tā zhǎole yīgè hěn hǎo de zhuōzǐ, kěyǐ kànjiàn mén. Tā zuò xiàlái, bǎ zhōngwén shū fàng zài zhuōzǐ shàng. Tā de xīn yòu tiào dé hěn kuài.\nYī diǎn sìshíwǔ fēn, sū xuě hái méiyǒu lái. Chéng yáng kāishǐ dānxīnle. Tā xiǎng:“Sū xuě huì lái ba? Tā bù huì wàngjì ba?”\nYī diǎn wǔshí fēn, chéng yáng kànjiàn sū xuě zǒu jìn túshū guǎn. Tā chuānzhuó lán sè de máoyī, tóufǎ hěn piàoliang. Chéng yáng zhàn qǐlái, xiàng tā zhāoshǒu.\nSū xuě zǒu guòlái, xiàozhe shuō:“Chéng yáng, nǐ láidé zhème zǎo!”\nChéng yáng shuō:“Yīnwèi wǒ hěn xīngfèn. Sū xuě, xièxiè nǐ láile.”\nTāmen zuò xiàlái, kāishǐ xuéxí. Sū xuě ná chū tā de bǐjìběn, shàngmiàn xiězhe hěnduō hànzì. Tā shuō:“Chéng yáng, wǒmen xiān dú zhèxiē jùzǐ, hǎo ma?”\nChéng yáng diǎndiǎn tóu. Tā shuō:“Hǎo! Wǒmen yīqǐ dú.”",
+      "contentEn": "Cheng Yang came over and sat next to Su Xue's table. He whispered: \"Su Xue, can I ask you a question?\"\nSu Xue raised her head and saw Cheng Yang's face was very red. She said: \"Cheng Yang, what's wrong with you? Why is your face so red?\"\nCheng Yang said: \"Because I am very nervous. I want to ask you...can we study together? My Chinese is not very good.\"\nAmelia Su smiled. She said, \"Okay! I still need to practice my Chinese.\"\nCheng Yang's eyes lit up. He asked: \"Really? Let's study together this afternoon?\"\nAmelia Su shook her head. She said: \"Not today, because I have to go to class at three o'clock. But next Tuesday, we can meet here.\"\nCheng Yang nodded. He said: \"Okay! I will wait for you here at two o'clock next Tuesday afternoon.\"\nSu Xue took out her notebook. She said: \"Cheng Yang, how do you usually study Chinese?\"\nCheng Yang said: \"I just read, but I don't speak. So my speaking is very bad.\"\nSu Xue said: \"Then we can talk together on Tuesday. I will ask you questions in Chinese and you will answer in Chinese.\"\nCheng Yang smiled. He said: \"This method is very good! Thank you, Su Xue.\"\nThe library bell rang. Su Xue stood up and put the book into her bag. She said: \"I'm leaving. Cheng Yang, see you on Tuesday!\"\nCheng Yang also stood up. He said: \"See you on Tuesday! Su Xue, thank you for giving me this opportunity.\"\nWhen Su Xue walked out of the library, Cheng Yang was still standing next to the table. His heart was beating fast. He thought: \"Next Tuesday, I will come early.\"\nA week has passed. Cheng Yang is happy every day because he knows Tuesday is coming. He practices speaking Chinese every night. He said: \"Hello, Su Xue. The weather is very good today.\"\nHe also practiced saying: \"Su Xue, how do you pronounce this Chinese character?\"\nOn Tuesday morning, Cheng Yang got up at seven o'clock. He washed his face, had breakfast, and then started practicing Chinese again. His roommate asked him: \"Cheng Yang, why are you so happy?\"\nCheng Yang said: \"Because I have to study with Su Xue this afternoon!\"\nThe roommate said: \"Who is Su Xue?\"\nCheng Yang's face turned red again. He said: \"She is a classmate in the library. Her Chinese is very good.\"\nAt half past one in the afternoon, Cheng Yang arrived at the library. He found a good table with a view of the door. He sat down and put the Chinese book on the table. His heart was beating fast again.\nAt 1:45, Su Xue has not come yet. Cheng Yang started to worry. He thought: \"Will Su Xue come? She won't forget, right?\"\nAt one-fifty, Cheng Yang saw Su Xue walking into the library. She is wearing a blue sweater and has beautiful hair. Cheng Yang stood up and waved to her.\nSu Xue came over and said with a smile: \"Cheng Yang, you came so early!\"\nCheng Yang said: \"Because I am very excited. Su Xue, thank you for coming.\"\nThey sat down and started studying. Su Xue took out her notebook, which had many Chinese characters written on it. She said: \"Cheng Yang, let's read these sentences first, okay?\"\nCheng Yang nodded. He said: \"Okay! Let's read it together.\"",
+      "questions": [
+        {
+          "q": "王梅为什么今天早上迟到了？",
+          "qPy": "Wáng Méi wèishénme yào jīntiān zǎoshang chídào le?",
+          "qEn": "Why was Wang Mei late this morning?",
+          "options": [
+            "因为她起床太晚了",
+            "因为她的自行车坏了",
+            "因为天下大雨了"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā qǐchuáng tài wǎn le",
+            "Yīnwèi tā de zìxíngchē huài le",
+            "Yīnwèi tiān xià dàyǔ le"
+          ],
+          "optionsEn": [
+            "Because she got up too late",
+            "Because her bicycle broke down",
+            "Because it rained heavily"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "跑步以后，李华在小亭子里给王梅什么？",
+          "qPy": "Pǎobù yǐhòu, Lǐ Huá zài xiǎo tíngzi lǐ gěi Wáng Méi shénme?",
+          "qEn": "After running, what did Li Hua give Wang Mei in the small pavilion?",
+          "options": [
+            "一本书",
+            "一张纸",
+            "一瓶水"
+          ],
+          "optionsPy": [
+            "Yī běn shū",
+            "Yī zhāng zhǐ",
+            "Yī píng shuǐ"
+          ],
+          "optionsEn": [
+            "A book",
+            "A piece of paper",
+            "A bottle of water"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "今天下午李华要帮王梅做什么？",
+          "qPy": "Jīntiān xiàwǔ Lǐ Huá yào bāng Wáng Méi zuò shénme?",
+          "qEn": "What will Li Hua help Wang Mei do this afternoon?",
+          "options": [
+            "修自行车",
+            "复习英语",
+            "买新鞋子"
+          ],
+          "optionsPy": [
+            "Xiū zìxíngchē",
+            "Fùxí Yīngyǔ",
+            "Mǎi xīn xiézi"
+          ],
+          "optionsEn": [
+            "Fix the bicycle",
+            "Review English",
+            "Buy new shoes"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_9",
+      "titleCn": "闹钟没有响",
+      "titlePy": "Nàozhōng méiyǒu xiǎng",
+      "titleEn": "Alarm Fails",
+      "contentCn": "星期五晚上，杜月坐在床上看手机。她的眼睛很红，因为今天工作太多了。老板说下个星期要给客户看新计划，所以她必须今天晚上写完。\n“再写一页就好，”杜月对自己说。但是一页变成了五页，五页变成了十页。当她写完的时候，已经晚上两点半了。\n杜月把手机放在桌子上，没有充电。她太累了，连衣服都没有换就睡了。\n第二天早上，阳光从窗户进来，照在她的脸上。杜月睁开眼睛，看见墙上的钟已经八点半了。\n“啊！”她大叫一声。她的闹钟没有响！手机没有电了，所以闹钟没有工作。\n杜月从床上跳起来。她必须九点到达公司，现在只有三十分钟了。她的头发很乱，脸也没有洗。\n“怎么办？怎么办？”她一边说一边找衣服。地上有很多衣服，她不知道哪件是干净的。\n她找到一件白色的衬衫和一条黑色的裙子，快速地穿上。然后她跑去洗手间，一边刷牙一边找袜子。",
+      "contentPy": "Xīngqíwǔ wǎnshàng, dù yuè zuò zài chuángshàng kàn shǒujī. Tā de yǎnjīng hěn hóng, yīn wéi jīntiān gōngzuò tài duōle. Lǎobǎn shuō xià gè xīngqí yào gěi kèhù kàn xīn jìhuà, suǒyǐ tā bìxū jīntiān wǎnshàng xiě wán.\n“Zài xiě yī yè jiù hǎo,” dù yuè duì zìjǐ shuō. Dànshì yī yè biàn chéngle wǔ yè, wǔ yè biàn chéngle shí yè. Dāng tā xiě wán de shíhòu, yǐjīng wǎnshàng liǎng diǎn bànle.\nDù yuè bǎ shǒujī fàng zài zhuōzǐ shàng, méiyǒu chōngdiàn. Tā tài lèile, lián yīfú dōu méiyǒu huàn jiù shuìle.\nDì èr tiān zǎoshang, yángguāng cóng chuānghù jìnlái, zhào zài tā de liǎn shàng. Dù yuè zhēng kāi yǎnjīng, kànjiàn qiáng shàng de zhōng yǐjīng bā diǎn bànle.\n“A!” Tā dà jiào yīshēng. Tā de nàozhōng méiyǒu xiǎng! Shǒujī méiyǒu diànle, suǒyǐ nàozhōng méiyǒu gōngzuò.\nDù yuè cóng chuángshàng tiào qǐlái. Tā bìxū jiǔ diǎn dàodá gōngsī, xiànzài zhǐyǒu sānshí fēnzhōngle. Tā de tóufǎ hěn luàn, liǎn yě méiyǒu xǐ.\n“Zěnme bàn? Zěnme bàn?” Tā yībiān shuō yībiān zhǎo yīfú. Dìshàng yǒu hěnduō yīfú, tā bù zhīdào nǎ jiàn shì gānjìng de.\nTā zhǎodào yī jiàn báisè de chènshān hé yītiáo hēisè de qúnzǐ, kuàisù de chuān shàng. Ránhòu tā pǎo qù xǐshǒujiān, yībiān shuāyá yībiān zhǎo wàzǐ.",
+      "contentEn": "On Friday night, Du Yue sat on the bed and looked at her mobile phone. Her eyes are very red because she has too much work today. The boss said she would show the new plan to the client next week, so she had to finish it tonight.\n\"Just write another page,\" Du Yue said to herself. But one page turned into five pages, and five pages turned into ten pages. When she finished writing, it was already half past two in the evening.\nDu Yue put her phone on the table without charging it. She was so tired that she went to bed without changing her clothes.\nThe next morning, the sun came in through the window and shone on her face. Du Yue opened her eyes and saw that it was half past eight on the clock on the wall.\n\"Ah!\" she shouted. Her alarm didn't go off! The phone is out of battery, so the alarm clock isn't working.\nDu Yue jumped up from the bed. She must arrive at the company at nine o'clock, and now there is only thirty minutes left. Her hair was messy and her face was unwashed.\n\"What should I do? What should I do?\" she said while looking for clothes. There were many clothes on the floor, and she didn't know which ones were clean.\nShe found a white shirt and a black skirt and quickly put them on. Then she ran to the bathroom and looked for socks while brushing her teeth.",
+      "questions": [
+        {
+          "q": "今天早上李晴的闹钟为什么没有响？",
+          "qPy": "Jīntiān zǎoshang Lǐ Qíng de nàozhōng wèishénme méiyǒu xiǎng?",
+          "qEn": "Why didn't Li Qing's alarm clock ring this morning?",
+          "options": [
+            "因为她把闹钟忘在公司了",
+            "因为她的手机没电关机了",
+            "开因为她没有设闹钟"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā bǎ nàozhōng wàng zài gōngsī le",
+            "Yīnwèi tā de shǒujī méidiàn guānjī le",
+            "Yīnwèi tā méiyǒu shè nàozhōng"
+          ],
+          "optionsEn": [
+            "Because she forgot her alarm clock at the office",
+            "Because her phone ran out of power and shut off",
+            "Because she didn't set the alarm"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "李晴是怎么去公司的？",
+          "qPy": "Lǐ Qíng shì zěnme qù gōngsī de?",
+          "qEn": "How did Li Qing go to the office?",
+          "options": [
+            "先走路，然后坐地铁",
+            "一直坐出租车",
+            "骑自行车"
+          ],
+          "optionsPy": [
+            "Xiān zǒulù, ránhòu zuò dìtiě",
+            "Yīzhí zuò chūzūchē",
+            "Qí zìxíngchē"
+          ],
+          "optionsEn": [
+            "Walked first, then took the subway",
+            "Took a taxi all the way",
+            "Rode a bicycle"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "会议开始后，李晴发现她把什么忘在家里了？",
+          "qPy": "Huìyì kāishǐ hòu, Lǐ Qíng fāxiàn tā bǎ shénme wàng zài jiālǐ le?",
+          "qEn": "After the meeting started, what did Li Qing realize she had forgotten at home?",
+          "options": [
+            "包",
+            "手机",
+            "电脑"
+          ],
+          "optionsPy": [
+            "Bāo",
+            "Shǒujī",
+            "Diànnǎo"
+          ],
+          "optionsEn": [
+            "Her bag",
+            "Her phone",
+            "Her laptop"
+          ],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": "essay_2_10",
+      "titleCn": "爱的决定",
+      "titlePy": "Ài de juédìng",
+      "titleEn": "Choose Love",
+      "contentCn": "吴子轩把手机放进包里，然后站起来。他再看一次单子，然后走出去。他一边走，一边想：今天一定要给叶子晴最好的晚上。\n超市里很多人。吴子轩推着车，慢慢走。他找鸡蛋，找米饭，找绿色的豆子。有一个老太太对他说：“年轻人，你知道胡萝卜在哪里吗？”\n吴子轩说：“对不起，我也不知道。”他有点紧张，因为他的单子很长。\n他找到所有的东西以后，去收钱的地方。收钱的小姐说：“一百二十块。”吴子轩拿出钱，然后拿着三个大袋子回家。\n到家以后，他把所有的东西放在厨房桌子上。他再看一次视频，然后开始准备。他先把鸡蛋打进碗里，然后用筷子打鸡蛋。他的手有点抖，因为这是他第一次做饭。\n“要先放油，”他对自己说。他打开火，把油放进锅里。油很热，他听到“zi zi”的声音。吴子轩有点害怕，往后退了一步。\n他把鸡蛋倒进锅里。鸡蛋马上变成黄色，很好看。他用铲子炒鸡蛋，但是有一块鸡蛋飞出来，掉在地上。“没关系，”他说，“叶子晴不会知道。”\n接着他放米饭，放豆子，放小的虾。厨房里有很多烟，他的眼睛有点疼。但是炒饭闻起来很香！\n突然，他的手机响了。是叶子晴的信息：“子轩，我七点到你家。”吴子轩看时间，已经六点了！他还有很多事情要做。\n他更快地工作。他找两个漂亮的盘子，洗好，擦干。他把炒饭放进盘子里，然后尝一口。“啊！”\n他大叫，“没有味道！”\n他马上放盐，再放一点酱油。再尝一口，这次他笑了。“好吃！”他说。\n他把盘子放在桌子上，然后跑出去买花。花店的小姐给他红玫瑰。他回家以后，把花放在炒饭旁边。\n门铃响了。吴子轩的心跳得很快。他开门，叶子晴站在那里，穿着白色的裙子。她闻到味道，说：“什么这么香？”\n吴子轩笑着说：“我给你一个特别的晚上。我做饭了！”\n叶子晴走进来，看见桌上的炒饭和花。她的眼睛变大，说：“你...你为我做饭？”她的声音有点颤抖。\n吴子轩点头，说：“今天是我们认识一百天。我想让你高兴。”\n叶子晴坐下来，拿起筷子。她吃一口，然后停住。吴子轩很紧张，问：“怎么样？”\n叶子晴看着他，慢慢笑了。她说：“这是我吃过最好吃的炒饭。”然后她站起来，亲了吴子轩的脸。\n吴子轩的脸变红了。他想：第一次做饭，成功了！",
+      "contentPy": "Wúzǐxuān bǎ shǒujī fàng jìn bāo lǐ, ránhòu zhàn qǐlái. Tā zài kàn yīcì dānzǐ, ránhòu zǒu chūqù. Tā yībiān zǒu, yībiān xiǎng: Jīntiān yīdìng yào gěi yèzǐ qíng zuì hǎo de wǎnshàng.\nChāoshì lǐ hěnduō rén. Wúzǐxuān tuīzhe chē, màn man zǒu. Tā zhǎo jīdàn, zhǎo mǐfàn, zhǎo lǜsè de dòuzǐ. Yǒu yīgè lǎo tàitài duì tā shuō:“Niánqīng rén, nǐ zhīdào húluóbo zài nǎlǐ ma?”\nWúzǐxuān shuō:“Duìbùqǐ, wǒ yě bù zhīdào.” Tā yǒudiǎn jǐnzhāng, yīnwèi tā de dānzǐ hěn zhǎng.\nTā zhǎodào suǒyǒu de dōngxī yǐhòu, qù shōu qián dì dìfāng. Shōu qián de xiǎojiě shuō:“Yībǎi èrshí kuài.” Wúzǐxuān ná chū qián, ránhòu ná zháo sān gè dà dàizǐ huí jiā.\nDàojiā yǐhòu, tā bǎ suǒyǒu de dōngxī fàng zài chúfáng zhuōzǐ shàng. Tā zài kàn yīcì shìpín, ránhòu kāishǐ zhǔnbèi. Tā xiān bǎ jīdàn dǎ jìn wǎn lǐ, ránhòu yòng kuàizǐ dǎ jīdàn. Tā de shǒu yǒudiǎn dǒu, yīnwèi zhè shì tā dì yī cì zuò fàn.\n“Yào xiān fàng yóu,” tā duì zìjǐ shuō. Tā dǎkāi huǒ, bǎ yóu fàng jìn guō lǐ. Yóu hěn rè, tā tīng dào “zi zi” de shēngyīn. Wúzǐxuān yǒudiǎn hàipà, wǎng hòutuìle yībù.\nTā bǎ jīdàn dào jìn guō lǐ. Jīdàn mǎshàng biàn chéng huángsè, hěn hǎokàn. Tā yòng chǎnzǐ chǎo jīdàn, dànshì yǒu yīkuài jīdàn fēi chūlái, diào zài dìshàng.“Méiguānxì,” tā shuō,“yèzǐ qíng bù huì zhīdào.”\nJiēzhe tā fàng mǐfàn, fàng dòuzǐ, fàng xiǎo de xiā. Chúfáng li yǒu hěnduō yān, tā de yǎnjīng yǒudiǎn téng. Dànshì chǎofàn wén qǐlái hěn xiāng!\nTúrán, tā de shǒujī xiǎngle. Shì yèzǐ qíng de xìnxī:“Zǐ xuān, wǒ qī diǎn dào nǐ jiā.” Wúzǐxuān kàn shíjiān, yǐjīng liù diǎnle! Tā hái yǒu hěnduō shìqíng yào zuò.\nTā gèng kuài dì gōngzuò. Tā zhǎo liǎng gè piàoliang de pánzǐ, xǐ hǎo, cā gān. Tā bǎ chǎofàn fàng jìn pánzǐ lǐ, ránhòu cháng yīkǒu.“A!”\nTā dà jiào,“méiyǒu wèidào!”\nTā mǎshàng fàng yán, zài fàng yīdiǎn jiàngyóu. Zài cháng yīkǒu, zhè cì tā xiàole.“Hào chī!” Tā shuō.\nTā bǎ pánzǐ fàng zài zhuōzǐ shàng, ránhòu pǎo chūqù mǎi huā. Huā diàn de xiǎojiě gěi tā hóng méiguī. Tā huí jiā yǐhòu, bǎ huā fàng zài chǎofàn pángbiān.\nMénlíng xiǎngle. Wúzǐxuān de xīntiào dé hěn kuài. Tā kāimén, yèzǐ qíng zhàn zài nàlǐ, chuānzhuó báisè de qúnzǐ. Tā wén dào wèidào, shuō:“Shénme zhème xiāng?”\nWúzǐxuān xiàozhe shuō:“Wǒ gěi nǐ yīgè tèbié de wǎnshàng. Wǒ zuò fànle!”\nYèzǐ qíng zǒu jìnlái, kànjiàn zhuō shàng de chǎofàn hé huā. Tā de yǎnjīng biàn dà, shuō:“Nǐ... Nǐ wèi wǒ zuò fàn?” Tā de shēngyīn yǒudiǎn chàndǒu.\nWúzǐxuān diǎntóu, shuō:“Jīntiān shì wǒmen rènshí yībǎi tiān. Wǒ xiǎng ràng nǐ gāoxìng.”\nYèzǐ qíng zuò xiàlái, ná qǐ kuàizǐ. Tā chī yīkǒu, ránhòu tíng zhù. Wúzǐxuān hěn jǐnzhāng, wèn:“Zěnme yàng?”\nYèzǐ qíng kànzhe tā, màn man xiàole. Tā shuō:“Zhè shì wǒ chīguò zuì hào chī de chǎofàn.” Ránhòu tā zhàn qǐlái, qīnle wúzǐxuān de liǎn.\nWúzǐxuān de liǎn biàn hóngle. Tā xiǎng: Dì yī cì zuò fàn, chénggōngle!",
+      "contentEn": "Wu Zixuan put his phone in his bag and stood up. He looked at the list again and walked out. As he walked, he thought: I must give Ye Ziqing the best night today.\nThere are many people in the supermarket. Wu Zixuan pushed the cart and walked slowly. He looked for eggs, rice, and green beans. An old lady said to him: \"Young man, do you know where the carrot is?\"\nWu Zixuan said: \"I'm sorry, I don't know either.\" He was a little nervous because his list was very long.\nAfter he found everything, he went to the place where the money was collected. The lady who collected the money said: \"One hundred and twenty yuan.\" Wu Zixuan took out the money and went home with three big bags.\nWhen he got home, he put everything on the kitchen table. He watched the video again and began to prepare. He first cracked the eggs into the bowl, then beat the eggs with chopsticks. His hands were shaking a little because this was his first time cooking.\n\"Let the oil go first,\" he said to himself. He turned on the fire and put the oil into the pot. The oil was hot and he heard a \"zi zi\" sound. Wu Zixuan was a little scared and took a step back.\nHe poured the eggs into the pot. The eggs will turn yellow immediately, which is very beautiful. He scrambled the eggs with a shovel, but a piece of the egg flew out and fell to the ground. \"It doesn't matter,\" he said, \"Ye Ziqing won't know.\"\nThen he put rice, beans, and small shrimps. There was a lot of smoke in the kitchen and his eyes hurt a little. But the fried rice smells delicious!\nSuddenly, his cell phone rang. It was a message from Ye Ziqing: \"Zixuan, I will be at your house at seven o'clock.\" Wu Zixuan looked at the time and it was already six o'clock! He still has a lot to do.\nHe works faster. He found two beautiful dishes, washed them, and dried them. He put the fried rice on the plate and took a bite. \"ah!\"\nHe yelled, \"There's no taste!\"\nHe immediately put salt and a little soy sauce. Another taste and this time he smiled. \"Delicious!\" he said.\nHe put the plate on the table and ran out to buy flowers. The florist girl gave him red roses. When he got home, he put the flowers next to the fried rice.\nThe doorbell rang. Wu Zixuan's heart beat very fast. He opened the door and Ye Ziqing stood there, wearing a white skirt. She smelled it and said, \"What smells so good?\"\nWu Zixuan smiled and said, \"I'll give you a special evening. I'll cook!\"\nYe Ziqing walked in and saw fried rice and flowers on the table. Her eyes got bigger and she said, \"You...you cook for me?\" Her voice was a little trembling.\nWu Zixuan nodded and said, \"Today marks the 100th day we have known each other. I want to make you happy.\"\nYe Ziqing sat down and picked up the chopsticks. She took a bite, then paused. Wu Zixuan was very nervous and asked: \"How is it?\"\nYe Ziqing looked at him and smiled slowly. She said: \"This is the best fried rice I have ever eaten.\" Then she stood up and kissed Wu Zixuan on the face.\nWu Zixuan's face turned red. He thought: Cooking for the first time, it was a success!",
+      "questions": [
+        {
+          "q": "咪咪是一只什么样的宠物？",
+          "qPy": "Mīmī shì yī zhī shénmeyàng de chǒngwù?",
+          "qEn": "What kind of pet is Mimi?",
+          "options": [
+            "老奶奶养的狗",
+            "陪伴老奶奶十二年的白猫",
+            "王医生的黑色小猫"
+          ],
+          "optionsPy": [
+            "Lǎonǎinai yǎng de gǒu",
+            "Péibàn lǎonǎinai shí'èr nián de bái māo",
+            "Wáng yīshēng de hēisè xiǎomāo"
+          ],
+          "optionsEn": [
+            "A dog raised by the grandma",
+            "A white cat that accompanied the grandma for 12 years",
+            "Dr. Wang's black kitten"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "王医生为什么觉得应该让咪咪舒服地走？",
+          "qPy": "Wáng yīshēng wèishénme juéde yīnggāi ràng Mīmī shūfu de zǒu?",
+          "qEn": "Why did Dr. Wang feel they should let Mimi go peacefully?",
+          "options": [
+            "因为咪咪的心脏有大问题，治疗会让它更疼",
+            "开因为医院里没有猫吃的东西了",
+            "因为老奶奶没有钱给它买药"
+          ],
+          "optionsPy": [
+            "Yīnwèi Mīmī de xīnzàng yǒu dà wèntí, zhìliáo huì ràng tā gèng téng",
+            "Yīnwèi yīyuàn lǐ méiyǒu māo chī de dōngxi le",
+            "Yīnwèi lǎonǎinai méiyǒu qián gěi tā mǎi yào"
+          ],
+          "optionsEn": [
+            "Because Mimi's heart has a big problem, and treatment will make her hurt more",
+            "Because there is no cat food in the hospital",
+            "Because the grandma has no money to buy medicine for her"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "王医生给咪咪打完针以后，咪咪怎么样了？",
+          "qPy": "Wáng yīshēng gěi Mīmī dǎ wán zhēn yǐhòu, Mīmī zěnmeyàng le?",
+          "qEn": "What happened to Mimi after Dr. Wang gave her the injection?",
+          "options": [
+            "醒了过来开始吃东西",
+            "安静地睡着了（死去了）",
+            "高兴地在地上跳"
+          ],
+          "optionsPy": [
+            "Xǐngle guòlai kāishǐ chī dōngxi",
+            "Ānjìng de shuìzháo le (sǐqù le)",
+            "Gāoxìng de zài dìshàng tiào"
+          ],
+          "optionsEn": [
+            "Woke up and started eating",
+            "Fell asleep peacefully (passed away)",
+            "Jumped happily on the ground"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_11",
+      "titleCn": "健身房门口",
+      "titlePy": "Jiànshēnfáng ménkǒu",
+      "titleEn": "Gym Entrance",
+      "contentCn": "文杰站在健身房门口，他的手放在门把手上，但是他不拉门。他看进去，看见很多男人，他们的肌肉很大。文杰想：“我太瘦小了，他们会笑我吗？”\n一个高个子男人走过来，他的手臂像文杰的腿那么粗。男人推开门进去，门“叮”的一声。文杰的心跳得很快，他后退一步。\n“你是新来的吗？”一个声音在文杰后面说。\n文杰转身，看见一个女人。她穿着黑色的运动服，头发很短。\n“我...我是文杰。”文杰说，他的声音很小。\n女人笑了：“我是顾教练。你预约了三点，对吗？”\n文杰点头。他看手表，已经三点零五分了。\n“我们进去吧。”顾教练说，她向前走。\n文杰不动。他说：“里面的人...他们都很强壮。”\n顾教练停下来。她看文杰的眼睛，说：“他们昨天也像你一样。每个人都是从第一次开始的。”\n“但是我的手臂这么细...”文杰摸自己的手臂。\n“所以我们来锻炼啊。”\n顾教练笑，“你不是来变成他们，你是来变成更好的自己。”\n文杰看里面，又看顾教练。他深吸一口气，说：“好...好的。”\n他们一起走向门口。当文杰拉门的时候，他的手还在发抖。门开了，健身房的空气很冷，有金属的味道。\n一个正在举重的男人看过来。文杰想跑，但是顾教练的手放在他的背上。\n“我们先去换衣服。”\n顾教练说，“你的柜子在这里。”\n文杰跟着她走，他的腿像木头一样硬。他想：“我现在真的进来了。”",
+      "contentPy": "Wén jié zhàn zài jiànshēnfáng ménkǒu, tā de shǒu fàng zài mén bǎshǒu shàng, dànshì tā bù lā mén. Tā kàn jìnqù, kànjiàn hěnduō nánrén, tāmen de jīròu hěn dà. Wén jié xiǎng:“Wǒ tài shòuxiǎole, tāmen huì xiào wǒ ma?”\nYīgè gāo gèzǐ nánrén zǒu guòlái, tā de shǒubì xiàng wén jié de tuǐ nàme cū. Nánrén tuī kāi mén jìnqù, mén “dīng” de yīshēng. Wén jié de xīntiào dé hěn kuài, tā hòutuì yībù.\n“Nǐ shì xīn lái de ma?” Yīgè shēngyīn zài wén jié hòumiàn shuō.\nWén jié zhuǎnshēn, kànjiàn yīgè nǚrén. Tā chuānzhuó hēisè de yùndòng fú, tóufǎ hěn duǎn.\n“Wǒ... Wǒ shì wén jié.” Wén jié shuō, tā de shēngyīn hěn xiǎo.\nNǚrén xiàole:“Wǒ shì gù jiàoliàn. Nǐ yùyuēle sān diǎn, duì ma?”\nWén jié diǎntóu. Tā kàn shǒubiǎo, yǐjīng sān diǎn líng wǔ fēnle.\n“Wǒmen jìnqù ba.” Gù jiàoliàn shuō, tā xiàng qián zǒu.\nWén jié bù dòng. Tā shuō:“Lǐmiàn de rén... Tāmen dōu hěn qiángzhuàng.”\nGù jiàoliàn tíng xiàlái. Tā kàn wén jié de yǎnjīng, shuō:“Tāmen zuótiān yě xiàng nǐ yīyàng. Měi gèrén dōu shì cóng dì yī cì kāishǐ de.”\n“Dànshì wǒ de shǒubì zhème xì...” Wén jié mō zìjǐ de shǒubì.\n“Suǒyǐ wǒmen lái duànliàn a.”\nGù jiàoliàn xiào,“nǐ bùshì lái biàn chéng tāmen, nǐ shì lái biàn chéng gèng hǎo de zìjǐ.”\nWén jié kàn lǐmiàn, yòu kàngù jiàoliàn. Tā shēn xī yī kǒuqì, shuō:“Hǎo... Hǎo de.”\nTāmen yīqǐ zǒuxiàng ménkǒu. Dāng wén jié lā mén de shíhòu, tā de shǒu hái zài fādǒu. Mén kāile, jiànshēnfáng de kōngqì hěn lěng, yǒu jīnshǔ de wèidào.\nYīgè zhèngzài jǔzhòng de nánrén kàn guòlái. Wén jié xiǎng pǎo, dànshì gù jiàoliàn de shǒu fàng zài tā de bèi shàng.\n“Wǒmen xiān qù huàn yīfú.”\nGù jiàoliàn shuō,“nǐ de guìzǐ zài zhèlǐ.”\nWén jié gēnzhe tā zǒu, tā de tuǐ xiàng mùtou yīyàng yìng. Tā xiǎng:“Wǒ xiànzài zhēn de jìnláile.”",
+      "contentEn": "Wenjie stood at the door of the gym, his hand on the door handle, but he didn't open the door. He looked in and saw many men with huge muscles. Wenjie thought: \"I'm too thin, will they laugh at me?\"\nA tall man came over. His arms were as thick as Wenjie's legs. The man pushed the door open and went in. The door dinged. Wenjie's heart was beating fast and he took a step back.\n\"Are you new here?\" a voice said behind Wenjie.\nWenjie turned around and saw a woman. She was wearing a black tracksuit and her hair was short.\n\"I...I am Wenjie.\" Wenjie said, his voice was very small.\nThe woman smiled: \"I'm Coach Gu. You made an appointment at three o'clock, right?\"\nWenjie nodded. He looked at his watch. It was already three past five.\n\"Let's go in.\" Coach Gu said as she walked forward.\nWenjie didn't move. \"The people inside... they're all strong,\" he said.\nCoach Gu stopped. She looked into Wenjie's eyes and said, \"They were just like you yesterday. Everyone started from the first time.\"\n\"But my arms are so thin...\" Wenjie touched his arm.\n\"So let's exercise.\"\nCoach Gu smiled, \"You are not here to become them, you are here to become a better version of yourself.\"\nWenjie looked inside and then at the coach. He took a deep breath and said, \"Okay... okay.\"\nThey walked toward the door together. When Wenjie opened the door, his hands were still shaking. The door opened, and the air in the gym was cold and smelled of metal.\nA man lifting weights looked over. Wenjie wanted to run, but Coach Gu put his hand on his back.\n\"Let's go change clothes first.\"\nCoach Gu said, \"Your locker is here.\"\nWenjie followed her, his legs as hard as wood. He thought: \"Now I'm really in.\"",
+      "questions": [
+        {
+          "q": "文杰在健身房门口为什么不进去？",
+          "qPy": "Wén Jié zài jiànshēnfáng ménkǒu wèishénme bù jìnqu?",
+          "qEn": "Why didn't Wenjie go inside at the gym entrance?",
+          "options": [
+            "因为他觉得里面太冷了",
+            "因为他觉得自己太瘦小，怕别人笑他",
+            "因为他没有预约时间"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā juéde lǐmiàn tài lěng le",
+            "Yīnwèi tā juéde zìjǐ tài shòuxiǎo, pà biérén xiào tā",
+            "Yīnwèi tā méiyǒu yùyuē shíjiān"
+          ],
+          "optionsEn": [
+            "Because he thought it was too cold inside",
+            "Because he felt he was too thin and small, and feared others would laugh at him",
+            "Because he didn't make an appointment"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "顾教练是谁？",
+          "qPy": "Gù jiàoliàn shì shéi?",
+          "qEn": "Who is Coach Gu?",
+          "options": [
+            "一个正在举重的男人",
+            "文杰的大学同学",
+            "穿着黑色运动服的女教练"
+          ],
+          "optionsPy": [
+            "Yī gè zhèngzài jǔzhòng de nánrén",
+            "Wén Jié de dàxué tóngxué",
+            "Chuānzhe hēisè yùndòngfú de nǚ jiàoliàn"
+          ],
+          "optionsEn": [
+            "A man who is lifting weights",
+            "Wenjie's university classmate",
+            "A female coach wearing black sportswear"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "顾教练对文杰说了什么？",
+          "qPy": "Gù jiàoliàn duì Wén Jié shuōle shénme?",
+          "qEn": "What did Coach Gu say to Wenjie?",
+          "options": [
+            "别来了，你太瘦小了",
+            "每个人都是从第一次开始的，你是来变成更好的自己",
+            "你的柜子不在这里"
+          ],
+          "optionsPy": [
+            "Bié lái le, nǐ tài shòuxiǎo le",
+            "Měi gè rén dōu shì cóng dì-yī cì kāishǐ de, nǐ shì lái biànchéng gèng hǎo de zìjǐ",
+            "Nǐ de guìzi bù zài zhèlǐ"
+          ],
+          "optionsEn": [
+            "Don't come, you are too thin and small",
+            "Everyone starts from the first time, and you are here to become a better version of yourself",
+            "Your locker is not here"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_12",
+      "titleCn": "太热的晚上",
+      "titlePy": "Tài rè de wǎnshang",
+      "titleEn": "Too Hot a Night",
+      "contentCn": "今天下午五点，火车到了城市。\n林建国拿着一个大的包走下火车。他六十五岁了，从南方乡下来。城市里的人很多，车也很多，声音很大。林建国看了看，心里想，这里和乡下不一样。\n“爸！这里！”儿子志远在叫他。\n林建国看到儿子，笑了。志远四十岁，在城市工作十年了。他走过来，拿过爸爸的包。“爸，坐火车累不累？”\n“不累，不累。”林建国说。\n他跟着儿子走到车旁边。车上，志远说：“爸，我们家不大，您住几天就习惯了。”\n林建国看看窗外。窗外的楼很高，车一辆一辆的，人走来走去。他说：“这里人真多。”\n二十分钟后，他们到了儿子家。儿子家在八楼，不大，有两个房间。小雪和苏悦在家里。小雪是志远的女儿，十六岁。苏悦是志远的妻子，三十八岁。\n“爷爷！”小雪看到爷爷，很高兴。\n“小雪，你好！”林建国笑着说。\n苏悦走过来，说：“爸，您来了。我和小雪做了晚饭，您吃一点。”\n晚饭有四个菜，很好吃。林建国吃了一口，说：“好吃，好吃。”苏悦听了，笑了笑。\n晚上九点，志远说：“爸，您早点睡吧。您的房间在这里。”\n林建国的房间不大。他躺在床上，觉得很热。窗外的车声很大，一辆一辆的车在走。他闭上眼睛，可是车声一直在。他想到乡下的家，那里晚上很安静，没有车声。\n他起来，走到窗边。窗外，城市的灯很亮，车还在走。他看了看，又回到床上。\n这一夜，林建国没睡好。",
+      "contentPy": "Jīntiān xiàwǔ wǔ diǎn, huǒchē dàole chéngshì.\nLínjiànguó názhe yīgè dà de bāo zǒu xià huǒchē. Tā liùshíwǔ suìle, cóng nánfāng xiāngxiàlái. Chéngshì lǐ de rén hěnduō, chē yě hěnduō, shēngyīn hěn dà. Línjiànguó kànle kàn, xīnlǐ xiǎng, zhèlǐ hé xiāng xià bù yīyàng.\n“Bà! Zhèlǐ!” Érzǐ zhì yuǎn zài jiào tā.\nLínjiànguó kàn dào érzǐ, xiàole. Zhì yuǎn sìshí suì, zài chéngshì gōngzuò shí niánle. Tā zǒu guòlái, náguò bàba de bāo.“Bà, zuò huǒchē lèi bù lèi?”\n“Bù lèi, bù lèi.” Línjiànguó shuō.\nTā gēn zhāo er zǐ zǒu dào chē pángbiān. Chē shàng, zhì yuǎn shuō:“Bà, wǒmen jiā bù dà, nín zhù jǐ tiān jiù xíguànle.”\nLínjiànguó kàn kàn chuāngwài. Chuāngwài de lóu hěn gāo, chē yī liàng yī liàng de, rén zǒu lái zǒu qù. Tā shuō:“Zhèlǐ rén zhēn duō.”\nÈrshí fēnzhōng hòu, tāmen dào liǎo er zǐ jiā. Érzǐ jiā zài bā lóu, bù dà, yǒu liǎng gè fángjiān. Xiǎoxuě hé sū yuè zài jiālǐ. Xiǎoxuě shì zhì yuǎn de nǚ'ér, shíliù suì. Sū yuè shì zhì yuǎn de qīzǐ, sānshíbā suì.\n“Yéyé!” Xiǎoxuě kàn dào yéyé, hěn gāoxìng.\n“Xiǎoxuě, nǐ hǎo!” Línjiànguó xiàozhe shuō.\nSū yuè zǒu guòlái, shuō:“Bà, nín láile. Wǒ hé xiǎoxuě zuòle wǎnfàn, nín chī yīdiǎn.”\nWǎnfàn yǒu sì gè cài, hěn hào chī. Línjiànguó chīle yīkǒu, shuō:“Hào chī, hào chī.” Sū yuè tīngle, xiàole xiào.\nWǎnshàng jiǔ diǎn, zhì yuǎn shuō:“Bà, nín zǎodiǎn shuì ba. Nín de fángjiān zài zhèlǐ.”\nLínjiànguó de fángjiān bù dà. Tā tǎng zài chuángshàng, juédé hěn rè. Chuāngwài de chē shēng hěn dà, yī liàng yī liàng de chē zài zǒu. Tā bì shàng yǎnjīng, kěshì chē shēng yīzhí zài. Tā xiǎngdào xiāngxià de jiā, nàlǐ wǎnshàng hěn ānjìng, méiyǒu chē shēng.\nTā qǐlái, zǒu dào chuāng biān. Chuāngwài, chéngshì de dēng hěn liàng, chē hái zài zǒu. Tā kànle kàn, yòu huí dào chuángshàng.\nZhè yīyè, línjiànguó méi shuì hǎo.",
+      "contentEn": "At five o'clock this afternoon, the train arrived in the city.\nLin Jianguo walked off the train holding a big bag. He is sixty-five years old and comes from the southern countryside. There are many people and cars in the city, and the noise is very loud. Lin Jianguo looked at it and thought to himself, this place is different from the countryside.\n\"Dad! Here!\" His son Zhiyuan called him.\nLin Jianguo smiled when he saw his son. Zhiyuan is forty years old and has been working in the city for ten years. He came over and took his father's bag. \"Dad, are you tired from taking the train?\"\n\"Not tired, not tired.\" Lin Jianguo said.\nHe followed his son to the car. In the car, Zhiyuan said: \"Dad, our family is not big, you can get used to it after living here for a few days.\"\nLin Jianguo looked out the window. The buildings outside the window are very high, there are cars one after another, and people are walking around. \"There are so many people here,\" he said.\nTwenty minutes later, they arrived at their son's house. My son's house is on the eighth floor. It's not big, with two rooms. Xiaoxue and Su Yue are at home. Xiaoxue is Zhiyuan's daughter, sixteen years old. Su Yue is Zhiyuan's wife, thirty-eight years old.\n\"Grandpa!\" Xiaoxue was very happy to see her grandpa.\n\"Hello, Xiaoxue!\" Lin Jianguo said with a smile.\nSu Yue came over and said, \"Dad, you are here. Xiaoxue and I made dinner, you can eat some.\"\nThere are four dishes for dinner, which are delicious. Lin Jianguo took a bite and said, \"It's delicious, it's delicious.\" Su Yue smiled after hearing this.\nAt nine o'clock in the evening, Zhiyuan said: \"Dad, please go to bed early. Your room is here.\"\nLin Jianguo's room is not big. He was lying on the bed and felt very hot. The sound of cars outside the window was very loud, and cars were passing one by one. He closed his eyes, but the sound of the car kept coming. He thought of his home in the country, where it was quiet at night and there was no sound of cars.\nHe got up and went to the window. Outside the window, the city lights are bright and the cars are still moving. He looked at it and went back to bed.\nThat night, Lin Jianguo didn't sleep well.",
+      "questions": [
+        {
+          "q": "林建国是从哪里来的？",
+          "qPy": "Lín Jiànguó shì cóng nǎlǐ lái de?",
+          "qEn": "Where did Lin Jianguo come from?",
+          "options": [
+            "上海",
+            "南方的乡下",
+            "北方的城市"
+          ],
+          "optionsPy": [
+            "Shànghǎi",
+            "Nánfāng de xiāngxià",
+            "Běifāng de chéngshì"
+          ],
+          "optionsEn": [
+            "Shanghai",
+            "Southern countryside",
+            "Northern city"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "志远家在几楼？",
+          "qPy": "Zhìyuǎn jiā zài jǐ lóu?",
+          "qEn": "Which floor is Zhiyuan's home on?",
+          "options": [
+            "二楼",
+            "六楼",
+            "八楼"
+          ],
+          "optionsPy": [
+            "èr lóu",
+            "Liù lóu",
+            "Bā lóu"
+          ],
+          "optionsEn": [
+            "Second floor",
+            "Sixth floor",
+            "Eighth floor"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "林建国第一天晚上为什么没睡好？",
+          "qPy": "Lín Jiànguó dì-yī tiān wǎnshang wèishénme méi shuì hǎo?",
+          "qEn": "Why did Lin Jianguo not sleep well on his first night?",
+          "options": [
+            "因为房间太冷了",
+            "因为觉得很热，而且窗外的车声很大",
+            "因为他想念他的儿子"
+          ],
+          "optionsPy": [
+            "Yīnwèi fángjiān tài lěng le",
+            "Yīnwèi juéde hěn rè, érqiě chuāngwài de chēshēng hěn dà",
+            "Yīnwèi tā xiǎngniàn tā de érzi"
+          ],
+          "optionsEn": [
+            "Because the room was too cold",
+            "Because he felt very hot and the car noises outside were very loud",
+            "Because he missed his son"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_13",
+      "titleCn": "坏掉的摄像头",
+      "titlePy": "Huài diào de shèxiàngtóu",
+      "titleEn": "Broken Camera",
+      "contentCn": "今天下午，在大学宿舍里，林雨晴坐在床上看手机。今天是她的二十岁生日，她很高兴。\n她想和爸爸妈妈视频电话。她打开手机，找到爸爸的名字，点了一下。\n手机响了，她听见爸爸的声音：“雨晴！生日快乐！”\n“爸爸！”\n雨晴说，“我看不��你，你能看见我吗？”\n“看不见，”爸爸说，“你的手机怎么了？”\n雨晴看手机，手机上面是黑的。她看不见爸爸的脸，只能听见声音。她又着急又不高兴。\n“爸爸，我的手机摄像头坏了，”她说，“今天是我生日，我想看见你和妈妈。”\n“别着急，”爸爸说，“你妈妈也在这里。”\n妈妈的声音来了：“雨晴，生日快乐！我们都很想你。”\n雨晴听见妈妈的声音，心里很高兴，但是看不见他们的脸，她很难过。\n这时候，室友赵美琳走进来。她看见雨晴不高兴，问：“雨晴，你怎么了？”\n“我的手机摄像头坏了，”雨晴说，“我想和爸爸妈妈视频，但是只能听见声音，看不见人。”\n美琳说：“用我的手机吧，我的手机很好。”\n雨晴看着美琳，说：“真的吗？谢谢你！”\n美琳把手机给雨晴。雨晴很高兴，她马上给爸爸打电话。",
+      "contentPy": "Jīntiān xiàwǔ, zài dàxué sùshè lǐ, lín yǔqíng zuò zài chuángshàng kàn shǒujī. Jīntiān shì tā de èrshí suì shēngrì, tā hěn gāoxìng.\nTā xiǎng hé bàba māmā shìpín diànhuà. Tā dǎkāi shǒujī, zhǎodào bàba de míngzì, diǎnle yīxià.\nShǒujī xiǎngle, tā tīngjiàn bàba de shēngyīn:“Yǔqíng! Shēngrì kuàilè!”\n“Bàba!”\nYǔqíng shuō,“wǒ kàn bù ��nǐ, nǐ néng kànjiàn wǒ ma?”\n“Kàn bùjiàn,” bàba shuō,“nǐ de shǒujī zěnmeliǎo?”\nYǔqíng kàn shǒujī, shǒujī shàngmiàn shì hēi de. Tā kàn bùjiàn bàba de liǎn, zhǐ néng tīngjiàn shēngyīn. Tā yòu zhāojí yòu bù gāoxìng.\n“Bàba, wǒ de shǒujī shèxiàngtóu huàile,” tā shuō,“jīntiān shì wǒ shēngrì, wǒ xiǎng kànjiàn nǐ hé māmā.”\n“Bié zhāojí,” bàba shuō,“nǐ māmā yě zài zhèlǐ.”\nMāmā de shēngyīn láile:“Yǔqíng, shēngrì kuàilè! Wǒmen dōu hěn xiǎng nǐ.”\nYǔqíng tīngjiàn māmā de shēngyīn, xīnlǐ hěn gāoxìng, dànshì kàn bùjiàn tāmen de liǎn, tā hěn nánguò.\nZhè shíhòu, shìyǒu zhàoměilín zǒu jìnlái. Tā kànjiàn yǔqíng bù gāoxìng, wèn:“Yǔqíng, nǐ zěnmeliǎo?”\n“Wǒ de shǒujī shèxiàngtóu huàile,” yǔqíng shuō,“wǒ xiǎng hé bàba māmā shìpín, dànshì zhǐ néng tīngjiàn shēngyīn, kàn bùjiàn rén.”\nMěi lín shuō:“Yòng wǒ de shǒujī ba, wǒ de shǒujī hěn hǎo.”\nYǔqíng kànzhe měi lín, shuō:“Zhēn de ma? Xièxiè nǐ!”\nMěi lín bǎ shǒujī gěi yǔqíng. Yǔqíng hěn gāoxìng, tā mǎshàng gěi bàba dǎ diànhuà.",
+      "contentEn": "This afternoon, in the university dormitory, Lin Yuqing sat on the bed and looked at her mobile phone. Today is her twentieth birthday and she is very happy.\nShe wants to have a video call with her parents. She opened her phone, found her father's name, and clicked on it.\nThe phone rang, and she heard her father's voice: \"Yuqing! Happy birthday!\"\n\"dad!\"\nYuqing said, \"I can't see you, can you see me?\"\n\"Can't see,\" Dad said, \"What happened to your phone?\"\nYuqing looked at her phone, which was black. She couldn't see her father's face, but could only hear his voice. She was anxious and unhappy.\n\"Dad, my cell phone camera is broken,\" she said, \"Today is my birthday and I want to see you and mom.\"\n\"Don't worry,\" Dad said, \"Your mother is here too.\"\nMy mother's voice came: \"Yuqing, happy birthday! We all miss you very much.\"\nYuqing was happy when she heard her mother's voice, but she was sad when she couldn't see their faces.\nAt this time, roommate Zhao Meilin walked in. She was unhappy when she saw Yuqing and asked, \"Yuqing, what's wrong with you?\"\n\"My mobile phone camera is broken,\" Yuqing said. \"I want to video chat with my parents, but I can only hear sounds and cannot see people.\"\nMei Lin said: \"Use my mobile phone, my mobile phone is very good.\"\nYuqing looked at Meilin and said, \"Really? Thank you!\"\nMeilin gave her cell phone to Yuqing. Yuqing was very happy and called her father immediately.",
+      "questions": [
+        {
+          "q": "今天是谁的二十岁生日？",
+          "qPy": "Jīntiān shì shéi de èrshí suì shēngrì?",
+          "qEn": "Whose twentieth birthday is it today?",
+          "options": [
+            "林雨晴",
+            "赵美琳",
+            "林建国"
+          ],
+          "optionsPy": [
+            "Lín Yǔqíng",
+            "Zhào Měilín",
+            "Lín Jiànguó"
+          ],
+          "optionsEn": [
+            "Lin Yuqing",
+            "Zhao Meilin",
+            "Lin Jianguo"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "林雨晴和爸爸视频电话时，发现了什么问题？",
+          "qPy": "Lín Yǔqíng hé bàba shìpín diànhuà shí, fāxiànle shénme wèntí?",
+          "qEn": "What problem did Lin Yuqing discover during the video call with her father?",
+          "options": [
+            "手机没有电关机了",
+            "手机摄像头坏了，只能听见声音看不见人",
+            "电话打不通"
+          ],
+          "optionsPy": [
+            "Shǒujī méiyǒu diàn guānjī le",
+            "Shǒujī shèxiàngtóu huài le, zhǐ néng tīngjiàn shēngyīn kànbujiàn rén",
+            "Diànhuà dǎ bù tōng"
+          ],
+          "optionsEn": [
+            "The phone ran out of power and shut down",
+            "The phone camera was broken, she could only hear voices but couldn't see anyone",
+            "The phone call couldn't go through"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "赵美琳是怎么帮助林雨晴的？",
+          "qPy": "Zhào Měilín shì zěnme bāngzhù Lín Yǔqíng de?",
+          "qEn": "How did Zhao Meilin help Lin Yuqing?",
+          "options": [
+            "帮她修好了手机",
+            "把自己的手机借给她打视频电话",
+            "买了一个新手机送给她"
+          ],
+          "optionsPy": [
+            "Bāng tā xiūhǎole shǒujī",
+            "Bǎ zìjǐ de shǒujī jiègěi tā dǎ shìpín diànhuà",
+            "Mǎile yī gè xīn shǒujī sònggěi tā"
+          ],
+          "optionsEn": [
+            "Helped her fix her phone",
+            "Lent her own phone to her to make the video call",
+            "Bought a new phone as a gift for her"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_14",
+      "titleCn": "夏天的约定",
+      "titlePy": "Xiàtiān de yuēdìng",
+      "titleEn": "Summer Promise",
+      "contentCn": "夏天快到了。一天晚上，在林远的家，苏晴坐在沙发上，看着手机笑。\n“林远，你看这个！”她把手机给他看。\n手机上是一个很漂亮的海边照片。蓝蓝的天，白白的小鸟，还有很多人笑着游泳。\n“我想去这里！”\n苏晴说，“夏天的时候，我们去海边，好吗？住三天，每天游泳，吃好东西。”\n林远看着照片，笑了一下，但是没说话。\n“怎么了？”\n苏晴问他，“你不喜欢海边吗？”\n“我喜欢海边，”林远说，“可是……我不会游泳。”\n苏晴放下手机，看着他。“你不会游泳？真的吗？”\n“真的，”林远说，“我小时候怕水，现在也怕水。”\n苏晴想了一想，说：“那你学游泳，好吗？还有两个月就是夏天了。你学两个月，就会了。”\n林远看着苏晴。她的眼睛很亮，很开心。他知道她很喜欢游泳，也很想去海边。他不想让她不高兴。\n“好，”林远说，“我学。”\n苏晴很高兴，马上在手机上找游泳班。“你看，这里有一个游泳班，很近，就在你家后边。明天就可以报名。”\n林远看着手机上的游泳班，心里有一点怕。但是他爱苏晴，他想和���一起去海边，一起游泳。\n第二天，林远去了游泳馆。他走到报名的地方，一个男人坐在那里。\n“你好，我要报名游泳班，”林远说。\n那个男人看了看他，说：“你是给小孩报名吗？”\n“不是，”林远说，“是我自己学。”\n那个男人笑了一下，说：“好。我叫马教练，我是你的老师。星期六早上九点，你来这里上课。”\n林远点了点头，心里想：星期六，我就要学游泳了。我可以的。",
+      "contentPy": "Xiàtiān kuài dàole. Yītiān wǎnshàng, zài lín yuǎn de jiā, sū qíng zuò zài shāfā shàng, kàn zhuó shǒujī xiào.\n“Lín yuǎn, nǐ kàn zhège!” Tā bǎ shǒujī gěi tā kàn.\nShǒujī shàng shì yīgè hěn piàoliang dì hǎibiān zhàopiàn. Lán lán de tiān, báibái de xiǎo niǎo, hái yǒu hěnduō rén xiàozhe yóuyǒng.\n“Wǒ xiǎng qù zhèlǐ!”\nSū qíng shuō,“xiàtiān de shíhòu, wǒmen qù hǎibiān, hǎo ma? Zhù sān tiān, měitiān yóuyǒng, chī hǎo dōngxī.”\nLín yuǎn kànzhe zhàopiàn, xiàole yīxià, dànshì méi shuōhuà.\n“Zěnmeliǎo?”\nSū qíng wèn tā,“nǐ bù xǐhuān hǎibiān ma?”\n“Wǒ xǐhuān hǎibiān,” lín yuǎn shuō,“kěshì……wǒ bù huì yóuyǒng.”\nSū qíng fàngxià shǒujī, kànzhe tā.“Nǐ bù huì yóuyǒng? Zhēn de ma?”\n“Zhēn de,” lín yuǎn shuō,“wǒ xiǎoshíhòu pà shuǐ, xiànzài yě pà shuǐ.”\nSū qíng xiǎngle yī xiǎng, shuō:“Nà nǐ xué yóuyǒng, hǎo ma? Hái yǒu liǎng gè yuè jiùshì xiàtiānle. Nǐ xué liǎng gè yuè, jiù huìle.”\nLín yuǎn kànzhe sū qíng. Tā de yǎnjīng hěn liàng, hěn kāixīn. Tā zhīdào tā hěn xǐhuān yóuyǒng, yě hěn xiǎng qù hǎibiān. Tā bùxiǎng ràng tā bù gāoxìng.\n“Hǎo,” lín yuǎn shuō,“wǒ xué.”\nSū qíng hěn gāoxìng, mǎshàng zài shǒujī shàng zhǎo yóuyǒng bān.“Nǐ kàn, zhè li yǒu yīgè yóuyǒng bān, hěn jìn, jiù zài nǐ jiā hòubian. Míngtiān jiù kěyǐ bàomíng.”\nLín yuǎn kàn zhuó shǒujī shàng de yóuyǒng bān, xīn li yǒu yīdiǎn pà. Dànshì tā ài sū qíng, tā xiǎng hé ���yīqǐ qù hǎibiān, yīqǐ yóuyǒng.\nDì èr tiān, lín yuǎn qùle yóuyǒng guǎn. Tā zǒu dào bàomíng dì dìfāng, yīgè nánrén zuò zài nàlǐ.\n“Nǐ hǎo, wǒ yào bàomíng yóuyǒng bān,” lín yuǎn shuō.\nNàgè nánrén kànle kàn tā, shuō:“Nǐ shì gěi xiǎohái bàomíng ma?”\n“Bùshì,” lín yuǎn shuō,“shì wǒ zìjǐ xué.”\nNàgè nánrén xiàole yīxià, shuō:“Hǎo. Wǒ jiào mǎ jiàoliàn, wǒ shì nǐ de lǎoshī. Xīngqíliù zǎoshang jiǔ diǎn, nǐ lái zhèlǐ shàngkè.”\nLín yuǎn diǎnle diǎntóu, xīnlǐ xiǎng: Xīngqíliù, wǒ jiù yào xué yóuyǒngle. Wǒ kěyǐ de.",
+      "contentEn": "Summer is coming. One night, at Lin Yuan's home, Su Qing was sitting on the sofa, looking at her phone and laughing.\n\"Lin Yuan, look at this!\" She showed him the phone.\nOn my phone is a beautiful photo of the beach. The blue sky, the white birds, and many people swimming with smiles.\n\"I want to go here!\"\nSu Qing said, \"In the summer, let's go to the beach, okay? Stay there for three days, swim every day, and eat good food.\"\nLin Yuan looked at the photo and smiled, but said nothing.\n\"What's wrong?\"\nSu Qing asked him, \"Don't you like the beach?\"\n\"I like the beach,\" Lin Yuan said, \"but... I can't swim.\"\nSu Qing put down her phone and looked at him. \"You can't swim? Really?\"\n\"It's true,\" Lin Yuan said, \"I was afraid of water when I was a child, and I am afraid of water now.\"\nSu Qing thought for a while and said, \"Then you learn to swim, okay? Summer is only two months away. If you learn it for two months, you will be good at it.\"\nLin Yuan looked at Amelia Su. Her eyes were bright and she was very happy. He knew she loved swimming and wanted to go to the beach. He didn't want to upset her.\n\"Okay,\" Lin Yuan said, \"I'll learn.\"\nSu Qing was very happy and immediately looked for swimming classes on her mobile phone. \"Look, there is a swimming class here. It's very close, right behind your house. You can sign up tomorrow.\"\nLin Yuan looked at the swimming class on his mobile phone and felt a little scared. But he loves Su Qing, and he wants to go to the beach with her and swim together.\nThe next day, Lin Yuan went to the swimming pool. He walked to the registration area and a man was sitting there.\n\"Hello, I want to sign up for a swimming class,\" Lin Yuan said.\nThe man looked at him and said, \"Are you signing up a child?\"\n\"No,\" Lin Yuan said, \"I learned it myself.\"\nThe man smiled and said, \"Okay. My name is Coach Ma, and I am your teacher. You come here for class at nine o'clock on Saturday morning.\"\nLin Yuan nodded, thinking: On Saturday, I will learn to swim. I can do it.",
+      "questions": [
+        {
+          "q": "苏晴夏天想去哪里？",
+          "qPy": "Sū Qíng xiàtiān xiǎng qù nǎlǐ?",
+          "qEn": "Where does Su Qing want to go in the summer?",
+          "options": [
+            "运动馆",
+            "海边",
+            "南方乡下"
+          ],
+          "optionsPy": [
+            "Yùndòngguǎn",
+            "Hǎibiān",
+            "Nánfāng xiāngxià"
+          ],
+          "optionsEn": [
+            "Sports hall",
+            "The beach",
+            "Southern countryside"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "林远为什么一开始不说话？",
+          "qPy": "Lín Yuǎn wèishénme yī kāishǐ bù shuōhuà?",
+          "qEn": "Why did Lin Yuan not speak at first?",
+          "options": [
+            "因为他不想去海边",
+            "因为他不会游泳，而且怕水",
+            "因为他的自行车坏了"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā bù xiǎng qù hǎibiān",
+            "Yīnwèi tā bù huì yóuyǒng, érqiě pà shuǐ",
+            "Yīnwèi tā de zìxíngchē huài le"
+          ],
+          "optionsEn": [
+            "Because he doesn't want to go to the beach",
+            "Because he doesn't know how to swim and is afraid of water",
+            "Because his bicycle is broken"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "谁是林远的游泳老师？",
+          "qPy": "Shéi shì Lín Yuǎn de yóuyǒng lǎoshī?",
+          "qEn": "Who is Lin Yuan's swimming teacher?",
+          "options": [
+            "苏晴",
+            "马教练",
+            "顾教练"
+          ],
+          "optionsPy": [
+            "Sū Qíng",
+            "Mǎ jiàoliàn",
+            "Gù jiàoliàn"
+          ],
+          "optionsEn": [
+            "Su Qing",
+            "Coach Ma",
+            "Coach Gu"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_15",
+      "titleCn": "上车以后",
+      "titlePy": "Shàng chē yǐhòu",
+      "titleEn": "Getting in the Car Goes Wrong",
+      "contentCn": "今天早上，在林雨晴家，她起得很早。她吃了一点儿东西，喝了一杯水。她看着手机，手机上是驾驶学校的名字。她要去学开车了。\n八点半，在一家驾驶学校，林雨晴看见了赵师傅。赵师傅五十多岁，不高，说话不快。他问她：“你是林雨晴吗？”雨晴说是。\n赵师傅笑了，说：“好，我们去看看车。”\n车是白色的，不大。赵师傅让雨晴坐在前面，他自己坐在旁边。雨晴坐在车里，看着前面。她的心很快。她看着车里的东西，很多她不知道是什么。赵师傅说：“这是方向盘，那是刹车，那是油门。你看见了吗？”雨晴说看见了，可是她心里很紧张。\n赵师傅说：“不要怕。现在，我们慢慢开。你先开一点点。”雨晴的手放在方向盘上。她看着前面，可是她的脚不知道放在哪儿。她想放在刹车上，可是她的脚放在了油门上。她不知道。\n赵师傅说：“好，现在，慢慢开。”雨晴的脚一用力，车一下子往前冲了。\n车很快，赵师傅大叫：“刹车！刹车！”雨晴很怕，她的脚不知道怎么办。车还在往前。赵师傅很快地帮她把车停下了。\n车停下来，雨晴坐在那儿，不说话。她的脸很白。赵师傅看着她，说：“没事，没事。你把刹车和油门搞错了。很多第一次学车的人都这样。”\n雨晴说：“对不起，对不起。”她的声音很小。\n赵师傅说：“不要对不起。我们再来一次。这一次，你的脚放在刹车上，不要放在油门上。好吗？”\n雨晴说好，可是她的心还是很快。她看着前面，手放在方向盘上。她想，今天她真的能学会开车吗？",
+      "contentPy": "Jīntiān zǎoshang, zài lín yǔqíng jiā, tā qǐ dé hěn zǎo. Tā chīle yīdiǎn er dōngxī, hēle yībēi shuǐ. Tā kàn zhuó shǒujī, shǒujī shàng shì jiàshǐ xuéxiào de míngzì. Tā yào qù xué kāichēle.\nBā diǎn bàn, zài yījiā jiàshǐ xuéxiào, lín yǔqíng kànjiànle zhào shīfù. Zhào shīfù wǔshí duō suì, bù gāo, shuōhuà bùkuài. Tā wèn tā:“Nǐ shì lín yǔqíng ma?” Yǔqíng shuō shì.\nZhào shīfù xiàole, shuō:“Hǎo, wǒmen qù kàn kàn chē.”\nChē shì báisè de, bù dà. Zhào shīfù ràng yǔqíng zuò zài qiánmiàn, tā zìjǐ zuò zài pángbiān. Yǔqíng zuò zài chē lǐ, kànzhe qiánmiàn. Tā de xīn hěn kuài. Tā kànzhe chē lǐ de dōngxī, hěnduō tā bù zhīdào shì shénme. Zhào shīfù shuō:“Zhè shì fāngxiàngpán, nà shì shāchē, nà shì yóumén. Nǐ kànjiànle ma?” Yǔqíng shuō kànjiànle, kěshì tā xīnlǐ hěn jǐnzhāng.\nZhào shīfù shuō:“Bùyào pà. Xiànzài, wǒmen màn man kāi. Nǐ xiān kāi yī diǎndiǎn.” Yǔqíng de shǒu fàng zài fāngxiàngpán shàng. Tā kànzhe qiánmiàn, kěshì tā de jiǎo bù zhīdào fàng zài nǎ'er. Tā xiǎng fàng zài shāchē shàng, kěshì tā de jiǎo fàng zàile yóumén shàng. Tā bù zhīdào.\nZhào shīfù shuō:“Hǎo, xiànzài, màn man kāi.” Yǔqíng de jiǎo yī yònglì, chē yīxià zǐ wǎng qián chōngle.\nChē hěn kuài, zhào shīfù dà jiào:“Shāchē! Shāchē!” Yǔqíng hěn pà, tā de jiǎo bù zhīdào zěnme bàn. Chē hái zài wǎng qián. Zhào shīfù hěn kuài dì bāng tā bǎ chē tíng xiàle.\nChē tíng xiàlái, yǔqíng zuò zài nà'er, bù shuōhuà. Tā de liǎn hěn bái. Zhào shīfù kànzhe tā, shuō:“Méishì, méishì. Nǐ bǎ shāchē hé yóumén gǎo cuòle. Hěnduō dì yī cì xuéchē de rén dōu zhèyàng.”\nYǔqíng shuō:“Duìbùqǐ, duìbùqǐ.” Tā de shēngyīn hěn xiǎo.\nZhào shīfù shuō:“Bùyào duìbùqǐ. Wǒmen zàilái yīcì. Zhè yīcì, nǐ de jiǎo fàng zài shāchē shàng, bùyào fàng zài yóumén shàng. Hǎo ma?”\nYǔqíng shuō hǎo, kěshì tā de xīn háishì hěn kuài. Tā kànzhe qiánmiàn, shǒu fàng zài fāngxiàngpán shàng. Tā xiǎng, jīntiān tā zhēn de néng xuéhuì kāichē ma?",
+      "contentEn": "This morning, at Lin Yuqing's house, she got up very early. She ate something and drank a glass of water. She looked at her phone. On the phone was the name of the driving school. She is going to learn to drive.\nAt half past eight, Lin Yuqing saw Master Zhao at a driving school. Master Zhao is in his fifties, not tall, and doesn't speak quickly. He asked her: \"Are you Lin Yuqing?\" Yuqing said yes.\nMaster Zhao smiled and said, \"Okay, let's go take a look at the car.\"\nThe car is white and not big. Master Zhao asked Yuqing to sit in front and he sat next to him. Yuqing sat in the car and looked ahead. Her heart is quick. She looked at the things in the car, and there were many things she didn't know what they were. Master Zhao said: \"This is the steering wheel, that is the brake, and that is the accelerator. Did you see it?\" Yuqing said she saw it, but she was very nervous.\nMaster Zhao said: \"Don't be afraid. Now, let's drive slowly. You drive a little first.\" Yu Qing put her hands on the steering wheel. She looked ahead, but she didn't know where to put her feet. She wanted to put her foot on the brake, but her foot was on the accelerator. She doesn't know.\nMaster Zhao said: \"Okay, now, drive slowly.\" Yu Qing put her foot hard, and the car suddenly rushed forward.\nThe car was going very fast, and Master Zhao shouted: \"Brake! Brake!\" Yuqing was very scared and didn't know what to do with her feet. The car is still moving forward. Master Zhao quickly stopped the car for her.\nThe car stopped and Yuqing sat there, silent. Her face is very white. Master Zhao looked at her and said, \"It's okay, it's okay. You made the wrong brake and accelerator. Many people who are learning to drive for the first time do this.\"\nYuqing said: \"I'm sorry, I'm sorry.\" Her voice was very small.\nMaster Zhao said: \"Don't be sorry. Let's do it again. This time, put your foot on the brake, not on the accelerator. Okay?\"\nYuqing said yes, but her heart was still very fast. She looked ahead, her hands on the steering wheel. She thought, can she really learn to drive today?",
+      "questions": [
+        {
+          "q": "林雨晴今天早上要去学做什么？",
+          "qPy": "Lín Yǔqíng jīntiān zǎoshang yào qù xué zuò shénme?",
+          "qEn": "What is Lin Yuqing going to learn to do this morning?",
+          "options": [
+            "学开车",
+            "学游泳",
+            "学英语"
+          ],
+          "optionsPy": [
+            "Xué kāichē",
+            "Xué yóuyǒng",
+            "Xué Yīngyǔ"
+          ],
+          "optionsEn": [
+            "Learn to drive",
+            "Learn to swim",
+            "Learn English"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "赵师傅是谁？",
+          "qPy": "Zhào shīfu shì shéi?",
+          "qEn": "Who is Master Zhao?",
+          "options": [
+            "林雨晴的爸爸",
+            "驾驶学校的教练",
+            "一个高个子的医生"
+          ],
+          "optionsPy": [
+            "Lín Yǔqíng de bàba",
+            "Jiàshǐ xuéxiào de jiàoliàn",
+            "Yī gè gāogèzi de yīshēng"
+          ],
+          "optionsEn": [
+            "Lin Yuqing's dad",
+            "The instructor at the driving school",
+            "A tall doctor"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "第一次开车时，林雨晴为什么让车子往前冲了？",
+          "qPy": "Dì-yī cì kāichē shí, Lín Yǔqíng wèishénme ràng chēzi wǎng qián chōng le?",
+          "qEn": "Why did Lin Yuqing make the car rush forward the first time she drove?",
+          "options": [
+            "因为她把油门当成了刹车",
+            "因为她想开得很快",
+            "因为车子方向盘坏了"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā bǎ yóumén dāngchéngle shāchē",
+            "Yīnwèi tā xiǎng kāide hěn kuài",
+            "Yīnwèi chēzi fāngxiàngpán huài le"
+          ],
+          "optionsEn": [
+            "Because she mistook the accelerator for the brake",
+            "Because she wanted to drive very fast",
+            "Because the car's steering wheel was broken"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "essay_2_16",
+      "titleCn": "公园计划",
+      "titlePy": "Gōngyuán jìhuà",
+      "titleEn": "Park Plans Fall Through",
+      "contentCn": "今天早上，林思远在房间里醒来。他看窗外，天是黑的，雨下得很大。他拿起手机，给陈雨桐打电话。\n“雨桐，是我。”林思远说。\n“思远，怎么了？”陈雨桐的声音很小，他好像刚醒来。\n“我们不能去公园了。你看，外面下大雨。”林思远走到窗前，雨很大，路上都是水。\n陈雨桐停了一下，说：“我看见了。雨真的很大。”\n“我不高兴。我想去打篮球。”林思远坐在床上，看着他的篮球鞋。\n“我知道你喜欢打篮球。”\n陈雨桐说，“但是下雨天，我们不能在外面。”\n“那我们在哪里见面？做什么？”林思远问。\n陈雨桐想了想，说：“你来我家吧。我们可以看电影。我家有新的电影。”\n“看电影？”\n林思远站起来，“好，我喜欢看电影。你家有吃的东西吗？我早上没吃饭。”\n“有，我妈妈买了面包和水果。你来吧。”\n林思远说：“好，我现在去你家。再见。”\n“再见。你路上小心，雨很大。”\n林思远穿上衣服，拿了一把雨伞，走出门。外面的雨真的很大，雨伞没什么用，他的衣服很快就湿了。他不喜欢下雨天，但是他想，去朋友家看电影也是很好的。\n他走到陈雨桐家楼下，打电话说：“我到了。”\n陈雨桐打开门，林思远进来，身上都是水。陈雨桐笑了，说：“你快进来，我给你毛巾。”\n林思远擦头发，说：“这个雨太大了。我的鞋子也湿了。”\n“没关系，你坐。我去给你拿面包。”陈雨桐去厨房，拿来面包和水。\n林思远吃面包，说：“你家真安静。你爸妈不在家吗？”\n“他们去工作了。今天晚上回来。我们看电影吧。”\n林思远很高兴，说：“好，看什么电影？”\n“一个很好笑的电影，你看了会很高兴。”陈雨桐打开电视，拿起遥控器。\n但是电视上什么都没有。陈雨桐又按了一下，还是什么都没有。\n“怎么了？”林思远问。\n“我不知道。网络好像坏了。”陈雨桐站起来，去看那个网络的东西。\n林思远也走过去，两人一起看。那个东西上的灯不亮。\n“我们试试。”林思远说。他按了几下，灯还是不亮。\n陈雨桐说：“可能雨太大，网络坏了。”\n林思远坐回沙发上，说：“那我们做什么？不能打篮球，也不能看电影。”\n陈雨桐也坐下，两人看着窗外的大雨，都不说话。",
+      "contentPy": "Jīntiān zǎoshang, línsīyuǎn zài fángjiān lǐ xǐng lái. Tā kàn chuāngwài, tiān shì hēi de, yǔ xià dé hěn dà. Tā ná qǐ shǒujī, gěi chényǔtóng dǎ diànhuà.\n“Yǔ tóng, shì wǒ.” Línsīyuǎn shuō.\n“Sī yuǎn, zěnmeliǎo?” Chényǔtóng de shēngyīn hěn xiǎo, tā hǎoxiàng gāng xǐng lái.\n“Wǒmen bùnéng qù gōngyuánle. Nǐ kàn, wàimiàn xià dàyǔ.” Línsīyuǎn zǒu dào chuāng qián, yǔ hěn dà, lùshàng dū shì shuǐ.\nChényǔtóng tíngle yīxià, shuō:“Wǒ kànjiànle. Yǔ zhēn de hěn dà.”\n“Wǒ bù gāoxìng. Wǒ xiǎng qù dǎ lánqiú.” Línsīyuǎn zuò zài chuángshàng, kànzhe tā de lánqiú xié.\n“Wǒ zhīdào nǐ xǐhuān dǎ lánqiú.”\nChényǔtóng shuō,“dànshì xià yǔtiān, wǒmen bùnéng zài wàimiàn.”\n“Nà wǒmen zài nǎlǐ jiànmiàn? Zuò shénme?” Línsīyuǎn wèn.\nChényǔtóng xiǎngle xiǎng, shuō:“Nǐ lái wǒjiā ba. Wǒmen kěyǐ kàn diànyǐng. Wǒjiā yǒu xīn de diànyǐng.”\n“Kàn diànyǐng?”\nLínsīyuǎn zhàn qǐlái,“hǎo, wǒ xǐhuān kàn diànyǐng. Nǐ jiā yǒu chī de dōngxī ma? Wǒ zǎoshang méi chīfàn.”\n“Yǒu, wǒ māmā mǎile miànbāo hé shuǐguǒ. Nǐ lái ba.”\nLínsīyuǎn shuō:“Hǎo, wǒ xiànzài qù nǐ jiā. Zàijiàn.”\n“Zàijiàn. Nǐ lùshàng xiǎoxīn, yǔ hěn dà.”\nLínsīyuǎn chuān shàng yīfú, nále yī bǎ yǔsǎn, zǒuchū mén. Wàimiàn de yǔ zhēn de hěn dà, yǔsǎn méishénme yòng, tā de yīfú hěn kuài jiù shīle. Tā bù xǐhuān xià yǔtiān, dànshì tā xiǎng, qù péngyǒu jiā kàn diànyǐng yěshì hěn hǎo de.\nTā zǒu dào chényǔtóng jiā lóu xià, dǎ diànhuà shuō:“Wǒ dàole.”\nChényǔtóng dǎkāi mén, línsīyuǎn jìnlái, shēnshang dōu shì shuǐ. Chényǔtóng xiàole, shuō:“Nǐ kuài jìnlái, wǒ gěi nǐ máojīn.”\nLínsīyuǎn cā tóufǎ, shuō:“Zhège yǔ tài dàle. Wǒ de xiézǐ yě shīle.”\n“Méiguānxì, nǐ zuò. Wǒ qù gěi nǐ ná miànbāo.” Chényǔtóng qù chúfáng, ná lái miànbāo hé shuǐ.\nLínsīyuǎn chī miànbāo, shuō:“Nǐ jiā zhēn ānjìng. Nǐ bà mā bù zàijiā ma?”\n“Tāmen qù gōngzuòle. Jīntiān wǎnshàng huílái. Wǒmen kàn diànyǐng ba.”\nLínsīyuǎn hěn gāoxìng, shuō:“Hǎo, kàn shénme diànyǐng?”\n“Yīgè hěn hǎoxiào de diànyǐng, nǐ kànle huì hěn gāoxìng.” Chényǔtóng dǎkāi diànshì, ná qǐ yáokòng qì.\nDànshì diànshì shàng shénme dōu méiyǒu. Chényǔtóng yòu ànle yīxià, háishì shénme dōu méiyǒu.\n“Zěnmeliǎo?” Línsīyuǎn wèn.\n“Wǒ bù zhīdào. Wǎngluò hǎoxiàng huàile.” Chényǔtóng zhàn qǐlái, qù kàn nàgè wǎngluò de dōngxī.\nLínsīyuǎn yě zǒu guòqù, liǎng rén yīqǐ kàn. Nàgè dōngxī shàng de dēng bù liàng.\n“Wǒmen shì shì.” Línsīyuǎn shuō. Tā ànle jǐ xià, dēng háishì bù liàng.\nChényǔtóng shuō:“Kěnéng yǔ tài dà, wǎngluò huàile.”\nLínsīyuǎn zuò huí shāfā shàng, shuō:“Nà wǒmen zuò shénme? Bùnéng dǎ lánqiú, yě bùnéng kàn diànyǐng.”\nChényǔtóng yě zuò xià, liǎng rén kànzhe chuāngwài de dàyǔ, dōu bù shuōhuà.",
+      "contentEn": "This morning, Lin Siyuan woke up in the room. He looked out the window. It was dark and it was raining heavily. He picked up his cell phone and called Chen Yutong.\n\"Yutong, it's me.\" Lin Siyuan said.\n\"Siyuan, what's wrong?\" Chen Yutong's voice was very low, as if he had just woken up.\n\"We can't go to the park. Look, it's raining heavily outside.\" Lin Siyuan walked to the window. It was raining heavily and there was water on the road.\nChen Yutong paused and said, \"I saw it. The rain was really heavy.\"\n\"I'm not happy. I want to play basketball.\" Lin Siyuan sat on the bed and looked at his basketball shoes.\n\"I know you like playing basketball.\"\nChen Yutong said, \"But we can't be outside when it rains.\"\n\"Then where shall we meet? What shall we do?\" Lin Siyuan asked.\nChen Yutong thought for a while and said, \"Come to my house. We can watch movies. There are new movies at my house.\"\n\"See a movie?\"\nLin Siyuan stood up, \"Okay, I like watching movies. Do you have anything to eat at home? I didn't eat in the morning.\"\n\"Yes, my mother bought bread and fruits. Come on.\"\nLin Siyuan said: \"Okay, I'll go to your house now. Goodbye.\"\n\"Goodbye. Be careful on the road, it's raining heavily.\"\nLin Siyuan put on his clothes, took an umbrella, and walked out. It was raining really hard outside, and the umbrella was of no use. His clothes quickly got wet. He didn't like rainy days, but he thought it would be nice to go to a friend's house and watch a movie.\nHe walked downstairs to Chen Yutong's house and called, \"I'm here.\"\nChen Yutong opened the door and Lin Siyuan came in, covered in water. Chen Yutong smiled and said, \"Come in quickly and I'll give you a towel.\"\nLin Siyuan wiped his hair and said, \"It's raining too much. My shoes are also wet.\"\n\"It's okay, you sit down. I'll get you bread.\" Chen Yutong went to the kitchen and brought bread and water.\nLin Siyuan ate bread and said, \"Your home is so quiet. Are your parents not at home?\"\n\"They went to work. Come back tonight. Let's watch a movie.\"\nLin Siyuan was very happy and said, \"Okay, what movie should we watch?\"\n\"It's a very funny movie. You will be very happy after watching it.\" Chen Yutong turned on the TV and picked up the remote control.\nBut there was nothing on the TV. Chen Yutong pressed it again, but still nothing.\n\"What's wrong?\" Lin Siyuan asked.\n\"I don't know. The network seems to be broken.\" Chen Yutong stood up and looked at the network stuff.\nLin Siyuan also walked over, and the two of them watched together. The light on that thing doesn't work.\n\"Let's try.\" Lin Siyuan said. He pressed it several times, but the light still didn't come on.\nChen Yutong said: \"Maybe it rained too much and the network was broken.\"\nLin Siyuan sat back on the sofa and said, \"Then what do we do? We can't play basketball or watch movies.\"\nChen Yutong also sat down, and the two of them looked at the heavy rain outside the window without saying anything.",
+      "questions": [
+        {
+          "q": "林思远和陈雨桐本来计划去哪里？",
+          "qPy": "Lín Sīyuǎn hé Chén Yǔtóng běnlái jìhuà qù nǎlǐ?",
+          "qEn": "Where did Lin Siyuan and Chen Yutong originally plan to go?",
+          "options": [
+            "去学校的图书馆",
+            "去公园打篮球",
+            "去商店买面包"
+          ],
+          "optionsPy": [
+            "Qù xuéxiào de túshūguǎn",
+            "Qù gōngyuán dǎ lánqiú",
+            "Qù shāngdiàn mǎi miànbāo"
+          ],
+          "optionsEn": [
+            "Go to the school library",
+            "Go to the park to play basketball",
+            "Go to the store to buy bread"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "林思远为什么去陈雨桐家？",
+          "qPy": "Lín Sīyuǎn wèishénme qù Chén Yǔtóng jiā?",
+          "qEn": "Why did Lin Siyuan go to Chen Yutong's house?",
+          "options": [
+            "因为外面下大雨，他们决定一起看电影",
+            "因为他要去陈雨桐家做饭",
+            "因为他想借陈雨桐的雨伞"
+          ],
+          "optionsPy": [
+            "Yīnwèi wàimiàn xià dàyǔ, tāmen juédìng yīqǐ kàn diànyǐng",
+            "Yīnwèi tā yào qù Chén Yǔtóng jiā zuòfàn",
+            "Yīnwèi tā xiǎng jiè Chén Yǔtóng de yǔsǎn"
+          ],
+          "optionsEn": [
+            "Because it was raining heavily outside and they decided to watch a movie together",
+            "Because he was going to cook at Chen Yutong's house",
+            "Because he wanted to borrow Chen Yutong's umbrella"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "为什么他们最后不能看电影？",
+          "qPy": "Wèishénme tāmen zuìhòu bùnéng kàn diànyǐng?",
+          "qEn": "Why couldn't they watch a movie in the end?",
+          "options": [
+            "因为电视机坏了",
+            "因为网络坏了，电视上什么都没有",
+            "因为林思远要回家睡觉"
+          ],
+          "optionsPy": [
+            "Yīnwèi diànshìjī huài le",
+            "Yīnwèi wǎngluò huài le, diànshì shàng shénme dōu méiyǒu",
+            "Yīnwèi Lín Sīyuǎn yào huíjiā shuìjiào"
+          ],
+          "optionsEn": [
+            "Because the TV was broken",
+            "Because the network was down and there was nothing on the TV",
+            "Because Lin Siyuan had to go home to sleep"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_17",
+      "titleCn": "晚上的吉他声",
+      "titlePy": "Wǎnshang de jítā shēng",
+      "titleEn": "Late Night Guitar Sounds",
+      "contentCn": "林雨晴是北京一所大学的研究生。她今年二十四岁，学习很忙，每天都要看很多书。她住在北京一个居民楼的十一楼。她的家不大，但是很干净。她喜欢在晚上十一点睡觉，因为第二天早上七点要起床去学校。\n可是，这几天她不能好好睡觉。\n每天晚上十一点，她准备睡觉的时候，楼上就有人开始弹吉他。吉他的声音很大，她能听见每一个声音。第一天晚上，她想：可能是今天有人高兴，所以弹吉他。第二天晚上，吉他声又来了。她躺在床上，看着上面的墙，心里想：这个人为什么每天都是十一点弹吉他？\n第三天晚上，林雨晴很累。她早上八点去学校，晚上九点才回家。她吃了饭，看了书，十一点准备睡觉。她关了灯，躺在床上。这时候，楼上的吉他声又开始了。\n林雨晴坐起来，看着钟。十一点。她心里很不高兴。她想睡觉，但是吉他的声音太大了。她躺在床上，用东西放在耳朵上，但是还是能听见吉他的声音。\n第四天，林雨晴在学校的时候，心里一直在想楼上的吉他声。她不知道楼上住的是谁。她想：我不能每天都这样。我要去和他说，请他晚上不要弹吉他。但是她又不认识那个人，她有点不好意思去。\n晚上回家的时候，林雨晴想了一个办法。她写了一张字条。她写得很礼貌：\n“你好，我是住在十一楼的人。我不知道你是谁，但是我每天晚上都能听见你弹吉他的声音。你弹得很好，但是我每天十一点要睡觉，因为早上要去学校。能不能请你在晚上十一点以后不弹吉他？谢谢你。”\n林雨晴看了字条，觉得很好。她走到十二楼，找到楼上的门。她把字条贴在门上，然后很快地下楼回家。\n那天晚上十一点，林雨晴躺在床上，等着。她没有听见吉他的声音。她很开心，想：他看见我的字条了。她闭上眼睛，很快就睡觉了。",
+      "contentPy": "Lín yǔqíng shì běijīng yī suǒ dàxué de yánjiūshēng. Tā jīnnián èrshísì suì, xuéxí hěn máng, měitiān dū yào kàn hěnduō shū. Tā zhù zài běijīng yīgè jūmín lóu de shíyī lóu. Tā de jiā bù dà, dànshì hěn gānjìng. Tā xǐhuān zài wǎnshàng shíyī diǎn shuìjiào, yīnwèi dì èr tiān zǎoshang qī diǎn yào qǐchuáng qù xuéxiào.\nKěshì, zhè jǐ tiān tā bùnéng hǎohǎo shuìjiào.\nMěitiān wǎnshàng shíyī diǎn, tā zhǔnbèi shuìjiào de shíhòu, lóu shàng jiù yǒurén kāishǐ dàn jítā. Jítā de shēngyīn hěn dà, tā néng tīngjiàn měi yīgè shēngyīn. Dì yī tiān wǎnshàng, t�� xiǎng: Kěnéng shì jīntiān yǒurén gāoxìng, suǒyǐ dàn jítā. Dì èr tiān wǎnshàng, jítā shēng yòu láile. Tā tǎng zài chuángshàng, kànzhe shàngmiàn de qiáng, xīnlǐ xiǎng: Zhège rén wéi shén me měitiān dū shì shíyī diǎn dàn jítā?\nDì sān tiān wǎnshàng, lín yǔqíng hěn lèi. Tā zǎoshang bā diǎn qù xuéxiào, wǎnshàng jiǔ diǎn cái huí jiā. Tā chīle fàn, kànle shū, shíyī diǎn zhǔnbèi shuìjiào. Tā guānle dēng, tǎng zài chuángshàng. Zhè shíhòu, lóu shàng de jítā shēng yòu kāishǐle.\nLín yǔqíng zuò qǐlái, kànzhe zhōng. Shíyī diǎn. Tā xīnlǐ hěn bù gāoxìng. Tā xiǎng shuìjiào, dànshì jítā de shēngyīn tài dàle. Tā tǎng zài chuángshàng, yòng dōngxī fàng zài ěrduǒ shàng, dànshì háishì néng tīngjiàn jítā de shēngyīn.\nDì sì tiān, lín yǔqíng zài xuéxiào de shíhòu, xīnlǐ yīzhí zài xiǎng lóu shàng de jítā shēng. Tā bù zhīdào lóu shàng zhù de shì shéi. Tā xiǎng: Wǒ bùnéng měitiān dū zhèyàng. Wǒ yào qù hé tā shuō, qǐng tā wǎnshàng bùyào dàn jítā. Dànshì tā yòu bù rènshí nàgè rén, tā yǒudiǎn bù hǎoyìsi qù.\nWǎnshàng huí jiā de shíhòu, lín yǔqíng xiǎngle yīgè bànfǎ. Tā xiěle yī zhāng zìtiáo. Tā xiě dé hěn lǐmào:\n“Nǐ hǎo, wǒ shì zhù zài shíyī lóu de rén. Wǒ bù zhīdào nǐ shì shéi, dànshì wǒ měitiān wǎnshàng dū néng tīngjiàn nǐ dàn jítā de shēngyīn. Nǐ dàn dé hěn hǎo, dànshì wǒ měitiān shíyī diǎn yào shuìjiào, yīnwèi zǎoshang yào qù xuéxiào. Néng bùnéng qǐng nǐ zài wǎnshàng shíyī diǎn yǐhòu bù dàn jítā? Xièxiè nǐ.”\nLín yǔqíng kànle zìtiáo, juédé hěn hǎo. Tā zǒu dào shí'èr lóu, zhǎodào lóu shàng de mén. Tā bǎ zìtiáo tiē zài mén shàng, ránhòu hěn kuài dìxià lóu huí jiā.\nNèitiān wǎnshàng shíyī diǎn, lín yǔqíng tǎng zài chuángshàng, děngzhe. Tā méiyǒu tīngjiàn jítā de shēngyīn. Tā hěn kāixīn, xiǎng: Tā kànjiàn wǒ de zìtiáole. Tā bì shàng yǎnjīng, hěn kuài jiù shuìjiàole.",
+      "contentEn": "Lin Yuqing is a graduate student at a university in Beijing. She is twenty-four years old. She is very busy studying and reads many books every day. She lives on the 11th floor of a residential building in Beijing. Her home is not big, but it is very clean. She likes to go to bed at 11pm because she has to get up at 7am to go to school the next morning.\nHowever, she couldn't sleep well these days.\nEvery night at eleven o'clock, when she was getting ready to go to bed, someone would start playing guitar upstairs. The guitar was so loud she could hear every sound. On the first night, she thought: Maybe someone was happy today, so they played the guitar. The next night, the guitar sound returned. She was lying on the bed, looking at the wall above, and thinking: Why does this person play the guitar at eleven o'clock every day?\nOn the night of the third day, Lin Yuqing was very tired. She goes to school at eight in the morning and comes home at nine in the evening. She ate, read, and got ready to go to bed at eleven o'clock. She turned off the light and lay on the bed. At this time, the guitar sound upstairs started again.\nLin Yuqing sat up and looked at the clock. Eleven o'clock. She was very unhappy. She wanted to sleep, but the guitar was too loud. She was lying on the bed, putting something to her ears, but she could still hear the guitar.\nOn the fourth day, when Lin Yuqing was at school, she kept thinking about the sound of the guitar upstairs. She didn't know who lived upstairs. She thought: I can't do this every day. I'm going to tell him and ask him not to play the guitar at night. But she didn't know that person, so she was a little embarrassed to go.\nWhen going home at night, Lin Yuqing thought of a way. She wrote a note. She wrote politely:\n\"Hello, I live on the eleventh floor. I don't know who you are, but I can hear you playing the guitar every night. You play very well, but I have to go to bed at eleven o'clock every day because I have to go to school in the morning. Can you please not play the guitar after eleven o'clock in the evening? Thank you.\"\nLin Yuqing read the note and thought it was very good. She walked to the twelfth floor and found the door upstairs. She taped the note to the door and quickly went home.\nAt eleven o'clock that night, Lin Yuqing was lying on the bed, waiting. She didn't hear the guitar. She was very happy and thought: He saw my note. She closed her eyes and fell asleep quickly.",
+      "questions": [
+        {
+          "q": "林雨晴为什么需要每天十一点睡觉？",
+          "qPy": "Lín Yǔqíng wèishénme xūyào měitiān shíyī diǎn shuìjiào?",
+          "qEn": "Why does Lin Yuqing need to go to sleep at eleven o'clock every night?",
+          "options": [
+            "因为她要在晚上十一点看书",
+            "因为她第二天早上七点要起床去学校",
+            "因为她不喜欢晚上的电视节目"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā yào zài wǎnshàng shíyī diǎn kànshū",
+            "Yīnwèi tā dì-èr tiān zǎoshang qī diǎn yào qǐchuáng qù xuéxiào",
+            "Yīnwèi tā bù xǐhuan wǎnshàng de diànshì jiémù"
+          ],
+          "optionsEn": [
+            "Because she wants to read books at 11pm",
+            "Because she needs to get up at 7am the next morning to go to school",
+            "Because she doesn't like late-night TV shows"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "楼上的人什么时候弹吉他？",
+          "qPy": "Lóushàng de rén shénme shíhou dàn jítā?",
+          "qEn": "When does the person upstairs play the guitar?",
+          "options": [
+            "每天早上七点",
+            "每天下午三点",
+            "每天晚上十一点"
+          ],
+          "optionsPy": [
+            "Měitiān zǎoshang qī diǎn",
+            "Měitiān xiàwǔ sān diǎn",
+            "Měitiān wǎnshàng shíyī diǎn"
+          ],
+          "optionsEn": [
+            "Every morning at seven o'clock",
+            "Every afternoon at three o'clock",
+            "Every night at eleven o'clock"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "林雨晴是怎么解决吉他声问题的？",
+          "qPy": "Lín Yǔqíng shì zěnme jiějué jítā shēng wèntí de?",
+          "qEn": "How did Lin Yuqing solve the guitar sound problem?",
+          "options": [
+            "她搬到了别的居民楼住",
+            "她写了一张礼貌的字条贴在楼上邻居的门上",
+            "她上去和楼上的人大吵了一架"
+          ],
+          "optionsPy": [
+            "Tā bāndàole bié de jūmínlóu zhù",
+            "Tā xiěle yī zhāng lǐmào de zìtiáo tiē zài lóushàng línjū de mén shàng",
+            "Tā shàngqù hé lóushàng de rén dà chǎole yī jià"
+          ],
+          "optionsEn": [
+            "She moved to another residential building",
+            "She wrote a polite note and taped it to the upstairs neighbor's door",
+            "She went upstairs and had a big argument with the person upstairs"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_18",
+      "titleCn": "奶奶的电话",
+      "titlePy": "Nǎinai de diànhuà",
+      "titleEn": "Grandma's Summons",
+      "contentCn": "除夕下午，在北京，林奶奶在家里。她在厨房，叫大家来。\n“今天，每个人都要包饺子。”林奶奶说。\n林小北在客厅里，他听见奶奶的话，很紧张。他不会包饺子。这是第一次。\n林小雪看见弟弟的脸，笑了。“小北，你不会，是吗？”\n小北不说话。\n“没关系，”妈妈说，“我教你。”\n爸爸林建国也来了。“好，我们一起做。”他说。\n林奶奶拿出面团。面团很大，很白。她给每个人一块。她又拿出肉馅。肉馅很多，很好看。\n小北看着肉馅，想：这个不难。他把面团拿在手里。面团很软。\n“看，”林奶奶说，“先做皮。”\n林奶奶的手很快。她做一个小圆面皮，很好看。小雪也做，她也做得很好。妈妈的也好看。爸爸的不好看，但他笑。\n小北做皮。他的皮不圆，也不好看。他看看姐姐的皮，再看看自己的。他觉得自己做得不好。\n“没关系，”妈妈说，“第一次都是这样的。”\n小北又开始做。这一次好一点。他做了三个皮。三个皮都不太好看，但他很高兴。\n“现在，”林奶奶说，“放馅。”\n林奶奶教大家怎么放馅。不能太多，也不能太少。小北看奶奶的手。奶奶放一点馅在皮里，然后包起来。饺子很好看，站起来。\n小北也放馅。他放了很多。他想，多一点好吃。他包起来，但饺子破了。肉馅出来了。\n小雪看见，又笑了。“小北，太多了！”\n小北的脸红了。他又做一个。这次他放很少的馅。饺子包好了，但站不起来。它很小，不好看。\n“这个也不好。”小北说。\n“再做，”妈妈说，“你可以的。”\n小北又做。他做了五个饺子。有的破了，有的站不起来。他的手上都是面。\n小雪看弟弟的饺子，笑得很开心。“你的饺子都睡觉了，小北！”\n小北的脸很红。他不说话，又做一个。\n林奶奶走过来。她看小北做的饺子，没说话。她又看肉馅。肉馅快用完了。林奶奶看看爸爸。\n“建国，”林奶奶说，“肉不够。你昨天买肉了吗？”\n爸爸的脸红了。“我……我忘了。”他说。\n大家都不说话了。外面，雪在下。",
+      "contentPy": "Chúxì xiàwǔ, zài běijīng, lín nǎinai zài jiālǐ. Tā zài chúfáng, jiào dàjiā lái.\n“Jīntiān, měi gèrén dōu yào bāo jiǎozǐ.” Lín nǎinai shuō.\nLín xiǎo běi zài kètīng lǐ, tā tīngjiàn nǎinai dehuà, hěn jǐnzhāng. Tā bù huì bāo jiǎozǐ. Zhè shì dì yī cì.\nLín xiǎoxuě kànjiàn dìdì de liǎn, xiàole.“Xiǎo běi, nǐ bù huì, shì ma?”\nXiǎo běi bù shuōhuà.\n“Méiguānxì,” māmā shuō,“wǒ jiào nǐ.”\nBàba línjiànguó yě láile.“Hǎo, wǒmen yīqǐ zuò.” Tā shuō.\nLín nǎinai ná chū miàntuán. Miàntuán hěn dà, hěn bái. Tā gěi měi gèrén yīkuài. Tā yòu ná chū ròu xiàn. Ròu xiàn hěnduō, hěn hǎokàn.\nXiǎo běi kànzhe ròu xiàn, xiǎng: Zhège bù nán. Tā bǎ miàntuán ná zài shǒu lǐ. Miàntuán hěn ruǎn.\n“Kàn,” lín nǎinai shuō,“xiān zuò pí.”\nLín nǎinai de shǒu hěn kuài. Tā zuò yīgè xiǎo yuán miànpí, hěn hǎokàn. Xiǎoxuě yě zuò, tā yě zuò dé hěn hǎo. Māmā de yě hǎokàn. Bàba de bù hǎokàn, dàn tā xiào.\nXiǎo běi zuò pí. Tā de pí bù yuán, yě bù hǎokàn. Tā kàn kàn jiějiě de pí, zài kàn kàn zìjǐ de. Tā juédé zìjǐ zuò dé bù hǎo.\n“Méiguānxì,” māmā shuō,“dì yī cì dōu shì zhèyàng de.”\nXiǎo běi yòu kāishǐ zuò. Zhè yīcì hǎo yīdiǎn. Tā zuòle sān gè pí. Sān gè pí dōu bù tài hǎokàn, dàn tā hěn gāoxìng.\n“Xiànzài,” lín nǎinai shuō,“fàng xiàn.”\nLín nǎinai jiào dàjiā zěnme fàng xiàn. Bùnéng tài duō, yě bùnéng tài shǎo. Xiǎo běi kàn nǎinai de shǒu. Nǎinai fàng yīdiǎn xiàn zài pí lǐ, ránhòu bāo qǐlái. Jiǎozǐ hěn hǎokàn, zhàn qǐlái.\nXiǎo běi yě fàng xiàn. Tā fàngle hěnduō. Tā xiǎng, duō yīdiǎn hào chī. Tā bāo qǐlái, dàn jiǎozǐ pòle. Ròu xiàn chūláile.\nXiǎoxuě kànjiàn, yòu xiàole.“Xiǎo běi, tài duōle!”\nXiǎo běi de liǎnhóngle. Tā yòu zuò yīgè. Zhè cì tā fàng hěn shǎo de xiàn. Jiǎozǐ bāo hǎole, dàn zhàn bù qǐlái. Tā hěn xiǎo, bù hǎokàn.\n“Zhège yě bù hǎo.” Xiǎo běi shuō.\n“Zài zuò,” māmā shuō,“nǐ kěyǐ de.”\nXiǎo běi yòu zuò. Tā zuòle wǔ gè jiǎozǐ. Yǒu de pòle, yǒu de zhàn bù qǐlái. Tā de shǒu shàng dū shì miàn.\nXiǎoxuě kàn dìdì de jiǎozǐ, xiào dé hěn kāixīn.“Nǐ de jiǎozǐ dōu shuìjiàole, xiǎo běi!”\nXiǎo běi de liǎn hěn hóng. Tā bù shuōhuà, yòu zuò yīgè.\nLín nǎinai zǒu guòlái. Tā kàn xiǎo běi zuò de jiǎozǐ, méi shuōhuà. Tā yòu kàn ròu xiàn. Ròu xiàn kuài yòng wánliǎo. Lín nǎinai kàn kàn bàba.\n“Jiànguó,” lín nǎinai shuō,“ròu bùgòu. Nǐ zuótiān mǎi ròule ma?”\nBàba de liǎnhóngle.“Wǒ……wǒ wàngle.” Tā shuō.\nDàjiā dōu bù shuōhuàle. Wàimiàn, xuě zàixià.",
+      "contentEn": "On the afternoon of New Year's Eve, in Beijing, Grandma Lin was at home. She was in the kitchen, calling everyone to come.\n\"Today, everyone has to make dumplings.\" Grandma Lin said.\nLin Xiaobei was in the living room. He heard his grandma's words and became very nervous. He can't make dumplings. This is the first time.\nLin Xiaoxue smiled when she saw her brother's face. \"Xiao Bei, you can't, can you?\"\nXiaobei said nothing.\n\"It doesn't matter,\" Mom said, \"I'll teach you.\"\nDad Lin Jianguo is also here. \"Okay, let's do it together,\" he said.\nGrandma Lin took out the dough. The dough is large and white. She gave everyone a piece. She took out the minced meat again. There is a lot of meat filling and it looks very nice.\nXiaobei looked at the minced meat and thought: This is not difficult. He took the dough in his hands. The dough is very soft.\n\"Look,\" Grandma Lin said, \"make the skin first.\"\nGrandma Lin’s hands are very fast. She made a small round dough, which looked very nice. Xiaoxue does it too, and she does it very well. Mom's looks good too. Dad's doesn't look good, but he smiles.\nXiaobei makes the leather. His skin is neither round nor good-looking. He looked at his sister's skin and then at his own. He felt that he was not doing well.\n\"It's okay,\" Mom said. \"It's always like this the first time.\"\nXiaobei started to do it again. This time it was better. He made three skins. None of the three skins looked good, but he was happy.\n\"Now,\" said Grandma Lin, \"put the stuffing in.\"\nGrandma Lin taught everyone how to put stuffing. Not too much, not too little. Xiaobei looked at grandma's hand. Grandma puts a little stuffing in the skin and wraps it up. The dumplings look great and stand up.\nXiaobei also puts stuffing. He put a lot of it. He thought, more delicious. He wrapped it, but the dumpling broke. The minced meat came out.\nXiaoxue saw it and smiled again. \"Xiao Bei, there are too many!\"\nXiaobei's face turned red. He does another one. This time he put very little stuffing. The dumplings are wrapped, but they can’t stand up. It's small and not pretty.\n\"This is not good either.\" Xiaobei said.\n\"Do it again,\" Mom said. \"You can do it.\"\nXiaobei did it again. He made five dumplings. Some are broken, and some cannot stand up. His hands were full of noodles.\nXiaoxue looked at her brother's dumplings and smiled happily. \"Your dumplings are all asleep, Xiaobei!\"\nXiaobei's face was very red. He didn't say anything and did another thing.\nGrandma Lin came over. She looked at the dumplings made by Xiaobei and said nothing. She looked at the minced meat again. The meat filling is almost gone. Grandma Lin looked at Dad.\n\"Jianguo,\" Grandma Lin said, \"there's not enough meat. Did you buy meat yesterday?\"\nDad blushed. \"I...I forgot,\" he said.\nEveryone was silent. Outside, snow is falling.",
+      "questions": [
+        {
+          "q": "谁是第一次学包饺子？",
+          "qPy": "Shéi shì dì-yī cì xué bāo jiǎozǐ?",
+          "qEn": "Who is learning to make dumplings for the first time?",
+          "options": [
+            "林奶奶",
+            "林建国",
+            "林小北"
+          ],
+          "optionsPy": [
+            "Lín nǎinai",
+            "Lín Jiànguó",
+            "Lín Xiǎoběi"
+          ],
+          "optionsEn": [
+            "Grandma Lin",
+            "Lin Jianguo",
+            "Lin Xiaobei"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "林小北包的第一只饺子为什么破了？",
+          "qPy": "Lín Xiǎoběi bāo de dì-yī zhī jiǎozǐ wèishénme pò le?",
+          "qEn": "Why did the first dumpling Lin Xiaobei wrapped break?",
+          "options": [
+            "因为他放了太多肉馅",
+            "因为面皮太小了",
+            "因为饺子站不起来"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā fàngle tài duō ròuxiàn",
+            "Yīnwèi miànpí tài xiǎo le",
+            "Yīnwèi jiǎozǐ zhàn bù qǐlái"
+          ],
+          "optionsEn": [
+            "Because he put too much meat filling",
+            "Because the dumpling skin was too small",
+            "Because the dumpling couldn't stand up"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "为什么最后大家都不说话了？",
+          "qPy": "Wèishénme zuìhòu dàjiā dōu bù shuōhuà le?",
+          "qEn": "Why was everyone silent in the end?",
+          "options": [
+            "因为林小北哭了起来",
+            "因为爸爸林建国忘了买肉，肉不够了",
+            "因为外面雪太大了，不能出去玩"
+          ],
+          "optionsPy": [
+            "Yīnwèi Lín Xiǎoběi kūle qǐlai",
+            "Yīnwèi bàba Lín Jiànguó wàngle mǎi ròu, ròu bùgòu le",
+            "Yīnwèi wàimiàn xuě tài dà le, bùnéng chūqù wán"
+          ],
+          "optionsEn": [
+            "Because Lin Xiaobei started crying",
+            "Because dad Lin Jianguo forgot to buy meat and there wasn't enough",
+            "Because the snow outside was too heavy to go out and play"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_19",
+      "titleCn": "突然的礼物",
+      "titlePy": "Tūrán de lǐwù",
+      "titleEn": "Sudden Gift",
+      "contentCn": "丁东明看表，四点。他跳了起来。\n“六点要去方老师家吃饭！”他说。\n丁东明没有礼物。他马上穿衣服，从房间跑出来。他的手机在桌子上，他拿手机，跑出去。\n街上很多人。丁东明一边走一边想：“方老师喜欢什么？茶？书？花？”\n他走过一家书店，进去。书店很安静。丁东明看书，一本书要八十块。他摸口袋，只有五十块。他摇摇头，从书店出来。\n太阳很大。丁东明走得很快。他看见一家花店，花店外面有很多红色的花。\n“这花很漂亮，”丁东明说，“但是方老师家有花吗？”\n他不知道。他继续走。\n前面有一家小商店。丁东明进去，里面有很多东西：杯子、笔、小盒子。他看一个蓝色的杯子，杯子上面有猫。\n“这个杯子很可爱，”丁东明说，“但是方老师用杯子吗？”\n他看表，四点四十了。只有一小时二十分钟。\n丁东明有点着急。他从商店出来，站在街上。很多人从他身边走过去。\n“怎么办？”\n他想，“我没有礼物，不能空手去老师家。”\n他想起方老师说过喜欢喝茶。他四处看，看见对面有一家茶叶店。",
+      "contentPy": "Dīng dōngmíng kàn biǎo, sì diǎn. Tā tiàole qǐlái.\n“Liù diǎn yào qù fāng lǎoshī jiā chīfàn!” Tā shuō.\nDīng dōngmíng méiyǒu lǐwù. Tā mǎshàng chuān yīfú, cóng fángjiān pǎo chūlái. Tā de shǒujī zài zhuōzǐ shàng, tā ná shǒujī, pǎo chūqù.\nJiē shàng hěnduō rén. Dīng dōngmíng yībiān zǒu yībiān xiǎng:“Fāng lǎoshī xǐhuān shénme? Chá? Shū? Huā?”\nTā zǒuguò yījiā shūdiàn, jìnqù. Shūdiàn hěn ānjìng. Dīng dōngmíng kànshū, yī běn shū yào bāshí kuài. Tā mō kǒudài, zhǐyǒu wǔshí kuài. Tā yáo yáotóu, cóng shūdiàn chūlái.\nTàiyáng hěn dà. Dīng dōngmíng zǒu dé hěn kuài. Tā kànjiàn yījiā huā diàn, huā diàn wàimiàn yǒu hěnduō hóngsè de huā.\n“Zhè huā hěn piàoliang,” dīngdōng míngshuō,“dànshì fāng lǎoshī jiā yǒu huā ma?”\nTā bù zhīdào. Tā jìxù zǒu.\nQiánmiàn yǒu yījiā xiǎo shāngdiàn. Dīng dōngmíng jìnqù, lǐmiàn yǒu hěnduō dōngxī: Bēizǐ, bǐ, xiǎo hézǐ. Tā kàn yīgè lán sè de bēizǐ, bēizǐ shàngmiàn yǒu māo.\n“Zhège bēizǐ hěn kě'ài,” dīngdōng míngshuō,“dànshì fāng lǎoshī yòng bēizǐ ma?”\nTā kàn biǎo, sì diǎn sìshíle. Zhǐyǒu yī xiǎoshí èrshí fēnzhōng.\nDīng dōngmíng yǒudiǎn zhāojí. Tā cóng shāngdiàn chūlái, zhàn zài jiē shàng. Hěnduō rén cóng tā shēnbiān zǒu guòqù.\n“Zěnme bàn?”\nTā xiǎng,“wǒ méiyǒu lǐwù, bùnéng kōngshǒu qù lǎoshī jiā.”\nTā xiǎngqǐ fāng lǎoshī shuōguò xǐhuān hē chá. Tā sìchù kàn, kànjiàn duìmiàn yǒu yījiā cháyè diàn.",
+      "contentEn": "Ding Dongming looked at his watch, four o'clock. He jumped.\n\"I'm going to Teacher Fang's house for dinner at six o'clock!\" he said.\nDing Dongming has no gift. He immediately put on his clothes and ran out of the room. His cell phone was on the table. He took it and ran out.\nThere are many people on the street. Ding Dongming thought as he walked: \"What does Teacher Fang like? Tea? Books? Flowers?\"\nHe walked past a bookstore and went in. The bookstore is very quiet. Ding Dongming reads books, and a book costs 80 yuan. He felt in his pocket and found only fifty yuan. He shook his head and came out of the bookstore.\nThe sun is very big. Ding Dongming walked very fast. He saw a flower shop with many red flowers outside.\n\"This flower is very beautiful,\" Ding Dongming said, \"but does Teacher Fang have any flowers at home?\"\nHe doesn't know. He kept walking.\nThere is a small shop in front. Ding Dongming went in and there were many things inside: cups, pens, and small boxes. He looked at a blue cup with a cat on it.\n\"This cup is very cute,\" Ding Dongming said, \"but does Teacher Fang use the cup?\"\nHe looked at his watch. It was four forty. Only one hour and twenty minutes.\nDing Dongming was a little anxious. He came out of the store and stood in the street. Many people walked past him.\n\"what to do?\"\nHe thought, \"I don't have a gift, so I can't go to my teacher's house empty-handed.\"\nHe remembered that Teacher Fang said that he liked drinking tea. He looked around and saw a tea shop opposite.",
+      "questions": [
+        {
+          "q": "丁东明六点要去谁家吃饭？",
+          "qPy": "Dīng Dōngmíng liù diǎn yào qù shéi jiā chīfàn?",
+          "qEn": "Whose house is Ding Dongming going to for dinner at six o'clock?",
+          "options": [
+            "方老师家",
+            "他自己的家",
+            "赵医生家"
+          ],
+          "optionsPy": [
+            "Fāng lǎoshī jiā",
+            "Tā zìjǐ de jiā",
+            "Zhào yīshēng jiā"
+          ],
+          "optionsEn": [
+            "Teacher Fang's house",
+            "His own house",
+            "Dr. Zhao's house"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "丁东明为什么没有在书店买书？",
+          "qPy": "Dīng Dōngmíng wèishénme méiyǒu zài shūdiàn mǎishū?",
+          "qEn": "Why did Ding Dongming not buy a book in the bookstore?",
+          "options": [
+            "因为他不买书送给老师",
+            "因为书店里太吵了",
+            "因为一本书要八十块，而他只有五十块"
+          ],
+          "optionsPy": [
+            "Yīnwèi tā bù mǎishū sònggěi lǎoshī",
+            "Yīnwèi shūdiàn lǐ tài chǎo le",
+            "Yīnwèi yī běn shū yào bāshí kuài, ér tā zhǐyǒu wǔshí kuài"
+          ],
+          "optionsEn": [
+            "Because he doesn't want to buy a book for the teacher",
+            "Because it was too noisy in the bookstore",
+            "Because a book costs 80 yuan, and he only has 50 yuan"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "丁东明最后想去哪里买礼物？",
+          "qPy": "Dīng Dōngmíng zuìhòu xiǎng qù nǎlǐ mǎi lǐwù?",
+          "qEn": "Where did Ding Dongming want to buy a gift in the end?",
+          "options": [
+            "花店",
+            "茶叶店",
+            "小商店"
+          ],
+          "optionsPy": [
+            "Huādiàn",
+            "Cháyèdiàn",
+            "Xiǎo shāngdiàn"
+          ],
+          "optionsEn": [
+            "A flower shop",
+            "A tea shop",
+            "A small shop"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_20",
+      "titleCn": "考试后的想法",
+      "titlePy": "Kǎoshì hòu de xiǎngfǎ",
+      "titleEn": "Dreams After Exams",
+      "contentCn": "苏小雨把手机放在桌子上，说：“我们考完试了，应该高兴一点！”\n程山说：“我很高兴，但是考试真的太累了。我想去山上，那里的空气很好。”\n叶文说：“我想在家看书。山上的虫子很多，海边的人太多。”\n苏小雨说：“我们去一个有小山，也有海的地方，好吗？”\n程山说：“这样的地方在哪里？”\n叶文说：“我知道一个地方。我去年去过，那里有山，也有海，人很少。”\n苏小雨说：“太好了！叶文，你快告诉我们！”\n叶文说：“那个地方叫青月湾。从我们这里坐火车，五个小时就到了。那里有小的山，不是很高。山下面就是海，水很干净。”\n程山说：“山上有没有路？”\n叶文说：“有路，很好走。我奶奶也去过的。”\n苏小雨说：“我们可以在海边住吗？”\n叶文说：“可以。那里有人家，他们家有房间给客人住。一个晚上只要八十块钱。”\n程山说：“太好了！我们什么时候去？”\n苏小雨说：“我们下个星期去，好吗？这个星期我要在家睡觉。”\n叶文说：“好。我们买星期二的火车票。星期二人少。”\n程山说：“我们要带什么东西？”\n叶文说：“带衣服，带书，带吃的。那里没有大的商店。”\n苏小雨说：“我要带我的相机去！我们拍很多照片！”\n程山说：“我要带我的新鞋子去爬山。”\n叶文说：“你们要记得带钱。那里不能用手机给钱。”\n苏小雨说：“我带钱。我妈妈给我了五百块钱。”\n程山说：“我也带钱。我爸爸说我考试很好，给我了钱让我去玩。”\n叶文说：“那我们说好了。星期二早上七点，我们在火车站见面。”\n苏小雨说：“好！我们一定来！”\n程山说：“不来的人是狗！”\n三个人都笑了。苏小雨把手机拿起来，说：“我要告诉我妈妈这个好消息！”\n程山说：“我也要告诉我爸爸！”\n叶文说：“我去找一下火车票。我们要快一点买，不然没有票了。”\n苏小雨说：“叶文，你真聪明！你知道这么好的地方！”\n叶文说：“我们一起去，一定很好玩！”\n程山说：“夏天的计划真好！”",
+      "contentPy": "Sū xiǎoyǔ bǎ shǒujī fàng zài zhuōzǐ shàng, shuō:“Wǒmen kǎo wán shìle, yīnggāi gāoxìng yīdiǎn!”\nChéng shān shuō:“Wǒ hěn gāoxìng, dànshì kǎoshì zhēn de tài lèile. Wǒ xiǎng qù shānshàng, nàlǐ de kōngqì hěn hǎo.”\nYè wén shuō:“Wǒ xiǎng zàijiā kànshū. Shānshàng de chóngzǐ hěnduō, hǎibiān de rén tài duō.”\nSū xiǎoyǔ shuō:“Wǒmen qù yīgè yǒu xiǎoshān, yěyǒu hǎi dì dìfāng, hǎo ma?”\nChéng shān shuō:“Zhèyàng dì dìfāng zài nǎlǐ?”\nyè wén shuō wǒ zhī dào yí gè dì fāng wǒ qù nián qù guò nà li yǒu shān yě yǒu hǎi rén hěn shǎo\nSū xiǎoyǔ shuō:“Tài hǎole! Yè wén, nǐ kuài gàosù wǒmen!”\nYè wén shuō:“Nàgè dìfāng jiào qīng yuè wān. Cóng wǒmen zhèlǐ zuò huǒchē, wǔ gè xiǎoshí jiù dàole. Nà li yǒu xiǎo de shān, bùshì hěn gāo. Shān xiàmiàn jiùshì hǎi, shuǐ hěn gānjìng.”\nChéng shān shuō:“Shānshàng yǒu méiyǒu lù?”\nYè wén shuō:“Yǒu lù, hěn hǎo zǒu. Wǒ nǎinai yě qùguò de.”\nSū xiǎoyǔ shuō:“Wǒmen kěyǐ zài hǎibiān zhù ma?”\nYè wén shuō:“Kěyǐ. Nà li yǒu rénjiā, tāmen jiā yǒu fángjiān gěi kèrén zhù. Yīgè wǎnshàng zhǐyào bāshí kuài qián.”\nChéng shān shuō:“Tài hǎole! Wǒmen shénme shíhòu qù?”\nSū xiǎoyǔ shuō:“Wǒmen xià gè xīngqí qù, hǎo ma? Zhège xīngqí wǒ yào zàijiā shuìjiào.”\nYè wén shuō:“Hǎo. Wǒmen mǎi xīngqí'èr de huǒchē piào. Xīngqí'èr rén shǎo.”\nChéng shān shuō:“Wǒmen yào dài shénme dōngxī?”\nYè wén shuō:“Dài yīfú, dài shū, dài chī de. Nàlǐ méiyǒu dà de shāngdiàn.”\nSū xiǎoyǔ shuō:“Wǒ yào dài wǒ de xiàngjī qù! Wǒmen pāi hěnduō zhàopiàn!”\nChéng shān shuō:“Wǒ yào dài wǒ de xīn xiézǐ qù páshān.”\nYè wén shuō:“Nǐmen yào jìdé dài qián. Nàlǐ bùnéng yòng shǒujī gěi qián.”\nSū xiǎoyǔ shuō:“Wǒ dài qián. Wǒ māmā gěi wǒle wǔbǎi kuài qián.”\nChéng shān shuō:“Wǒ yě dài qián. Wǒ bàba shuō wǒ kǎoshì hěn hǎo, gěi wǒle qián ràng wǒ qù wán.”\nYè wén shuō:“Nà wǒmen shuō hǎole. Xīngqí'èr zǎoshang qī diǎn, wǒmen zài huǒchē zhàn jiànmiàn.”\nSū xiǎoyǔ shuō:“Hǎo! Wǒmen yīdìng lái!”\nChéng shān shuō:“Bù lái de rén shì gǒu!”\nSān gèrén dōu xiàole. Sū xiǎoyǔ bǎ shǒujī ná qǐlái, shuō:“Wǒ yào gàosù wǒ māmā zhège hǎo xiāoxī!”\nChéng shān shuō:“Wǒ yě yào gàosù wǒ bàba!”\nYè wén shuō:“Wǒ qù zhǎo yīxià huǒchē piào. Wǒmen yào kuài yīdiǎn mǎi, bùrán méiyǒu piàole.”\nSū xiǎoyǔ shuō:“Yè wén, nǐ zhēn cōngmíng! Nǐ zhīdào zhème hǎo dì dìfāng!”\nYè wén shuō:“Wǒmen yīqǐ qù, yīdìng hěn hǎowán!”\nChéng shān shuō:“Xiàtiān de jìhuà zhēn hǎo!”",
+      "contentEn": "Amelia Su put her phone on the table and said, \"We have finished the exam, we should be happy!\"\nCheng Shan said: \"I'm very happy, but the exam is really tiring. I want to go to the mountains, where the air is very good.\"\nYe Wen said: \"I want to read at home. There are a lot of bugs on the mountains and there are too many people on the beach.\"\nAmelia Su said: \"Let's go to a place with hills and the sea, okay?\"\nCheng Shan said: \"Where is such a place?\"\n叶文说：“我知道一个地方。我去年去过，那里有山，也有海，人很少。”\nAmelia Su said: \"Great! Ye Wen, tell us quickly!\"\nYe Wen said: \"That place is called Qingyue Bay. It takes five hours to get there by train from us. There are small mountains there, not very high. There is the sea below the mountains, and the water is very clean.\"\nCheng Shan asked: \"Is there a road on the mountain?\"\nYe Wen said: \"There is a road and it is easy to walk. My grandma has also been there.\"\nAmelia Su said: \"Can we live by the sea?\"\nYe Wen said: \"Okay. There is a family there, and their family has rooms for guests to stay. It only costs 80 yuan a night.\"\nCheng Shan said: \"Great! When should we go?\"\nAmelia Su said: \"Let's go next week, okay? I'm going to sleep at home this week.\"\nYe Wen said: \"Okay. Let's buy train tickets for Tuesday. There are fewer people on Tuesday.\"\nCheng Shan said: \"What should we bring?\"\nYe Wen said: \"Bring clothes, books, and food. There are no big stores there.\"\nAmelia Su said: \"I'm going to bring my camera! Let's take a lot of photos!\"\nCheng Shan said: \"I want to take my new shoes to climb the mountain.\"\nYe Wen said: \"You must remember to bring money. You cannot use mobile phones to give money there.\"\nAmelia Su said: \"I brought money. My mother gave me five hundred yuan.\"\nCheng Shan said: \"I also bring money. My father said that I did well in the exam and gave me money to play.\"\nYe Wen said: \"Then we have agreed. We will meet at the train station at seven o'clock on Tuesday morning.\"\nAmelia Su said: \"Okay! We will definitely come!\"\nCheng Shan said: \"Anyone who doesn't come is a dog!\"\nAll three laughed. Amelia Su picked up the phone and said, \"I want to tell my mother the good news!\"\nCheng Shan said: \"I want to tell my dad too!\"\nYe Wen said: \"I'm going to look for train tickets. We have to buy them quickly, otherwise we won't have any tickets.\"\nAmelia Su said: \"Ye Wen, you are so smart! You know such a good place!\"\nYe Wen said: \"It will be fun if we go together!\"\nCheng Shan said: \"The summer plan is really good!\"",
+      "questions": [
+        {
+          "q": "青月湾是个什么样的地方？",
+          "qPy": "Qīngyuè Wān shì gè shénmeyàng de dìfang?",
+          "qEn": "What kind of place is Qingyue Bay?",
+          "options": [
+            "只有大山没有海的地方",
+            "有小山也有海，而且人很少的地方",
+            "有很多大商店和人非常多的地方"
+          ],
+          "optionsPy": [
+            "Zhǐyǒu dàshān méiyǒu hǎi de dìfang",
+            "Yǒu xiǎoshān yěyǒu hǎi, érqiě rén hěn shǎo de dìfang",
+            "Yǒu hěnduō dà shāngdiàn hé rén fēicháng duō de dìfang"
+          ],
+          "optionsEn": [
+            "A place with only big mountains and no sea",
+            "A place with hills and the sea, and very few people",
+            "A place with many large shops and a lot of people"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "他们打算什么时候去青月湾？",
+          "qPy": "Tāmen dǎsuàn shénme shíhou qù Qīngyuè Wān?",
+          "qEn": "When do they plan to go to Qingyue Bay?",
+          "options": [
+            "今天下午",
+            "这个星期六",
+            "下个星期二"
+          ],
+          "optionsPy": [
+            "Jīntiān xiàwǔ",
+            "Zhège xīngqīliù",
+            "Xià gè xīngqī'èr"
+          ],
+          "optionsEn": [
+            "This afternoon",
+            "This Saturday",
+            "Next Tuesday"
+          ],
+          "correct": 2
+        },
+        {
+          "q": "叶文为什么提醒大家要记得带钱？",
+          "qPy": "Yè Wén wèishénme tíxǐng dàjiā yào jìde dài qián?",
+          "qEn": "Why did Ye Wen remind everyone to bring money?",
+          "options": [
+            "因为那里不能用手机付钱",
+            "因为那里的房间非常贵",
+            "因为他们要在火车上买很多东西"
+          ],
+          "optionsPy": [
+            "Yīnwèi nàlǐ bùnéng yòng shǒujī fùqián",
+            "Yīnwèi nàlǐ de fángjiān fēicháng guì",
+            "Yīnwèi tāmen yào zài huǒchē shàng mǎi hěnduō dōngxi"
+          ],
+          "optionsEn": [
+            "Because they cannot use mobile phones to pay there",
+            "Because the rooms there are very expensive",
+            "Because they need to buy many things on the train"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "essay_2_21",
+      "titleCn": "门口的床",
+      "titlePy": "Ménkǒu de chuáng",
+      "titleEn": "Bed at the Door",
+      "contentCn": "苏远把床从车上搬下来，和司机一起抬到门口。床是木头做的，很重。苏远说：“谢谢您帮我抬床。”\n司机说：“不客气，但是床能进去吗？”\n苏远看看门，又看看床。门很小，床很大。他心里想：“完了，床进不去。”\n叶奶奶从屋里走出来，看见苏远和司机站在门口。叶奶奶说：“小苏，怎么了？”\n苏远说：“叶奶奶，我的床太大，门太小，进不去。”\n叶奶奶走过来，用手量了量门的宽度，又量了量床的长度。叶奶奶说：“床比门宽了十厘米。”\n苏远着急地说：“那怎么办？我昨天才买的床，不能退。”\n司机说：“要不把床拆开？”\n苏远摇头：“我不会拆床，也没有工具。”\n叶奶奶想了想，说：“我们把床竖起来试试？”\n三个人一起把床竖起来。床很高，苏远举着手，床还是进不去。门太矮了。\n司机说：“真的进不去，我走了。”司机开车走了。\n苏远坐在门口的床上，很难过。他第一次有自己的家，却连床都进不去。太阳很大，他的衣服都湿了。\n叶奶奶说：“别难过，我们去问问老王。老王以前做过木工，他有办法。”\n苏远站起来，说：“真的吗？”\n叶奶奶说：“真的。老王住在我家后面，我们走过去。”\n苏远和叶奶奶走到老王家。老王正在院子里修椅子。老王看见叶奶奶，说：“叶奶奶，有什么事？”\n叶奶奶说：“小苏买了新床，但是床太大，门太小，进不去。”\n苏远说：“王师傅，您能帮我吗？”\n老王放下工具，说：“我去看看。”\n三个人走回苏远的新家。老王看了看床，又看了看门。老王说：“门不能改，只能改床。”\n苏远担心地问：“怎么改？”\n老王笑着说：“把床腿锯短一点，就能进去了。”\n苏远说：“锯短床腿？那床会不会坏？”\n老王说：“不会坏。锯短五厘米就够了，床还是很好用。”\n老王回家拿了锯子回来。他让苏远把床翻过来，开始锯四条床腿。锯子的声音很大，很多邻居都出来看。\n一个阿姨说：“新来的小伙子在做什么？”\n叶奶奶说：“他的床进不去，老王在帮他。”\n阿姨说：“老王的手艺很好，不用担心。”\n二十分钟后，老王锯完了四条床腿。他说：“好了，现在试试。”\n苏远和老王把床抬起来，慢慢往门里送。这次床进去了！苏远高兴地说：“进去了！谢谢王师傅！”\n老王说：“小事。把床放好，今晚就能睡觉了。”\n苏远把床放在卧室里，正好合适。他拿出钱包，要给老王钱。老王摆手说：“不用钱，邻居互相帮助。”\n叶奶奶说：“对啊，我们四合院的人都很友好。”\n老王走了，邻居们也散了。苏远看着自己的床，笑了。虽然床腿短了五厘米，但是很舒服。\n他躺在床上，想：“北京的第一天，很难，但是很好。”",
+      "contentPy": "Sū yuǎn bǎ chuáng cóng chē shàng bān xiàlái, hé sījī yīqǐ tái dào ménkǒu. Chuáng shì mùtou zuò de, hěn zhòng. Sū yuǎn shuō:“Xièxiè nín bāng wǒ tái chuáng.”\nSījī shuō:“Bù kèqì, dànshì chuáng néng jìnqù ma?”\nSū yuǎn kàn kān mén, yòu kàn kàn chuáng. Mén hěn xiǎo, chuáng hěn dà. Tā xīnlǐ xiǎng:“Wánliǎo, chuáng jìn bù qù.”\nYè nǎinai cóng wū li zǒu chūlái, kànjiàn sū yuǎn hé sījī zhàn zài ménkǒu. Yè nǎinai shuō:“Xiǎo sū, zěnmeliǎo?”\nSū yuǎn shuō:“Yè nǎinai, wǒ de chuáng tài dà, mén tài xiǎo, jìn bù qù.”\nYè nǎinai zǒu guòlái, yòng shǒu liàngle liàng mén de kuāndù, yòu liàngle liàng chuáng de chángdù. Yè nǎinai shuō:“Chuáng bǐ mén kuānle shí límǐ.”\nSū yuǎn zhāojí de shuō:“Nà zěnme bàn? Wǒ zuótiān cái mǎi de chuáng, bùnéng tuì.”\nSījī shuō:“Yào bù bǎ chuáng chāi kāi?”\nSū yuǎn yáotóu:“Wǒ bù huì chāi chuáng, yě méiyǒu gōngjù.”\nYè nǎinai xiǎngle xiǎng, shuō:“Wǒmen bǎ chuáng shù qǐlái shì shì?”\nSān gèrén yīqǐ bǎ chuáng shù qǐlái. Chuáng hěn gāo, sūyuǎnjǔ zhuóshǒu, chuáng háishì jìn bù qù. Mén tài ǎile.\nSījī shuō:“Zhēn de jìn bù qù, wǒ zǒule.” Sījī kāichē zǒule.\nSū yuǎn zuò zài ménkǒu de chuángshàng, hěn nánguò. Tā dì yī cì yǒu zìjǐ de jiā, què lián chuáng dōu jìn bù qù. Tàiyáng hěn dà, tā de yīfú dōu shīle.\nYè nǎinai shuō:“Bié nánguò, wǒmen qù wèn wèn lǎo wáng. Lǎo wáng yǐqián zuòguò mùgōng, tā yǒu bànfǎ.”\nSū yuǎn zhàn qǐlái, shuō:“Zhēn de ma?”\nYè nǎinai shuō:“Zhēn de. Lǎo wáng zhù zài wǒjiā hòumiàn, wǒmen zǒu guòqù.”\nSū yuǎn hé yè nǎinai zǒu dào lǎo wángjiā. Lǎo wáng zhèngzài yuànzǐ lǐ xiū yǐzǐ. Lǎo wáng kànjiàn yè nǎinai, shuō:“Yè nǎinai, yǒu shé me shì?”\nYè nǎinai shuō:“Xiǎo sū mǎile xīn chuáng, dànshì chuáng tài dà, mén tài xiǎo, jìn bù qù.”\nSū yuǎn shuō:“Wáng shīfù, nín néng bāng wǒ ma?”\nLǎo wáng fàngxià gōngjù, shuō:“Wǒ qù kàn kàn.”\nSān gèrén zǒu huí sū yuǎn de xīnjiā. Lǎo wáng kànle kàn chuáng, yòu kànle kān mén. Lǎo wáng shuō:“Mén bùnéng gǎi, zhǐ néng gǎi chuáng.”\nSū yuǎn dānxīn dì wèn:“Zěnme gǎi?”\nLǎo wáng xiàozhe shuō:“Bǎ chuáng tuǐ jù duǎn yīdiǎn, jiù néng jìnqùle.”\nSū yuǎn shuō:“Jù duǎn chuáng tuǐ? Nà chuáng huì bù huì huài?”\nLǎo wáng shuō:“Bù huì huài. Jù duǎn wǔ límǐ jiù gòule, chuáng háishì hěn hǎo yòng.”\nLǎo wáng huí jiā nále jùzǐ huílái. Tā ràng sū yuǎn bǎ chuáng fān guòlái, kāishǐ jù sìtiáo chuáng tuǐ. Jùzǐ de shēngyīn hěn dà, hěnduō línjū dōu chūlái kàn.\nYīgè āyí shuō:“Xīn lái de xiǎohuǒzǐ zài zuò shénme?”\nYè nǎinai shuō:“Tā de chuáng jìn bù qù, lǎo wáng zài bāng tā.”\nĀyí shuō:“Lǎo wáng de shǒuyì hěn hǎo, bùyòng dānxīn.”\nÈrshí fēnzhōng hòu, lǎo wáng jù wánliǎo sìtiáo chuáng tuǐ. Tā shuō:“Hǎole, xiànzài shì shì.”\nSū yuǎn hé lǎo wáng bǎ chuáng tái qǐlái, màn man wǎng mén li sòng. Zhè cì chuáng jìnqùle! Sū yuǎn gāoxìng de shuō:“Jìnqùle! Xièxiè wáng shīfù!”\nLǎo wáng shuō:“Xiǎoshì. Bǎ chuáng fàng hǎo, jīn wǎn jiù néng shuìjiàole.”\nSū yuǎn bǎ chuáng fàng zài wòshì lǐ, zhènghǎo héshì. Tā ná chū qiánbāo, yào gěi lǎo wáng qián. Lǎo wáng bǎishǒu shuō:“Bùyòng qián, línjū hùxiāng bāngzhù.”\nYè nǎinai shuō:“Duì a, wǒmen sìhéyuàn de rén dōu hěn yǒuhǎo.”\nLǎo wáng zǒule, línjūmen yě sànle. Sū yuǎn kànzhe zìjǐ de chuáng, xiàole. Suīrán chuáng tuǐ duǎnle wǔ límǐ, dànshì hěn shūfú.\nTā tǎng zài chuángshàng, xiǎng:“Běijīng de dì yī tiān, hěn nán, dànshì hěn hǎo.”",
+      "contentEn": "Su Yuan took the bed out of the car and carried it to the door with the driver. The bed is made of wood and is very heavy. Su Yuan said: \"Thank you for helping me carry the bed.\"\nThe driver said, \"You're welcome, but can the bed go in?\"\nSu Yuan looked at the door and then at the bed. The door is small and the bed is huge. He thought to himself: \"It's over, I can't get into the bed.\"\nGrandma Ye walked out of the house and saw Su Yuan and the driver standing at the door. Grandma Ye said: \"Xiao Su, what's wrong?\"\nSu Yuan said: \"Grandma Ye, my bed is too big and the door is too small, so I can't get in.\"\nGrandma Ye came over and measured the width of the door and the length of the bed with her hands. Grandma Ye said: \"The bed is ten centimeters wider than the door.\"\nSu Yuan said anxiously: \"What should I do? The bed I just bought yesterday cannot be returned.\"\nThe driver said, \"How about taking the bed apart?\"\nSu Yuan shook his head: \"I don't know how to dismantle the bed, and I don't have the tools.\"\nGrandma Ye thought for a while and said, \"Let's try erecting the bed?\"\nThe three of them put the bed up together. The bed was very high. Su Yuan raised his hands, but he still couldn't get into the bed. The door is too low.\nThe driver said: \"I really can't get in, so I'm leaving.\" The driver drove away.\nSu Yuan sat on the bed by the door, feeling sad. For the first time, he had his own home, but he couldn't even get into his bed. The sun was so strong that his clothes got wet.\nGrandma Ye said: \"Don't be sad, let's ask Lao Wang. Lao Wang used to do carpentry, he has a way.\"\nSu Yuan stood up and said, \"Really?\"\nGrandma Ye said: \"It's true. Lao Wang lives behind my house, let's walk over.\"\nSu Yuan and Grandma Ye walked to Lao Wang's house. Lao Wang is repairing chairs in the yard. Lao Wang saw Grandma Ye and said, \"Grandma Ye, what's the matter?\"\nGrandma Ye said: \"Xiao Su bought a new bed, but the bed is too big and the door is too small, so she can't get in.\"\nSu Yuan said: \"Master Wang, can you help me?\"\nLao Wang put down his tools and said, \"I'll go take a look.\"\nThe three people walked back to Su Yuan's new home. Lao Wang looked at the bed and then at the door. Lao Wang said: \"You can't change the door, you can only change the bed.\"\nSu Yuan asked worriedly: \"How to change it?\"\nLao Wang said with a smile: \"Saw the bed legs a little shorter and you can get in.\"\nSu Yuan said: \"Saw the bed legs short? Will the bed be damaged?\"\nLao Wang said: \"It won't break. Just cut it short by five centimeters, and the bed will still be very useful.\"\nLao Wang went home and brought back the saw. He asked Su Yuan to turn the bed over and start sawing the four bed legs. The sound of the saw was so loud that many neighbors came out to watch.\nAn aunt said: \"What is the new guy doing?\"\nGrandma Ye said: \"He can't get into his bed, Lao Wang is helping him.\"\nThe aunt said: \"Lao Wang's craftsmanship is very good, don't worry.\"\nTwenty minutes later, Lao Wang finished sawing the four bed legs. He said, \"Okay, try it now.\"\nSu Yuan and Lao Wang lifted the bed and slowly walked it through the door. This time the bed went in! Su Yuan said happily: \"We're in! Thank you, Master Wang!\"\nLao Wang said: \"It's a small thing. Put the bed in place and you can sleep tonight.\"\nSu Yuan placed the bed in the bedroom, which was just right. He took out his wallet and wanted to give Lao Wang money. Lao Wang waved his hand and said, \"No money, neighbors help each other.\"\nGrandma Ye said: \"Yes, the people in our courtyard are very friendly.\"\nLao Wang left, and the neighbors dispersed. Su Yuan looked at his bed and smiled. Although the bed legs are five centimeters shorter, it is very comfortable.\nHe lay on the bed and thought: \"The first day in Beijing is difficult, but very good.\"",
+      "questions": [
+        {
+          "q": "苏远遇到了什么困难？",
+          "qPy": "Sū Yuǎn yùdàole shénme kùnnán?",
+          "qEn": "What difficulty did Su Yuan run into?",
+          "options": [
+            "他买的床太大，门太小，床进不去新家",
+            "他的床在路上被雨淋湿了",
+            "他没有钱付给送床的司机"
+          ],
+          "optionsPy": [
+            "Tā mǎi de chuáng tài dà, mén tài xiǎo, chuáng jìn bù qù xīnjiā",
+            "Tā de chuáng zài lùshàng bèi yǔ línshī le",
+            "Tā méiyǒu qián fùgěi sòng chuáng de sījī"
+          ],
+          "optionsEn": [
+            "The bed he bought was too big and the door was too small, so the bed couldn't enter his new home",
+            "His bed got wet from the rain on the way",
+            "He didn't have money to pay the driver who delivered the bed"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "老王是怎么帮苏远解决这个问题的？",
+          "qPy": "Lǎo Wáng shì zěnme bāng Sū Yuǎn jiějué zhège wèntí de?",
+          "qEn": "How did Lao Wang help Su Yuan solve this problem?",
+          "options": [
+            "他帮苏远把门拆掉了",
+            "他用锯子把新床的四条床腿锯短了五厘米",
+            "他帮苏远把床退回了商店"
+          ],
+          "optionsPy": [
+            "Tā bāng Sū Yuǎn bǎ mén chāidiào le",
+            "Tā yòng jùzi bǎ xīn chuáng de sì tiáo chuángtuǐ jù duǎnle wǔ límǐ",
+            "Tā bāng Sū Yuǎn bǎ chuáng tuìhuíle shāngdiàn"
+          ],
+          "optionsEn": [
+            "He helped Su Yuan take down the door",
+            "He used a saw to cut the four legs of the new bed five centimeters shorter",
+            "He helped Su Yuan return the bed to the store"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "老王最后收了苏远的钱吗？",
+          "qPy": "Lǎo Wáng zuìhòu shōule Sū Yuǎn de qián ma?",
+          "qEn": "Did Lao Wang accept Su Yuan's money in the end?",
+          "options": [
+            "收了，因为锯床腿很辛苦",
+            "没有收，因为他说邻居之间应该互相帮助",
+            "收了一半，作为工具的费用"
+          ],
+          "optionsPy": [
+            "Shōule, yīnwèi jù chuángtuǐ hěn xīnkǔ",
+            "Méiyǒu shōu, yīnwèi tā shuō línjū zhī jiān yīnggāi hùxiāng bāngzhù",
+            "Shōule yībàn, zuòwéi gōngjù de fèiyòng"
+          ],
+          "optionsEn": [
+            "Yes, because sawing the bed legs was hard work",
+            "No, because he said neighbors should help each other",
+            "He accepted half, as a fee for the tools"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_22",
+      "titleCn": "车上的歌声",
+      "titlePy": "Chē shàng de gēshēng",
+      "titleEn": "Singing on the Bus",
+      "contentCn": "大巴在山路上慢慢开。丁小雨站在车中间，她问：“我们再来一首歌，好吗？”\n学生们都说：“好！”\n叶小云举手，她说：“我会唱《小苹果》。”\n苏天明说：“我也会！”\n程老师走过来，程老师说：“唱歌可以，但是大家要坐好。”\n丁小雨开始唱：“你是我的小呀小苹果……”\n三十个声音一起唱，大巴里都是笑声。城市的高楼越来越矮，绿色的山越来越近。\n苏天明看着窗外，他说：“小云，你看！山上有花！”\n叶小云把脸贴在玻璃上，她说：“是桃花！粉红色的！”\n程老师第二次数头，程老师说：“大家看左边，有很多花树。”\n学生们都挤到左边，大巴轻轻晃了一下。司机大声说：“孩子们，坐回去！”\n丁小雨坐下来，她问程老师：“老师，西山高吗？”\n程老师说：“不高，但是路长。我们要开两个小时。”\n叶小云从包里拿出水，她给苏天明一瓶，她说：“给你。”\n苏天明接过水，他问：“你带吃的了吗？”\n叶小云点点头，她小声说：“我带了饼干和苹果，我们���会儿一起吃。”\n大巴转了一个大弯，城市完全看不见了。两边都是高高的树，太阳从树叶中间照进来，在地上画很多圆。\n丁小雨又开始唱歌，这次她唱得小声，只有她周围的人能听见。叶小云跟着轻轻哼，苏天明用手打拍子。\n程老师坐在前面，程老师看着学生们，她笑了。",
+      "contentPy": "Dàbā zài shānlù shàng màn man kāi. Dīng xiǎoyǔ zhàn zài chē zhōngjiān, tā wèn:“Wǒmen zàilái yī shǒu gē, hǎo ma?”\nXuéshēngmen dōu shuō:“Hǎo!”\nYèxiǎoyún jǔ shǒu, tā shuō:“Wǒ huì chàng “xiǎo píngguǒ”.”\nSū tiānmíng shuō:“Wǒ yě huì!”\nChéng lǎoshī zǒu guòlái, chéng lǎoshī shuō:“Chànggē kěyǐ, dànshì dàjiā yào zuò hǎo.”\nDīng xiǎoyǔ kāishǐ chàng:“Nǐ shì wǒ de xiǎo ya xiǎo píngguǒ……”\nSānshí gè shēngyīn yīqǐ chàng, dà bālǐ dōu shì xiào shēng. Chéngshì de gāolóu yuè lái yuè ǎi, lǜsè de shānyuè lái yuè jìn.\nSū tiānmíng kànzhe chuāngwài, tā shuō:“Xiǎo yún, nǐ kàn! Shānshàng yǒu huā!”\nYèxiǎoyún bǎ liǎn tiē zài bōlí shàng, tā shuō:“Shì táohuā! Fěnhóng sè de!”\nChéng lǎoshī dì èr cìshù tóu, chéng lǎoshī shuō:“Dàjiā kàn zuǒbiān, yǒu hěnduō huā shù.”\nXuéshēngmen dōu jǐ dào zuǒbiān, dàbā qīng qīng huǎngle yīxià. Sījī dàshēng shuō:“Háizǐmen, zuò huíqù!”\nDīng xiǎoyǔ zuò xiàlái, tā wèn chéng lǎoshī:“Lǎoshī, xīshān gāo ma?”\nChéng lǎoshī shuō:“Bù gāo, dànshì lù zhǎng. Wǒmen yào kāi liǎng gè xiǎoshí.”\nYèxiǎoyún cóng bāo lǐ ná chū shuǐ, tā gěi sū tiānmíng yī píng, tā shuō:“Gěi nǐ.”\nSū tiānmíng jiēguò shuǐ, tā wèn:“Nǐ dài chī dele ma?”\nYèxiǎoyún diǎndiǎn tóu, tā xiǎoshēng shuō:“Wǒ dàile bǐnggān hé píngguǒ, wǒmen ���huì er yīqǐ chī.”\nDàbā zhuǎnle yīgè dà wān, chéngshì wánquán kàn bùjiànle. Liǎngbiān dōu shì gāo gāo de shù, tàiyáng cóng shùyè zhōngjiān zhào jìnlái, zài dìshàng huà hěnduō yuán.\nDīng xiǎoyǔ yòu kāishǐ chànggē, zhè cì tā chàng dé xiǎoshēng, zhǐyǒu tā zhōuwéi de rén néng tīngjiàn. Yèxiǎoyún gēnzhe qīng qīng hēng, sū tiānmíng yòng shǒudǎ pāizǐ.\nChéng lǎoshī zuò zài qiánmiàn, chéng lǎoshī kànzhe xuéshēngmen, tā xiàole.",
+      "contentEn": "The bus drove slowly on the mountain road. Ding Xiaoyu stood in the middle of the car. She asked, \"Shall we play another song?\"\nThe students all said: \"Okay!\"\nYe Xiaoyun raised her hand and said, \"I can sing \"Little Apple\".\"\nSu Tianming said: \"I can do it too!\"\nTeacher Cheng came over and said, \"It's okay to sing, but everyone must sit still.\"\nDing Xiaoyu began to sing: \"You are my little little apple...\"\nThirty voices sang together, and the whole bus was filled with laughter. The tall buildings in the city are getting shorter and shorter, and the green mountains are getting closer and closer.\nSu Tianming looked out the window and said, \"Xiaoyun, look! There are flowers on the mountain!\"\nYe Xiaoyun pressed her face against the glass and said, \"It's peach blossoms! Pink!\"\nTeacher Cheng counted his head for the second time, and Teacher Cheng said: \"Look to the left, everyone, there are many flowers and trees.\"\nThe students all crowded to the left, and the bus shook slightly. The driver shouted: \"Kids, sit back!\"\nDing Xiaoyu sat down and asked Teacher Cheng: \"Teacher, is the Western Mountain high?\"\nTeacher Cheng said: \"It's not high, but the road is long. We have to drive for two hours.\"\nYe Xiaoyun took out water from her bag and gave Su Tianming a bottle. She said, \"Here you go.\"\nSu Tianming took the water and asked, \"Have you brought anything to eat?\"\nYe Xiaoyun nodded, and she whispered: \"I brought biscuits and apples, we will eat them together later.\"\nThe bus made a sharp turn and the city was completely invisible. There are tall trees on both sides, and the sun shines through the leaves, drawing many circles on the ground.\nDing Xiaoyu started singing again, this time she sang quietly so that only the people around her could hear. Ye Xiaoyun hummed softly, and Su Tianming beat the time with his hands.\nTeacher Cheng sat in front. Teacher Cheng looked at the students and smiled.",
+      "questions": [
+        {
+          "q": "孩子们在大巴车上做什么？",
+          "qPy": "Háizimen zài dàbā chē shàng zuò shénme?",
+          "qEn": "What are the children doing on the bus?",
+          "options": [
+            "他们一边坐车，一边快乐地唱歌",
+            "他们都在睡觉，车里很安静",
+            "他们正在用手机玩游戏"
+          ],
+          "optionsPy": [
+            "Tāmen yībiān zuòchē, yībiān kuàilè de chànggē",
+            "Tāmen dōu zài shuìjiào, chē lǐ hěn ānjìng",
+            "Tāmen zhèngzài yòng shǒujī wán yóuxì"
+          ],
+          "optionsEn": [
+            "They are singing happily while riding the bus",
+            "They are all sleeping, and the bus is very quiet",
+            "They are playing games on their mobile phones"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "为什么大巴车突然轻轻晃了一下？",
+          "qPy": "Wèishénme dàbā chē tūrán qīngqīng huǎngle yīxià?",
+          "qEn": "Why did the bus suddenly shake slightly?",
+          "options": [
+            "环境里的风太大",
+            "因为学生们都挤到左边去看花树",
+            "因为大巴车坏了"
+          ],
+          "optionsPy": [
+            "Huánjìng lǐ de fēng tài dà",
+            "Yīnwèi xuéshēngmen dōu jǐ dào zuǒbiān qù kàn huāshù",
+            "Yīnwèi dàbā chē huài le"
+          ],
+          "optionsEn": [
+            "Because the wind in the environment was too strong",
+            "Because all the students crowded to the left to look at the flowering trees",
+            "Because the bus broke down"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "叶小云给苏天明带了什么？",
+          "qPy": "Yè Xiǎoyún gěi Sū Tiānmíng dàile shénme?",
+          "qEn": "What did Ye Xiaoyun bring for Su Tianming?",
+          "options": [
+            "一瓶水，还有饼干和苹果",
+            "一本新书和一枝笔",
+            "一双运动鞋子"
+          ],
+          "optionsPy": [
+            "Yī píng shuǐ, hái yǒu bǐnggān hé píngguǒ",
+            "Yī běn xīn shū hé yī zhī bǐ",
+            "Yī shuāng yùndòng xiézi"
+          ],
+          "optionsEn": [
+            "A bottle of water, along with biscuits and apples",
+            "A new book and a pen",
+            "A pair of sports shoes"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "essay_2_23",
+      "titleCn": "第一次吵架",
+      "titlePy": "Dì-yī cì chǎojià",
+      "titleEn": "First Fight",
+      "contentCn": "余梅把箱子推进去，说：“我是余梅，我从四川过来。”她的眼睛看着床，床很小，但是她的箱子很大。\n叶小音从椅子上站起来，说：“你好，我是叶小音，我从广东过来。”她的声音软软的，像水一样。\n余梅打开箱子，拿出一瓶红色的东西。她���：“这是我家做的辣椒酱，很香，你闻一闻。”\n叶小音摇摇头，说：“我不吃辣，我们广东菜是甜的。”她的身体往后退了一步。\n余梅的眼睛变大了，她说：“什么？不吃辣？那你怎么吃饭？”她的手里拿着瓶子，瓶子在灯光下面很红。\n叶小音从她的桌子上拿过一个盒子，她说：“我们吃这个，这是马蹄糕，很甜，你尝一尝。”她的手指白白的，像小骨头。\n余梅吃了一口，她的脸变了，她说：“太甜了！像吃糖一样！”她把马蹄糕放回去，放得很重。\n叶小音的脸也变红了，她说：“你们四川菜只有辣，没有别的味道！”她的声音不再软软的，像刀子一样。\n余梅站起来，她说：“我们四川菜最好吃！全国人都爱吃！”她的脚在地上踩了一下。\n叶小音也站起来，她说：“我们广东菜才最好吃！广东人会吃，天下人都知道！”她的手指着窗户，窗户外面有很多树。\n两个女孩都不说话了，她们的脸都红红的，一个像辣椒，一个像红豆沙。",
+      "contentPy": "Yú méi bǎ xiāngzǐ tuī jìnqù, shuō:“Wǒ shì yú méi, wǒ cóng sìchuān guòlái.” Tā de yǎnjīng kànzhe chuáng, chuáng hěn xiǎo, dànshì tā de xiāngzǐ hěn dà.\nYèxiǎoyīn cóng yǐzǐ shàng zhàn qǐlái, shuō:“Nǐ hǎo, wǒ shì yèxiǎoyīn, wǒ cóng guǎngdōng guòlái.” Tā de shēngyīn ruǎn ruǎn de, xiàng shuǐ yīyàng.\nYú méi dǎkāi xiāngzǐ, ná chū yī píng hóngsè de dōngxī. Tā ���:“Zhè shì wǒjiā zuò de làjiāo jiàng, hěn xiāng, nǐ wén yī wén.”\nYèxiǎoyīn yáo yáotóu, shuō:“Wǒ bù chī là, wǒmen guǎngdōng cài shì tián de.” Tā de shēntǐ wǎng hòutuìle yībù.\nYú méi de yǎnjīng biàn dàle, tā shuō:“Shénme? Bù chī là? Nà nǐ zěnme chīfàn?” Tā de shǒu lǐ názhe píngzǐ, píngzǐ zài dēngguāng xiàmiàn hěn hóng.\nYèxiǎoyīn cóng tā de zhuōzǐ shàng náguò yīgè hézǐ, tā shuō:“Wǒmen chī zhège, zhè shì mǎtí gāo, hěn tián, nǐ cháng yī cháng.” Tā de shǒuzhǐ báibái de, xiàng xiǎo gǔtou.\nYú méi chīle yīkǒu, tā de liǎn biànle, tā shuō:“Tài tiánle! Xiàng chī táng yīyàng!” Tā bǎ mǎtí gāo fàng huíqù, fàng dé hěn zhòng.\nYèxiǎoyīn de liǎn yě biàn hóngle, tā shuō:“Nǐmen sìchuān cài zhǐyǒu là, méiyǒu bié de wèidào!” Tā de shēngyīn bù zài ruǎn ruǎn de, xiàng dāozǐ yīyàng.\nYú méi zhàn qǐlái, tā shuō:“Wǒmen sìchuān cài zuì hào chī! Quánguó rén dōu ài chī!” Tā de jiǎo zài dìshàng cǎile yīxià.\nYèxiǎoyīn yě zhàn qǐlái, tā shuō:“Wǒmen guǎngdōng cài cái zuì hào chī! Guǎngdōng rén huì chī, tiānxià rén dōu zhīdào!” Tā de shǒuzhǐzhe chuānghù, chuānghù wàimiàn yǒu hěnduō shù.\nLiǎng gè nǚhái dōu bù shuōhuàle, tāmen de liǎn dōu hóng hóng de, yīgè xiàng làjiāo, yīgè xiàng hóngdòu shā.",
+      "contentEn": "Yu Mei pushed the box in and said, \"I am Yu Mei, I come from Sichuan.\" Her eyes looked at the bed. The bed was small, but her box was very big.\nYe Xiaoyin stood up from the chair and said, \"Hello, I'm Ye Xiaoyin, I come from Guangdong.\" Her voice was as soft as water.\nYu Mei opened the box and took out a bottle of red stuff. She said: \"This is my home-made chili sauce. It's very fragrant. Smell it.\"\nYe Xiaoyin shook her head and said, \"I don't eat spicy food. Our Cantonese food is sweet.\" She took a step back.\nYu Mei's eyes got bigger, and she said, \"What? You don't eat spicy food? Then how do you eat?\" She held a bottle in her hand, and the bottle was very red under the light.\nYe Xiaoyin took a box from her table and said, \"Let's eat this. This is water chestnut cake. It's very sweet. Try it.\" Her fingers were white, like small bones.\nYu Mei took a bite, and her face changed. She said, \"It's too sweet! It's like eating candy!\" She put the horseshoe cake back very heavily.\nYe Xiaoyin's face also turned red, and she said: \"Your Sichuan food is only spicy and has no other taste!\" Her voice was no longer soft, like a knife.\nYu Mei stood up and said, \"Our Sichuan food is the most delicious! People all over the country love it!\" She stepped on the ground.\nYe Xiaoyin also stood up and said, \"Our Cantonese food is the most delicious! Cantonese people know how to eat it, and everyone in the world knows it!\" She pointed to the window, and there were many trees outside the window.\nThe two girls were silent. Their faces were both as red as red bean paste. One looked like chili pepper and the other looked like red bean paste.",
+      "questions": [
+        {
+          "q": "余梅和叶小音分别来自哪里？",
+          "qPy": "Yú Méi hé Yè Xiǎoyīn fēnbié láizì nǎlǐ?",
+          "qEn": "Where do Yu Mei and Ye Xiaoyin come from respectively?",
+          "options": [
+            "余梅来自四川，叶小音来自广东",
+            "余梅来自北京，叶小音来自上海",
+            "余梅来自广东，叶小音来自四川"
+          ],
+          "optionsPy": [
+            "Yú Méi láizì Sìchuān, Yè Xiǎoyīn láizì Guǎngdōng",
+            "Yú Méi láizì Běijīng, Yè Xiǎoyīn láizì Shànghǎi",
+            "Yú Méi láizì Guǎngdōng, Yè Xiǎoyīn láizì Sìchuān"
+          ],
+          "optionsEn": [
+            "Yu Mei is from Sichuan, Ye Xiaoyin is from Guangdong",
+            "Yu Mei is from Beijing, Ye Xiaoyin is from Shanghai",
+            "Yu Mei is from Guangdong, Ye Xiaoyin is from Sichuan"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "余梅和叶小音为什么吵架？",
+          "qPy": "Yú Méi hé Yè Xiǎoyīn wèishénme chǎojià?",
+          "qEn": "Why did Yu Mei and Ye Xiaoyin argue?",
+          "options": [
+            "因为她们都不想睡小床",
+            "因为关于四川菜和广东菜哪个最好吃，她们有不同的想法",
+            "因为叶小音弄坏了余梅的辣椒酱"
+          ],
+          "optionsPy": [
+            "Yīnwèi tāmen dōu bù xiǎng shuì xiǎochuáng",
+            "Yīnwèi guānyú Sìchuān cài hé Guǎngdōng cài nǎge zuì hǎochī, tāmen yǒu bùtóng de xiǎngfǎ",
+            "Yīnwèi Yè Xiǎoyīn nònghuàile Yú Méi de làjiāojiàng"
+          ],
+          "optionsEn": [
+            "Because neither of them wanted to sleep in the small bed",
+            "Because they had different ideas about whether Sichuan food or Cantonese food is the most delicious",
+            "Because Ye Xiaoyin broke Yu Mei's chili sauce"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "余梅尝了叶小音的马蹄糕后，觉得怎么样？",
+          "qPy": "Yú Méi chángle Yè Xiǎoyīn de mǎtígāo hòu, juéde zěnmeyàng?",
+          "qEn": "What did Yu Mei think after tasting Ye Xiaoyin's water chestnut cake?",
+          "options": [
+            "她觉得太甜了，像吃糖一样",
+            "她觉得非常好吃，还想再吃一块",
+            "她觉得有一点点辣"
+          ],
+          "optionsPy": [
+            "Tā juéde tài tiánle, xiàng chī táng yīyàng",
+            "Tā juéde fēicháng hǎochī, hái xiǎng zài chī yī kuài",
+            "Tā juéde yǒu yīdiǎndiǎn là"
+          ],
+          "optionsEn": [
+            "She felt it was too sweet, like eating candy",
+            "She thought it was very delicious and wanted to eat another piece",
+            "She thought it was a little bit spicy"
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "essay_2_24",
+      "titleCn": "看不懂的信息",
+      "titlePy": "Kànbùdǒng de xìnxī",
+      "titleEn": "Unreadable Message",
+      "contentCn": "潘东把手机放进兜里，雨就落在他的头发上。他跑向地铁站，心里一直在想：AMX是什么？BZY又是什么？\n地铁里人很多。潘东抓住扶手，又拿出手机看那条短信。叶梅写的是：亲爱的，我需要AMX和BZY，还有热水。谢谢宝贝。\n“她叫我宝贝。”\n潘东笑了，但很快又皱起眉头，“可是AMX到底是什么？”\n旁边一个老奶奶看他着急的样子，就问：“年轻人，你没事吧？”\n潘东说：“我女朋友生病了，她给我发短信，可是我看不懂药的名字。”\n老奶奶戴上眼镜看手机，然后摇头说：“我也不懂这些英文字。你为什么不打电话问她？”\n“她说话会疼。”\n潘东说，“她喉咙很疼，所以发短信。”\n地铁到了人民广场站。潘东跑出去，冲进雨里。他记得前面有一条街有很多药店。\n雨越下越大。潘东的鞋子湿了，袜子也湿了。他跑到第一家药店，推开门进去。\n“你好，”潘东对穿白衣服的女人说，“我要AMX和BZY。”\n女人眨眨眼：“什么？”\n“AMX和BZY，”潘东把手机给她看，“我女朋友需要的药。”\n女人看了看，笑了：“这些不是药的名字。可能是她不舒服，打错了字。”\n潘东的心沉下去：“那怎么办？她生病了，需要药。”\n“她有什么症状？”女人问。\n“她喉咙疼，还有发烧。”\n潘东说，“昨天开始的。”\n女人从柜台后面拿出两盒药：“这个治喉咙，这个退烧。多喝水，多休息。”\n潘东买了药，又把药名写在纸上。他走出药店，雨还在下。他想了想，又走进旁边的超市买矿泉水和橙子。\n手机响了。是叶梅的短信：买到了吗？我好难受。\n潘东站在超市门口回复：买到了！我马上回来。还给你买了橙子和水。\n他刚要按发送，突然停住了。一个新的问题让他站在雨中不动了：他忘了问怎么吃这些药！一次吃几片？一天吃几次？\n潘东转身又跑回药店。刚才那个女人正在给别的客人找药。潘东排队等着，雨水从他的头发滴到地板上。\n终于轮到他了。潘东拿出药盒：“对不起，我忘了问，这个怎么吃？”\n女人笑着说：“盒子上有说明。喉咙药一天三次，一次两片。退烧药发烧的时候吃，一次一片。”\n潘东点头，把这些话也写在纸上。这次他小心地把纸折好，放进贴身的口袋。\n走出药店的时候，雨小了。潘东看看时间，已经下午四点。他女朋友一定等着急了。\n他跑向地铁站，心里想着：希望这些药有用。希望叶梅快点好起来。\n在地铁上，潘东给叶梅发短信：我买到药了！还有橙子。二十分钟到你家。\n发完短信，潘东发现旁边坐着一个小女孩在哭。女孩的妈妈说：“她发烧了，不肯吃药。”\n潘东从袋子里拿出一个橙子给小女孩：“这个很甜，吃完药可以吃橙子。”\n小女孩停止哭泣，看着橙子。她妈妈对潘东说：“谢谢你。”\n潘东笑了笑。他想，今天虽然很累，但是能帮助别人，感觉很好。\n地铁到站了。潘东站起身，抓紧装药的袋子。他知道，叶梅在等着他。",
+      "contentPy": "Pān dōng bǎ shǒujī fàng jìn dōu lǐ, yǔ jiù luò zài tā de tóufǎ shàng. Tā pǎo xiàng dìtiě zhàn, xīnlǐ yīzhí zài xiǎng:AMX shì shénme?BZY yòu shì shénme?\nDìtiě lǐ rén hěnduō. Pān dōng zhuā zhù fúshǒu, yòu ná chū shǒujī kàn nà tiáo duǎnxìn. Yè méi xiě de shì: Qīn'ài de, wǒ xūyào AMX hé BZY, hái yǒu rè shuǐ. Xièxiè bǎobèi.\n“Tā jiào wǒ bǎobèi.”\nPān dōng xiàole, dàn hěn kuài yòu zhòu qǐ méitóu,“kěshì AMX dàodǐ shì shénme?”\nPángbiān yīgè lǎonǎinai kàn tā zhāojí de yàngzǐ, jiù wèn:“Niánqīng rén, nǐ méishì ba?”\nPān dōng shuō:“Wǒ nǚ péngyǒu shēngbìngle, tā gěi wǒ fā duǎnxìn, kěshì wǒ kàn bù dǒng yào de míngzì.”\nLǎonǎinai dài shàng yǎnjìng kàn shǒujī, ránhòu yáotóu shuō:“Wǒ yě bù dǒng zhèxiē yīng wénzì. Nǐ wèishéme bù dǎ diànhuà wèn tā?”\n“Tā shuōhuà huì téng.”\nPān dōng shuō,“tā hóulóng hěn téng, suǒyǐ fā duǎnxìn.”\nDìtiě dàole rénmín guǎngchǎng zhàn. Pān dōng pǎo chūqù, chōng jìn yǔ lǐ. Tā jìdé qiánmiàn yǒu yītiáo jiē yǒu hěnduō yàodiàn.\nYǔ yuè xiàyuè dà. Pān dōng de xiézǐ shīle, wàzǐ yě shīle. Tā pǎo dào dì yī jiā yàodiàn, tuī kāi mén jìnqù.\n“Nǐ hǎo,” pān dōng duì chuān bái yīfú de nǚrén shuō,“wǒ yào AMX hé BZY.”\nNǚrén zhǎ zhǎyǎn:“Shénme?”\n“AMX hé BZY,” pān dōng bǎ shǒujī gěi tā kàn,“wǒ nǚ péngyǒu xūyào di yào.”\nNǚrén kànle kàn, xiàole:“Zhèxiē bùshì yào de míngzì. Kěnéng shì tā bú shūfú, dǎ cuòle zì.”\nPān dōng de xīn chén xiàqù:“Nà zěnme bàn? Tā shēngbìngle, xūyào yào.”\n“Tā yǒu shé me zhèngzhuàng?” Nǚrén wèn.\n“Tā hóulóng téng, hái yǒu fāshāo.”\nPān dōng shuō,“zuótiān kāishǐ de.”\nNǚrén cóng guìtái hòumiàn ná chū liǎng hé yào:“Zhège zhì hóulóng, zhège tuìshāo. Duō hē shuǐ, duō xiūxí.”\nPān dōng mǎile yào, yòu bǎ yào míng xiě zài zhǐ shàng. Tā zǒuchū yàodiàn, yǔ hái zàixià. Tā xiǎngle xiǎng, yòu zǒu jìn pángbiān de chāoshì mǎi kuàngquán shuǐ hé chéngzǐ.\nShǒujī xiǎngle. Shì yè méi de duǎnxìn: Mǎi dàole ma? Wǒ hǎo nánshòu.\nPān dōng zhàn zài chāoshì ménkǒu huífù: Mǎi dàole! Wǒ mǎshàng huílái. Hái gěi nǐ mǎile chéngzǐ hé shuǐ.\nTā gāng yào àn fāsòng, túrán tíng zhùle. Yīgè xīn de wèntí ràng tā zhàn zài yǔzhōng bù dòngle: Tā wàngle wèn zěnme chī zhèxiē yào! Yīcì chī jǐ piàn? Yītiān chī jǐ cì?\nPān dōng zhuǎnshēn yòu pǎo huí yàodiàn. Gāngcái nàgè nǚrén zhèngzài gěi bié de kèrén zhǎo yào. Pān dōng páiduì děngzhe, yǔshuǐ cóng tā de tóufǎ dī dào dìbǎn shàng.\nZhōngyú lún dào tāle. Pān dōng ná chū yào hé:“Duìbùqǐ, wǒ wàngle wèn, zhège zěnme chī?”\nNǚrén xiàozhe shuō:“Hézǐ shàng yǒu shuōmíng. Hóulóng yào yītiān sāncì, yīcì liǎng piàn. Tuìshāo yào fāshāo de shíhòu chī, yīcì yīpiàn.”\nPān dōng diǎntóu, bǎ zhèxiē huà yě xiě zài zhǐ shàng. Zhè cì tā xiǎoxīn dì bǎ zhǐ zhé hǎo, fàng jìn tiēshēn de kǒudài.\nZǒuchū yàodiàn de shíhòu, yǔ xiǎole. Pān dōng kàn kàn shíjiān, yǐjīng xiàwǔ sì diǎn. Tā nǚ péngyǒu yīdìng děng zhāojíle.\nTā pǎo xiàng dìtiě zhàn, xīnlǐ xiǎngzhe: Xīwàng zhèxiē yào yǒuyòng. Xīwàng yè méi kuài diǎn hǎo qǐlái.\nZài dìtiě shàng, pān dōng gěi yèméifā duǎnxìn: Wǒ mǎi dào yàole! Hái yǒu chéngzǐ. Èrshí fēnzhōng dào nǐ jiā.\nFā wán duǎnxìn, pān dōng fāxiàn pángbiān zuòzhe yīgè xiǎo nǚhái zài kū. Nǚhái de māmā shuō:“Tā fāshāole, bù kěn chī yào.”\nPān dōng cóng dàizǐ lǐ ná chū yīgè chéngzǐ gěi xiǎo nǚhái:“Zhège hěn tián, chī wán yào kěyǐ chī chéngzǐ.”\nXiǎo nǚhái tíngzhǐ kūqì, kànzhe chéngzǐ. Tā māmā duì pān dōng shuō:“Xièxiè nǐ.”\nPān dōng xiàole xiào. Tā xiǎng, jīntiān suīrán hěn lèi, dànshì néng bāngzhù biérén, gǎnjué hěn hǎo.\nDìtiě dào zhànle. Pān dōng zhàn qǐshēn, zhuājǐn zhuāng yào de dàizǐ. Tā zhīdào, yè méi zài děngzhe tā.",
+      "contentEn": "Pan Dong put his mobile phone in his pocket, and the rain fell on his hair. He ran to the subway station, thinking all the time: What is AMX? What is BZY?\nThere are many people in the subway. Pan Dong grabbed the armrest and took out his phone to read the text message. Ye Mei wrote: Dear, I need AMX and BZY, and hot water. Thank you baby.\n\"She called me baby.\"\nPan Dong smiled, but soon frowned, \"But what exactly is AMX?\"\nAn old woman next to him saw his anxious look and asked, \"Young man, are you okay?\"\nPan Dong said: \"My girlfriend was sick, and she sent me a text message, but I couldn't understand the name of the medicine.\"\nThe old lady put on her glasses and looked at her phone, then shook her head and said, \"I don't understand these English words either. Why don't you call her and ask her?\"\n\"It hurts when she talks.\"\nPan Dong said, \"Her throat hurt, so she sent the text message.\"\nThe subway arrived at People's Square Station. Pan Dong ran out and into the rain. He remembered that there was a street ahead with many pharmacies.\nThe rain is getting heavier. Pan Dong's shoes were wet and his socks were also wet. He ran to the first pharmacy, opened the door and went in.\n\"Hello,\" Pan Dong said to the woman in white, \"I want AMX and BZY.\"\nThe woman blinked: \"What?\"\n\"AMX and BZY,\" Pan Dong showed her the phone, \"the medicine my girlfriend needs.\"\nThe woman looked at it and smiled: \"These are not the names of the medicines. Maybe she was uncomfortable and made a typo.\"\nPan Dong's heart sank: \"What should we do? She is sick and needs medicine.\"\n\"What symptoms does she have?\" the woman asked.\n\"She has a sore throat and a fever.\"\nPan Dong said, \"It started yesterday.\"\nThe woman took out two boxes of medicine from behind the counter: \"This one treats the throat, this one reduces the fever. Drink more water and get more rest.\"\nPan Dong bought the medicine and wrote the name of the medicine on paper. When he walked out of the pharmacy, it was still raining. He thought for a while and then walked into the nearby supermarket to buy mineral water and oranges.\nThe phone rang. It’s a text message from Ye Mei: Have you bought it? I feel so bad.\nPan Dong stood at the door of the supermarket and replied: I bought it! I'll be right back. I also bought you oranges and water.\nHe was about to press send when he suddenly stopped. A new question stopped him standing in the rain: he forgot to ask how to take these medicines! How many slices should you take at one time? How many times a day do you eat?\nPan Dong turned around and ran back to the pharmacy. The woman just now was looking for medicine for other customers. Pan Dong waited in line, rain dripping from his hair to the floor.\nIt was finally his turn. Pan Dong took out the medicine box: \"I'm sorry, I forgot to ask, how do you take this?\"\nThe woman smiled and said, \"There are instructions on the box. Throat medicine, two tablets three times a day. Take antipyretic medicine when you have a fever, one tablet at a time.\"\nPan Dong nodded and wrote these words on the paper. This time he carefully folded the paper and put it in his pocket.\nWhen I walked out of the drugstore, the rain stopped. Pan Dong looked at the time, it was already four o'clock in the afternoon. His girlfriend must be anxious.\nHe ran to the subway station, thinking: I hope these medicines will work. I hope Ye Mei gets better soon.\nOn the subway, Pan Dong texted Ye Mei: I bought the medicine! And oranges. I'll be at your house in twenty minutes.\nAfter sending the text message, Pan Dong found a little girl sitting next to him crying. The girl's mother said: \"She has a fever and refuses to take medicine.\"\nPan Dong took out an orange from the bag and gave it to the little girl: \"This is very sweet. You can eat the orange after taking the medicine.\"\nThe little girl stopped crying and looked at the orange. Her mother said to Pan Dong: \"Thank you.\"\nPan Dong smiled. He thought that although he was very tired today, it felt good to be able to help others.\nThe subway has arrived. Pan Dong stood up and grabbed the bag containing the medicine. He knew that Ye Mei was waiting for him.",
+      "questions": [
+        {
+          "q": "潘东的女朋友发来的信息里，“AMX”和“BZY”是什么意思？",
+          "qPy": "Pān Dōng de nǚpéngyou fā lái de xìnxī lǐ, “AMX” hé “BZY” shì shénme yìsi?",
+          "qEn": "In the message from Pan Dong's girlfriend, what do 'AMX' and 'BZY' mean?",
+          "options": [
+            "这是两种感冒药的英文名字",
+            "这不代表药的名字，可能是她生病不舒服打错了字",
+            "这是她想吃的水果的拼音缩写"
+          ],
+          "optionsPy": [
+            "Zhè shì liǎng zhǒng gǎnmàoyào de Yīngwén míngzi",
+            "Zhè bù dàibiǎo yào de míngzi, kěnéng shì tā shēngbìng bù shūfu dǎcuòle zì",
+            "Zhè shì tā xiǎng chī de shuǐguǒ de pīnyīn suōxiě"
+          ],
+          "optionsEn": [
+            "These are the English names of two types of cold medicines",
+            "These do not represent the names of medicines; she might have made typos because she felt unwell",
+            "These are the pinyin abbreviations of fruits she wanted to eat"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "药店的女人告诉潘东什么？",
+          "qPy": "Yàodiàn de nǚrén gàosù Pān Dōng shénme?",
+          "qEn": "What did the woman at the pharmacy tell Pan Dong?",
+          "options": [
+            "她说那两种药卖完了，请他去别的药店",
+            "她告诉他这些字母不是药的名字，并根据症状给他拿了药",
+            "她让他给女朋友买牛奶喝"
+          ],
+          "optionsPy": [
+            "Tā shuō nà liǎng zhǒng yào màiwánle, qǐng tā qù bié de yàodiàn",
+            "Tā gàosù tā zhèxiē zìmǔ búshì yào de míngzi, bìng gēnjù zhèngzhuàng gěi tā nále yào",
+            "Tā ràng tā gěi nǚpéngyou mǎi niúnǎi hē"
+          ],
+          "optionsEn": [
+            "She said those two medicines were sold out and asked him to go to another pharmacy",
+            "She told him those letters were not names of medicines and gave him medicines based on her symptoms",
+            "She asked him to buy milk for his girlfriend"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "潘东在地铁上是怎么帮助小女孩的？",
+          "qPy": "Pān Dōng zài dìtiě shàng shì zěnme bāngzhù xiǎo nǚhái de?",
+          "qEn": "How did Pan Dong help the little girl on the subway?",
+          "options": [
+            "他把自己的伞送给了小女孩",
+            "他给哭泣的女孩一个橙子，说吃完药可以吃它",
+            "他给小女孩唱了一首歌"
+          ],
+          "optionsPy": [
+            "Tā bǎ zìjǐ de sǎn sònggěile xiǎo nǚhái",
+            "Tā gěi kūqì de nǚhái yī gè chéngzi, shuō chī wán yào kěyǐ chī tā",
+            "Tā gěi xiǎo nǚhái chàngle yī shǒu gē"
+          ],
+          "optionsEn": [
+            "He gave his own umbrella to the little girl",
+            "He gave the crying girl an orange, saying she could eat it after taking the medicine",
+            "He sang a song to the little girl"
+          ],
+          "correct": 1
+        }
+      ]
+    },
+    {
+      "id": "essay_2_25",
+      "titleCn": "经理的大话",
+      "titlePy": "Jīnglǐ de dàhuà",
+      "titleEn": "Boss Talks Big",
+      "contentCn": "沈经理站在草地上，两只手放在腰上，大声说：“今天我要跑第一！谁也别想超过我！”\n苏月把一瓶水放在桌子上，抬头看沈经理。苏月小声说：“沈经理跑得很快吗？我从来没看过他跑步。”\n叶会计坐在椅子上，手里拿着一个苹果。叶会计笑着说：“他说大话。去年他跑最后，还差点摔倒。”\n程亮走过来，手里拿着两根香蕉。程亮说：“但是今年他天天早上在公园跑步，我看过他。”\n沈经理听见他们说话，转过身来。沈经理说：“你们不相信？等会儿你们就知道了！”\n苏月把水果切成小块，放进盘子里。苏月说：“沈经理，你先吃点水果吧，跑步前要喝水。”\n沈经理走过来，拿起一块西瓜。沈经理说：“谢谢苏月。我吃了这些，就能跑得更快。”\n叶会计站起来，走到苏月旁边。叶会计说：“苏月，你也参加跑步吗？”\n苏月摇摇头，说：“我不跑，我给大家准备水和吃的。我跑得很慢。”\n程亮吃下一根香蕉，说：“我参加接力赛，不跑长跑。长跑太累了。”\n这时候，公司的王老板走过来。王老板穿着运动服，头发梳得很亮。王老板说：“大家都准备好了吗？跑步比赛十分钟后开始！”\n沈经理立刻站直身体。沈经理说：“王老板，我今天一定要拿第一！”\n王老板笑着说：“好！我等会儿给你发奖。”王老板说完，走向起跑线。\n苏月看着沈经理，发现他一直在原地跳。苏月问：“沈经理，你紧张吗？”\n沈经理说：“我不紧张！我在热身！”但是他的手一直在抖。\n叶会计小声对苏月说：“他去年摔倒的时候，大家都在笑。他今年一定很怕再摔倒。”\n程亮说：“我们去看比赛吧，站近一点。”\n三个人走到起跑线附近。草地上已经站着二十多个参加比赛的人。沈经理站在最前面，两只脚不停地动。\n王老板拿着喇叭，大声说：“各就各位——预备——跑！”\n二十多个人一起跑出去。沈经理跑得很快，一下子冲到最前面。苏月拍手，说：“沈经理真的跑第一！”\n叶会计说：“才跑第一圈，还有三圈呢。”\n跑第二圈的时候，沈经理还是第一。但是他的脸很红，呼吸很重。程亮说：“他好像很累。”\n第三圈，一个年轻人超过沈经理。沈经理想加速，但是他的脚不太稳。苏月担心地说：“他会不会又摔倒？”\n最后一圈，又有两个人超过沈经理。沈经理的脸从红色变成白色。他咬紧牙齿，拼命往前跑。\n快到终点的时候，沈经理的左脚绊到右脚。他的身体向前倒下去。苏月叫出声：“啊！”\n但是沈经理没有摔倒。他用两只手撑住地面，像动物一样跳起来，继续往前冲。他超过一个人，又超过一个人。\n终点线就在眼前。沈经理和那个年轻人并肩跑。大家都大声喊：“加油！加油！”\n沈经理最后一步跨过终点线，比年轻人快了一点点。王老板举起沈经理的手，大声说：“沈经理第一名！”\n苏月跑过来，给沈经理一瓶水。苏月说：“沈经理，你太厉害了！”\n沈经理喝下水，大口喘气。沈经理说：“我……我做到了！我没有摔倒！”\n叶会计笑着说：“今年没人笑你，大家都为你拍手。”\n程亮说：“沈经理，你说到做到，真的赢了！”\n沈经理看着大家，眼睛有点湿。沈经理说：“谢谢你们来看我比赛。去年我摔倒，今年我站起来。”\n王老板走过来，给沈经理一块金色奖牌。王老板说：“这是坚持奖！不是最快的人能得，是最努力的人能得！”\n沈经理接过奖牌，笑得像春天的太阳。沈经理说：“明年我还要跑！”\n苏月看着大家开心的样子，心里想：运动会真的很好，能让大家都快乐起来。",
+      "contentPy": "Shěn jīnglǐ zhàn zài cǎodì shàng, liǎng zhī shǒu fàng zài yāo shàng, dàshēng shuō:“Jīntiān wǒ yào pǎo dì yī! Shéi yě bié xiǎng chāoguò wǒ!”\nSū yuè bǎ yī píng shuǐ fàng zài zhuōzǐ shàng, táitóu kàn shěn jīnglǐ. Sū yuè xiǎoshēng shuō:“Shěn jīnglǐ pǎo dé hěn kuài ma? Wǒ cónglái méi kànguò tā pǎobù.”\nYè kuàijì zuò zài yǐzǐ shàng, shǒu lǐ názhe yīgè píngguǒ. Yè kuàijì xiàozhe shuō:“Tā shuō dàhuà. Qùnián tā pǎo zuìhòu, hái chàdiǎn shuāi dǎo.”\nChéng liàng zǒu guòlái, shǒu lǐ ná zháo liǎng gēn xiāngjiāo. Chéng liàng shuō:“Dànshì jīnnián tā tiāntiān zǎoshang zài gōngyuán pǎobù, wǒ kànguò tā.”\nShěn jīnglǐ tīngjiàn tāmen shuōhuà, zhuǎnguò shēn lái. Shěn jīnglǐ shuō:“Nǐmen bù xiāngxìn? Děng huì er nǐmen jiù zhīdàole!”\nSū yuè bǎ shuǐguǒ qiè chéng xiǎo kuài, fàng jìn pánzǐ lǐ. Sū yuè shuō:“Shěn jīnglǐ, nǐ xiān chī diǎn shuǐguǒ ba, pǎobù qián yào hē shuǐ.”\nShěn jīnglǐ zǒu guòlái, ná qǐ yīkuài xīguā. Shěn jīnglǐ shuō:“Xièxiè sū yuè. Wǒ chīle zhèxiē, jiù néng pǎo dé gèng kuài.”\nYè kuàijì zhàn qǐlái, zǒu dào sū yuè pángbiān. Yè kuàijì shuō:“Sū yuè, nǐ yě cānjiā pǎobù ma?”\nSū yuè yáo yáotóu, shuō:“Wǒ bù pǎo, wǒ gěi dàjiā zhǔnbèi shuǐ hé chī de. Wǒ pǎo dé hěn màn.”\nChéng liàng chī xià yī gēn xiāngjiāo, shuō:“Wǒ cānjiā jiēlì sài, bù pǎo chángpǎo. Chángpǎo tài lèile.”\nZhè shíhòu, gōngsī de wáng lǎobǎn zǒu guòlái. Wáng lǎobǎn chuānzhuó yùndòng fú, tóufǎ shū dé hěn liàng. Wáng lǎobǎn shuō:“Dàjiā dōu zhǔnbèi hǎole ma? Pǎobù bǐsài shí fēnzhōng hòu kāishǐ!”\nShěn jīnglǐ lìkè zhàn zhí shēntǐ. Shěn jīnglǐ shuō:“Wáng lǎobǎn, wǒ jīntiān yīdìng yào ná dì yī!”\nWáng lǎobǎn xiàozhe shuō:“Hǎo! Wǒ děng huì er gěi nǐ fā jiǎng.” Wáng lǎobǎn shuō wán, zǒuxiàng qǐpǎoxiàn.\nSū yuè kànzhe shěn jīnglǐ, fāxiàn tā yīzhí zàiyuán dì tiào. Sū yuè wèn:“Shěn jīnglǐ, nǐ jǐnzhāng ma?”\nShěn jīnglǐ shuō:“Wǒ bù jǐnzhāng! Wǒ zài rèshēn!” Dànshì tā de shǒu yīzhí zài dǒu.\nYè kuàijì xiǎoshēng duì sū yuè shuō:“Tā qùnián shuāi dǎo de shíhòu, dàjiā dōu zài xiào. Tā jīnnián yīdìng hěn pà zài shuāi dǎo.”\nChéng liàng shuō:“Wǒmen qù kàn bǐsài ba, zhàn jìn yīdiǎn.”\nSān gèrén zǒu dào qǐpǎoxiàn fùjìn. Cǎodì shàng yǐjīng zhànzhe èrshí duō gè cānjiā bǐsài de rén. Shěn jīnglǐ zhàn zài zuì qiánmiàn, liǎng zhī jiǎo bù tíng dì dòng.\nWáng lǎobǎn názhe lǎbā, dàshēng shuō:“Gèjiùgèwèi——yùbèi——pǎo!”\nÈrshí duō gèrén yīqǐ pǎo chūqù. Shěn jīnglǐ pǎo dé hěn kuài, yīxià zǐ chōng dào zuì qiánmiàn. Sū yuè pāishǒu, shuō:“Shěn jīnglǐ zhēn de pǎo dì yī!”\nYè kuàijì shuō:“Cái pǎo dì yī quān, hái yǒusān quān ne.”\nPǎo dì èr quān de shíhòu, shěn jīnglǐ háishì dì yī. Dànshì tā de liǎn hěn hóng, hūxī hěn zhòng. Chéng liàng shuō:“Tā hǎoxiàng hěn lèi.”\nDì sān quān, yīgè niánqīng rén chāoguò shěn jīnglǐ. Shěn jīnglǐ xiǎng jiāsù, dànshì tā de jiǎo bù tài wěn. Sū yuè dānxīn dì shuō:“Tā huì bù huì yòu shuāi dǎo?”\nZuìhòu yī quān, yòu yǒu liǎng gèrén chāoguò shěn jīnglǐ. Shěn jīnglǐ de liǎn cóng hóngsè biàn chéng báisè. Tā yǎo jǐn yáchǐ, pīnmìng wǎng qián pǎo.\nKuài dào zhōngdiǎn de shíhòu, shěn jīnglǐ de zuǒ jiǎo bàn dào yòu jiǎo. Tā de shēntǐ xiàng qián dào xiàqù. Sū yuè jiào chū shēng:“A!”\nDànshì shěn jīnglǐ méiyǒu shuāi dǎo. Tā yòng liǎng zhī shǒu chēng zhù dìmiàn, xiàng dòngwù yīyàng tiào qǐlái, jìxù wǎng qián chōng. Tā chāoguò yīgè rén, yòu chāoguò yīgè rén.\nZhōngdiǎn xiàn jiù zài yǎnqián. Shěn jīnglǐ hé nàgè niánqīng rén bìngjiān pǎo. Dàjiā dū dàshēng hǎn:“Jiāyóu! Jiāyóu!”\nShěn jīnglǐ zuìhòu yībù kuàguò zhōngdiǎn xiàn, bǐ niánqīng rén kuàile yī diǎndiǎn. Wáng lǎobǎn jǔ qǐ shěn jīnglǐ de shǒu, dàshēng shuō:“Shěn jīnglǐ dì yī míng!”\nSū yuè pǎo guòlái, gěi shěn jīnglǐ yī píng shuǐ. Sū yuè shuō:“Shěn jīnglǐ, nǐ tài lìhàile!”\nShěn jīnglǐ hē xiàshuǐ, dàkǒu chuǎnqì. Shěn jīnglǐ shuō:“Wǒ……wǒ zuò dàole! Wǒ méiyǒu shuāi dǎo!”\nYè kuàijì xiàozhe shuō:“Jīnnián méi rén xiào nǐ, dàjiā dōu wèi nǐ pāishǒu.”\nChéng liàng shuō:“Shěn jīnglǐ, nǐ shuō dào zuò dào, zhēn de yíngle!”\nShěn jīnglǐ kànzhe dàjiā, yǎnjīng yǒudiǎn shī. Shěn jīnglǐ shuō:“Xièxiè nǐmen lái kàn wǒ bǐsài. Qùnián wǒ shuāi dǎo, jīnnián wǒ zhàn qǐlái.”\nWáng lǎobǎn zǒu guòlái, gěi shěn jīnglǐ yīkuài jīnsè jiǎngpái. Wáng lǎobǎn shuō:“Zhè shì jiānchí jiǎng! Bùshì zuì kuài de rén néng dé, shì zuì nǔlì de rén néng dé!”\nShěn jīnglǐ jiēguò jiǎngpái, xiào dé xiàng chūntiān de tàiyáng. Shěn jīnglǐ shuō:“Míngnián wǒ hái yào pǎo!”\nSū yuè kànzhe dàjiā kāixīn de yàngzǐ, xīnlǐ xiǎng: Yùndònghuì zhēn de hěn hǎo, néng ràng dàjiā dōu kuàilè qǐlái.",
+      "contentEn": "Manager Shen stood on the grass, put his hands on his waist, and said loudly: \"I want to run first today! No one can surpass me!\"\nSu Yue put a bottle of water on the table and looked up at Manager Shen. Su Yue whispered: \"Is Manager Shen running fast? I have never seen him running.\"\nAccountant Ye was sitting on a chair, holding an apple in his hand. Accountant Ye said with a smile: \"He's talking big words. Last year he ran last and almost fell down.\"\nCheng Liang came over, holding two bananas in his hand. Cheng Liang said: \"But this year he runs in the park every morning. I have seen him.\"\nManager Shen heard them talking and turned around. Manager Shen said: \"You don't believe it? You'll find out later!\"\nSu Yue cut the fruit into small pieces and put them on the plate. Su Yue said: \"Manager Shen, eat some fruit first, and drink water before running.\"\nManager Shen came over and picked up a piece of watermelon. Manager Shen said: \"Thank you Su Yue. If I eat these, I can run faster.\"\nAccountant Ye stood up and walked to Su Yue's side. Accountant Ye said: \"Su Yue, are you also participating in running?\"\nSu Yue shook her head and said, \"I won't run. I'll prepare water and food for everyone. I run very slowly.\"\nCheng Liang ate a banana and said: \"I am participating in the relay race, not long-distance running. Long-distance running is too tiring.\"\nAt this time, the company's boss Wang came over. Boss Wang was wearing sportswear and his hair was combed brightly. Boss Wang said: \"Is everyone ready? The running race starts in ten minutes!\"\nManager Shen immediately stood up straight. Manager Shen said: \"Boss Wang, I must take first place today!\"\nBoss Wang smiled and said: \"Okay! I will give you the prize later.\" After finishing speaking, Boss Wang walked towards the starting line.\nSu Yue looked at Manager Shen and found that he had been jumping in place. Su Yue asked: \"Manager Shen, are you nervous?\"\nManager Shen said: \"I'm not nervous! I'm warming up!\" But his hands kept shaking.\nAccountant Ye whispered to Su Yue: \"When he fell last year, everyone was laughing. He must be afraid of falling again this year.\"\nCheng Liang said: \"Let's go watch the game and stand closer.\"\nThe three of them walked near the starting line. There are already more than twenty people participating in the competition standing on the grass. Manager Shen stood at the front, his feet constantly moving.\nBoss Wang held a loudspeaker and said loudly: \"Get on your feet—get ready—run!\"\nMore than twenty people ran out together. Manager Shen ran very fast and rushed to the front. Su Yue clapped her hands and said, \"Manager Shen really came first!\"\nAccountant Ye said: \"It's just the first lap, there are still three laps to go.\"\nDuring the second lap, Manager Shen was still first. But his face was red and he was breathing heavily. Cheng Liang said: \"He seems to be very tired.\"\nOn the third lap, a young man passed Manager Shen. Manager Shen wanted to speed up, but his feet were not stable. Su Yue said worriedly: \"Will he fall again?\"\nOn the last lap, two more people passed Manager Shen. Manager Shen’s face turned from red to white. He gritted his teeth and ran forward with all his strength.\nAs he neared the finish line, Manager Shen’s left foot tripped over his right foot. His body fell forward. Su Yue shouted: \"Ah!\"\nBut Manager Shen did not fall. He braced himself on the ground with both hands, jumped up like an animal, and continued to rush forward. He is more than one person and more than another.\nThe finish line is in sight. Manager Shen ran side by side with the young man. Everyone shouted: \"Come on! Come on!\"\nManager Shen took the last step across the finish line, a little faster than the young man. Boss Wang raised Manager Shen's hand and said loudly: \"Manager Shen is first!\"\nSu Yue ran over and gave Manager Shen a bottle of water. Su Yue said: \"Manager Shen, you are so awesome!\"\nManager Shen drank the water and gasped for air. Manager Shen said: \"I...I did it! I didn't fall!\"\nAccountant Ye smiled and said, \"No one is laughing at you this year, everyone is clapping for you.\"\nCheng Liang said: \"Manager Shen, you do what you say, you really won!\"\nManager Shen looked at everyone, his eyes a little wet. Manager Shen said: \"Thank you for coming to watch my game. Last year I fell down, this year I stood up.\"\nBoss Wang came over and gave Manager Shen a golden medal. Boss Wang said: \"This is the persistence award! It is not awarded to the fastest person, but to the person who works hardest!\"\nManager Shen took the medal and smiled like the spring sun. Manager Shen said: \"I will run again next year!\"\nSu Yue looked at everyone's happy faces and thought to herself: The sports meeting is really good and can make everyone happy.",
+      "questions": [
+        {
+          "q": "沈经理在跑步比赛前说了什么大话？",
+          "qPy": "Shěn jīnglǐ zài pǎobù bǐsài qián shuōle shénme dàhuà?",
+          "qEn": "What big words did Manager Shen say before the running race?",
+          "options": [
+            "他说他今天一定要跑第一名，谁也超不过他",
+            "他说他根本不想参加比赛",
+            "他说他是全公司跑得最慢的人"
+          ],
+          "optionsPy": [
+            "Tā shuō tā jīntiān yīdìng yào pǎo dì-yī míng, shéi yě chāobúguò tā",
+            "Tā shuō tā gēnběn bùxiǎng cānjiā bǐsài",
+            "Tā shuō tā shì quán gōngsī pǎo de zuì màn de rén"
+          ],
+          "optionsEn": [
+            "He said he would definitely run first today and no one could surpass him",
+            "He said he did not want to participate in the race at all",
+            "He said he was the slowest runner in the whole company"
+          ],
+          "correct": 0
+        },
+        {
+          "q": "快到终点时，发生了什么危险的事？",
+          "qPy": "Kuài dào zhōngdiǎn shí, fāshēngle shénme wēixiǎn de shì?",
+          "qEn": "What dangerous thing happened when approaching the finish line?",
+          "options": [
+            "沈经理把水倒在了别的跑道上",
+            "沈经理的左脚绊到了右脚，身体向前倒了下去",
+            "王老板不小心关掉了终点线"
+          ],
+          "optionsPy": [
+            "Shěn jīnglǐ bǎ shuǐ dàozàile bié de pǎodào shàng",
+            "Shěn jīnglǐ de zuǒ jiǎo bàn dàole yòu jiǎo, shēntǐ xiàngqián dǎole xiàqù",
+            "Wáng lǎobǎn bù xiǎoxīn guāndiàole zhōngdiǎn xiàn"
+          ],
+          "optionsEn": [
+            "Manager Shen poured water on other tracks",
+            "Manager Shen's left foot tripped over his right foot, and his body fell forward",
+            "Boss Wang accidentally closed the finish line"
+          ],
+          "correct": 1
+        },
+        {
+          "q": "王老板最后发给沈经理的奖牌叫什么奖？",
+          "qPy": "Wáng lǎobǎn zuìhòu fā gěi Shěn jīnglǐ de jiǎngpái jiào shénme jiǎng?",
+          "qEn": "What was the award name on the medal Boss Wang gave Manager Shen in the end?",
+          "options": [
+            "最快奖",
+            "坚持奖",
+            "快乐奖"
+          ],
+          "optionsPy": [
+            "Zuìkuài jiǎng",
+            "Jiānchí jiǎng",
+            "Kuàilè jiǎng"
+          ],
+          "optionsEn": [
+            "Fastest Award",
+            "Persistence Award",
+            "Happiness Award"
+          ],
+          "correct": 1
+        }
+      ]
     }
   ],
   "3": [

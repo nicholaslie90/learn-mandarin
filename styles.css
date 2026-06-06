@@ -162,6 +162,7 @@ header {
   overflow-x: auto;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
   -webkit-overflow-scrolling: touch;
+  min-width: 0;
 }
 
 .level-selector-wrapper::-webkit-scrollbar {
@@ -215,6 +216,9 @@ header {
   cursor: pointer;
   max-width: 450px;
   width: auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .voice-select option {
@@ -291,6 +295,8 @@ header {
   border-radius: 1rem;
   overflow-x: auto;
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
 }
 
 .nav-tabs::-webkit-scrollbar {
@@ -1885,6 +1891,23 @@ body.light-theme select {
   color: var(--text-primary);
 }
 
+body.light-theme .card-back {
+  background: linear-gradient(135deg, hsl(220, 25%, 98%), hsl(220, 20%, 92%));
+  border-color: var(--border-glow);
+}
+
+body.light-theme .card-pos {
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .card-example-box {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .card-level-badge {
+  background: rgba(0, 0, 0, 0.04);
+}
+
 /* Mobile Responsive Enhancements */
 @media (max-width: 768px) {
   .app-container {
@@ -1914,6 +1937,7 @@ body.light-theme select {
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     gap: 0.5rem;
+    min-width: 0;
   }
   .level-selector-wrapper::-webkit-scrollbar {
     display: none;
@@ -1923,9 +1947,15 @@ body.light-theme select {
     padding: 0.4rem 0.8rem;
     font-size: 0.85rem;
   }
+  .voice-select {
+    max-width: 180px;
+  }
   .stats-bar {
     width: auto;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
   }
 }
 
@@ -2013,6 +2043,7 @@ body.light-theme select {
   }
   .voice-select {
     width: 100%;
+    max-width: 150px;
   }
   .stats-bar {
     width: 100%;
@@ -2055,6 +2086,13 @@ body.light-theme select {
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+  .card-actions {
+    gap: 0.75rem;
+  }
+  .action-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
