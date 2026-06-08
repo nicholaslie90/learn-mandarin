@@ -369,6 +369,19 @@
             <div id="quizOptionsGrid" class="quiz-options-grid" style="width:100%; margin-top:2rem;">
               <!-- Dynamically populated buttons -->
             </div>
+            
+            <!-- Explanation & Next Button Container (Hidden by default) -->
+            <div id="quizExplanationContainer" style="display:none; margin-top:1.5rem; width:100%; border-top:1px solid var(--border-glass); padding-top:1.5rem; flex-direction:column; gap:1rem;">
+              <div id="quizExplanationContent" style="text-align:left; display:flex; flex-direction:column; gap:0.5rem; background:rgba(0,0,0,0.15); padding:1rem; border-radius:0.75rem; border:1px solid var(--border-glass);">
+                <!-- Dynamically populated -->
+              </div>
+              <button id="quizNextBtn" class="btn-primary" style="margin-top:0.5rem; width:100%; justify-content:center;" onclick="handleQuizNext()">
+                Next Question
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left: 0.25rem;">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
           
           <!-- Quiz Results Overlay Screen -->

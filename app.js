@@ -17,7 +17,10 @@ function isGoogleTaiwan(v) {
 }
 
 function getDefaultVoice(voices) {
-  let voice = voices.find(isGoogleTaiwan);
+  let voice = voices.find(v => v.name.includes('Neijia') || v.voiceURI.includes('Neijia'));
+  if (voice) return voice;
+
+  voice = voices.find(isGoogleTaiwan);
   if (voice) return voice;
   
   voice = voices.find(v => v.name.includes('Meijia') || v.voiceURI.includes('Meijia'));
@@ -36,11 +39,11 @@ function loadChineseVoices() {
   if (typeof speechSynthesis === 'undefined') return;
   const voices = speechSynthesis.getVoices();
   
-  // Filter for Chinese and keep only Meijia, Tingting, or Google ones
+  // Filter for Chinese and keep only Neijia, Meijia, Tingting, or Google ones
   const filtered = voices.filter(v => {
     const isChinese = v.lang.includes('zh') || v.lang.includes('ZH') || v.lang.includes('Chinese');
-    const matchesRequired = v.name.includes('Meijia') || v.name.includes('Tingting') || v.name.toLowerCase().includes('google') ||
-                            v.voiceURI.includes('Meijia') || v.voiceURI.includes('Tingting') || v.voiceURI.toLowerCase().includes('google');
+    const matchesRequired = v.name.includes('Neijia') || v.name.includes('Meijia') || v.name.includes('Tingting') || v.name.toLowerCase().includes('google') ||
+                            v.voiceURI.includes('Neijia') || v.voiceURI.includes('Meijia') || v.voiceURI.includes('Tingting') || v.voiceURI.toLowerCase().includes('google');
     return isChinese && matchesRequired;
   });
   
@@ -1562,6 +1565,11 @@ function renderQuizQuestion() {
   quizActiveCard.style.display = 'block';
   quizResultsCard.style.display = 'none';
   
+  const explanationContainer = document.getElementById('quizExplanationContainer');
+  if (explanationContainer) {
+    explanationContainer.style.display = 'none';
+  }
+  
   const currentQ = state.quizQuestions[state.quizIndex];
   const word = currentQ.word;
   
@@ -1702,15 +1710,69 @@ function selectQuizOption(btn, isCorrect, targetWordId) {
     });
   }
   
-  // Proceed to next screen after short delay
-  setTimeout(() => {
-    if (state.quizIndex < state.quizQuestions.length - 1) {
-      state.quizIndex++;
-      renderQuizQuestion();
-    } else {
-      endQuizSession();
+  // Show explanation and next question button
+  const explanationContainer = document.getElementById('quizExplanationContainer');
+  const explanationContent = document.getElementById('quizExplanationContent');
+  const nextBtn = document.getElementById('quizNextBtn');
+  
+  if (explanationContainer && explanationContent && nextBtn) {
+    const currentQ = state.quizQuestions[state.quizIndex];
+    const targetWord = currentQ.word;
+    if (targetWord) {
+      let exampleHTML = '';
+      if (targetWord.exampleCn) {
+        exampleHTML = `
+          <div class="card-example-box" style="margin-top: 0.5rem;">
+            <div class="card-ex-cn" style="font-size: 1.1rem; font-family: var(--font-serif);">${targetWord.exampleCn}</div>
+            <div class="card-ex-py" style="font-size: 0.85rem; color: var(--accent-blue);">${targetWord.examplePy}</div>
+            <div class="card-ex-en" style="font-size: 0.8rem; color: var(--text-secondary);">${targetWord.exampleEn}</div>
+          </div>
+        `;
+      }
+      
+      explanationContent.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+          <h4 style="font-size: 1.5rem; font-family: var(--font-serif); margin: 0; color:var(--text-primary);">${targetWord.character}</h4>
+          <span class="card-pos" style="margin: 0; font-size: 0.7rem;">${targetWord.pos || 'Word'}</span>
+        </div>
+        <div style="font-size: 1rem; color: var(--accent-cyan); font-weight: 600; text-align:left; width:100%;">${targetWord.pinyin}</div>
+        <div style="font-size: 0.95rem; color: var(--text-primary); margin-top: 0.25rem; text-align:left; width:100%;">${targetWord.english}</div>
+        ${exampleHTML}
+      `;
     }
-  }, 1400);
+    
+    if (state.quizIndex < state.quizQuestions.length - 1) {
+      nextBtn.innerHTML = `
+        <span>Next Question</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left: 0.25rem;">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      `;
+    } else {
+      nextBtn.innerHTML = `
+        <span>Finish Quiz</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-left: 0.25rem;">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      `;
+    }
+    
+    explanationContainer.style.display = 'flex';
+  }
+}
+
+function handleQuizNext() {
+  const explanationContainer = document.getElementById('quizExplanationContainer');
+  if (explanationContainer) {
+    explanationContainer.style.display = 'none';
+  }
+  
+  if (state.quizIndex < state.quizQuestions.length - 1) {
+    state.quizIndex++;
+    renderQuizQuestion();
+  } else {
+    endQuizSession();
+  }
 }
 
 function endQuizSession() {
