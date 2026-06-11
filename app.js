@@ -318,6 +318,7 @@ const state = {
   showQuizPinyin: false,
   showQuizTranslation: false,
   currentEssayIndex: 0,
+  essayIndexByLevel: {},
   readEssayIds: [],
   dictionaryLimit: 100,
   points: 0,
@@ -665,8 +666,10 @@ function updateReadStoriesCountUI() {
     return;
   }
   
-  const essayIdsOfCurrentLevel = essays.map(e => e.id);
-  const readCount = state.readEssayIds.filter(id => essayIdsOfCurrentLevel.includes(id)).length;
+  const essayIdsOfCurrentLevel = new Set(essays.map(e => e.id));
+  const readCount = new Set(
+    state.readEssayIds.filter(id => essayIdsOfCurrentLevel.has(id))
+  ).size;
   countEl.textContent = `${readCount}/${essays.length}`;
 }
 
@@ -1166,26 +1169,15 @@ function switchTab(tabId) {
     state.dictionaryLimit = 100;
     renderDictionary();
   } else if (tabId === 'reading') {
-    const essays = HSK_ESSAYS[state.currentLevel];
-    if (essays && essays.length > 0) {
-      // Try to select a random unread essay if possible
-      const unreadEssays = essays.filter(e => !state.readEssayIds.includes(e.id));
-      if (unreadEssays.length > 0) {
-        const randomEssay = unreadEssays[Math.floor(Math.random() * unreadEssays.length)];
-        state.currentEssayIndex = essays.findIndex(e => e.id === randomEssay.id);
-      } else {
-        // Fallback: pick any random essay if all are read
-        state.currentEssayIndex = Math.floor(Math.random() * essays.length);
-      }
-    }
     renderEssay();
   }
 }
 
 // Level Change Trigger
 function switchLevel(level) {
+  state.essayIndexByLevel[state.currentLevel] = state.currentEssayIndex;
   state.currentLevel = parseInt(level, 10);
-  state.currentEssayIndex = 0; // Reset essay index when switching level
+  state.currentEssayIndex = state.essayIndexByLevel[state.currentLevel] ?? 0;
   state.dictionaryLimit = 100; // Reset dictionary limit when switching level
   document.querySelectorAll('.level-btn').forEach(btn => {
     if (parseInt(btn.getAttribute('data-level'), 10) === state.currentLevel) {
@@ -2364,6 +2356,7 @@ function renderEssay() {
   if (state.currentEssayIndex === undefined || state.currentEssayIndex >= essays.length) {
     state.currentEssayIndex = 0;
   }
+  state.essayIndexByLevel[state.currentLevel] = state.currentEssayIndex;
   const essay = essays[state.currentEssayIndex];
 
   // Mark this essay as read and save progress
@@ -2977,6 +2970,7 @@ function generateNewReadingTest() {
     const nextIndex = essays.findIndex(e => e.id === randomEssay.id);
     
     state.currentEssayIndex = nextIndex;
+    state.essayIndexByLevel[state.currentLevel] = nextIndex;
     
     // Re-enable button
     if (genBtn) {
