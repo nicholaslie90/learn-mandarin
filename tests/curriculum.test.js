@@ -52,3 +52,33 @@ test('determinism: same input yields identical structure', () => {
   const b = JSON.stringify(C.buildCurriculum(fakeData()));
   assert.strictEqual(a, b);
 });
+
+test('first lesson of level 1 is always unlocked', () => {
+  const cur = C.buildCurriculum(fakeData());
+  const j = { completedLessons: {}, passedCheckpoints: {} };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l0', j), true);
+});
+
+test('second lesson locked until first completed', () => {
+  const cur = C.buildCurriculum(fakeData());
+  const locked = { completedLessons: {}, passedCheckpoints: {} };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l1', locked), false);
+  const unlocked = { completedLessons: { 'L1-u0-l0': { stars: 1 } }, passedCheckpoints: {} };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l1', unlocked), true);
+});
+
+test('checkpoint unlocked only when all unit lessons complete', () => {
+  const cur = C.buildCurriculum(fakeData()); // level 1 unit 0 has 3 lessons
+  const partial = { completedLessons: { 'L1-u0-l0': {}, 'L1-u0-l1': {} }, passedCheckpoints: {} };
+  assert.strictEqual(C.isCheckpointUnlocked(cur, 'CP1-u0', partial), false);
+  const all = { completedLessons: { 'L1-u0-l0': {}, 'L1-u0-l1': {}, 'L1-u0-l2': {} }, passedCheckpoints: {} };
+  assert.strictEqual(C.isCheckpointUnlocked(cur, 'CP1-u0', all), true);
+});
+
+test('level 2 first lesson locked until level 1 test passed', () => {
+  const cur = C.buildCurriculum(fakeData());
+  const noLT = { completedLessons: {}, passedCheckpoints: {} };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', noLT), false);
+  const withLT = { completedLessons: {}, passedCheckpoints: { 'LT1': { score: 1 } } };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', withLT), true);
+});

@@ -90,6 +90,50 @@
     return [];
   }
 
+  function getLevel(curriculum, level) {
+    return curriculum.levels.find(function (l) { return l.level === level; });
+  }
+
+  function getUnit(curriculum, level, unitIndex) {
+    const lvl = getLevel(curriculum, level);
+    return lvl ? lvl.units[unitIndex] : null;
+  }
+
+  function isCheckpointUnlocked(curriculum, checkpointId, journey) {
+    const m = /^CP(\d+)-u(\d+)$/.exec(checkpointId);
+    if (!m) return false;
+    const unit = getUnit(curriculum, +m[1], +m[2]);
+    if (!unit) return false;
+    return unit.lessons.every(function (l) { return !!journey.completedLessons[l.lessonId]; });
+  }
+
+  function isLevelTestUnlocked(curriculum, levelTestId, journey) {
+    const m = /^LT(\d+)$/.exec(levelTestId);
+    if (!m) return false;
+    const lvl = getLevel(curriculum, +m[1]);
+    if (!lvl) return false;
+    return lvl.units.every(function (u) { return !!journey.passedCheckpoints[u.checkpointId]; });
+  }
+
+  function isUnitComplete(curriculum, checkpointId, journey) {
+    return isCheckpointUnlocked(curriculum, checkpointId, journey);
+  }
+
+  function isLessonUnlocked(curriculum, lessonId, journey) {
+    const p = parseLessonId(lessonId);
+    if (p.lessonIndex > 0) {
+      const prev = 'L' + p.level + '-u' + p.unitIndex + '-l' + (p.lessonIndex - 1);
+      return !!journey.completedLessons[prev];
+    }
+    // first lesson of a unit
+    if (p.unitIndex > 0) {
+      return !!journey.passedCheckpoints['CP' + p.level + '-u' + (p.unitIndex - 1)];
+    }
+    // first lesson of first unit of a level
+    if (p.level === 1) return true;
+    return !!journey.passedCheckpoints['LT' + (p.level - 1)];
+  }
+
   return {
     __name: 'Curriculum',
     CURRICULUM_CONFIG: CURRICULUM_CONFIG,
@@ -97,5 +141,9 @@
     parseLessonId: parseLessonId,
     getLessonWords: getLessonWords,
     getUnitWords: getUnitWords,
+    isLessonUnlocked: isLessonUnlocked,
+    isCheckpointUnlocked: isCheckpointUnlocked,
+    isLevelTestUnlocked: isLevelTestUnlocked,
+    isUnitComplete: isUnitComplete,
   };
 });
