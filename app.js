@@ -1317,7 +1317,14 @@ function shuffleArray(array) {
   return array;
 }
 
-function initFlashcards() {
+function initFlashcards(explicitList) {
+  if (Array.isArray(explicitList)) {
+    activeFlashcardList = [...explicitList];
+    state.flashcardIndex = 0;
+    state.flashcardFlipped = false;
+    renderFlashcard();
+    return;
+  }
   const allWords = HSK_DATA[state.currentLevel] || [];
   // Review Mode checking
   if (state.activeTab === 'flashcards_review') {
@@ -1521,31 +1528,31 @@ function toggleStarWord(wordId) {
 // -------------------------------------------------------------
 // View Renderers: 3. Practice Quiz
 // -------------------------------------------------------------
-function startNewQuiz() {
-  const words = HSK_DATA[state.currentLevel] || [];
+function startNewQuiz(quizWords, options) {
+  const opts = options || {};
+  const words = Array.isArray(quizWords) ? quizWords : (HSK_DATA[state.currentLevel] || []);
+  const count = opts.count || 10;
+  state.quizOnComplete = typeof opts.onComplete === 'function' ? opts.onComplete : null;
   if (words.length < 4) {
     alert("Not enough HSK vocabulary loaded to run a practice quiz.");
+    if (state.quizOnComplete) { state.quizOnComplete(0); state.quizOnComplete = null; }
     return;
   }
-  
-  // Generate a random pool of 10 questions
+
   const shuffled = [...words].sort(() => 0.5 - Math.random());
-  state.quizQuestions = shuffled.slice(0, 10).map(word => {
+  state.quizQuestions = shuffled.slice(0, count).map(word => {
     const typeIndex = Math.floor(Math.random() * 4);
-    // Types: 0: Character -> Select Meaning, 1: Character -> Select Pinyin, 2: Meaning -> Select Character, 3: Listening -> Select Character
     let type = 'meaning';
     if (typeIndex === 1) type = 'pinyin';
     else if (typeIndex === 2) type = 'character';
     else if (typeIndex === 3) type = 'listening';
-    
     return { word, type };
   });
-  
+
   state.quizIndex = 0;
   state.quizScore = 0;
   state.quizAnswersHistory = [];
   state.quizSelectedOption = null;
-  
   renderQuizQuestion();
 }
 
@@ -1806,6 +1813,14 @@ function endQuizSession() {
       demoteSRSWord(item.wordId);
     }
   });
+
+  // Notify guided-journey controller, if this quiz was launched by a lesson/checkpoint
+  if (state.quizOnComplete) {
+    const ratio = state.quizQuestions.length ? (state.quizScore / state.quizQuestions.length) : 0;
+    const cb = state.quizOnComplete;
+    state.quizOnComplete = null;
+    cb(ratio);
+  }
 }
 
 // -------------------------------------------------------------
