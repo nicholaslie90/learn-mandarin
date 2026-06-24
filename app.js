@@ -322,6 +322,9 @@ const state = {
   readEssayIds: [],
   dictionaryLimit: 100,
   points: 0,
+  journey: null,        // JourneyState object, hydrated on load
+  curriculum: null,     // built once from HSK_DATA
+  quizOnComplete: null, // set by guided-journey quiz launches
 };
 
 // Spaced Repetition Intervals (in hours)
@@ -392,7 +395,8 @@ async function saveProgressToDB() {
     await db.set('lastStudyDate', state.lastStudyDate);
     await db.set('points', state.points);
     await db.set('readEssayIds', state.readEssayIds);
-    
+    await db.set('journey', state.journey);
+
     // Backup unlocked extra card IDs
     const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
     if (stored) {
@@ -407,6 +411,16 @@ async function saveProgressToDB() {
     localStorage.setItem('hsk_sensei_last_study', state.lastStudyDate);
     localStorage.setItem('hsk_sensei_points', state.points.toString());
     localStorage.setItem('hsk_sensei_read_essay_ids', JSON.stringify(state.readEssayIds));
+    localStorage.setItem('hsk_sensei_journey', JSON.stringify(state.journey));
+  }
+}
+
+async function saveJourney() {
+  try {
+    if (!db.db) await db.init();
+    await db.set('journey', state.journey);
+  } catch (e) {
+    localStorage.setItem('hsk_sensei_journey', JSON.stringify(state.journey));
   }
 }
 
@@ -425,7 +439,8 @@ async function loadProgressFromDB() {
     const unlockedExtraIds = await db.get('unlockedExtraIds');
     const points = await db.get('points');
     const readEssayIds = await db.get('readEssayIds');
-    
+    const journey = await db.get('journey');
+
     if (progress) {
       state.progress = progress;
     } else {
@@ -502,6 +517,14 @@ async function loadProgressFromDB() {
       });
     });
     
+    if (journey && journey.schemaVersion) {
+      state.journey = journey;
+    } else {
+      const localJourney = localStorage.getItem('hsk_sensei_journey');
+      state.journey = localJourney ? JSON.parse(localJourney) : JourneyState.createEmptyJourney();
+    }
+    state.curriculum = Curriculum.buildCurriculum(HSK_DATA);
+
     await saveProgressToDB();
   } catch (error) {
     console.error("Failed to load progress from IndexedDB, falling back to LocalStorage:", error);
@@ -547,6 +570,8 @@ async function loadProgressFromDB() {
         }
       });
     });
+    if (!state.journey) state.journey = JourneyState.createEmptyJourney();
+    if (!state.curriculum) state.curriculum = Curriculum.buildCurriculum(HSK_DATA);
   }
 }
 
@@ -1155,7 +1180,9 @@ function switchTab(tabId) {
   });
   
   // Specific screen setups
-  if (tabId === 'dashboard') {
+  if (tabId === 'learn') {
+    renderLearnSection();
+  } else if (tabId === 'dashboard') {
     renderDashboard();
   } else if (tabId === 'flashcards') {
     initFlashcards();
@@ -1221,6 +1248,16 @@ function renderPointsUI() {
   const val = document.getElementById('headerPointsVal');
   if (val) {
     val.textContent = state.points;
+  }
+}
+
+function renderLearnSection() {
+  const title = document.getElementById('learnLevelTitle');
+  if (title) title.textContent = `HSK ${state.currentLevel} Journey`;
+  const rank = document.getElementById('headerRankVal');
+  if (rank) rank.textContent = JourneyState.getRank(state.points);
+  if (typeof JourneyUI !== 'undefined' && JourneyUI.renderLearnPath) {
+    JourneyUI.renderLearnPath(document.getElementById('learnPath'), state);
   }
 }
 
@@ -3137,8 +3174,8 @@ window.addEventListener('DOMContentLoaded', async () => {
   renderStreakUI();
   renderPointsUI();
   
-  // Dashboard default
-  switchTab('dashboard');
+  // Learn tab default
+  switchTab('learn');
   
   // Register window resize listener
   window.addEventListener('resize', handleWindowResize);
