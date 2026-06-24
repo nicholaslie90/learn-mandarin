@@ -1330,6 +1330,7 @@ function askCheckpointReadingQuestion(essays, cb) {
   const q = essay.questions[0];
   const optionsText = q.options.map(function (o, i) { return (i + 1) + '. ' + o; }).join('\n');
   const ans = prompt(essay.titleCn + '\n\n' + essay.contentCn + '\n\n' + q.q + '\n' + optionsText + '\n\nEnter option number:');
+  if (ans === null) { cb(true); return; }
   const picked = parseInt(ans, 10) - 1;
   cb(picked === q.correct);
 }

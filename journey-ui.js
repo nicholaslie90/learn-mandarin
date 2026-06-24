@@ -64,7 +64,7 @@
   }
   function renderBadgeGallery(container, journey) {
     if (!container) return;
-    if (!journey.badges.length) { container.innerHTML = '<span class="badge-empty">No badges yet — keep going!</span>'; return; }
+    if (!journey.badges || !journey.badges.length) { container.innerHTML = '<span class="badge-empty">No badges yet — keep going!</span>'; return; }
     container.innerHTML = journey.badges.map(function (b) {
       return '<span class="badge-chip">' + badgeLabel(b) + '</span>';
     }).join('');
