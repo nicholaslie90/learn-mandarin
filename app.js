@@ -3119,6 +3119,41 @@ function generateNewReadingTest() {
   }, 1200);
 }
 
+async function exportProgressFile() {
+  const unlocked = JSON.parse(localStorage.getItem('hsk_sensei_unlocked_extra_ids') || '[]');
+  const bundle = Backup.buildExportBundle({
+    progress: state.progress,
+    streak: state.streak,
+    lastStudyDate: state.lastStudyDate,
+    points: state.points,
+    readEssayIds: state.readEssayIds,
+    unlockedExtraIds: unlocked,
+    journey: state.journey,
+  }, new Date().toISOString());
+  Backup.downloadExport(bundle, new Date().toISOString().slice(0, 10));
+}
+
+async function importProgressFile(file) {
+  let obj;
+  try { obj = await Backup.readImportFile(file); }
+  catch (e) { alert(e.message); return; }
+  const res = Backup.validateImportBundle(obj);
+  if (!res.ok) { alert('Import failed: ' + res.error); return; }
+  if (!confirm('This will OVERWRITE your current progress. Continue?')) return;
+  const d = res.data;
+  state.progress = d.progress;
+  state.streak = d.streak;
+  state.lastStudyDate = d.lastStudyDate;
+  state.points = d.points;
+  state.readEssayIds = d.readEssayIds || [];
+  state.journey = d.journey;
+  localStorage.setItem('hsk_sensei_unlocked_extra_ids', JSON.stringify(d.unlockedExtraIds || []));
+  await saveProgressToDB();
+  await saveJourney();
+  alert('Progress imported. Reloading.');
+  location.reload();
+}
+
 // Clean raw dictionary classifier strings in definitions dynamically at load time
 function cleanDatabaseDefinitions() {
   const cleanTranslation = (text) => {
@@ -3256,7 +3291,19 @@ window.addEventListener('DOMContentLoaded', async () => {
   
   // Learn tab default
   switchTab('learn');
-  
+
+  // Export / Import button listeners
+  const exportBtn = document.getElementById('exportBtn');
+  const importBtn = document.getElementById('importBtn');
+  const importInput = document.getElementById('importFileInput');
+  if (exportBtn) exportBtn.addEventListener('click', exportProgressFile);
+  if (importBtn && importInput) {
+    importBtn.addEventListener('click', function () { importInput.click(); });
+    importInput.addEventListener('change', function (e) {
+      if (e.target.files && e.target.files[0]) importProgressFile(e.target.files[0]);
+    });
+  }
+
   // Register window resize listener
   window.addEventListener('resize', handleWindowResize);
 });
