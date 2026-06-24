@@ -51,5 +51,31 @@
     container.innerHTML = html;
   }
 
-  return { __name: 'JourneyUI', renderLearnPath: renderLearnPath };
+  var BADGE_LABELS = {
+    'streak-7': '🔥 7-Day Streak',
+    'words-100': '💯 100 Words',
+    'perfect-checkpoint': '🌟 Perfect Checkpoint',
+  };
+  function badgeLabel(id) {
+    if (BADGE_LABELS[id]) return BADGE_LABELS[id];
+    if (id.indexOf('unit-complete:') === 0) return '🏅 ' + id.split(':')[1];
+    if (id.indexOf('level-complete:') === 0) return '👑 ' + id.split(':')[1];
+    return id;
+  }
+  function renderBadgeGallery(container, journey) {
+    if (!container) return;
+    if (!journey.badges.length) { container.innerHTML = '<span class="badge-empty">No badges yet — keep going!</span>'; return; }
+    container.innerHTML = journey.badges.map(function (b) {
+      return '<span class="badge-chip">' + badgeLabel(b) + '</span>';
+    }).join('');
+  }
+  function renderDailyGoal(container, journey, today) {
+    if (!container) return;
+    var done = journey.dailyGoalDate === today && journey.dailyGoalDone;
+    container.innerHTML = done
+      ? '<span class="goal-done">✅ Daily goal complete!</span>'
+      : '<span class="goal-todo">🎯 Daily goal: finish 1 lesson today</span>';
+  }
+
+  return { __name: 'JourneyUI', renderLearnPath: renderLearnPath, renderBadgeGallery: renderBadgeGallery, renderDailyGoal: renderDailyGoal };
 });

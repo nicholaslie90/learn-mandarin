@@ -1259,6 +1259,11 @@ function renderLearnSection() {
   if (typeof JourneyUI !== 'undefined' && JourneyUI.renderLearnPath) {
     JourneyUI.renderLearnPath(document.getElementById('learnPath'), state);
   }
+  const today = new Date().toISOString().slice(0, 10);
+  if (typeof JourneyUI !== 'undefined') {
+    JourneyUI.renderDailyGoal(document.getElementById('dailyGoalPill'), state.journey, today);
+    JourneyUI.renderBadgeGallery(document.getElementById('badgeGallery'), state.journey);
+  }
 }
 
 // -------------------------------------------------------------
@@ -1305,11 +1310,28 @@ function startCheckpoint(checkpointId) {
   const words = Curriculum.getUnitWords(HSK_DATA, state.curriculum, checkpointId);
   if (words.length < 4) return;
   switchTab('practice');
-  // Combined quiz over all unit words; reading question handled by Reading Lab separately if desired.
   startNewQuiz(words, {
     count: Math.min(12, words.length),
-    onComplete: function (ratio) { finishCheckpoint(checkpointId, ratio); },
+    onComplete: function (vocabRatio) {
+      const essays = (typeof HSK_ESSAYS !== 'undefined') ? (HSK_ESSAYS[state.currentLevel] || []) : [];
+      if (!essays.length) { finishCheckpoint(checkpointId, vocabRatio); return; }
+      askCheckpointReadingQuestion(essays, function (readingCorrect) {
+        // Weight: vocab 80%, reading 20%
+        const ratio = vocabRatio * 0.8 + (readingCorrect ? 0.2 : 0);
+        finishCheckpoint(checkpointId, ratio);
+      });
+    },
   });
+}
+
+function askCheckpointReadingQuestion(essays, cb) {
+  const essay = essays[Math.floor(Math.random() * essays.length)];
+  if (!essay || !essay.questions || !essay.questions.length) { cb(true); return; }
+  const q = essay.questions[0];
+  const optionsText = q.options.map(function (o, i) { return (i + 1) + '. ' + o; }).join('\n');
+  const ans = prompt(essay.titleCn + '\n\n' + essay.contentCn + '\n\n' + q.q + '\n' + optionsText + '\n\nEnter option number:');
+  const picked = parseInt(ans, 10) - 1;
+  cb(picked === q.correct);
 }
 
 function finishCheckpoint(checkpointId, ratio) {
