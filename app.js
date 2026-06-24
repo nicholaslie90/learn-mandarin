@@ -1331,7 +1331,6 @@ function finishCheckpoint(checkpointId, ratio) {
 }
 
 function evaluateJourneyBadges() {
-  const words = HSK_DATA[state.currentLevel] || [];
   let mastered = 0;
   Object.keys(state.progress).forEach(function (id) {
     if (state.progress[id] && state.progress[id].srsLevel >= 4) mastered++;

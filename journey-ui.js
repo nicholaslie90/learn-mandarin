@@ -1,8 +1,8 @@
 (function (root, factory) {
-  const api = factory();
+  const api = factory(root);
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root[api.__name] = api;
-})(typeof self !== 'undefined' ? self : this, function () {
+})(typeof self !== 'undefined' ? self : this, function (root) {
   function nodeState(curriculum, journey, id, kind) {
     const C = root.Curriculum || require('./curriculum.js');
     if (kind === 'lesson') {
