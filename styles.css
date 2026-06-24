@@ -2180,3 +2180,19 @@ body.light-theme .grid-overlay svg {
 }
 
 
+
+/* ------------------------------------------------------------------ */
+/* Journey path styles (Task 8)                                         */
+/* ------------------------------------------------------------------ */
+.learn-path { display:flex; flex-direction:column; gap:1.5rem; padding:1rem 0; }
+.path-unit { display:flex; flex-direction:column; align-items:center; gap:0.75rem; }
+.path-unit-title { font-weight:600; color:var(--text-secondary); }
+.path-node { display:flex; flex-direction:column; align-items:center; gap:0.25rem;
+  width:120px; padding:0.75rem; border-radius:1rem; border:1px solid var(--glass-border, rgba(255,255,255,.15));
+  background:var(--glass-bg, rgba(255,255,255,.06)); cursor:pointer; color:var(--text-primary); }
+.path-node.node-locked { opacity:.45; cursor:not-allowed; }
+.path-node.node-done { border-color:var(--accent-cyan, #22d3ee); }
+.path-node.node-open { box-shadow:0 0 0 2px var(--accent-blue, #3b82f6) inset; }
+.path-checkpoint { width:140px; font-weight:600; }
+.node-stars { letter-spacing:2px; color:#fbbf24; }
+.path-empty { text-align:center; color:var(--text-secondary); padding:2rem; }

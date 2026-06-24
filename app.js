@@ -1261,6 +1261,87 @@ function renderLearnSection() {
   }
 }
 
+// -------------------------------------------------------------
+// Journey controllers (Task 8)
+// -------------------------------------------------------------
+function startLesson(lessonId) {
+  const words = Curriculum.getLessonWords(HSK_DATA, lessonId);
+  if (!words.length) return;
+  // Phase 1: flashcard intro of this lesson's words
+  switchTab('flashcards');
+  initFlashcards(words);
+  // Phase 2: when the user opens Practice (or via a "Start quiz" affordance), run the mini-quiz.
+  // For a guided flow we launch the quiz immediately after flashcards via the existing Practice UI:
+  state.pendingLesson = { lessonId: lessonId, words: words };
+  showLessonQuizPrompt(lessonId, words);
+}
+
+function showLessonQuizPrompt(lessonId, words) {
+  // Minimal affordance: a confirm-style banner button. Reuse Practice tab for the quiz.
+  const count = Math.min(8, words.length);
+  switchTab('practice');
+  startNewQuiz(words, { count: count, onComplete: function (ratio) { finishLesson(lessonId, ratio); } });
+}
+
+function finishLesson(lessonId, ratio) {
+  const res = JourneyState.applyLessonCompletion(state.journey, lessonId, ratio, Date.now());
+  state.points += res.xpGained;
+  // First lesson of the day -> daily goal bonus + streak
+  const today = new Date().toISOString().slice(0, 10);
+  const goal = JourneyState.applyDailyGoal(state.journey, today);
+  state.points += goal.bonusXp;
+  if (goal.bonusXp > 0) updateStreak();
+  // Mark this lesson's words as learned in SRS
+  Curriculum.getLessonWords(HSK_DATA, lessonId).forEach(function (w) { promoteSRSWord(w.id); });
+  evaluateJourneyBadges();
+  state.journey.rank = JourneyState.getRank(state.points);
+  saveProgressToDB();
+  saveJourney();
+  renderPointsUI();
+  switchTab('learn');
+}
+
+function startCheckpoint(checkpointId) {
+  const words = Curriculum.getUnitWords(HSK_DATA, state.curriculum, checkpointId);
+  if (words.length < 4) return;
+  switchTab('practice');
+  // Combined quiz over all unit words; reading question handled by Reading Lab separately if desired.
+  startNewQuiz(words, {
+    count: Math.min(12, words.length),
+    onComplete: function (ratio) { finishCheckpoint(checkpointId, ratio); },
+  });
+}
+
+function finishCheckpoint(checkpointId, ratio) {
+  const passed = ratio >= Curriculum.CURRICULUM_CONFIG.passThreshold;
+  if (passed) {
+    const res = JourneyState.applyCheckpointPass(state.journey, checkpointId, ratio, Date.now());
+    state.points += res.xpGained;
+    evaluateJourneyBadges();
+    state.journey.rank = JourneyState.getRank(state.points);
+    saveProgressToDB();
+    saveJourney();
+    renderPointsUI();
+    alert('Checkpoint passed! (' + Math.round(ratio * 100) + '%)');
+  } else {
+    alert('Score ' + Math.round(ratio * 100) + '% — need ' +
+      Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
+  }
+  switchTab('learn');
+}
+
+function evaluateJourneyBadges() {
+  const words = HSK_DATA[state.currentLevel] || [];
+  let mastered = 0;
+  Object.keys(state.progress).forEach(function (id) {
+    if (state.progress[id] && state.progress[id].srsLevel >= 4) mastered++;
+  });
+  JourneyState.evaluateBadges(state.journey, {
+    journey: state.journey,
+    streak: state.streak,
+    masteredCount: mastered,
+  });
+}
 
 // -------------------------------------------------------------
 // View Renderers: 1. Dashboard
