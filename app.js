@@ -1324,6 +1324,59 @@ function startCheckpoint(checkpointId) {
   });
 }
 
+// Wrap each Chinese character in a hoverable span (for the reading modal).
+function wrapHanziForHover(text) {
+  let html = '';
+  for (const ch of (text || '')) {
+    if (ch === '\n') html += '<br>';
+    else if (ch === '&') html += '&amp;';
+    else if (ch === '<') html += '&lt;';
+    else if (ch === '>') html += '&gt;';
+    else if (isChineseChar(ch)) html += '<span class="rq-word">' + ch + '</span>';
+    else html += ch;
+  }
+  return html;
+}
+
+// Position and fill the floating meaning/reading tooltip over a hovered char.
+function showReadingTip(span, tip) {
+  const ch = span.textContent;
+  const w = findWordByChar(ch);
+  const py = (w && w.pinyin && w.pinyin !== 'Lookup...') ? w.pinyin : '—';
+  const en = w ? w.english : 'No dictionary entry';
+  tip.innerHTML =
+    '<span class="rq-tip-char">' + ch + '</span>' +
+    '<span class="rq-tip-py">' + py + '</span>' +
+    '<span class="rq-tip-en">' + en + '</span>';
+  tip.style.display = 'flex';
+  const r = span.getBoundingClientRect();
+  const tr = tip.getBoundingClientRect();
+  let left = r.left + r.width / 2 - tr.width / 2;
+  left = Math.max(8, Math.min(left, window.innerWidth - tr.width - 8));
+  let top = r.top - tr.height - 8;
+  if (top < 8) top = r.bottom + 8; // flip below if no room above
+  tip.style.left = left + 'px';
+  tip.style.top = top + 'px';
+}
+
+// Wire hover (show meaning) and click (speak) on the reading modal, once.
+function setupReadingHover() {
+  const modal = document.getElementById('readingQuizModal');
+  const tip = document.getElementById('readingQuizTip');
+  if (!modal || !tip) return;
+  modal.addEventListener('mouseover', function (e) {
+    const span = e.target.closest('.rq-word');
+    if (span) showReadingTip(span, tip);
+  });
+  modal.addEventListener('mouseout', function (e) {
+    if (e.target.closest('.rq-word')) tip.style.display = 'none';
+  });
+  modal.addEventListener('click', function (e) {
+    const span = e.target.closest('.rq-word');
+    if (span) playTextToSpeech(span.textContent);
+  });
+}
+
 function askCheckpointReadingQuestion(essays, cb) {
   const essay = essays[Math.floor(Math.random() * essays.length)];
   if (!essay || !essay.questions || !essay.questions.length) { cb(true); return; }
@@ -1356,11 +1409,11 @@ function askCheckpointReadingQuestion(essays, cb) {
     if (btn && !btn.disabled) { e.preventDefault(); btn.click(); }
   }
 
-  // Build passage (title + body) and question
+  // Build passage (title + body) and question, with each character hoverable
   passageEl.innerHTML =
-    '<div class="reading-quiz-title">' + (essay.titleCn || '') + '</div>' +
-    '<div class="reading-quiz-body">' + (essay.contentCn || '').replace(/\n/g, '<br>') + '</div>';
-  questionEl.textContent = q.q;
+    '<div class="reading-quiz-title">' + wrapHanziForHover(essay.titleCn || '') + '</div>' +
+    '<div class="reading-quiz-body">' + wrapHanziForHover(essay.contentCn || '') + '</div>';
+  questionEl.innerHTML = wrapHanziForHover(q.q || '');
 
   // Build clickable A/B/C/D options (same look as the main quiz)
   optionsEl.innerHTML = '';
@@ -2730,31 +2783,24 @@ function renderEssay() {
   renderEssayQuestions(essay);
 }
 
-function handleEssayWordClick(char) {
-  let foundWord = null;
-  
-  // 1. Search in primary HSK_DATA
+// Look up a single character's dictionary entry (primary then extra data).
+function findWordByChar(char) {
   for (const level in HSK_DATA) {
-    const list = HSK_DATA[level];
-    const match = list.find(w => w.character === char);
-    if (match) {
-      foundWord = match;
-      break;
-    }
+    const match = HSK_DATA[level].find(w => w.character === char);
+    if (match) return match;
   }
-  
-  // 2. Search in EXTRA_HSK_DATA if not found in primary
-  if (!foundWord) {
+  if (typeof EXTRA_HSK_DATA !== 'undefined') {
     for (const level in EXTRA_HSK_DATA) {
-      const list = EXTRA_HSK_DATA[level];
-      const match = list.find(w => w.character === char);
-      if (match) {
-        foundWord = match;
-        break;
-      }
+      const match = EXTRA_HSK_DATA[level].find(w => w.character === char);
+      if (match) return match;
     }
   }
-  
+  return null;
+}
+
+function handleEssayWordClick(char) {
+  let foundWord = findWordByChar(char);
+
   if (!foundWord) {
     foundWord = {
       id: `mock_${char}`,
@@ -3463,6 +3509,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   // Keyboard answers for the quiz (A/B/C/D to choose, Enter/Space to advance)
   document.addEventListener('keydown', handleQuizKeydown);
+
+  // Hover-to-learn tooltips in the reading comprehension modal
+  setupReadingHover();
 });
 
 // Dynamic Resize Handlers for Mobile responsiveness

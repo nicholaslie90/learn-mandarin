@@ -2267,3 +2267,38 @@ body.light-theme .grid-overlay svg {
   text-align: left;
   color: var(--text-primary);
 }
+.reading-quiz-hint {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: left;
+  margin: -0.75rem 0 1.25rem 0;
+  opacity: 0.8;
+}
+.rq-word {
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+.rq-word:hover {
+  background: var(--accent-blue, #3b82f6);
+  color: #fff;
+}
+.rq-tip {
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  align-items: center;
+  text-align: center;
+  max-width: 260px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--shadow-lg);
+}
+.rq-tip-char { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-primary); }
+.rq-tip-py { color: var(--accent-cyan); font-size: 0.9rem; font-weight: 600; }
+.rq-tip-en { color: var(--text-secondary); font-size: 0.8rem; line-height: 1.3; }
