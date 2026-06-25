@@ -2001,13 +2001,23 @@ function renderQuizQuestion() {
     qAudioBtn.style.display = 'none';
   }
   
-  // Generate options (1 correct, 3 wrong distractors)
-  // Ensure that single-character questions only present single-character distractors,
-  // and multi-character questions present multi-character distractors.
-  const isSingleWord = word.character.length === 1;
+  // Generate options (1 correct, 3 wrong distractors).
+  // For character/listening choices (the answer is shown as Hanzi), match the
+  // exact character (= syllable) count so length can't give the answer away.
+  // For meaning/pinyin, just keep single-vs-multi parity. Widen gracefully if
+  // the level lacks enough same-length words.
   const pool = HSK_DATA[state.currentLevel] || [];
-  let eligible = pool.filter(w => w.id !== word.id && (w.character.length === 1) === isSingleWord);
-  
+  const targetLen = word.character.length;
+  const isSingleWord = targetLen === 1;
+  const matchExactLen = (currentQ.type === 'character' || currentQ.type === 'listening');
+
+  let eligible = matchExactLen
+    ? pool.filter(w => w.id !== word.id && w.character.length === targetLen)
+    : pool.filter(w => w.id !== word.id && (w.character.length === 1) === isSingleWord);
+
+  if (eligible.length < 3) {
+    eligible = pool.filter(w => w.id !== word.id && (w.character.length === 1) === isSingleWord);
+  }
   if (eligible.length < 3) {
     eligible = pool.filter(w => w.id !== word.id);
   }
