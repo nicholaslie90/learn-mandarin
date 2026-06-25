@@ -90,3 +90,39 @@ test('level 2 lesson 1 unlocks once LT1 is in passedCheckpoints', () => {
   const after = { completedLessons: {}, passedCheckpoints: { 'LT1': { score: 0.9 } } };
   assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', after), true);
 });
+
+test('themed curriculum makes one unit per theme in meta order', () => {
+  const data = fakeData(); // level 1: hsk1_1..hsk1_30
+  const wt = {};
+  data['1'].forEach((w, i) => { wt[w.id] = i < 5 ? 'food' : 'people'; });
+  const tm = [
+    { key: 'people', name: 'People', emoji: '👤' },
+    { key: 'food', name: 'Food', emoji: '🍜' },
+  ];
+  const cur = C.buildCurriculum(data, undefined, wt, tm);
+  const lvl1 = cur.levels.find(l => l.level === 1);
+  assert.strictEqual(lvl1.units.length, 2); // both themes present
+  assert.strictEqual(lvl1.units[0].title, 'People'); // meta order: people first
+  assert.strictEqual(lvl1.units[0].themeKey, 'people');
+  assert.strictEqual(lvl1.units[1].title, 'Food');
+  // people has 25 words -> lessons of 12 => 12,12,1 = 3 lessons under unit 0
+  assert.strictEqual(lvl1.units[0].lessons.length, 3);
+  assert.strictEqual(lvl1.units[0].lessons[0].lessonId, 'L1-u0-l0');
+  assert.strictEqual(lvl1.units[1].lessons[0].lessonId, 'L1-u1-l0');
+  assert.strictEqual(lvl1.units[1].checkpointId, 'CP1-u1');
+});
+
+test('themed curriculum skips empty themes without gaps in unit index', () => {
+  const data = fakeData();
+  const wt = {};
+  data['1'].forEach((w) => { wt[w.id] = 'food'; }); // all food, people empty
+  const tm = [
+    { key: 'people', name: 'People', emoji: '👤' },
+    { key: 'food', name: 'Food', emoji: '🍜' },
+  ];
+  const cur = C.buildCurriculum(data, undefined, wt, tm);
+  const lvl1 = cur.levels.find(l => l.level === 1);
+  assert.strictEqual(lvl1.units.length, 1);
+  assert.strictEqual(lvl1.units[0].unitIndex, 0);
+  assert.strictEqual(lvl1.units[0].themeKey, 'food');
+});

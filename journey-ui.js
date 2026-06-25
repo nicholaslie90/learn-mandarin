@@ -31,7 +31,8 @@
     }
     let html = '';
     lvl.units.forEach(function (unit) {
-      html += '<div class="path-unit"><div class="path-unit-title">Unit ' + (unit.unitIndex + 1) + '</div>';
+      var unitTitle = unit.title ? ((unit.emoji ? unit.emoji + ' ' : '') + unit.title) : ('Unit ' + (unit.unitIndex + 1));
+      html += '<div class="path-unit"><div class="path-unit-title">' + unitTitle + '</div>';
       unit.lessons.forEach(function (lesson) {
         const st = nodeState(cur, state.journey, lesson.lessonId, 'lesson');
         const rec = state.journey.completedLessons[lesson.lessonId];

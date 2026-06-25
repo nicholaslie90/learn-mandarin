@@ -16,34 +16,93 @@
     return out;
   }
 
-  function buildCurriculum(hskData, config) {
+  function makeLesson(level, unitIndex, lessonIndex, wordsInLesson) {
+    return {
+      lessonId: 'L' + level + '-u' + unitIndex + '-l' + lessonIndex,
+      level: level,
+      unitIndex: unitIndex,
+      lessonIndex: lessonIndex,
+      wordIds: wordsInLesson.map(function (w) { return w.id; }),
+      wordCount: wordsInLesson.length,
+    };
+  }
+
+  // Fixed-size sequential units (fallback when no theme map is available).
+  function buildSequentialUnits(level, words, cfg) {
+    const lessons = chunk(words, cfg.wordsPerLesson).map(function (w, idx) {
+      return makeLesson(level, Math.floor(idx / cfg.lessonsPerUnit), idx % cfg.lessonsPerUnit, w);
+    });
+    const unitsCount = Math.ceil(lessons.length / cfg.lessonsPerUnit);
+    const units = [];
+    for (let u = 0; u < unitsCount; u++) {
+      units.push({
+        unitIndex: u,
+        checkpointId: 'CP' + level + '-u' + u,
+        lessons: lessons.filter(function (l) { return l.unitIndex === u; }),
+      });
+    }
+    return units;
+  }
+
+  // One unit per theme (in themeMeta order); each theme split into lessons.
+  // Themes with fewer than MIN_UNIT_WORDS are merged into a neighbor so we
+  // never create a trivial unit / an unpassable checkpoint.
+  var MIN_UNIT_WORDS = 4;
+  function buildThemedUnits(level, words, cfg, wt, tm) {
+    const byTheme = {};
+    words.forEach(function (w) {
+      const key = wt[w.id] || 'general';
+      (byTheme[key] = byTheme[key] || []).push(w);
+    });
+    // Ordered, non-empty theme groups
+    let groups = [];
+    tm.forEach(function (theme) {
+      const ws = byTheme[theme.key];
+      if (ws && ws.length) {
+        groups.push({ title: theme.name, emoji: theme.emoji, themeKey: theme.key, words: ws.slice() });
+      }
+    });
+    // Fold an undersized group into the previous group
+    const merged = [];
+    groups.forEach(function (g) {
+      if (g.words.length < MIN_UNIT_WORDS && merged.length > 0) {
+        merged[merged.length - 1].words = merged[merged.length - 1].words.concat(g.words);
+      } else {
+        merged.push(g);
+      }
+    });
+    // If the first group is still undersized, fold it into the next one
+    if (merged.length > 1 && merged[0].words.length < MIN_UNIT_WORDS) {
+      merged[1].words = merged[0].words.concat(merged[1].words);
+      merged.shift();
+    }
+    return merged.map(function (g, ui) {
+      return {
+        unitIndex: ui,
+        checkpointId: 'CP' + level + '-u' + ui,
+        title: g.title,
+        emoji: g.emoji,
+        themeKey: g.themeKey,
+        lessons: chunk(g.words, cfg.wordsPerLesson).map(function (w, idx) {
+          return makeLesson(level, ui, idx, w);
+        }),
+      };
+    });
+  }
+
+  function buildCurriculum(hskData, config, wordTheme, themeMeta) {
     const cfg = config || CURRICULUM_CONFIG;
+    const wt = wordTheme || (typeof WORD_THEME !== 'undefined' ? WORD_THEME : null);
+    const tm = themeMeta || (typeof THEME_META !== 'undefined' ? THEME_META : null);
+    const themed = !!(wt && tm);
     const levels = [];
     cfg.guidedLevels.forEach(function (level) {
       const words = (hskData[String(level)] || []);
       if (words.length === 0) return;
-      const lessonChunks = chunk(words, cfg.wordsPerLesson);
-      const lessons = lessonChunks.map(function (wordsInLesson, idx) {
-        const unitIndex = Math.floor(idx / cfg.lessonsPerUnit);
-        const lessonIndex = idx % cfg.lessonsPerUnit;
-        return {
-          lessonId: 'L' + level + '-u' + unitIndex + '-l' + lessonIndex,
-          level: level,
-          unitIndex: unitIndex,
-          lessonIndex: lessonIndex,
-          wordIds: wordsInLesson.map(function (w) { return w.id; }),
-          wordCount: wordsInLesson.length,
-        };
-      });
-      const unitsCount = Math.ceil(lessons.length / cfg.lessonsPerUnit);
-      const units = [];
-      for (let u = 0; u < unitsCount; u++) {
-        units.push({
-          unitIndex: u,
-          checkpointId: 'CP' + level + '-u' + u,
-          lessons: lessons.filter(function (l) { return l.unitIndex === u; }),
-        });
-      }
+      const units = themed
+        ? buildThemedUnits(level, words, cfg, wt, tm)
+        : buildSequentialUnits(level, words, cfg);
+      if (units.length === 0) return;
       levels.push({ level: level, units: units, levelTestId: 'LT' + level });
     });
     return { levels: levels };

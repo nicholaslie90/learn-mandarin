@@ -424,6 +424,20 @@ async function saveJourney() {
   }
 }
 
+// The journey switched from sequential 48-word units to theme-based units, so
+// old lesson/checkpoint ids point to different content. Reset lesson progress
+// once on this structural change while keeping XP/points, streak, rank, and
+// badges (cumulative achievements that remain valid).
+const CURRICULUM_VERSION = 2; // 1 = sequential, 2 = themed
+function migrateJourneyCurriculum() {
+  const j = state.journey;
+  if (!j) return;
+  if (j.curriculumVersion === CURRICULUM_VERSION) return;
+  j.completedLessons = {};
+  j.passedCheckpoints = {};
+  j.curriculumVersion = CURRICULUM_VERSION;
+}
+
 function saveToLocalStorage() {
   saveProgressToDB();
 }
@@ -523,6 +537,7 @@ async function loadProgressFromDB() {
       const localJourney = localStorage.getItem('hsk_sensei_journey');
       state.journey = localJourney ? JSON.parse(localJourney) : JourneyState.createEmptyJourney();
     }
+    migrateJourneyCurriculum();
     state.curriculum = Curriculum.buildCurriculum(HSK_DATA);
 
     await saveProgressToDB();
@@ -1308,7 +1323,7 @@ function finishLesson(lessonId, ratio) {
 
 function startCheckpoint(checkpointId) {
   const words = Curriculum.getUnitWords(HSK_DATA, state.curriculum, checkpointId);
-  if (words.length < 4) return;
+  if (words.length === 0) return;
   switchTab('practice');
   startNewQuiz(words, {
     count: Math.min(12, words.length),
@@ -1493,7 +1508,7 @@ function startLevelTest(levelTestId) {
   if (!m) return;
   const level = parseInt(m[1], 10);
   const words = HSK_DATA[level] || [];
-  if (words.length < 4) return;
+  if (words.length === 0) return;
   switchTab('practice');
   startNewQuiz(words, {
     count: Math.min(15, words.length),
@@ -1845,7 +1860,10 @@ function startNewQuiz(quizWords, options) {
   const words = Array.isArray(quizWords) ? quizWords : (HSK_DATA[state.currentLevel] || []);
   const count = opts.count || 10;
   state.quizOnComplete = typeof opts.onComplete === 'function' ? opts.onComplete : null;
-  if (words.length < 4) {
+  // Distractors are drawn from the whole level, so the question pool itself
+  // can be small (a short themed lesson/checkpoint); only the level needs >=4.
+  const distractorPool = HSK_DATA[state.currentLevel] || [];
+  if (words.length === 0 || distractorPool.length < 4) {
     alert("Not enough HSK vocabulary loaded to run a practice quiz.");
     if (state.quizOnComplete) { state.quizOnComplete(0); state.quizOnComplete = null; }
     return;
