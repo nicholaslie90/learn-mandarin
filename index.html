@@ -63,9 +63,12 @@
         </div>
         
         <!-- Export/Import Buttons -->
-        <button id="exportBtn" class="icon-btn" title="Export progress">⬇️</button>
-        <button id="importBtn" class="icon-btn" title="Import progress">⬆️</button>
-        <input id="importFileInput" type="file" accept="application/json" style="display:none" />
+        <div class="progress-io" title="Back up or restore your learning progress as a file">
+          <span class="progress-io-label">Progress</span>
+          <button id="exportBtn" class="io-btn" title="Save your progress to a file (download)">💾 Save</button>
+          <button id="importBtn" class="io-btn" title="Load progress from a saved file (upload)">📂 Load</button>
+          <input id="importFileInput" type="file" accept="application/json" style="display:none" />
+        </div>
 
         <!-- Theme Toggle Button -->
         <button id="themeToggleBtn" class="canvas-btn" style="margin: 0; padding: 0.5rem; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%;" onclick="toggleTheme()" title="Toggle Light/Dark Theme">

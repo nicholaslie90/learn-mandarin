@@ -339,6 +339,42 @@ header {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Save / Load progress controls in the header */
+.progress-io {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.progress-io-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  margin-right: 0.1rem;
+}
+.io-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 0.6rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+.io-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* Section divider label inside the nav (groups the free-practice tabs) */
 .tab-group-label {
   display: flex;
