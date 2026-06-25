@@ -1951,6 +1951,43 @@ function handleQuizNext() {
   }
 }
 
+// Keyboard support for the practice quiz: press A/B/C/D to select an answer,
+// then Enter or Space to advance to the next question.
+function handleQuizKeydown(e) {
+  // Only while the Practice tab is showing an active (unfinished) question
+  const practice = document.getElementById('practiceSection');
+  if (!practice || !practice.classList.contains('active')) return;
+  const activeCard = document.getElementById('quizActiveCard');
+  if (!activeCard || activeCard.style.display === 'none') return;
+
+  // Don't hijack typing in inputs (e.g. dictionary search) or modifier combos
+  const tag = (e.target.tagName || '').toLowerCase();
+  if (tag === 'input' || tag === 'textarea' || e.target.isContentEditable) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+  // After an answer is locked in, Enter/Space moves on
+  if (state.quizSelectedOption !== null) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+      const explanation = document.getElementById('quizExplanationContainer');
+      if (explanation && explanation.style.display !== 'none') {
+        e.preventDefault();
+        handleQuizNext();
+      }
+    }
+    return;
+  }
+
+  // Otherwise A/B/C/D (case-insensitive) picks the matching option
+  const idx = { a: 0, b: 1, c: 2, d: 3 }[e.key.toLowerCase()];
+  if (idx === undefined) return;
+  const buttons = document.querySelectorAll('#quizOptionsGrid .option-btn');
+  const btn = buttons[idx];
+  if (btn && !btn.disabled) {
+    e.preventDefault();
+    btn.click();
+  }
+}
+
 function endQuizSession() {
   const quizActiveCard = document.getElementById('quizActiveCard');
   const quizResultsCard = document.getElementById('quizResultsCard');
@@ -3367,6 +3404,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   // Register window resize listener
   window.addEventListener('resize', handleWindowResize);
+
+  // Keyboard answers for the quiz (A/B/C/D to choose, Enter/Space to advance)
+  document.addEventListener('keydown', handleQuizKeydown);
 });
 
 // Dynamic Resize Handlers for Mobile responsiveness
