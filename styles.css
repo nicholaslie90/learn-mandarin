@@ -2180,3 +2180,37 @@ body.light-theme .grid-overlay svg {
 }
 
 
+
+/* ------------------------------------------------------------------ */
+/* Journey path styles (Task 8)                                         */
+/* ------------------------------------------------------------------ */
+.learn-path { display:flex; flex-direction:column; gap:1.5rem; padding:1rem 0; }
+.path-unit { display:flex; flex-direction:column; align-items:center; gap:0.75rem; }
+.path-unit-title { font-weight:600; color:var(--text-secondary); }
+.path-node { display:flex; flex-direction:column; align-items:center; gap:0.25rem;
+  width:120px; padding:0.75rem; border-radius:1rem; border:1px solid var(--glass-border, rgba(255,255,255,.15));
+  background:var(--glass-bg, rgba(255,255,255,.06)); cursor:pointer; color:var(--text-primary); }
+.path-node.node-locked { opacity:.45; cursor:not-allowed; }
+.path-node.node-done { border-color:var(--accent-cyan, #22d3ee); }
+.path-node.node-open { box-shadow:0 0 0 2px var(--accent-blue, #3b82f6) inset; }
+.path-checkpoint { width:140px; font-weight:600; }
+.node-stars { letter-spacing:2px; color:#fbbf24; }
+.path-empty { text-align:center; color:var(--text-secondary); padding:2rem; }
+
+/* ------------------------------------------------------------------ */
+/* Badge gallery, daily goal, stat-pill (Task 10)                       */
+/* ------------------------------------------------------------------ */
+.badge-gallery { display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; margin:1rem 0; }
+.badge-chip { padding:0.35rem 0.7rem; border-radius:999px; background:var(--glass-bg, rgba(255,255,255,.08));
+  border:1px solid var(--glass-border, rgba(255,255,255,.15)); font-size:0.85rem; }
+.badge-empty, .goal-todo, .goal-done { color:var(--text-secondary); font-size:0.9rem; }
+.daily-goal-pill { text-align:center; margin:0.5rem 0; }
+.goal-done { color:var(--accent-cyan, #22d3ee); }
+
+/* Header rank pill — mirrors .stat-item / .stat-lbl look */
+.stat-pill { display:flex; align-items:center; gap:0.35rem; font-size:0.875rem;
+  background:rgba(255,255,255,.04); padding:0.25rem 0.6rem; border-radius:0.5rem;
+  border:1px solid var(--border-glass); }
+.stat-label { color:var(--text-secondary); font-size:0.75rem; }
+
+.path-level-test { width:140px; font-weight:600; }

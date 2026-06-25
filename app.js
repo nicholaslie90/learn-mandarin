@@ -322,6 +322,9 @@ const state = {
   readEssayIds: [],
   dictionaryLimit: 100,
   points: 0,
+  journey: null,        // JourneyState object, hydrated on load
+  curriculum: null,     // built once from HSK_DATA
+  quizOnComplete: null, // set by guided-journey quiz launches
 };
 
 // Spaced Repetition Intervals (in hours)
@@ -392,7 +395,8 @@ async function saveProgressToDB() {
     await db.set('lastStudyDate', state.lastStudyDate);
     await db.set('points', state.points);
     await db.set('readEssayIds', state.readEssayIds);
-    
+    await db.set('journey', state.journey);
+
     // Backup unlocked extra card IDs
     const stored = localStorage.getItem('hsk_sensei_unlocked_extra_ids');
     if (stored) {
@@ -407,6 +411,16 @@ async function saveProgressToDB() {
     localStorage.setItem('hsk_sensei_last_study', state.lastStudyDate);
     localStorage.setItem('hsk_sensei_points', state.points.toString());
     localStorage.setItem('hsk_sensei_read_essay_ids', JSON.stringify(state.readEssayIds));
+    localStorage.setItem('hsk_sensei_journey', JSON.stringify(state.journey));
+  }
+}
+
+async function saveJourney() {
+  try {
+    if (!db.db) await db.init();
+    await db.set('journey', state.journey);
+  } catch (e) {
+    localStorage.setItem('hsk_sensei_journey', JSON.stringify(state.journey));
   }
 }
 
@@ -425,7 +439,8 @@ async function loadProgressFromDB() {
     const unlockedExtraIds = await db.get('unlockedExtraIds');
     const points = await db.get('points');
     const readEssayIds = await db.get('readEssayIds');
-    
+    const journey = await db.get('journey');
+
     if (progress) {
       state.progress = progress;
     } else {
@@ -502,6 +517,14 @@ async function loadProgressFromDB() {
       });
     });
     
+    if (journey && journey.schemaVersion) {
+      state.journey = journey;
+    } else {
+      const localJourney = localStorage.getItem('hsk_sensei_journey');
+      state.journey = localJourney ? JSON.parse(localJourney) : JourneyState.createEmptyJourney();
+    }
+    state.curriculum = Curriculum.buildCurriculum(HSK_DATA);
+
     await saveProgressToDB();
   } catch (error) {
     console.error("Failed to load progress from IndexedDB, falling back to LocalStorage:", error);
@@ -547,6 +570,8 @@ async function loadProgressFromDB() {
         }
       });
     });
+    if (!state.journey) state.journey = JourneyState.createEmptyJourney();
+    if (!state.curriculum) state.curriculum = Curriculum.buildCurriculum(HSK_DATA);
   }
 }
 
@@ -1155,7 +1180,9 @@ function switchTab(tabId) {
   });
   
   // Specific screen setups
-  if (tabId === 'dashboard') {
+  if (tabId === 'learn') {
+    renderLearnSection();
+  } else if (tabId === 'dashboard') {
     renderDashboard();
   } else if (tabId === 'flashcards') {
     initFlashcards();
@@ -1224,6 +1251,156 @@ function renderPointsUI() {
   }
 }
 
+function renderLearnSection() {
+  const title = document.getElementById('learnLevelTitle');
+  if (title) title.textContent = `HSK ${state.currentLevel} Journey`;
+  const rank = document.getElementById('headerRankVal');
+  if (rank) rank.textContent = JourneyState.getRank(state.points);
+  if (typeof JourneyUI !== 'undefined' && JourneyUI.renderLearnPath) {
+    JourneyUI.renderLearnPath(document.getElementById('learnPath'), state);
+  }
+  const today = new Date().toISOString().slice(0, 10);
+  if (typeof JourneyUI !== 'undefined') {
+    JourneyUI.renderDailyGoal(document.getElementById('dailyGoalPill'), state.journey, today);
+    JourneyUI.renderBadgeGallery(document.getElementById('badgeGallery'), state.journey);
+  }
+}
+
+// -------------------------------------------------------------
+// Journey controllers (Task 8)
+// -------------------------------------------------------------
+function startLesson(lessonId) {
+  const words = Curriculum.getLessonWords(HSK_DATA, lessonId);
+  if (!words.length) return;
+  // Phase 1: flashcard intro of this lesson's words
+  switchTab('flashcards');
+  initFlashcards(words);
+  // Phase 2: when the user opens Practice (or via a "Start quiz" affordance), run the mini-quiz.
+  // For a guided flow we launch the quiz immediately after flashcards via the existing Practice UI:
+  state.pendingLesson = { lessonId: lessonId, words: words };
+  showLessonQuizPrompt(lessonId, words);
+}
+
+function showLessonQuizPrompt(lessonId, words) {
+  // Minimal affordance: a confirm-style banner button. Reuse Practice tab for the quiz.
+  const count = Math.min(8, words.length);
+  switchTab('practice');
+  startNewQuiz(words, { count: count, onComplete: function (ratio) { finishLesson(lessonId, ratio); } });
+}
+
+function finishLesson(lessonId, ratio) {
+  const res = JourneyState.applyLessonCompletion(state.journey, lessonId, ratio, Date.now());
+  state.points += res.xpGained;
+  // First lesson of the day -> daily goal bonus + streak
+  const today = new Date().toISOString().slice(0, 10);
+  const goal = JourneyState.applyDailyGoal(state.journey, today);
+  state.points += goal.bonusXp;
+  if (goal.bonusXp > 0) updateStreak();
+  // Mark this lesson's words as learned in SRS
+  Curriculum.getLessonWords(HSK_DATA, lessonId).forEach(function (w) { promoteSRSWord(w.id); });
+  evaluateJourneyBadges();
+  state.journey.rank = JourneyState.getRank(state.points);
+  saveProgressToDB();
+  saveJourney();
+  renderPointsUI();
+  switchTab('learn');
+}
+
+function startCheckpoint(checkpointId) {
+  const words = Curriculum.getUnitWords(HSK_DATA, state.curriculum, checkpointId);
+  if (words.length < 4) return;
+  switchTab('practice');
+  startNewQuiz(words, {
+    count: Math.min(12, words.length),
+    onComplete: function (vocabRatio) {
+      const essays = (typeof HSK_ESSAYS !== 'undefined') ? (HSK_ESSAYS[state.currentLevel] || []) : [];
+      if (!essays.length) { finishCheckpoint(checkpointId, vocabRatio); return; }
+      askCheckpointReadingQuestion(essays, function (readingCorrect) {
+        // Weight: vocab 80%, reading 20%
+        const ratio = vocabRatio * 0.8 + (readingCorrect ? 0.2 : 0);
+        finishCheckpoint(checkpointId, ratio);
+      });
+    },
+  });
+}
+
+function askCheckpointReadingQuestion(essays, cb) {
+  const essay = essays[Math.floor(Math.random() * essays.length)];
+  if (!essay || !essay.questions || !essay.questions.length) { cb(true); return; }
+  const q = essay.questions[0];
+  const optionsText = q.options.map(function (o, i) { return (i + 1) + '. ' + o; }).join('\n');
+  const ans = prompt(essay.titleCn + '\n\n' + essay.contentCn + '\n\n' + q.q + '\n' + optionsText + '\n\nEnter option number:');
+  if (ans === null) { cb(true); return; }
+  const picked = parseInt(ans, 10) - 1;
+  cb(picked === q.correct);
+}
+
+function finishCheckpoint(checkpointId, ratio) {
+  const passed = ratio >= Curriculum.CURRICULUM_CONFIG.passThreshold;
+  if (passed) {
+    const res = JourneyState.applyCheckpointPass(state.journey, checkpointId, ratio, Date.now());
+    state.points += res.xpGained;
+    evaluateJourneyBadges();
+    state.journey.rank = JourneyState.getRank(state.points);
+    saveProgressToDB();
+    saveJourney();
+    renderPointsUI();
+    alert('Checkpoint passed! (' + Math.round(ratio * 100) + '%)');
+  } else {
+    alert('Score ' + Math.round(ratio * 100) + '% — need ' +
+      Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
+  }
+  switchTab('learn');
+}
+
+function startLevelTest(levelTestId) {
+  const m = /^LT(\d+)$/.exec(levelTestId);
+  if (!m) return;
+  const level = parseInt(m[1], 10);
+  const words = HSK_DATA[level] || [];
+  if (words.length < 4) return;
+  switchTab('practice');
+  startNewQuiz(words, {
+    count: Math.min(15, words.length),
+    onComplete: function (vocabRatio) {
+      const essays = (typeof HSK_ESSAYS !== 'undefined') ? (HSK_ESSAYS[level] || []) : [];
+      if (!essays.length) { finishLevelTest(levelTestId, vocabRatio); return; }
+      askCheckpointReadingQuestion(essays, function (readingCorrect) {
+        const ratio = vocabRatio * 0.8 + (readingCorrect ? 0.2 : 0);
+        finishLevelTest(levelTestId, ratio);
+      });
+    },
+  });
+}
+
+function finishLevelTest(levelTestId, ratio) {
+  const passed = ratio >= Curriculum.CURRICULUM_CONFIG.passThreshold;
+  if (passed) {
+    const res = JourneyState.applyCheckpointPass(state.journey, levelTestId, ratio, Date.now());
+    state.points += res.xpGained;
+    evaluateJourneyBadges();
+    state.journey.rank = JourneyState.getRank(state.points);
+    saveProgressToDB();
+    saveJourney();
+    renderPointsUI();
+    alert('Level Test passed! (' + Math.round(ratio * 100) + '%) Next HSK level unlocked.');
+  } else {
+    alert('Score ' + Math.round(ratio * 100) + '% — need ' + Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
+  }
+  switchTab('learn');
+}
+
+function evaluateJourneyBadges() {
+  let mastered = 0;
+  Object.keys(state.progress).forEach(function (id) {
+    if (state.progress[id] && state.progress[id].srsLevel >= 4) mastered++;
+  });
+  JourneyState.evaluateBadges(state.journey, {
+    journey: state.journey,
+    streak: state.streak,
+    masteredCount: mastered,
+  });
+}
 
 // -------------------------------------------------------------
 // View Renderers: 1. Dashboard
@@ -1317,7 +1494,14 @@ function shuffleArray(array) {
   return array;
 }
 
-function initFlashcards() {
+function initFlashcards(explicitList) {
+  if (Array.isArray(explicitList)) {
+    activeFlashcardList = [...explicitList];
+    state.flashcardIndex = 0;
+    state.flashcardFlipped = false;
+    renderFlashcard();
+    return;
+  }
   const allWords = HSK_DATA[state.currentLevel] || [];
   // Review Mode checking
   if (state.activeTab === 'flashcards_review') {
@@ -1521,31 +1705,31 @@ function toggleStarWord(wordId) {
 // -------------------------------------------------------------
 // View Renderers: 3. Practice Quiz
 // -------------------------------------------------------------
-function startNewQuiz() {
-  const words = HSK_DATA[state.currentLevel] || [];
+function startNewQuiz(quizWords, options) {
+  const opts = options || {};
+  const words = Array.isArray(quizWords) ? quizWords : (HSK_DATA[state.currentLevel] || []);
+  const count = opts.count || 10;
+  state.quizOnComplete = typeof opts.onComplete === 'function' ? opts.onComplete : null;
   if (words.length < 4) {
     alert("Not enough HSK vocabulary loaded to run a practice quiz.");
+    if (state.quizOnComplete) { state.quizOnComplete(0); state.quizOnComplete = null; }
     return;
   }
-  
-  // Generate a random pool of 10 questions
+
   const shuffled = [...words].sort(() => 0.5 - Math.random());
-  state.quizQuestions = shuffled.slice(0, 10).map(word => {
+  state.quizQuestions = shuffled.slice(0, count).map(word => {
     const typeIndex = Math.floor(Math.random() * 4);
-    // Types: 0: Character -> Select Meaning, 1: Character -> Select Pinyin, 2: Meaning -> Select Character, 3: Listening -> Select Character
     let type = 'meaning';
     if (typeIndex === 1) type = 'pinyin';
     else if (typeIndex === 2) type = 'character';
     else if (typeIndex === 3) type = 'listening';
-    
     return { word, type };
   });
-  
+
   state.quizIndex = 0;
   state.quizScore = 0;
   state.quizAnswersHistory = [];
   state.quizSelectedOption = null;
-  
   renderQuizQuestion();
 }
 
@@ -1806,6 +1990,14 @@ function endQuizSession() {
       demoteSRSWord(item.wordId);
     }
   });
+
+  // Notify guided-journey controller, if this quiz was launched by a lesson/checkpoint
+  if (state.quizOnComplete) {
+    const ratio = state.quizQuestions.length ? (state.quizScore / state.quizQuestions.length) : 0;
+    const cb = state.quizOnComplete;
+    state.quizOnComplete = null;
+    cb(ratio);
+  }
 }
 
 // -------------------------------------------------------------
@@ -2987,6 +3179,41 @@ function generateNewReadingTest() {
   }, 1200);
 }
 
+async function exportProgressFile() {
+  const unlocked = JSON.parse(localStorage.getItem('hsk_sensei_unlocked_extra_ids') || '[]');
+  const bundle = Backup.buildExportBundle({
+    progress: state.progress,
+    streak: state.streak,
+    lastStudyDate: state.lastStudyDate,
+    points: state.points,
+    readEssayIds: state.readEssayIds,
+    unlockedExtraIds: unlocked,
+    journey: state.journey,
+  }, new Date().toISOString());
+  Backup.downloadExport(bundle, new Date().toISOString().slice(0, 10));
+}
+
+async function importProgressFile(file) {
+  let obj;
+  try { obj = await Backup.readImportFile(file); }
+  catch (e) { alert(e.message); return; }
+  const res = Backup.validateImportBundle(obj);
+  if (!res.ok) { alert('Import failed: ' + res.error); return; }
+  if (!confirm('This will OVERWRITE your current progress. Continue?')) return;
+  const d = res.data;
+  state.progress = d.progress;
+  state.streak = d.streak;
+  state.lastStudyDate = d.lastStudyDate;
+  state.points = d.points;
+  state.readEssayIds = d.readEssayIds || [];
+  state.journey = d.journey;
+  localStorage.setItem('hsk_sensei_unlocked_extra_ids', JSON.stringify(d.unlockedExtraIds || []));
+  await saveProgressToDB();
+  await saveJourney();
+  alert('Progress imported. Reloading.');
+  location.reload();
+}
+
 // Clean raw dictionary classifier strings in definitions dynamically at load time
 function cleanDatabaseDefinitions() {
   const cleanTranslation = (text) => {
@@ -3122,9 +3349,22 @@ window.addEventListener('DOMContentLoaded', async () => {
   renderStreakUI();
   renderPointsUI();
   
-  // Dashboard default
-  switchTab('dashboard');
-  
+  // Learn tab default
+  switchTab('learn');
+
+  // Export / Import button listeners
+  const exportBtn = document.getElementById('exportBtn');
+  const importBtn = document.getElementById('importBtn');
+  const importInput = document.getElementById('importFileInput');
+  if (exportBtn) exportBtn.addEventListener('click', exportProgressFile);
+  if (importBtn && importInput) {
+    importBtn.addEventListener('click', function () { importInput.click(); });
+    importInput.addEventListener('change', function (e) {
+      if (e.target.files && e.target.files[0]) importProgressFile(e.target.files[0]);
+      e.target.value = '';
+    });
+  }
+
   // Register window resize listener
   window.addEventListener('resize', handleWindowResize);
 });
