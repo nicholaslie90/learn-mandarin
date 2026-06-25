@@ -29,35 +29,47 @@
         ' is available in Free Practice (no guided journey).</p>';
       return;
     }
+    const journey = state.journey;
+
+    function lessonNode(lesson) {
+      const st = nodeState(cur, journey, lesson.lessonId, 'lesson');
+      const rec = journey.completedLessons[lesson.lessonId];
+      const inner = st === 'done' ? '✓' : st === 'locked' ? '🔒' : (lesson.lessonIndex + 1);
+      const stars = '<span class="jnode-stars">' + (rec ? starHtml(rec.stars) : '') + '</span>';
+      const attrs = st === 'locked' ? 'disabled' : 'onclick="startLesson(\'' + lesson.lessonId + '\')"';
+      return '<div class="jnode-wrap"><button class="jnode node-' + st + '" title="Lesson ' +
+        (lesson.lessonIndex + 1) + '" ' + attrs + '>' + inner + '</button>' + stars + '</div>';
+    }
+    function cpNode(unit) {
+      const st = nodeState(cur, journey, unit.checkpointId, 'checkpoint');
+      const icon = st === 'done' ? '🏅' : st === 'locked' ? '🔒' : '🏁';
+      const attrs = st === 'locked' ? 'disabled' : 'onclick="startCheckpoint(\'' + unit.checkpointId + '\')"';
+      return '<div class="jnode-wrap"><button class="jnode jnode-cp node-' + st + '" title="Checkpoint" ' +
+        attrs + '>' + icon + '</button><span class="jnode-cap">Test</span></div>';
+    }
+
     let html = '';
     lvl.units.forEach(function (unit) {
-      var unitTitle = unit.title ? ((unit.emoji ? unit.emoji + ' ' : '') + unit.title) : ('Unit ' + (unit.unitIndex + 1));
-      html += '<div class="path-unit"><div class="path-unit-title">' + unitTitle + '</div>';
-      unit.lessons.forEach(function (lesson) {
-        const st = nodeState(cur, state.journey, lesson.lessonId, 'lesson');
-        const rec = state.journey.completedLessons[lesson.lessonId];
-        const stars = rec ? '<span class="node-stars">' + starHtml(rec.stars) + '</span>' : '';
-        html += '<button class="path-node node-' + st + '" ' +
-          (st === 'locked' ? 'disabled' : 'onclick="startLesson(\'' + lesson.lessonId + '\')"') + '>' +
-          '<span class="node-icon">' + (st === 'done' ? '✓' : st === 'locked' ? '🔒' : '●') + '</span>' +
-          '<span class="node-label">Lesson ' + (lesson.lessonIndex + 1) + '</span>' + stars + '</button>';
-      });
-      const cpSt = nodeState(cur, state.journey, unit.checkpointId, 'checkpoint');
-      html += '<button class="path-node path-checkpoint node-' + cpSt + '" ' +
-        (cpSt === 'locked' ? 'disabled' : 'onclick="startCheckpoint(\'' + unit.checkpointId + '\')"') + '>' +
-        '<span class="node-icon">' + (cpSt === 'done' ? '🏅' : cpSt === 'locked' ? '🔒' : '🏁') + '</span>' +
-        '<span class="node-label">Checkpoint</span></button>';
-      html += '</div>';
+      const title = unit.title ? ((unit.emoji ? unit.emoji + ' ' : '') + unit.title) : ('Unit ' + (unit.unitIndex + 1));
+      const done = unit.lessons.filter(function (l) { return journey.completedLessons[l.lessonId]; }).length;
+      const cpDone = !!journey.passedCheckpoints[unit.checkpointId];
+      html += '<div class="unit-card">' +
+        '<div class="unit-card-head"><span class="unit-name">' + title + '</span>' +
+        '<span class="unit-progress">' + (cpDone ? '✅ done' : done + '/' + unit.lessons.length) + '</span></div>' +
+        '<div class="unit-nodes">' +
+        unit.lessons.map(lessonNode).join('') + cpNode(unit) +
+        '</div></div>';
     });
+
     var ltId = lvl.levelTestId;
-    var ltState = state.journey.passedCheckpoints[ltId] ? 'done'
-      : C.isLevelTestUnlocked(cur, ltId, state.journey) ? 'open' : 'locked';
-    html += '<div class="path-unit">';
-    html += '<button class="path-node path-level-test node-' + ltState + '" ' +
-      (ltState === 'locked' ? 'disabled' : 'onclick="startLevelTest(\'' + ltId + '\')"') + '>' +
-      '<span class="node-icon">' + (ltState === 'done' ? '👑' : ltState === 'locked' ? '🔒' : '🎓') + '</span>' +
-      '<span class="node-label">Level Test</span></button>';
-    html += '</div>';
+    var ltState = journey.passedCheckpoints[ltId] ? 'done'
+      : C.isLevelTestUnlocked(cur, ltId, journey) ? 'open' : 'locked';
+    var ltIcon = ltState === 'done' ? '👑' : ltState === 'locked' ? '🔒' : '🎓';
+    var ltAttrs = ltState === 'locked' ? 'disabled' : 'onclick="startLevelTest(\'' + ltId + '\')"';
+    html += '<div class="unit-card unit-card-test">' +
+      '<div class="unit-card-head"><span class="unit-name">🎓 Level Test</span></div>' +
+      '<div class="unit-nodes"><div class="jnode-wrap"><button class="jnode jnode-cp node-' + ltState + '" title="Level Test" ' +
+      ltAttrs + '>' + ltIcon + '</button><span class="jnode-cap">Final</span></div></div></div>';
     container.innerHTML = html;
   }
 
