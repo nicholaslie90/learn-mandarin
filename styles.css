@@ -121,7 +121,7 @@ header {
 .app-logo {
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 24%;
   border: 2px solid var(--accent-cyan);
   box-shadow: var(--shadow-glow);
   object-fit: cover;

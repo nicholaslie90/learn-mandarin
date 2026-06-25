@@ -5,8 +5,8 @@
       <stop offset="1" stop-color="#22d3ee"/>
     </linearGradient>
   </defs>
-  <rect x="4" y="4" width="92" height="92" rx="24" fill="url(#hsk-g)"/>
-  <text x="50" y="53" text-anchor="middle" dominant-baseline="central"
-        font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="60"
+  <rect x="0" y="0" width="100" height="100" rx="22" fill="url(#hsk-g)"/>
+  <text x="50" y="55" text-anchor="middle" dominant-baseline="central"
+        font-family="'Noto Serif SC','Songti SC','SimSun',serif" font-size="64"
         font-weight="700" fill="#ffffff">学</text>
 </svg>
