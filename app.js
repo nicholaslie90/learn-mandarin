@@ -1212,7 +1212,58 @@ function switchTab(tabId) {
     renderDictionary();
   } else if (tabId === 'reading') {
     renderEssay();
+  } else if (tabId === 'grammar') {
+    renderGrammar();
   }
+}
+
+// -------------------------------------------------------------
+// View Renderer: Grammar reference (HSK 1-9 key grammar points)
+// -------------------------------------------------------------
+function grammarAttrEscape(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function renderGrammar() {
+  const container = document.getElementById('grammarList');
+  if (!container) return;
+  const title = document.getElementById('grammarLevelTitle');
+  if (title) title.textContent = `HSK ${state.currentLevel} Grammar`;
+
+  const points = (typeof GRAMMAR !== 'undefined' && GRAMMAR[state.currentLevel]) ? GRAMMAR[state.currentLevel] : [];
+  if (!points.length) {
+    container.innerHTML = '<p class="path-empty">No grammar points available for this level.</p>';
+    return;
+  }
+
+  container.innerHTML = points.map(function (p, i) {
+    const examples = p.examples.map(function (e) {
+      return '<div class="gr-ex">' +
+        '<button class="gr-ex-audio" data-cn="' + grammarAttrEscape(e.cn) + '" title="Listen">🔊</button>' +
+        '<div class="gr-ex-text">' +
+          '<div class="gr-ex-cn">' + e.cn + '</div>' +
+          '<div class="gr-ex-py">' + e.py + '</div>' +
+          '<div class="gr-ex-en">' + e.en + '</div>' +
+        '</div></div>';
+    }).join('');
+    return '<div class="gr-card">' +
+      '<div class="gr-card-head"><span class="gr-num">' + (i + 1) + '</span>' +
+      '<h3 class="gr-title">' + p.title + '</h3></div>' +
+      '<div class="gr-pattern">' + p.pattern + '</div>' +
+      '<p class="gr-explain">' + p.explanation + '</p>' +
+      '<div class="gr-examples">' + examples + '</div>' +
+      '</div>';
+  }).join('');
+}
+
+// Play example audio via delegation (wired once at init)
+function setupGrammarAudio() {
+  const container = document.getElementById('grammarList');
+  if (!container) return;
+  container.addEventListener('click', function (e) {
+    const btn = e.target.closest('.gr-ex-audio');
+    if (btn) playTextToSpeech(btn.getAttribute('data-cn'));
+  });
 }
 
 // Level Change Trigger
@@ -3571,6 +3622,9 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   // Hover-to-learn tooltips in the reading comprehension modal
   setupReadingHover();
+
+  // Grammar example audio (delegated)
+  setupGrammarAudio();
 });
 
 // Dynamic Resize Handlers for Mobile responsiveness

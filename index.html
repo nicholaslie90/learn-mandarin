@@ -162,6 +162,12 @@
         </svg>
         Reading Lab
       </button>
+      <button class="tab-btn" data-tab="grammar" onclick="switchTab('grammar')">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h10" />
+        </svg>
+        Grammar
+      </button>
     </nav>
 
     <!-- Main Screens Content Area -->
@@ -688,7 +694,15 @@
           
         </div>
       </section>
-      
+
+      <section id="grammarSection" class="screen-section">
+        <div class="grammar-header">
+          <h2 id="grammarLevelTitle">HSK 1 Grammar</h2>
+          <p class="grammar-subtitle">Key grammar points to know at this level — pattern, explanation, and examples.</p>
+        </div>
+        <div id="grammarList" class="grammar-list"></div>
+      </section>
+
     </main>
   </div>
 
@@ -842,6 +856,7 @@
   <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.5/dist/hanzi-writer.min.js"></script>
   <script src="data.js"></script>
   <script src="themes-map.js"></script>
+  <script src="grammar-data.js"></script>
   <script src="curriculum.js"></script>
   <script src="journey-state.js"></script>
   <script src="backup.js"></script>
