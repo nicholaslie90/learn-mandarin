@@ -2034,6 +2034,7 @@ function renderQuizQuestion() {
   const qMain = document.getElementById('quizQMain');
   const qText = document.getElementById('quizQText');
   const qAudioBtn = document.getElementById('quizAudioBtn');
+  if (qMain) qMain.removeAttribute('data-hint'); // reset pinyin hint each question
   
   // Audio playback for listening question
   if (currentQ.type === 'listening') {
@@ -2057,6 +2058,7 @@ function renderQuizQuestion() {
     qType.textContent = "Identify the meaning of the characters";
     qMain.style.display = 'block';
     qMain.textContent = word.character;
+    qMain.setAttribute('data-hint', word.pinyin); // hover reveals pinyin as a hint
     qText.style.display = 'none';
     qAudioBtn.style.display = 'none';
   } else {

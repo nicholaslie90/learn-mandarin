@@ -922,6 +922,30 @@ header {
   font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+/* Pinyin hint on hover (meaning questions only) */
+.quiz-question-main[data-hint] { cursor: help; }
+.quiz-question-main[data-hint]:hover::after {
+  content: attr(data-hint);
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  margin-bottom: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.6rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  color: var(--accent-cyan, #22d3ee);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: var(--shadow-lg);
+  pointer-events: none;
+  z-index: 20;
 }
 
 .quiz-question-text {
