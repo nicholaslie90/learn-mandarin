@@ -1348,7 +1348,7 @@ function askCheckpointReadingQuestion(essays, cb) {
     try { modal.close(); } catch (e) {}
     cb(correct);
   }
-  function onCancel(e) { e.preventDefault(); finish(true); } // ESC = skip (counts as pass)
+  function onCancel(e) { e.preventDefault(); finish(false); } // ESC = skip counts as a wrong answer
   function onKey(e) {
     const idx = { a: 0, b: 1, c: 2, d: 3 }[e.key.toLowerCase()];
     if (idx === undefined) return;
