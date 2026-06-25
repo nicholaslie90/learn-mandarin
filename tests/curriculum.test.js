@@ -75,20 +75,12 @@ test('checkpoint unlocked only when all unit lessons complete', () => {
   assert.strictEqual(C.isCheckpointUnlocked(cur, 'CP1-u0', all), true);
 });
 
-test('level 2 first lesson locked until level 1 test passed', () => {
+test('any level first lesson is open (learners can jump to any HSK level)', () => {
   const cur = C.buildCurriculum(fakeData());
-  const noLT = { completedLessons: {}, passedCheckpoints: {} };
-  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', noLT), false);
-  const withLT = { completedLessons: {}, passedCheckpoints: { 'LT1': { score: 1 } } };
-  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', withLT), true);
-});
-
-test('level 2 lesson 1 unlocks once LT1 is in passedCheckpoints', () => {
-  const cur = C.buildCurriculum(fakeData());
-  const before = { completedLessons: {}, passedCheckpoints: {} };
-  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', before), false);
-  const after = { completedLessons: {}, passedCheckpoints: { 'LT1': { score: 0.9 } } };
-  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', after), true);
+  const fresh = { completedLessons: {}, passedCheckpoints: {} };
+  // No prior-level completion required to start level 1 OR a higher level.
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l0', fresh), true);
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', fresh), true);
 });
 
 test('themed curriculum makes one unit per theme in meta order', () => {

@@ -184,13 +184,15 @@
       const prev = 'L' + p.level + '-u' + p.unitIndex + '-l' + (p.lessonIndex - 1);
       return !!journey.completedLessons[prev];
     }
-    // first lesson of a unit
+    // first lesson of a unit (theme): requires the previous theme's checkpoint
     if (p.unitIndex > 0) {
       return !!journey.passedCheckpoints['CP' + p.level + '-u' + (p.unitIndex - 1)];
     }
-    // first lesson of first unit of a level
-    if (p.level === 1) return true;
-    return !!journey.passedCheckpoints['LT' + (p.level - 1)];
+    // first lesson of the first unit of a level: always open, so learners can
+    // jump straight into ANY HSK level without finishing the previous ones.
+    // (Themes still unlock sequentially within a level; the level test is a
+    // capstone, not a gate.)
+    return true;
   }
 
   return {

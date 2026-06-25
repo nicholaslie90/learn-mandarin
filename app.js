@@ -1167,7 +1167,7 @@ function switchTab(tabId) {
     }
   }
   
-  // Stop active speech synthesis when switching tabs
+  // Stop active speech synthesis (and any pending quiz audio) when switching tabs
   if (typeof speechSynthesis !== 'undefined') {
     speechSynthesis.cancel();
     if (state.essaySpeaking) {
@@ -1175,6 +1175,7 @@ function switchTab(tabId) {
     }
     state.isSpeaking = false;
   }
+  if (typeof clearQuizAudio === 'function') clearQuizAudio();
   
   // Update Tab buttons
   document.querySelectorAll('.tab-btn').forEach(btn => {
@@ -1638,7 +1639,7 @@ function finishLevelTest(levelTestId, ratio) {
     saveProgressToDB();
     saveJourney();
     renderPointsUI();
-    alert('Level Test passed! (' + Math.round(ratio * 100) + '%) Next HSK level unlocked.');
+    alert('Level Test passed! (' + Math.round(ratio * 100) + '%) 🎉 You\'ve completed this HSK level.');
   } else {
     alert('Score ' + Math.round(ratio * 100) + '% — need ' + Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
   }
@@ -1991,11 +1992,22 @@ function startNewQuiz(quizWords, options) {
   renderQuizQuestion();
 }
 
+// Pending listening-question auto-play timer, so a stale word never plays
+// over a later/different question (e.g. when starting a new lesson).
+let quizAudioTimer = null;
+function clearQuizAudio() {
+  if (quizAudioTimer) { clearTimeout(quizAudioTimer); quizAudioTimer = null; }
+  if (typeof speechSynthesis !== 'undefined') speechSynthesis.cancel();
+}
+
 function renderQuizQuestion() {
   const quizActiveCard = document.getElementById('quizActiveCard');
   const quizResultsCard = document.getElementById('quizResultsCard');
   if (!quizActiveCard || !quizResultsCard) return;
-  
+
+  // Cancel any pending/playing audio from a previous question before rendering
+  clearQuizAudio();
+
   quizActiveCard.style.display = 'block';
   quizResultsCard.style.display = 'none';
   
@@ -2031,8 +2043,9 @@ function renderQuizQuestion() {
     qText.textContent = "Listen and select the matching characters:";
     qAudioBtn.style.display = 'flex';
     
-    // Automatically speak the word
-    setTimeout(() => { playTextToSpeech(word.character); }, 300);
+    // Automatically speak the word (tracked so it can be cancelled if the
+    // question changes before it fires)
+    quizAudioTimer = setTimeout(() => { quizAudioTimer = null; playTextToSpeech(word.character); }, 300);
     qAudioBtn.onclick = () => playTextToSpeech(word.character);
   } else if (currentQ.type === 'pinyin') {
     qType.textContent = "Identify the pinyin pronunciation";
@@ -2257,10 +2270,11 @@ function handleQuizKeydown(e) {
 }
 
 function endQuizSession() {
+  clearQuizAudio();
   const quizActiveCard = document.getElementById('quizActiveCard');
   const quizResultsCard = document.getElementById('quizResultsCard');
   if (!quizActiveCard || !quizResultsCard) return;
-  
+
   quizActiveCard.style.display = 'none';
   quizResultsCard.style.display = 'flex';
   
