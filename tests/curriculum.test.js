@@ -82,3 +82,11 @@ test('level 2 first lesson locked until level 1 test passed', () => {
   const withLT = { completedLessons: {}, passedCheckpoints: { 'LT1': { score: 1 } } };
   assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', withLT), true);
 });
+
+test('level 2 lesson 1 unlocks once LT1 is in passedCheckpoints', () => {
+  const cur = C.buildCurriculum(fakeData());
+  const before = { completedLessons: {}, passedCheckpoints: {} };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', before), false);
+  const after = { completedLessons: {}, passedCheckpoints: { 'LT1': { score: 0.9 } } };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', after), true);
+});

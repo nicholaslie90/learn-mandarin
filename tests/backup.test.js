@@ -37,3 +37,8 @@ test('validate rejects non-object / missing fields', () => {
   assert.strictEqual(B.validateImportBundle(null).ok, false);
   assert.strictEqual(B.validateImportBundle({ schemaVersion: 1 }).ok, false);
 });
+
+test('validate rejects arrays for progress/journey', () => {
+  assert.strictEqual(B.validateImportBundle({ schemaVersion: 1, progress: [], journey: {} }).ok, false);
+  assert.strictEqual(B.validateImportBundle({ schemaVersion: 1, progress: {}, journey: [] }).ok, false);
+});

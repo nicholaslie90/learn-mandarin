@@ -24,8 +24,8 @@
     if (obj.schemaVersion !== SCHEMA_VERSION) {
       return { ok: false, error: 'Unsupported file version (' + obj.schemaVersion + ').' };
     }
-    if (!obj.progress || typeof obj.progress !== 'object') return { ok: false, error: 'Missing progress data.' };
-    if (!obj.journey || typeof obj.journey !== 'object') return { ok: false, error: 'Missing journey data.' };
+    if (!obj.progress || typeof obj.progress !== 'object' || Array.isArray(obj.progress)) return { ok: false, error: 'Missing progress data.' };
+    if (!obj.journey || typeof obj.journey !== 'object' || Array.isArray(obj.journey)) return { ok: false, error: 'Missing journey data.' };
     return { ok: true, data: obj };
   }
 

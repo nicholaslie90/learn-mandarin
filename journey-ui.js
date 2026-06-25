@@ -48,6 +48,15 @@
         '<span class="node-label">Checkpoint</span></button>';
       html += '</div>';
     });
+    var ltId = lvl.levelTestId;
+    var ltState = state.journey.passedCheckpoints[ltId] ? 'done'
+      : C.isLevelTestUnlocked(cur, ltId, state.journey) ? 'open' : 'locked';
+    html += '<div class="path-unit">';
+    html += '<button class="path-node path-level-test node-' + ltState + '" ' +
+      (ltState === 'locked' ? 'disabled' : 'onclick="startLevelTest(\'' + ltId + '\')"') + '>' +
+      '<span class="node-icon">' + (ltState === 'done' ? '👑' : ltState === 'locked' ? '🔒' : '🎓') + '</span>' +
+      '<span class="node-label">Level Test</span></button>';
+    html += '</div>';
     container.innerHTML = html;
   }
 

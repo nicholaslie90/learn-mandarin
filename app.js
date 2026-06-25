@@ -1353,6 +1353,43 @@ function finishCheckpoint(checkpointId, ratio) {
   switchTab('learn');
 }
 
+function startLevelTest(levelTestId) {
+  const m = /^LT(\d+)$/.exec(levelTestId);
+  if (!m) return;
+  const level = parseInt(m[1], 10);
+  const words = HSK_DATA[level] || [];
+  if (words.length < 4) return;
+  switchTab('practice');
+  startNewQuiz(words, {
+    count: Math.min(15, words.length),
+    onComplete: function (vocabRatio) {
+      const essays = (typeof HSK_ESSAYS !== 'undefined') ? (HSK_ESSAYS[level] || []) : [];
+      if (!essays.length) { finishLevelTest(levelTestId, vocabRatio); return; }
+      askCheckpointReadingQuestion(essays, function (readingCorrect) {
+        const ratio = vocabRatio * 0.8 + (readingCorrect ? 0.2 : 0);
+        finishLevelTest(levelTestId, ratio);
+      });
+    },
+  });
+}
+
+function finishLevelTest(levelTestId, ratio) {
+  const passed = ratio >= Curriculum.CURRICULUM_CONFIG.passThreshold;
+  if (passed) {
+    const res = JourneyState.applyCheckpointPass(state.journey, levelTestId, ratio, Date.now());
+    state.points += res.xpGained;
+    evaluateJourneyBadges();
+    state.journey.rank = JourneyState.getRank(state.points);
+    saveProgressToDB();
+    saveJourney();
+    renderPointsUI();
+    alert('Level Test passed! (' + Math.round(ratio * 100) + '%) Next HSK level unlocked.');
+  } else {
+    alert('Score ' + Math.round(ratio * 100) + '% — need ' + Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
+  }
+  switchTab('learn');
+}
+
 function evaluateJourneyBadges() {
   let mastered = 0;
   Object.keys(state.progress).forEach(function (id) {
@@ -3324,6 +3361,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     importBtn.addEventListener('click', function () { importInput.click(); });
     importInput.addEventListener('change', function (e) {
       if (e.target.files && e.target.files[0]) importProgressFile(e.target.files[0]);
+      e.target.value = '';
     });
   }
 
