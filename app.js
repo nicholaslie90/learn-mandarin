@@ -1324,16 +1324,42 @@ function startCheckpoint(checkpointId) {
   });
 }
 
-// Wrap each Chinese character in a hoverable span (for the reading modal).
+function escapeHtmlChar(ch) {
+  if (ch === '&') return '&amp;';
+  if (ch === '<') return '&lt;';
+  if (ch === '>') return '&gt;';
+  return ch;
+}
+
+// Segment text into vocabulary words (greedy longest-match) and wrap each
+// hoverable word in a span, so hovering lands on whole words like 久违, not
+// stray single characters that have no standalone dictionary entry.
 function wrapHanziForHover(text) {
+  const { byWord, maxLen } = getVocabIndex();
+  const chars = Array.from(text || '');
   let html = '';
-  for (const ch of (text || '')) {
-    if (ch === '\n') html += '<br>';
-    else if (ch === '&') html += '&amp;';
-    else if (ch === '<') html += '&lt;';
-    else if (ch === '>') html += '&gt;';
-    else if (isChineseChar(ch)) html += '<span class="rq-word">' + ch + '</span>';
-    else html += ch;
+  let i = 0;
+  while (i < chars.length) {
+    const ch = chars[i];
+    if (ch === '\n') { html += '<br>'; i++; continue; }
+    if (!isChineseChar(ch)) { html += escapeHtmlChar(ch); i++; continue; }
+
+    // Try the longest run of consecutive Chinese chars that forms a known word
+    let matched = null;
+    const cap = Math.min(maxLen, chars.length - i);
+    for (let len = cap; len >= 1; len--) {
+      let allHan = true;
+      for (let k = 0; k < len; k++) {
+        if (!isChineseChar(chars[i + k])) { allHan = false; break; }
+      }
+      if (!allHan) continue;
+      const sub = chars.slice(i, i + len).join('');
+      if (byWord.has(sub)) { matched = sub; break; }
+    }
+
+    const word = matched || ch;
+    html += '<span class="rq-word">' + word + '</span>';
+    i += Array.from(word).length;
   }
   return html;
 }
@@ -2783,19 +2809,34 @@ function renderEssay() {
   renderEssayQuestions(essay);
 }
 
-// Look up a single character's dictionary entry (primary then extra data).
-function findWordByChar(char) {
-  for (const level in HSK_DATA) {
-    const match = HSK_DATA[level].find(w => w.character === char);
-    if (match) return match;
-  }
-  if (typeof EXTRA_HSK_DATA !== 'undefined') {
-    for (const level in EXTRA_HSK_DATA) {
-      const match = EXTRA_HSK_DATA[level].find(w => w.character === char);
-      if (match) return match;
+// Cached index of every vocabulary entry keyed by its (word) characters,
+// plus the longest entry length, for greedy word-segmentation lookups.
+let _vocabIndex = null;
+function getVocabIndex() {
+  if (_vocabIndex) return _vocabIndex;
+  const byWord = new Map();
+  let maxLen = 1;
+  const add = (data) => {
+    if (typeof data === 'undefined' || !data) return;
+    for (const lvl in data) {
+      for (const w of data[lvl]) {
+        if (w && w.character && !byWord.has(w.character)) {
+          byWord.set(w.character, w);
+          const len = Array.from(w.character).length;
+          if (len > maxLen) maxLen = len;
+        }
+      }
     }
-  }
-  return null;
+  };
+  add(HSK_DATA);
+  add(typeof EXTRA_HSK_DATA !== 'undefined' ? EXTRA_HSK_DATA : undefined);
+  _vocabIndex = { byWord, maxLen };
+  return _vocabIndex;
+}
+
+// Look up a word/character's dictionary entry (exact match).
+function findWordByChar(char) {
+  return getVocabIndex().byWord.get(char) || null;
 }
 
 function handleEssayWordClick(char) {
