@@ -2076,7 +2076,10 @@ function renderQuizQuestion() {
   const pool = HSK_DATA[state.currentLevel] || [];
   const targetLen = word.character.length;
   const isSingleWord = targetLen === 1;
-  const matchExactLen = (currentQ.type === 'character' || currentQ.type === 'listening');
+  // pinyin/character/listening all reveal syllable count in the choices, so
+  // match the answer's exact character (= syllable) count. Only 'meaning'
+  // (English choices) keeps the looser single-vs-multi match.
+  const matchExactLen = (currentQ.type === 'pinyin' || currentQ.type === 'character' || currentQ.type === 'listening');
 
   let eligible = matchExactLen
     ? pool.filter(w => w.id !== word.id && w.character.length === targetLen)
