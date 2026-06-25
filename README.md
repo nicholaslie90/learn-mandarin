@@ -1,6 +1,6 @@
-# HSK Sensei 🏮
+# HSK Lǎoshī 🏮
 
-HSK Sensei is a premium, interactive Mandarin learning application designed to help users master Chinese vocabulary across all HSK levels (HSK 1 to 9). Built with a modern, glassmorphic UI and native browser capabilities, it provides an all-in-one suite for flashcard study, handwriting practice, speaking training, and reading comprehension.
+HSK Lǎoshī is a premium, interactive Mandarin learning application designed to help users master Chinese vocabulary across all HSK levels (HSK 1 to 9). Built with a modern, glassmorphic UI and native browser capabilities, it provides an all-in-one suite for flashcard study, handwriting practice, speaking training, and reading comprehension.
 
 ---
 

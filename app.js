@@ -1,4 +1,4 @@
-// HSK Sensei - Client Logic & State Management
+// HSK Lǎoshī - Client Logic & State Management
 
 // Web Speech API Voice Selection helper
 let chineseVoice = null;
@@ -1400,8 +1400,30 @@ function escapeHtmlChar(ch) {
 // Segment text into vocabulary words (greedy longest-match) and wrap each
 // hoverable word in a span, so hovering lands on whole words like 久违, not
 // stray single characters that have no standalone dictionary entry.
-function wrapHanziForHover(text) {
+// Build a per-character pinyin map for an essay by aligning its Chinese
+// characters (title + content) with its pinyin syllables (1 char = 1 syllable).
+// Gives readings even for characters that aren't standalone HSK words (e.g. names).
+function buildEssayCharPy(essay) {
+  const map = {};
+  if (!essay) return map;
+  const cn = (essay.titleCn || '') + '\n' + (essay.contentCn || '');
+  const py = (essay.titlePy || '') + ' ' + (essay.contentPy || '');
+  const sylls = py.split(/\s+/)
+    .map(s => s.replace(/[^a-zA-Zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüńňǹ·']/g, ''))
+    .filter(Boolean);
+  let si = 0;
+  for (const ch of cn) {
+    if (isChineseChar(ch)) {
+      if (si < sylls.length && map[ch] === undefined) map[ch] = sylls[si];
+      si++; // advance for every Chinese character
+    }
+  }
+  return map;
+}
+
+function wrapHanziForHover(text, charPy) {
   const { byWord, maxLen } = getVocabIndex();
+  charPy = charPy || {};
   const chars = Array.from(text || '');
   let html = '';
   let i = 0;
@@ -1423,8 +1445,29 @@ function wrapHanziForHover(text) {
       if (byWord.has(sub)) { matched = sub; break; }
     }
 
-    const word = matched || ch;
-    html += '<span class="rq-word">' + word + '</span>';
+    let word, dataPy, dataEn, dataName = '', dataNamePy = '';
+    if (matched) {
+      word = matched;
+      const w = byWord.get(matched);
+      dataPy = (w && w.pinyin) ? w.pinyin : (charPy[matched] || '');
+      dataEn = (w && w.english) ? w.english : '';
+    } else {
+      // Unknown single character: still show its reading, and pull in the next
+      // character to surface the likely word/name.
+      word = ch;
+      dataPy = charPy[ch] || '';
+      const next = chars[i + 1];
+      if (next && isChineseChar(next)) {
+        dataName = ch + next;
+        dataNamePy = ((charPy[ch] || '') + ' ' + (charPy[next] || '')).trim();
+      }
+    }
+
+    html += '<span class="rq-word" data-w="' + grammarAttrEscape(word) + '"' +
+      ' data-py="' + grammarAttrEscape(dataPy) + '"' +
+      ' data-en="' + grammarAttrEscape(dataEn) + '"' +
+      (dataName ? ' data-name="' + grammarAttrEscape(dataName) + '" data-namepy="' + grammarAttrEscape(dataNamePy) + '"' : '') +
+      '>' + word + '</span>';
     i += Array.from(word).length;
   }
   return html;
@@ -1432,14 +1475,23 @@ function wrapHanziForHover(text) {
 
 // Position and fill the floating meaning/reading tooltip over a hovered char.
 function showReadingTip(span, tip) {
-  const ch = span.textContent;
-  const w = findWordByChar(ch);
-  const py = (w && w.pinyin && w.pinyin !== 'Lookup...') ? w.pinyin : '';
-  const en = w ? w.english : 'Not an HSK word on its own — often part of a name or compound';
-  tip.innerHTML =
-    '<span class="rq-tip-char">' + ch + '</span>' +
-    (py ? '<span class="rq-tip-py">' + py + '</span>' : '') +
-    '<span class="rq-tip-en">' + en + '</span>';
+  const ch = span.dataset.w || span.textContent;
+  const py = span.dataset.py || '';
+  const en = span.dataset.en || '';
+  const name = span.dataset.name || '';
+  const namePy = span.dataset.namepy || '';
+
+  let html = '<span class="rq-tip-char">' + ch + '</span>';
+  if (py) html += '<span class="rq-tip-py">' + py + '</span>';
+  if (en) {
+    html += '<span class="rq-tip-en">' + en + '</span>';
+  } else if (name) {
+    html += '<span class="rq-tip-en">Part of ' + name +
+      (namePy ? ' (' + namePy + ')' : '') + ' — likely a name or proper noun</span>';
+  } else {
+    html += '<span class="rq-tip-en">Not in the HSK dictionary</span>';
+  }
+  tip.innerHTML = html;
   tip.style.display = 'flex';
   const r = span.getBoundingClientRect();
   const tr = tip.getBoundingClientRect();
@@ -1501,11 +1553,13 @@ function askCheckpointReadingQuestion(essays, cb) {
     if (btn && !btn.disabled) { e.preventDefault(); btn.click(); }
   }
 
-  // Build passage (title + body) and question, with each character hoverable
+  // Build passage (title + body) and question, with each character hoverable.
+  // charPy gives per-character readings (incl. names) aligned from the essay pinyin.
+  const charPy = buildEssayCharPy(essay);
   passageEl.innerHTML =
-    '<div class="reading-quiz-title">' + wrapHanziForHover(essay.titleCn || '') + '</div>' +
-    '<div class="reading-quiz-body">' + wrapHanziForHover(essay.contentCn || '') + '</div>';
-  questionEl.innerHTML = wrapHanziForHover(q.q || '');
+    '<div class="reading-quiz-title">' + wrapHanziForHover(essay.titleCn || '', charPy) + '</div>' +
+    '<div class="reading-quiz-body">' + wrapHanziForHover(essay.contentCn || '', charPy) + '</div>';
+  questionEl.innerHTML = wrapHanziForHover(q.q || '', charPy);
 
   // Build clickable A/B/C/D options (same look as the main quiz)
   optionsEl.innerHTML = '';
