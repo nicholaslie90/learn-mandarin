@@ -1328,11 +1328,67 @@ function askCheckpointReadingQuestion(essays, cb) {
   const essay = essays[Math.floor(Math.random() * essays.length)];
   if (!essay || !essay.questions || !essay.questions.length) { cb(true); return; }
   const q = essay.questions[0];
-  const optionsText = q.options.map(function (o, i) { return (i + 1) + '. ' + o; }).join('\n');
-  const ans = prompt(essay.titleCn + '\n\n' + essay.contentCn + '\n\n' + q.q + '\n' + optionsText + '\n\nEnter option number:');
-  if (ans === null) { cb(true); return; }
-  const picked = parseInt(ans, 10) - 1;
-  cb(picked === q.correct);
+
+  const modal = document.getElementById('readingQuizModal');
+  const passageEl = document.getElementById('readingQuizPassage');
+  const questionEl = document.getElementById('readingQuizQuestion');
+  const optionsEl = document.getElementById('readingQuizOptions');
+  // Fallback to a non-blocking default if the modal markup is missing
+  if (!modal || !passageEl || !questionEl || !optionsEl || typeof modal.showModal !== 'function') {
+    cb(true);
+    return;
+  }
+
+  let answered = false;
+  function finish(correct) {
+    if (answered) return;
+    answered = true;
+    modal.removeEventListener('cancel', onCancel);
+    document.removeEventListener('keydown', onKey);
+    try { modal.close(); } catch (e) {}
+    cb(correct);
+  }
+  function onCancel(e) { e.preventDefault(); finish(true); } // ESC = skip (counts as pass)
+  function onKey(e) {
+    const idx = { a: 0, b: 1, c: 2, d: 3 }[e.key.toLowerCase()];
+    if (idx === undefined) return;
+    const btn = optionsEl.querySelectorAll('.option-btn')[idx];
+    if (btn && !btn.disabled) { e.preventDefault(); btn.click(); }
+  }
+
+  // Build passage (title + body) and question
+  passageEl.innerHTML =
+    '<div class="reading-quiz-title">' + (essay.titleCn || '') + '</div>' +
+    '<div class="reading-quiz-body">' + (essay.contentCn || '').replace(/\n/g, '<br>') + '</div>';
+  questionEl.textContent = q.q;
+
+  // Build clickable A/B/C/D options (same look as the main quiz)
+  optionsEl.innerHTML = '';
+  q.options.forEach(function (optText, idx) {
+    const letter = String.fromCharCode(65 + idx);
+    const button = document.createElement('button');
+    button.className = 'option-btn';
+    button.innerHTML =
+      '<span class="option-badge">' + letter + '</span>' +
+      '<span class="option-txt">' + optText + '</span>';
+    button.onclick = function () {
+      if (answered) return;
+      const correct = idx === q.correct;
+      // Lock all options and show correctness briefly
+      optionsEl.querySelectorAll('.option-btn').forEach(function (b, i) {
+        b.disabled = true;
+        if (i === q.correct) b.classList.add('correct');
+      });
+      if (correct) { button.classList.add('correct'); sounds.playCorrect(); }
+      else { button.classList.add('wrong'); sounds.playWrong(); }
+      setTimeout(function () { finish(correct); }, 750);
+    };
+    optionsEl.appendChild(button);
+  });
+
+  modal.addEventListener('cancel', onCancel);
+  document.addEventListener('keydown', onKey);
+  modal.showModal();
 }
 
 function finishCheckpoint(checkpointId, ratio) {

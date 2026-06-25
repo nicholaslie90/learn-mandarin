@@ -2234,3 +2234,36 @@ body.light-theme .grid-overlay svg {
 .stat-label { color:var(--text-secondary); font-size:0.75rem; }
 
 .path-level-test { width:140px; font-weight:600; }
+
+/* Reading comprehension question modal (checkpoint / level test) */
+.reading-quiz-modal { max-width: 640px; }
+.reading-quiz-passage {
+  max-height: 38vh;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-glass);
+  border-radius: 0.75rem;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+.reading-quiz-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+.reading-quiz-body {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-primary);
+}
+.reading-quiz-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: var(--text-primary);
+}
