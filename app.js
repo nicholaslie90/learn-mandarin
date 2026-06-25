@@ -1434,11 +1434,11 @@ function wrapHanziForHover(text) {
 function showReadingTip(span, tip) {
   const ch = span.textContent;
   const w = findWordByChar(ch);
-  const py = (w && w.pinyin && w.pinyin !== 'Lookup...') ? w.pinyin : '—';
-  const en = w ? w.english : 'No dictionary entry';
+  const py = (w && w.pinyin && w.pinyin !== 'Lookup...') ? w.pinyin : '';
+  const en = w ? w.english : 'Not an HSK word on its own — often part of a name or compound';
   tip.innerHTML =
     '<span class="rq-tip-char">' + ch + '</span>' +
-    '<span class="rq-tip-py">' + py + '</span>' +
+    (py ? '<span class="rq-tip-py">' + py + '</span>' : '') +
     '<span class="rq-tip-en">' + en + '</span>';
   tip.style.display = 'flex';
   const r = span.getBoundingClientRect();
