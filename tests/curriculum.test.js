@@ -59,12 +59,28 @@ test('first lesson of level 1 is always unlocked', () => {
   assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l0', j), true);
 });
 
-test('second lesson locked until first completed', () => {
+test('every lesson is unlocked from the start, at every level', () => {
   const cur = C.buildCurriculum(fakeData());
-  const locked = { completedLessons: {}, passedCheckpoints: {} };
-  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l1', locked), false);
-  const unlocked = { completedLessons: { 'L1-u0-l0': { stars: 1 } }, passedCheckpoints: {} };
-  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l1', unlocked), true);
+  const fresh = { completedLessons: {}, passedCheckpoints: {} };
+  // Later lessons within a unit are open without completing earlier ones.
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l1', fresh), true);
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u0-l2', fresh), true);
+  // Higher levels are open too.
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L2-u0-l0', fresh), true);
+});
+
+test('first lessons of later units are unlocked for a fresh journey', () => {
+  const data = fakeData();
+  const wt = {};
+  data['1'].forEach((w, i) => { wt[w.id] = i < 5 ? 'food' : 'people'; });
+  const tm = [
+    { key: 'people', name: 'People', emoji: '👤' },
+    { key: 'food', name: 'Food', emoji: '🍜' },
+  ];
+  const cur = C.buildCurriculum(data, undefined, wt, tm); // units u0 (people) and u1 (food)
+  const fresh = { completedLessons: {}, passedCheckpoints: {} };
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u1-l0', fresh), true);
+  assert.strictEqual(C.isLessonUnlocked(cur, 'L1-u1-l1', fresh), true);
 });
 
 test('checkpoint unlocked only when all unit lessons complete', () => {

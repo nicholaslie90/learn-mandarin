@@ -1306,16 +1306,16 @@ function updateProgressPill() {
 
 function renderStreakUI() {
   const val = document.getElementById('headerStreakVal');
-  if (val) {
-    val.textContent = state.streak;
-  }
+  if (!val) return;
+  if (typeof Celebrations !== 'undefined') Celebrations.countUp(val, state.streak);
+  else val.textContent = state.streak;
 }
 
 function renderPointsUI() {
   const val = document.getElementById('headerPointsVal');
-  if (val) {
-    val.textContent = state.points;
-  }
+  if (!val) return;
+  if (typeof Celebrations !== 'undefined') Celebrations.countUp(val, state.points);
+  else val.textContent = state.points;
 }
 
 function renderLearnSection() {
@@ -1356,6 +1356,7 @@ function showLessonQuizPrompt(lessonId, words) {
 }
 
 function finishLesson(lessonId, ratio) {
+  const prevRank = state.journey.rank;
   const res = JourneyState.applyLessonCompletion(state.journey, lessonId, ratio, Date.now());
   state.points += res.xpGained;
   // First lesson of the day -> daily goal bonus + streak
@@ -1365,12 +1366,17 @@ function finishLesson(lessonId, ratio) {
   if (goal.bonusXp > 0) updateStreak();
   // Mark this lesson's words as learned in SRS
   Curriculum.getLessonWords(HSK_DATA, lessonId).forEach(function (w) { promoteSRSWord(w.id); });
-  evaluateJourneyBadges();
+  const earned = evaluateJourneyBadges();
   state.journey.rank = JourneyState.getRank(state.points);
   saveProgressToDB();
   saveJourney();
-  renderPointsUI();
   switchTab('learn');
+  renderPointsUI();
+  renderStreakUI();
+  if (goal.bonusXp > 0 && typeof Celebrations !== 'undefined') {
+    Celebrations.toast('每日目标 Daily goal complete! +' + goal.bonusXp + ' XP', { icon: '🎯' });
+  }
+  celebrateProgress(prevRank, res.xpGained + goal.bonusXp, earned);
 }
 
 function startCheckpoint(checkpointId) {
@@ -1594,19 +1600,29 @@ function askCheckpointReadingQuestion(essays, cb) {
 function finishCheckpoint(checkpointId, ratio) {
   const passed = ratio >= Curriculum.CURRICULUM_CONFIG.passThreshold;
   if (passed) {
+    const prevRank = state.journey.rank;
     const res = JourneyState.applyCheckpointPass(state.journey, checkpointId, ratio, Date.now());
     state.points += res.xpGained;
-    evaluateJourneyBadges();
+    const earned = evaluateJourneyBadges();
     state.journey.rank = JourneyState.getRank(state.points);
     saveProgressToDB();
     saveJourney();
+    switchTab('learn');
     renderPointsUI();
-    alert('Checkpoint passed! (' + Math.round(ratio * 100) + '%)');
+    notifyResult('Checkpoint passed! (' + Math.round(ratio * 100) + '%)', { icon: '🏁' });
+    if (typeof Celebrations !== 'undefined') Celebrations.hanziConfetti({ count: 60 });
+    celebrateProgress(prevRank, res.xpGained, earned);
   } else {
-    alert('Score ' + Math.round(ratio * 100) + '% — need ' +
-      Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
+    switchTab('learn');
+    notifyResult('Score ' + Math.round(ratio * 100) + '% — need ' +
+      Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. 加油, try again!', { icon: '💪', reward: false });
   }
-  switchTab('learn');
+}
+
+// Toast when celebrations are loaded, alert as fallback.
+function notifyResult(message, options) {
+  if (typeof Celebrations !== 'undefined') Celebrations.toast(message, options);
+  else alert(message);
 }
 
 function startLevelTest(levelTestId) {
@@ -1632,18 +1648,22 @@ function startLevelTest(levelTestId) {
 function finishLevelTest(levelTestId, ratio) {
   const passed = ratio >= Curriculum.CURRICULUM_CONFIG.passThreshold;
   if (passed) {
+    const prevRank = state.journey.rank;
     const res = JourneyState.applyCheckpointPass(state.journey, levelTestId, ratio, Date.now());
     state.points += res.xpGained;
-    evaluateJourneyBadges();
+    const earned = evaluateJourneyBadges();
     state.journey.rank = JourneyState.getRank(state.points);
     saveProgressToDB();
     saveJourney();
+    switchTab('learn');
     renderPointsUI();
-    alert('Level Test passed! (' + Math.round(ratio * 100) + '%) 🎉 You\'ve completed this HSK level.');
+    notifyResult('Level Test passed! (' + Math.round(ratio * 100) + '%) You\'ve completed this HSK level.', { icon: '👑' });
+    if (typeof Celebrations !== 'undefined') Celebrations.hanziConfetti({ count: 120 });
+    celebrateProgress(prevRank, res.xpGained, earned);
   } else {
-    alert('Score ' + Math.round(ratio * 100) + '% — need ' + Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. Try again!');
+    switchTab('learn');
+    notifyResult('Score ' + Math.round(ratio * 100) + '% — need ' + Math.round(Curriculum.CURRICULUM_CONFIG.passThreshold * 100) + '% to pass. 加油, try again!', { icon: '💪', reward: false });
   }
-  switchTab('learn');
 }
 
 function evaluateJourneyBadges() {
@@ -1651,11 +1671,36 @@ function evaluateJourneyBadges() {
   Object.keys(state.progress).forEach(function (id) {
     if (state.progress[id] && state.progress[id].srsLevel >= 4) mastered++;
   });
-  JourneyState.evaluateBadges(state.journey, {
+  return JourneyState.evaluateBadges(state.journey, {
     journey: state.journey,
     streak: state.streak,
     masteredCount: mastered,
   });
+}
+
+const RANK_META = {
+  '学徒': { pinyin: 'xuétú', meaning: 'Apprentice' },
+  '学生': { pinyin: 'xuéshēng', meaning: 'Student' },
+  '高手': { pinyin: 'gāoshǒu', meaning: 'Expert' },
+  '大师': { pinyin: 'dàshī', meaning: 'Master' },
+};
+
+// One shared celebration pass for lesson / checkpoint / level-test completions.
+function celebrateProgress(prevRank, xpGained, earnedBadges) {
+  if (typeof Celebrations === 'undefined') return;
+  if (xpGained > 0) {
+    Celebrations.floatChip(document.getElementById('headerPointsVal'), '+' + xpGained + ' XP');
+  }
+  (earnedBadges || []).forEach(function (id) {
+    Celebrations.toast('Badge earned: ' + JourneyUI.badgeLabel(id), { icon: '🎖️' });
+  });
+  if (earnedBadges && earnedBadges.length) {
+    Celebrations.badgeShine(document.getElementById('badgeGallery'), { count: earnedBadges.length });
+  }
+  const rank = state.journey.rank;
+  if (prevRank && rank !== prevRank && RANK_META[rank]) {
+    Celebrations.sealCeremony({ name: rank, pinyin: RANK_META[rank].pinyin, meaning: RANK_META[rank].meaning });
+  }
 }
 
 // -------------------------------------------------------------
@@ -2304,6 +2349,9 @@ function endQuizSession() {
   } else {
     if (scoreEmoji) scoreEmoji.textContent = '💪';
     if (scoreHeading) scoreHeading.textContent = 'Keep Practicing!';
+  }
+  if (scorePercentage >= 70 && typeof Celebrations !== 'undefined') {
+    Celebrations.hanziConfetti({ count: scorePercentage >= 90 ? 80 : 40, originEl: scoreEmoji });
   }
   
   // Commit Quiz results to SRS scheduling

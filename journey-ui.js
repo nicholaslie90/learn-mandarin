@@ -99,5 +99,5 @@
       : '<span class="goal-todo">🎯 Daily goal: finish 1 lesson today</span>';
   }
 
-  return { __name: 'JourneyUI', renderLearnPath: renderLearnPath, renderBadgeGallery: renderBadgeGallery, renderDailyGoal: renderDailyGoal };
+  return { __name: 'JourneyUI', renderLearnPath: renderLearnPath, renderBadgeGallery: renderBadgeGallery, renderDailyGoal: renderDailyGoal, badgeLabel: badgeLabel };
 });

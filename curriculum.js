@@ -179,19 +179,11 @@
   }
 
   function isLessonUnlocked(curriculum, lessonId, journey) {
-    const p = parseLessonId(lessonId);
-    if (p.lessonIndex > 0) {
-      const prev = 'L' + p.level + '-u' + p.unitIndex + '-l' + (p.lessonIndex - 1);
-      return !!journey.completedLessons[prev];
-    }
-    // first lesson of a unit (theme): requires the previous theme's checkpoint
-    if (p.unitIndex > 0) {
-      return !!journey.passedCheckpoints['CP' + p.level + '-u' + (p.unitIndex - 1)];
-    }
-    // first lesson of the first unit of a level: always open, so learners can
-    // jump straight into ANY HSK level without finishing the previous ones.
-    // (Themes still unlock sequentially within a level; the level test is a
-    // capstone, not a gate.)
+    // All topic sections (lessons) are open at every HSK level from the start:
+    // learners can jump into any theme of any level without finishing the
+    // previous ones. Checkpoints and the level test remain earned capstones:
+    // a checkpoint still requires completing that unit's lessons, and the
+    // level test still requires all of the level's checkpoints.
     return true;
   }
 

@@ -2446,3 +2446,242 @@ body.light-theme .grid-overlay svg {
 .rq-tip-char { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--text-primary); }
 .rq-tip-py { color: var(--accent-cyan); font-size: 0.9rem; font-weight: 600; }
 .rq-tip-en { color: var(--text-secondary); font-size: 0.8rem; line-height: 1.3; }
+
+/* -------------------------------------------------------------
+   Celebrations (celebrations.js): confetti, toast, seal, floats
+   Reward vocabulary: seal red + gold, distinct from cyan task UI.
+   ------------------------------------------------------------- */
+:root {
+  --seal-red: oklch(0.58 0.19 27);
+  --seal-red-deep: oklch(0.46 0.17 27);
+  --gold: oklch(0.8 0.14 80);
+  /* semantic z-scale: header is 100; dialogs live in the top layer above all of these */
+  --z-celebration: 200;
+  --z-toast: 210;
+  --z-tooltip: 220;
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.icon-flame { color: var(--accent-orange); }
+
+#celebrationLayer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-celebration);
+  overflow: hidden;
+}
+
+.hz-confetti-piece {
+  position: absolute;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  will-change: transform, opacity;
+  animation: hz-confetti-burst var(--dur, 2s) var(--ease-out-quart) var(--delay, 0s) forwards;
+  opacity: 0;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes hz-confetti-burst {
+  0% { opacity: 0; transform: translate(0, 0) rotate(0deg) scale(0.6); }
+  10% { opacity: 1; transform: translate(calc(var(--dx, 0vw) * 0.35), -14vh) rotate(calc(var(--rot, 360deg) * 0.25)) scale(1); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--dx, 0vw), 52vh) rotate(var(--rot, 360deg)) scale(0.9); }
+}
+
+/* Milestone toast: Linear-grade restraint, enters slow, leaves fast */
+.milestone-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 5.5rem;
+  transform: translate(-50%, 10px) scale(0.97);
+  z-index: var(--z-toast);
+  max-width: min(90vw, 420px);
+  padding: 0.7rem 1.25rem;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-lg);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  /* exit timing (base state) is faster than entry */
+  transition: opacity 0.18s var(--ease-out-quart), transform 0.18s var(--ease-out-quart);
+}
+.milestone-toast.toast-visible {
+  opacity: 1;
+  transform: translate(-50%, 0) scale(1);
+  transition: opacity 0.25s var(--ease-out-expo), transform 0.25s var(--ease-out-expo);
+}
+.milestone-toast.toast-reward {
+  border-color: color-mix(in oklch, var(--gold) 65%, transparent);
+  box-shadow: 0 0 20px rgba(245, 180, 40, 0.18), var(--shadow-lg);
+}
+
+/* "+N XP" float above the points stat */
+.points-float-chip {
+  position: absolute;
+  transform: translateX(-50%);
+  z-index: var(--z-toast);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  animation: points-float 0.8s var(--ease-out-quart) forwards;
+}
+
+@keyframes points-float {
+  0% { opacity: 0; translate: 0 4px; }
+  15% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: 0; translate: 0 -30px; }
+}
+
+/* Rank-up seal ceremony: the one drenched moment. A carved seal
+   pressed onto the page, not a modal with confetti glued on. */
+dialog.rankup-modal {
+  max-width: 380px;
+  background:
+    radial-gradient(120% 90% at 50% 0%, color-mix(in oklch, var(--seal-red-deep) 22%, transparent), transparent 60%),
+    var(--bg-secondary);
+  border-color: color-mix(in oklch, var(--seal-red) 35%, var(--border-glass));
+}
+.rankup-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1.25rem 0.5rem 0.75rem;
+  text-align: center;
+}
+.rankup-title {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.rankup-title .rankup-title-zh {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-right: 0.5em;
+}
+.seal-stamp {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, var(--seal-red), var(--seal-red-deep));
+  border-radius: 16px;
+  rotate: -3deg;
+  box-shadow:
+    inset 0 0 0 3px color-mix(in oklch, white 22%, transparent),
+    inset 0 0 18px color-mix(in oklch, var(--seal-red-deep) 60%, transparent),
+    0 0 32px color-mix(in oklch, var(--seal-red) 45%, transparent);
+  margin-bottom: 0.9rem;
+}
+.seal-char {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: oklch(0.97 0.01 80);
+  rotate: 3deg; /* keep the glyph upright inside the tilted seal */
+  text-shadow: 0 1px 2px color-mix(in oklch, var(--seal-red-deep) 70%, transparent);
+}
+.seal-stamping {
+  animation: seal-stamp-in 0.6s var(--ease-out-expo);
+}
+@keyframes seal-stamp-in {
+  0% { transform: scale(1.9); opacity: 0; }
+  45% { transform: scale(0.96); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+#rankUpName {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  text-wrap: balance;
+}
+#rankUpPinyin { color: var(--gold); font-weight: 600; }
+#rankUpMeaning { color: var(--text-secondary); margin: 0 0 1.1rem; }
+/* Inside the ceremony, the CTA speaks the reward vocabulary, not task cyan */
+.rankup-modal .btn-primary {
+  justify-content: center;
+  min-width: 160px;
+  background: linear-gradient(135deg, var(--seal-red), var(--seal-red-deep));
+  color: oklch(0.97 0.01 80);
+  box-shadow: 0 0 18px color-mix(in oklch, var(--seal-red) 30%, transparent);
+}
+.rankup-modal .btn-primary:hover {
+  box-shadow: 0 0 26px color-mix(in oklch, var(--seal-red) 50%, transparent);
+}
+#rankUpCloseBtn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Newly earned badge shine */
+.badge-chip.badge-new {
+  border-color: color-mix(in oklch, var(--gold) 65%, transparent);
+  animation: badge-shine 1.2s var(--ease-out-quart) 2;
+}
+@keyframes badge-shine {
+  0%, 100% { box-shadow: none; }
+  50% { box-shadow: 0 0 14px rgba(245, 180, 40, 0.5); }
+}
+
+/* Correct-answer pop (option feedback) */
+.option-btn.correct {
+  animation: correct-pop 0.3s var(--ease-out-quart);
+}
+@keyframes correct-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.035); }
+  100% { transform: scale(1); }
+}
+
+/* Tooltip element owned by celebrations.js */
+.hanzi-tooltip {
+  z-index: var(--z-tooltip);
+  pointer-events: none;
+  max-width: 260px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: var(--shadow-lg);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Light theme: deepen the reward ramp so gold text and glows keep contrast */
+body.light-theme {
+  --seal-red: oklch(0.55 0.19 27);
+  --seal-red-deep: oklch(0.44 0.17 27);
+  --gold: oklch(0.55 0.12 80);
+}
+body.light-theme .hz-confetti-piece { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+body.light-theme .points-float-chip { text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hz-confetti-piece,
+  .points-float-chip,
+  .seal-stamping,
+  .badge-chip.badge-new,
+  .option-btn.correct,
+  .option-btn.wrong {
+    animation: none;
+  }
+  .milestone-toast,
+  .milestone-toast.toast-visible {
+    transition: opacity 0.01s linear;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
